@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--
+        Layout base del theme Dimsop.
+        Se hereda website.layout (plantilla estable) para:
+          - Añadir atributo de tema (data-theme) para el dark mode.
+          - Cargar la tipografía corporativa (Bebas Neue / Anton + Arimo).
+    -->
+    <template id="dimsop_layout" inherit_id="website.layout" name="Dimsop Layout">
+        <xpath expr="//html" position="attributes">
+            <attribute name="data-theme" select="'light'"/>
+        </xpath>
+    </template>
+</odoo>

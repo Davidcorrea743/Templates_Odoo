@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Menús del sitio (Sección 1 del documento)
+         Hijos directos de website.main_menu; website.menu_id computa
+         al primer menú top-level del sitio. -->
+    <record id="menu_inicio" model="website.menu">
+        <field name="name">Inicio</field>
+        <field name="website_id">1</field>
+        <field name="url">/</field>
+        <field name="sequence">11</field>
+        <field name="parent_id" ref="website.main_menu"/>
+    </record>
+
+    <record id="menu_nosotros" model="website.menu">
+        <field name="name">Nosotros</field>
+        <field name="website_id">1</field>
+        <field name="url">/#nosotros</field>
+        <field name="sequence">12</field>
+        <field name="parent_id" ref="website.main_menu"/>
+    </record>
+
+    <record id="menu_unidades" model="website.menu">
+        <field name="name">Unidades de Negocio</field>
+        <field name="website_id">1</field>
+        <field name="url">/#unidades</field>
+        <field name="sequence">13</field>
+        <field name="parent_id" ref="website.main_menu"/>
+    </record>
+
+    <record id="menu_blog" model="website.menu">
+        <field name="name">Blog</field>
+        <field name="website_id">1</field>
+        <field name="url">/blog</field>
+        <field name="sequence">14</field>
+        <field name="parent_id" ref="website.main_menu"/>
+    </record>
+
+    <record id="menu_contacto" model="website.menu">
+        <field name="name">Contacto</field>
+        <field name="website_id">1</field>
+        <field name="url">/#contacto</field>
+        <field name="sequence">15</field>
+        <field name="parent_id" ref="website.main_menu"/>
+    </record>
+
+    <record id="menu_privacidad" model="website.menu">
+        <field name="name">Políticas de Privacidad</field>
+        <field name="website_id">1</field>
+        <field name="url">/privacy</field>
+        <field name="sequence">16</field>
+        <field name="parent_id" ref="website.main_menu"/>
+    </record>
+
+    <!-- Datos corporativos de contacto (editar con los datos reales de Dimsop) -->
+    <record id="partner_dimsop" model="res.partner">
+        <field name="name">Dimsop</field>
+        <field name="street">Dirección oficial de las oficinas corporativas de Dimsop</field>
+        <field name="city">Caracas</field>
+        <field name="country_id" ref="base.ve"/>
+        <field name="phone">+58 000 000 0000</field>
+        <field name="email">contacto@dimsop.com</field>
+        <field name="website">https://www.dimsop.com</field>
+        <field name="is_company">True</field>
+    </record>
+
+    <!-- Parámetros configurables del theme -->
+    <record id="dimsop_config" model="ir.config_parameter">
+        <field name="key">dimsop.whatsapp_number</field>
+        <field name="value">123456789</field>
+    </record>
+    <record id="dimsop_config_linkedin" model="ir.config_parameter">
+        <field name="key">dimsop.linkedin_url</field>
+        <field name="value">https://www.linkedin.com/company/dimsop</field>
+    </record>
+    <record id="dimsop_config_instagram" model="ir.config_parameter">
+        <field name="key">dimsop.instagram_url</field>
+        <field name="value">https://www.instagram.com/dimsop</field>
+    </record>
+</odoo>

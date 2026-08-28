@@ -1,0 +1,626 @@
+// =====================================================================
+// DIMSOP - ESTILOS DEL SITIO
+// Componentes: header, banner, cintillo ISO, cards, contadores, footer,
+// botón flotante WhatsApp, etc.
+// =====================================================================
+
+// ----------------------------- Tipografía ---------------------------
+h1, h2, h3, h4, h5, .dimsop-h1, .dimsop-h2, .dimsop-h3 {
+    font-family: var(--dimsop-font-heading);
+    letter-spacing: .5px;
+}
+
+.dimsop-h1 { color: var(--dimsop-white); font-size: 3rem; }
+.dimsop-h2 { color: var(--dimsop-primary); font-weight: 700; }
+.dimsop-h3 { color: var(--dimsop-primary); font-weight: 600; }
+
+[data-theme="dark"] .dimsop-h2,
+[data-theme="dark"] .dimsop-h3 { color: var(--dimsop-white); }
+
+.dimsop-lead {
+    font-size: 1.15rem;
+    color: var(--dimsop-text);
+}
+
+// ----------------------------- Botones CTA ---------------------------
+.btn-dimsop-primary {
+    background-color: var(--dimsop-accent);
+    border-color: var(--dimsop-accent);
+    color: var(--dimsop-white);
+    font-family: var(--dimsop-font-heading);
+    letter-spacing: 1px;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.btn-dimsop-primary:hover {
+    background-color: #3f8a27;
+    border-color: #3f8a27;
+    color: var(--dimsop-white);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, .25);
+}
+
+.btn-dimsop-secondary {
+    background-color: transparent;
+    border: 2px solid var(--dimsop-accent);
+    color: var(--dimsop-white);
+    font-family: var(--dimsop-font-heading);
+    letter-spacing: 1px;
+    transition: background-color .2s ease, color .2s ease;
+}
+
+.btn-dimsop-secondary:hover {
+    background-color: var(--dimsop-accent);
+    color: var(--dimsop-white);
+}
+
+// ----------------------------- Header (Sección 1) --------------------
+.dimsop-header {
+    background-color: var(--dimsop-primary);
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+}
+
+// Nota: la topbar ISO se eliminó; el cintillo vive como sección #iso en home.
+
+.dimsop-header-main {
+    min-height: 70px;
+}
+
+.dimsop-logo img {
+    max-height: 46px;
+}
+
+// Fix: el HTML usa id (#dimsop-mobile-nav), no clase
+.dimsop-nav .nav-link,
+#dimsop-mobile-nav .nav-link {
+    color: var(--dimsop-white);
+    font-family: var(--dimsop-font-heading);
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+.dimsop-nav .nav-link:hover,
+.dimsop-nav .nav-link:focus-visible {
+    color: var(--dimsop-accent);
+}
+
+#dimsop-mobile-nav .nav-link:hover,
+#dimsop-mobile-nav .nav-link:focus-visible {
+    color: var(--dimsop-accent);
+}
+
+// ----------------------------- Buscador moderno (header) -------------
+.dimsop-search-wrap {
+    position: relative;
+}
+
+.dimsop-search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, .5);
+    font-size: .85rem;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.dimsop-search .form-control {
+    padding-left: 34px;
+    border-radius: 24px;
+    background-color: rgba(255, 255, 255, .1);
+    border: 1px solid rgba(255, 255, 255, .18);
+    color: var(--dimsop-white);
+    min-width: 180px;
+    font-size: .9rem;
+    transition: background-color .2s, border-color .2s, min-width .3s;
+}
+
+.dimsop-search .form-control::placeholder {
+    color: rgba(255, 255, 255, .45);
+}
+
+.dimsop-search .form-control:focus {
+    background-color: rgba(255, 255, 255, .16);
+    border-color: var(--dimsop-accent);
+    box-shadow: 0 0 0 2px rgba(77, 163, 47, .2);
+    color: var(--dimsop-white);
+    outline: none;
+    min-width: 240px;
+}
+
+// Touch targets >= 44px (burger y dark toggle)
+.dimsop-burger {
+    color: var(--dimsop-white);
+    background: transparent;
+    border: none;
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#dimsop-dark-toggle {
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// ----------------------------- Banner (Sección 2) --------------------
+.dimsop-banner {
+    position: relative;
+    min-height: 88vh;
+    overflow: hidden;
+    padding: 6rem 1rem;
+}
+
+.dimsop-banner-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: 0;
+}
+
+.dimsop-banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 25, 47, .72);
+    z-index: 1;
+}
+
+.dimsop-banner .container { z-index: 2; }
+
+// Texto del hero siempre blanco (está sobre video + overlay oscuro)
+.dimsop-banner .dimsop-lead,
+.dimsop-banner p {
+    color: var(--dimsop-white);
+}
+
+// Botón CTA hero (icono calendario)
+.dimsop-hero-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 2px solid var(--dimsop-white);
+    color: var(--dimsop-white);
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: background-color .25s ease, transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+.dimsop-hero-cta:hover {
+    background-color: var(--dimsop-accent);
+    border-color: var(--dimsop-accent);
+    color: var(--dimsop-white);
+    transform: scale(1.12);
+    box-shadow: 0 8px 24px rgba(77, 163, 47, .35);
+}
+
+.dimsop-hero-cta:focus-visible {
+    outline: 2px solid var(--dimsop-accent);
+    outline-offset: 3px;
+}
+
+// ----------------------------- Cintillo ISO (Sección 3) --------------
+.dimsop-iso {
+    background-color: var(--dimsop-primary-dark);
+    font-weight: 600;
+}
+
+// ----------------------------- Secciones -----------------------------
+.dimsop-section { background-color: var(--dimsop-bg); }
+.dimsop-section-dark { background-color: var(--dimsop-primary); }
+
+// Títulos en secciones oscuras: siempre blanco para contraste
+.dimsop-section-dark .dimsop-h2,
+.dimsop-section-dark .dimsop-h3,
+.dimsop-section-dark h2,
+.dimsop-section-dark h3 {
+    color: var(--dimsop-white);
+}
+
+// ----------------------------- Cards (Sección 4, 6) ------------------
+.dimsop-card {
+    background-color: var(--dimsop-surface);
+    border: 1px solid var(--dimsop-surface-border);
+    border-top: 4px solid var(--dimsop-accent);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.dimsop-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .1);
+}
+
+.dimsop-card-icon {
+    font-size: 2rem;
+    color: var(--dimsop-accent);
+    margin-bottom: .75rem;
+}
+
+// ----------------------------- Valores (Sección 4.3) -----------------
+.dimsop-value {
+    background-color: var(--dimsop-surface);
+    border: 1px solid var(--dimsop-surface-border);
+    border-radius: 8px;
+    padding: 1rem .5rem;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    font-weight: 600;
+    transition: transform .2s ease;
+}
+
+.dimsop-value:hover { transform: scale(1.05); }
+
+.dimsop-value-icon {
+    font-size: 1.6rem;
+    color: var(--dimsop-accent);
+}
+
+// ----------------------------- Metodología (Sección 5) ---------------
+.dimsop-img-methodology {
+    max-width: 820px;
+    border-radius: 10px;
+}
+
+.dimsop-step {
+    background-color: var(--dimsop-surface);
+    border-radius: 10px;
+    padding: 1.25rem;
+    height: 100%;
+    position: relative;
+}
+
+.dimsop-step-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--dimsop-accent);
+    color: var(--dimsop-white);
+    font-weight: 700;
+    margin-bottom: .5rem;
+}
+
+// ----------------------------- Logos aliados (Sección 8) -------------
+// Cintillo tipo carrusel con loop infinito (marquee CSS).
+// El track contiene 2 sets idénticos de logos; al desplazarse -50%
+// el loop es perfecto. Pausa en hover/focus.
+.dimsop-marquee {
+    overflow: hidden;
+    position: relative;
+    padding: .5rem 0;
+
+    // Degradados en los bordes para fundir el carrusel
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 80px;
+        z-index: 2;
+        pointer-events: none;
+    }
+    &::before { left: 0; background: linear-gradient(to right, var(--dimsop-bg), transparent); }
+    &::after { right: 0; background: linear-gradient(to left, var(--dimsop-bg), transparent); }
+}
+
+.dimsop-marquee-track {
+    display: flex;
+    gap: 1rem;
+    width: max-content;
+    animation: dimsop-marquee 45s linear infinite;
+
+    &:hover,
+    &:focus-within {
+        animation-play-state: paused;
+    }
+}
+
+@keyframes dimsop-marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
+.dimsop-logo-item {
+    background-color: var(--dimsop-surface);
+    border: 1px solid var(--dimsop-surface-border);
+    border-radius: 10px;
+    padding: 1rem;
+    flex: 0 0 auto;
+    min-width: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.dimsop-logo-item:hover,
+.dimsop-logo-item:focus-within {
+    transform: scale(1.12);          // Efecto Zoom/Hover
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .15);
+}
+
+.dimsop-logo-item img {
+    max-height: 60px;
+    max-width: 140px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: .8;
+    transition: filter .25s ease, opacity .25s ease;
+}
+
+.dimsop-logo-item:hover img,
+.dimsop-logo-item:focus-within img {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+// ----------------------------- Contadores (Sección 9) ----------------
+.dimsop-counter-num {
+    font-family: var(--dimsop-font-heading);
+    font-size: 3.4rem;
+    color: var(--dimsop-accent);
+}
+
+.dimsop-counter p {
+    color: var(--dimsop-white);
+    font-size: 1.1rem;
+}
+
+// ----------------------------- Proyectos (Sección 10) ---------------
+.dimsop-project {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: var(--dimsop-surface);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.dimsop-project:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, .15);
+}
+
+.dimsop-project img { height: 180px; object-fit: cover; }
+
+// ----------------------------- Blog (Sección 11) ---------------------
+.dimsop-badge {
+    background-color: var(--dimsop-accent);
+    color: var(--dimsop-white);
+}
+
+// Cover del blog sin imagen (degradado corporativo hasta tener blog-destacado.jpg)
+.dimsop-blog-cover {
+    min-height: 220px;
+    height: 100%;
+    border-radius: 0;
+    background:
+        linear-gradient(135deg, var(--dimsop-primary) 0%, var(--dimsop-secondary) 60%, var(--dimsop-primary-dark) 100%);
+}
+
+// Alertas de feedback del formulario (Sección 12)
+.dimsop-alert {
+    max-width: 720px;
+    margin-inline: auto;
+}
+
+// ----------------------------- Formulario (Sección 12) ---------------
+.dimsop-form .form-control,
+.dimsop-form .form-select {
+    border-radius: 6px;
+    border-color: var(--dimsop-surface-border);
+}
+
+.dimsop-form .form-label { font-weight: 600; }
+
+// ----------------------------- Footer (Sección 13) -------------------
+.dimsop-footer {
+    background-color: var(--dimsop-primary);
+    color: var(--dimsop-white);
+}
+
+.dimsop-footer a { color: var(--dimsop-white); text-decoration: none; }
+.dimsop-footer a:hover { color: var(--dimsop-accent); }
+
+.dimsop-footer-title {
+    font-family: var(--dimsop-font-heading);
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--dimsop-accent);
+    display: inline-block;
+    padding-bottom: .25rem;
+}
+
+.dimsop-social-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid var(--dimsop-white);
+    color: var(--dimsop-white);
+    font-size: 1.2rem;
+    transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+}
+
+.dimsop-social-btn:hover {
+    background-color: var(--dimsop-accent);
+    border-color: var(--dimsop-accent);
+    color: var(--dimsop-white) !important;
+}
+
+.dimsop-social-btn:focus-visible {
+    outline: 2px solid var(--dimsop-accent);
+    outline-offset: 2px;
+    color: var(--dimsop-white) !important;
+}
+
+.dimsop-footer-bottom {
+    background-color: var(--dimsop-primary-dark);
+    font-size: .85rem;
+}
+
+// ----------------------------- WhatsApp (Sección 14) -----------------
+#dimsop-whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background-color: #25d366;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, .3);
+    transition: transform .2s ease;
+    text-decoration: none !important;
+}
+
+#dimsop-whatsapp-float:hover,
+#dimsop-whatsapp-float:focus,
+#dimsop-whatsapp-float:visited,
+#dimsop-whatsapp-float:active {
+    text-decoration: none !important;
+    color: #ffffff;
+}
+
+// Animación de pulso para mayor visibilidad
+@keyframes dimsop-wa-pulse {
+    0%, 100% { box-shadow: 0 6px 16px rgba(37, 211, 102, .25); }
+    50%      { box-shadow: 0 6px 28px rgba(37, 211, 102, .55); }
+}
+
+#dimsop-whatsapp-float {
+    animation: dimsop-wa-pulse 2.5s ease-in-out infinite;
+}
+
+#dimsop-whatsapp-float:hover {
+    animation: none;
+}
+
+// =====================================================================
+// RESPONSIVE (breakpoints Bootstrap: 576 / 768 / 992 / 1200)
+// =====================================================================
+
+// Tablet y menores (<= 991px)
+@media (max-width: 991.98px) {
+    .dimsop-h1 { font-size: 2.4rem; }
+    .dimsop-h2 { font-size: 1.9rem; }
+
+    .dimsop-banner {
+        min-height: 70vh;
+        padding: 4rem 1rem;
+    }
+
+    .dimsop-counter-num { font-size: 2.8rem; }
+
+    // El buscador se oculta en pantallas medianas (queda en desktop)
+    .dimsop-search { display: none; }
+}
+
+// Móvil (<= 767px)
+@media (max-width: 767.98px) {
+    .dimsop-h1 { font-size: 2rem; }
+    .dimsop-h2 { font-size: 1.6rem; }
+    .dimsop-h3 { font-size: 1.25rem; }
+
+    .dimsop-lead { font-size: 1rem; }
+
+    .dimsop-banner {
+        min-height: 62vh;
+        padding: 3rem 1rem;
+    }
+
+    // Contadores apilados con separación clara
+    .dimsop-counter { margin-bottom: 1.5rem; }
+    .dimsop-counter:last-child { margin-bottom: 0; }
+
+    // Cards a ancho completo con respiración vertical
+    .dimsop-card,
+    .dimsop-step,
+    .dimsop-value { margin-bottom: .75rem; }
+
+    // Proyectos: imagen más baja en móvil
+    .dimsop-project img { height: 150px; }
+
+    // Formulario sin columnas
+    .dimsop-form .row > [class*="col-"] { width: 100%; }
+
+    // Footer centrado
+    .dimsop-footer { text-align: center; }
+    .dimsop-footer .d-flex { justify-content: center; }
+
+    #dimsop-whatsapp-float {
+        width: 52px;
+        height: 52px;
+        font-size: 1.7rem;
+        bottom: 16px;
+        right: 16px;
+    }
+}
+
+// Escritorios grandes: límite de legibilidad del hero
+@media (min-width: 1400px) {
+    .dimsop-h1 { font-size: 3.4rem; }
+}
+
+// =====================================================================
+// ACCESIBILIDAD - MOVIMIENTO REDUCIDO
+// =====================================================================
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    // El marquee deja de girar y permite scroll horizontal manual
+    .dimsop-marquee-track {
+        animation: none;
+        overflow-x: auto;
+    }
+
+    .dimsop-logo-item:hover,
+    .dimsop-logo-item:focus-within,
+    .btn-dimsop-primary:hover,
+    .dimsop-card:hover,
+    .dimsop-project:hover,
+    .dimsop-value:hover,
+    #dimsop-whatsapp-float:hover {
+        transform: none;
+    }
+}

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--
+        HEADER / BARRA DE NAVEGACIÓN SUPERIOR (Sección 1 del documento)
+        Reemplaza el header nativo de Odoo por el de Dimsop:
+          - Logo de la empresa
+          - Menú: Inicio | Nosotros | Unidades de Negocio | Blog | Contacto
+          - Lupa de buscador
+          - Selector de idioma ES/EN (nativo de Odoo: website.language_selector)
+          - Toggle de dark mode (luna/sol)
+
+        El logo debe colocarse en:
+          dimsop_website/static/src/img/logos/dimsop-logo.png
+    -->
+    <template id="dimsop_header" inherit_id="website.layout" name="Dimsop Header">
+        <xpath expr="//header[1]" position="replace">
+            <header id="dimsop_header" class="o_header dimsop-header">
+                <!-- Barra superior: cintillo de calidad ISO 9001 (Sección 3) -->
+                <div class="dimsop-topbar text-white text-center">
+                    En proceso de certificación ISO 9001 | Compromiso con la calidad y la mejora continua
+                </div>
+
+                <!-- Barra principal -->
+                <div class="dimsop-header-main container d-flex align-items-center justify-content-between py-2">
+                    <!-- Logo -->
+                    <a class="dimsop-logo" href="/" title="Dimsop">
+                        <img src="/dimsop_website/static/src/img/logos/dimsop-logo.png"
+                             alt="Dimsop"
+                             class="img-fluid"/>
+                    </a>
+
+                    <!-- Navegación -->
+                    <nav class="dimsop-nav d-none d-lg-flex">
+                        <ul class="nav">
+                            <t t-foreach="website.menu_id.child_ids" t-as="menu">
+                                <li class="nav-item">
+                                    <a class="nav-link" t-att-href="menu.url" t-esc="menu.name"/>
+                                </li>
+                            </t>
+                        </ul>
+                    </nav>
+
+                    <!-- Herramientas e interacción -->
+                    <div class="dimsop-tools d-flex align-items-center">
+                        <!-- Lupa de buscador -->
+                        <form class="dimsop-search me-2" action="/website/search" method="get" role="search">
+                            <input type="text" class="form-control form-control-sm" name="search"
+                                   placeholder="Buscar..." aria-label="Buscar"/>
+                        </form>
+
+                        <!-- Selector de idioma ES/EN -->
+                        <t t-call="website.language_selector"/>
+
+                        <!-- Toggle dark mode (manejado por js/darkmode.js) -->
+                        <button id="dimsop-dark-toggle" class="btn btn-sm btn-outline-light ms-2"
+                                type="button" title="Cambiar modo claro/oscuro" aria-label="Modo oscuro">
+                            <i class="fa fa-moon-o" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                    <!-- Menú móvil -->
+                    <a class="dimsop-burger d-lg-none" data-bs-toggle="collapse" href="#dimsop-mobile-nav"
+                       role="button" aria-expanded="false" aria-controls="dimsop-mobile-nav">
+                        <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+                    </a>
+                </div>
+
+                <!-- Navegación móvil -->
+                <div class="collapse d-lg-none" id="dimsop-mobile-nav">
+                    <ul class="nav flex-column px-3 pb-3">
+                        <t t-foreach="website.menu_id.child_ids" t-as="menu">
+                            <li class="nav-item">
+                                <a class="nav-link" t-att-href="menu.url" t-esc="menu.name"/>
+                            </li>
+                        </t>
+                    </ul>
+                </div>
+            </header>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,14 @@
+# Plantilla de traducción (gettext) para dimsop_website.
+# Regenerar automáticamente desde Odoo:
+#   odoo-bin -d DB --i18n-export=dimsop_website --language=es_ES > i18n/es_ES.po
+msgid ""
+msgstr ""
+"Project-Id-Version: dimsop_website 18.0.1.0.0\n"
+"Report-Msgid-Bugs-To: support@dimsop.com\n"
+"POT-Creation-Date: 2026-01-01 00:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"

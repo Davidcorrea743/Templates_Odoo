@@ -1,0 +1,1207 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+    <!--
+        ============================================================
+        DIMSOP - HOME
+        Iteración 1: Home funcional
+        ============================================================
+
+        Objetivo de esta iteración:
+        - Construir la estructura funcional de la página principal.
+        - Utilizar contenido real proporcionado por Dimsop.
+        - Crear las principales secciones del sitio.
+        - Mantener el diseño visual sencillo.
+        - Preparar clases CSS para las siguientes iteraciones.
+
+        Las secciones visuales más avanzadas (animaciones, video,
+        mapas, carruseles, contadores, dark mode, etc.) se
+        implementarán progresivamente.
+    -->
+
+
+    <!-- ============================================================
+         HOME
+         ============================================================ -->
+
+    <template id="dimsop_home" name="Dimsop Home">
+
+        <!--
+            Página principal.
+
+            website.layout proporciona:
+            - Header
+            - Footer
+            - Assets del sitio
+            - Estructura general de Odoo Website
+        -->
+        <t t-call="website.layout">
+
+            <!-- Contenedor principal de la página -->
+            <div id="wrap" class="dimsop-home">
+
+
+                <!-- ==================================================
+                     1. HERO SECTION
+                     ================================================== -->
+
+                <section id="hero"
+                         class="dimsop-section dimsop-hero">
+
+                    <div class="container">
+
+                        <div class="row align-items-center">
+
+                            <!-- Contenido principal -->
+                            <div class="col-lg-8">
+
+                                <h1 class="dimsop-hero-title">
+                                    Soluciones TIC de Vanguardia
+                                    para la continuidad de tu negocio.
+                                </h1>
+
+                                <p class="dimsop-hero-text">
+                                    Somos una organización líder en el
+                                    desarrollo y la implementación de
+                                    soluciones de Tecnologías de la
+                                    Información y Comunicación (TIC).
+                                </p>
+
+                                <p class="dimsop-hero-text">
+                                    Nuestro enfoque se centra en impulsar
+                                    la transformación digital mediante el
+                                    uso de tecnologías de innovación
+                                    emergentes y soluciones legadas
+                                    (tradicionales).
+                                </p>
+
+                                <p class="dimsop-hero-text">
+                                    Apoyamos a nuestros clientes y aliados
+                                    estratégicos a maximizar la rentabilidad
+                                    de sus negocios bajo un modelo de
+                                    ganancia mutua.
+                                </p>
+
+
+                                <!-- CTAs principales -->
+                                <div class="dimsop-hero-actions">
+
+                                    <!--
+                                        Por ahora los enlaces apuntan a
+                                        rutas estándar que posteriormente
+                                        conectaremos con las páginas reales.
+                                    -->
+                                    <a href="/contactus"
+                                       class="btn btn-primary">
+                                        Agendar Consultoría
+                                    </a>
+
+                                    <a href="#business-units"
+                                       class="btn btn-outline-primary ms-2">
+                                        Conocer Soluciones
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ==================================================
+                     2. CINTILLO ISO 9001
+                     ================================================== -->
+
+                <section id="quality"
+                         class="dimsop-section dimsop-quality">
+
+                    <div class="container">
+
+                        <div class="text-center">
+
+                            <p class="mb-0">
+                                <strong>
+                                    En proceso de certificación ISO 9001
+                                </strong>
+                                <span class="mx-2">|</span>
+                                Compromiso con la calidad y la mejora continua
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ==================================================
+                     3. QUIÉNES SOMOS
+                     ================================================== -->
+
+                <section id="about"
+                         class="dimsop-section dimsop-about">
+
+                    <div class="container">
+
+                        <div class="row">
+
+                            <div class="col-lg-12">
+
+                                <h2>
+                                    ¿Quiénes Somos?
+                                </h2>
+
+                                <p class="lead">
+                                    En Dimsop impulsamos la rentabilidad y
+                                    la continuidad operativa de nuestros
+                                    clientes, respaldados por personal
+                                    altamente calificado e innovadores de
+                                    la región.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Misión -->
+                        <div class="row mt-4">
+
+                            <div class="col-lg-6">
+
+                                <h3>
+                                    Misión
+                                </h3>
+
+                                <p>
+                                    Apoyar a nuestros clientes y aliados de
+                                    negocios en las soluciones de innovación
+                                    tecnológicas legadas y emergentes, para
+                                    maximizar la rentabilidad de sus negocios
+                                    en una relación de ganancia mutua,
+                                    contando con personal altamente
+                                    calificado e innovadores de la región.
+                                </p>
+
+                            </div>
+
+
+                            <!-- Visión -->
+                            <div class="col-lg-6">
+
+                                <h3>
+                                    Visión
+                                </h3>
+
+                                <p>
+                                    Ser líder en el desarrollo de soluciones
+                                    TIC basadas en las tecnologías de
+                                    innovación emergentes como Internet of
+                                    Things (IoT), la visión computarizada
+                                    (digitalización), la realidad virtual,
+                                    la inteligencia artificial y las
+                                    criptotecnologías, entre otras.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Valores -->
+                        <div class="row mt-4">
+
+                            <div class="col-12">
+
+                                <h3>
+                                    Nuestros Valores
+                                </h3>
+
+                            </div>
+
+
+                            <div class="col-md-4 col-lg">
+
+                                <div class="dimsop-value">
+                                    <h4>Transparencia</h4>
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-md-4 col-lg">
+
+                                <div class="dimsop-value">
+                                    <h4>
+                                        Trabajo en equipos virtuales
+                                    </h4>
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-md-4 col-lg">
+
+                                <div class="dimsop-value">
+                                    <h4>
+                                        Tecnologías disruptivas
+                                    </h4>
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-md-6 col-lg">
+
+                                <div class="dimsop-value">
+                                    <h4>
+                                        Innovación sostenible
+                                    </h4>
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-md-6 col-lg">
+
+                                <div class="dimsop-value">
+                                    <h4>Rentabilidad</h4>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ==================================================
+                     4. METODOLOGÍA DE TRABAJO
+                     ================================================== -->
+
+                <section id="methodology"
+                         class="dimsop-section dimsop-methodology">
+
+                    <div class="container">
+
+                        <div class="text-center">
+
+                            <h2>
+                                Nuestra Metodología de Trabajo
+                            </h2>
+
+                            <p class="lead">
+                                Trabajamos de forma estructurada para
+                                comprender las necesidades del cliente y
+                                diseñar soluciones tecnológicas a la medida.
+                            </p>
+
+                        </div>
+
+
+                        <div class="row mt-4">
+
+                            <!-- Paso 1 -->
+                            <div class="col-md-6 col-lg">
+
+                                <div class="dimsop-methodology-step">
+
+                                    <span class="dimsop-step-number">
+                                        01
+                                    </span>
+
+                                    <h3>
+                                        Necesidades del cliente
+                                    </h3>
+
+                                    <p>
+                                        Diagnóstico y levantamiento de
+                                        requerimientos.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Paso 2 -->
+                            <div class="col-md-6 col-lg">
+
+                                <div class="dimsop-methodology-step">
+
+                                    <span class="dimsop-step-number">
+                                        02
+                                    </span>
+
+                                    <h3>
+                                        Base instalada
+                                    </h3>
+
+                                    <p>
+                                        Evaluación de la infraestructura
+                                        existente.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Paso 3 -->
+                            <div class="col-md-6 col-lg">
+
+                                <div class="dimsop-methodology-step">
+
+                                    <span class="dimsop-step-number">
+                                        03
+                                    </span>
+
+                                    <h3>
+                                        Diseño de solución
+                                    </h3>
+
+                                    <p>
+                                        Arquitectura a la medida utilizando
+                                        tecnologías legadas y emergentes.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Paso 4 -->
+                            <div class="col-md-6 col-lg">
+
+                                <div class="dimsop-methodology-step">
+
+                                    <span class="dimsop-step-number">
+                                        04
+                                    </span>
+
+                                    <h3>
+                                        Equipo y servicios
+                                    </h3>
+
+                                    <p>
+                                        Selección de equipamiento y definición
+                                        del alcance técnico.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Paso 5 -->
+                            <div class="col-md-12 col-lg">
+
+                                <div class="dimsop-methodology-step">
+
+                                    <span class="dimsop-step-number">
+                                        05
+                                    </span>
+
+                                    <h3>
+                                        Propuesta de valor
+                                    </h3>
+
+                                    <p>
+                                        Maximización de la rentabilidad y
+                                        retorno de inversión.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ==================================================
+                     5. UNIDADES DE NEGOCIO
+                     ================================================== -->
+
+                <section id="business-units"
+                         class="dimsop-section dimsop-business-units">
+
+                    <div class="container">
+
+                        <div class="text-center">
+
+                            <h2>
+                                Unidades de Negocio
+                            </h2>
+
+                            <p class="lead">
+                                Soluciones tecnológicas orientadas a las
+                                necesidades actuales y futuras de nuestros
+                                clientes.
+                            </p>
+
+                        </div>
+
+
+                        <div class="row mt-4">
+
+
+                            <!-- Cloud -->
+                            <div class="col-md-6 col-lg-4">
+
+                                <article class="dimsop-business-card">
+
+                                    <h3>
+                                        Soluciones en la Nube
+                                    </h3>
+
+                                    <p>
+                                        Arquitecturas híbridas, privadas y
+                                        públicas con máxima escalabilidad.
+                                    </p>
+
+                                </article>
+
+                            </div>
+
+
+                            <!-- Redes -->
+                            <div class="col-md-6 col-lg-4">
+
+                                <article class="dimsop-business-card">
+
+                                    <h3>
+                                        Productos y Soluciones de Redes
+                                    </h3>
+
+                                    <p>
+                                        Conectividad de alto rendimiento e
+                                        infraestructura corporativa.
+                                    </p>
+
+                                </article>
+
+                            </div>
+
+
+                            <!-- Cybersecurity -->
+                            <div class="col-md-6 col-lg-4">
+
+                                <article class="dimsop-business-card">
+
+                                    <h3>
+                                        Ciberseguridad Avanzada
+                                    </h3>
+
+                                    <p>
+                                        Protección perimetral, detección de
+                                        amenazas y blindaje de activos.
+                                    </p>
+
+                                </article>
+
+                            </div>
+
+
+                            <!-- Managed Services -->
+                            <div class="col-md-6 col-lg-4">
+
+                                <article class="dimsop-business-card">
+
+                                    <h3>
+                                        Servicios Gestionados
+                                    </h3>
+
+                                    <p>
+                                        Monitoreo 24/7 y gestión integral de
+                                        la infraestructura de TI.
+                                    </p>
+
+                                </article>
+
+                            </div>
+
+
+                            <!-- FTTX -->
+                            <div class="col-md-6 col-lg-4">
+
+                                <article class="dimsop-business-card">
+
+                                    <h3>
+                                        Soluciones FTTX / ISP
+                                    </h3>
+
+                                    <p>
+                                        Despliegue y equipamiento para redes
+                                        masivas de fibra óptica.
+                                    </p>
+
+                                </article>
+
+                            </div>
+
+
+                            <!-- Unified Communications -->
+                            <div class="col-md-6 col-lg-4">
+
+                                <article class="dimsop-business-card">
+
+                                    <h3>
+                                        Comunicaciones Unificadas
+                                    </h3>
+
+                                    <p>
+                                        Integración de voz, video y
+                                        colaboración empresarial.
+                                    </p>
+
+                                </article>
+
+                            </div>
+
+
+                            <!-- Development / AI -->
+                            <div class="col-md-12">
+
+                                <article class="dimsop-business-card">
+
+                                    <h3>
+                                        Desarrollo e Inteligencia Artificial
+                                    </h3>
+
+                                    <p>
+                                        Soluciones avanzadas de software e
+                                        inteligencia artificial aplicadas a
+                                        procesos de negocio.
+                                    </p>
+
+                                </article>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ==================================================
+                     6. MAPA DE COBERTURA
+                     ================================================== -->
+
+                <section id="coverage"
+                         class="dimsop-section dimsop-coverage">
+
+                    <div class="container">
+
+                        <div class="text-center">
+
+                            <h2>
+                                Presencia y Cobertura
+                            </h2>
+
+                            <p class="lead">
+                                Nuestra experiencia y proyectos se extienden
+                                a diferentes países y regiones.
+                            </p>
+
+                        </div>
+
+
+                        <!--
+                            Placeholder temporal.
+
+                            En una próxima iteración reemplazaremos este
+                            bloque por el mapa interactivo solicitado.
+                        -->
+                        <div class="dimsop-map-placeholder text-center">
+
+                            <p>
+                                Mapa de cobertura
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ==================================================
+                     7. ALIADOS TECNOLÓGICOS
+                     ================================================== -->
+
+                <section id="partners"
+                         class="dimsop-section dimsop-partners">
+
+                    <div class="container">
+
+                        <div class="text-center">
+
+                            <h2>
+                                Aliados Tecnológicos
+                            </h2>
+
+                            <p class="lead">
+                                Trabajamos junto a fabricantes y aliados
+                                tecnológicos líderes de la industria.
+                            </p>
+
+                        </div>
+
+
+                        <!--
+                            Los logotipos reales se incorporarán cuando
+                            tengamos los assets proporcionados por Dimsop.
+                        -->
+                        <div class="dimsop-partners-placeholder text-center">
+
+                            <p>
+                                Logos de aliados tecnológicos
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ==================================================
+                     8. CONTADORES DE IMPACTO
+                     ================================================== -->
+
+                <section id="impact"
+                         class="dimsop-section dimsop-impact">
+
+                    <div class="container">
+
+                        <div class="text-center">
+
+                            <h2>
+                                Nuestro Impacto
+                            </h2>
+
+                        </div>
+
+
+                        <div class="row text-center mt-4">
+
+                            <!-- Proyectos -->
+                            <div class="col-md-4">
+
+                                <div class="dimsop-counter">
+
+                                    <strong>
+                                        +X
+                                    </strong>
+
+                                    <span>
+                                        Proyectos Implementados
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Clientes -->
+                            <div class="col-md-4">
+
+                                <div class="dimsop-counter">
+
+                                    <strong>
+                                        +Y
+                                    </strong>
+
+                                    <span>
+                                        Clientes Satisfechos
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Países -->
+                            <div class="col-md-4">
+
+                                <div class="dimsop-counter">
+
+                                    <strong>
+                                        +9
+                                    </strong>
+
+                                    <span>
+                                        Países con Presencia
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ==================================================
+                     9. PROYECTOS REFERENCIALES
+                     ================================================== -->
+
+                <section id="projects"
+                         class="dimsop-section dimsop-projects">
+
+                    <div class="container">
+
+                        <div class="text-center">
+
+                            <h2>
+                                Proyectos Referenciales
+                            </h2>
+
+                            <p class="lead">
+                                Experiencia comprobada en infraestructura,
+                                redes, comunicaciones y transformación
+                                digital.
+                            </p>
+
+                        </div>
+
+
+                        <div class="row mt-4">
+
+
+                            <!-- UCM Chile -->
+                            <div class="col-md-6 col-lg-4">
+
+                                <article class="dimsop-project-card">
+
+                                    <h3>
+                                        UCM Chile
+                                    </h3>
+
+                                    <p>
+                                        Servicio de soporte para la plataforma
+                                        CISCO Contact Center Express -
+                                        Unidad Coronaria Móvil (UCM) Chile.
+                                    </p>
+
+                                </article>
+
+                            </div>
+
+
+                            <!-- Policlínica Metropolitana -->
+                            <div class="col-md-6 col-lg-4">
+
+                                <article class="dimsop-project-card">
+
+                                    <h3>
+                                        Policlínica Metropolitana
+                                    </h3>
+
+                                    <p>
+                                        Servicio de soporte para la plataforma
+                                        CISCO Router &amp; SW de la red de
+                                        datos. Suministro e instalación de
+                                        solución de seguridad.
+                                    </p>
+
+                                </article>
+
+                            </div>
+
+
+                            <!-- Oleoducto de Colombia -->
+                            <div class="col-md-6 col-lg-4">
+
+                                <article class="dimsop-project-card">
+
+                                    <h3>
+                                        Oleoducto de Colombia
+                                    </h3>
+
+                                    <p>
+                                        Desarrollo, suministro, instalación,
+                                        administración y soporte de software
+                                        de gestión (MMS), licencias WEBEX de
+                                        CISCO Colombia.
+                                    </p>
+
+                                </article>
+
+                            </div>
+
+
+                            <!-- ITS Infocom -->
+                            <div class="col-md-6 col-lg-4">
+
+                                <article class="dimsop-project-card">
+
+                                    <h3>
+                                        ITS Infocom
+                                    </h3>
+
+                                    <p>
+                                        Suministro, instalación y soporte a
+                                        redes de datos y transformación de la
+                                        red WiFi en Colombia.
+                                    </p>
+
+                                </article>
+
+                            </div>
+
+
+                            <!-- Avianca -->
+                            <div class="col-md-6 col-lg-4">
+
+                                <article class="dimsop-project-card">
+
+                                    <h3>
+                                        Avianca
+                                    </h3>
+
+                                    <p>
+                                        Servicios profesionales para el
+                                        suministro, instalación y soporte a
+                                        redes de datos y transformación de
+                                        la red WiFi en Perú y Chile.
+                                    </p>
+
+                                </article>
+
+                            </div>
+
+
+                            <!-- Mi Tickera -->
+                            <div class="col-md-6 col-lg-4">
+
+                                <article class="dimsop-project-card">
+
+                                    <h3>
+                                        Mi Tickera
+                                    </h3>
+
+                                    <p>
+                                        Suministro e instalación de
+                                        infraestructura de red de datos
+                                        y telefonía.
+                                    </p>
+
+                                </article>
+
+                            </div>
+
+
+                            <!-- TODO 1 -->
+                            <div class="col-md-6 col-lg-4">
+
+                                <article class="dimsop-project-card">
+
+                                    <h3>
+                                        TODO 1
+                                    </h3>
+
+                                    <p>
+                                        Soporte y puesta en servicio para la
+                                        migración de la telefonía IP CISCO
+                                        para TODO 1, filial del Banco
+                                        Mercantil en Miami.
+                                    </p>
+
+                                </article>
+
+                            </div>
+
+
+                            <!-- Uniseguros -->
+                            <div class="col-md-6 col-lg-4">
+
+                                <article class="dimsop-project-card">
+
+                                    <h3>
+                                        Uniseguros
+                                    </h3>
+
+                                    <p>
+                                        Servicio de soporte para la plataforma
+                                        CISCO Contact Center y desarrollo de
+                                        scripts.
+                                    </p>
+
+                                </article>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ==================================================
+                     10. BLOG
+                     ================================================== -->
+
+                <section id="blog"
+                         class="dimsop-section dimsop-blog">
+
+                    <div class="container">
+
+                        <div class="text-center">
+
+                            <h2>
+                                Actualidad y Tendencias Tecnológicas
+                            </h2>
+
+                            <p class="lead">
+                                Conoce las últimas novedades, tendencias y
+                                conocimientos relacionados con tecnología.
+                            </p>
+
+                        </div>
+
+
+                        <!--
+                            Placeholder.
+
+                            Posteriormente conectaremos esta sección con
+                            el blog nativo de Odoo.
+                        -->
+                        <div class="dimsop-blog-placeholder text-center">
+
+                            <p>
+                                Próximamente encontrarás aquí nuestras
+                                últimas publicaciones.
+                            </p>
+
+                        </div>
+
+
+                        <div class="text-center mt-4">
+
+                            <a href="/blog"
+                               class="btn btn-primary">
+                                Ver todas las publicaciones →
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ==================================================
+                     11. CONTACTO
+                     ================================================== -->
+
+                <section id="contact"
+                         class="dimsop-section dimsop-contact">
+
+                    <div class="container">
+
+                        <div class="text-center">
+
+                            <h2>
+                                Contáctanos
+                            </h2>
+
+                            <p class="lead">
+                                Déjanos tus datos y un especialista se
+                                pondrá en contacto contigo.
+                            </p>
+
+                        </div>
+
+
+                        <!--
+                            Formulario inicial.
+
+                            En una siguiente iteración lo conectaremos
+                            correctamente con CRM / website_crm_lead.
+                        -->
+                        <div class="row justify-content-center mt-4">
+
+                            <div class="col-lg-8">
+
+                                <form action="/website/form/"
+                                      method="post"
+                                      class="dimsop-contact-form">
+
+                                    <!-- Nombre -->
+                                    <div class="mb-3">
+
+                                        <label for="contact_name"
+                                               class="form-label">
+                                            Nombre y Apellido
+                                        </label>
+
+                                        <input type="text"
+                                               id="contact_name"
+                                               name="name"
+                                               class="form-control"
+                                               required="required"/>
+
+                                    </div>
+
+
+                                    <!-- Email -->
+                                    <div class="mb-3">
+
+                                        <label for="contact_email"
+                                               class="form-label">
+                                            Correo Electrónico
+                                        </label>
+
+                                        <input type="email"
+                                               id="contact_email"
+                                               name="email_from"
+                                               class="form-control"
+                                               required="required"/>
+
+                                    </div>
+
+
+                                    <!-- Teléfono -->
+                                    <div class="mb-3">
+
+                                        <label for="contact_phone"
+                                               class="form-label">
+                                            Número de Teléfono
+                                        </label>
+
+                                        <input type="tel"
+                                               id="contact_phone"
+                                               name="phone"
+                                               class="form-control"/>
+
+                                    </div>
+
+
+                                    <!-- Empresa -->
+                                    <div class="mb-3">
+
+                                        <label for="contact_company"
+                                               class="form-label">
+                                            Empresa
+                                        </label>
+
+                                        <input type="text"
+                                               id="contact_company"
+                                               name="partner_name"
+                                               class="form-control"/>
+
+                                    </div>
+
+
+                                    <!-- Cargo -->
+                                    <div class="mb-3">
+
+                                        <label for="contact_job"
+                                               class="form-label">
+                                            Cargo
+                                        </label>
+
+                                        <input type="text"
+                                               id="contact_job"
+                                               name="function"
+                                               class="form-control"/>
+
+                                    </div>
+
+
+                                    <!-- Servicio -->
+                                    <div class="mb-3">
+
+                                        <label for="contact_service"
+                                               class="form-label">
+                                            Servicio de Interés
+                                        </label>
+
+                                        <select id="contact_service"
+                                                name="description"
+                                                class="form-select">
+
+                                            <option value="">
+                                                Selecciona una opción
+                                            </option>
+
+                                            <option value="Soluciones en la Nube">
+                                                Soluciones en la Nube
+                                            </option>
+
+                                            <option value="Redes">
+                                                Redes
+                                            </option>
+
+                                            <option value="Ciberseguridad">
+                                                Ciberseguridad
+                                            </option>
+
+                                            <option value="Servicios Gestionados">
+                                                Servicios Gestionados
+                                            </option>
+
+                                            <option value="FTTX / ISP">
+                                                FTTX / ISP
+                                            </option>
+
+                                            <option value="Comunicaciones Unificadas">
+                                                Comunicaciones Unificadas
+                                            </option>
+
+                                            <option value="Otro">
+                                                Otro
+                                            </option>
+
+                                        </select>
+
+                                    </div>
+
+
+                                    <!-- Botón -->
+                                    <div class="text-center">
+
+                                        <button type="submit"
+                                                class="btn btn-primary">
+                                            Enviar Mensaje
+                                        </button>
+
+                                    </div>
+
+                                </form>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+            </div>
+
+        </t>
+
+    </template>
+
+</odoo>
+

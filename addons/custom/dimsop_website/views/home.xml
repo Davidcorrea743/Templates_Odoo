@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--
+        PÁGINA DE INICIO (Home) - Estructura y Contenido Web V3 - Dimsop
+        Secciones:
+          1. Header (layout.xml)                   8. Aliados Tecnológicos
+          2. Banner principal (video)               9. Contadores de Impacto
+          3. Cintillo ISO 9001                     10. Proyectos Referenciales
+          4. ¿Quiénes somos?                       11. Blog
+          5. Metodología de Trabajo                12. Formulario de Contacto (→ CRM)
+          6. Unidades de Negocio                   13. Footer (footer.xml)
+          7. Mapa de Cobertura                     14. Botón flotante WhatsApp (JS)
+
+        ASSETS / RECURSOS (colocar los archivos en):
+          - Video banner : dimsop_website/static/src/video/banner_principal.mp4
+          - Logos aliados: dimsop_website/static/src/img/logos/aliados/
+          - Proyectos    : dimsop_website/static/src/img/projects/
+          - Metodología  : dimsop_website/static/src/img/methodology/metodologia.png
+          - Iconos/social: dimsop_website/static/src/img/social/
+    -->
+    <template id="dimsop_homepage_view" name="Dimsop Homepage">
+        <t t-call="website.layout">
+                    <div id="wrap" class="oe_structure oe_empty">
+
+                        <!-- =========================================================
+                             2. BANNER PRINCIPAL
+                             Fondo de video: static/src/video/banner_principal.mp4
+                             ========================================================= -->
+                        <section id="banner" class="dimsop-banner d-flex align-items-center text-white">
+                            <video class="dimsop-banner-video" autoplay="true" muted="true" loop="true" playsinline="true"
+                                   preload="metadata">
+                                <source src="/dimsop_website/static/src/video/banner_principal_2.mp4" type="video/mp4"/>
+                            </video>
+                            <div class="dimsop-banner-overlay"/>
+                            <div class="container text-center position-relative">
+                                <h1 class="dimsop-h1 mb-4">
+                                    Soluciones TIC de Vanguardia para la continuidad de tu negocio.
+                                </h1>
+                                <p class="dimsop-lead mx-auto mb-4" style="max-width: 680px;">
+                                    Impulsamos la transformación digital con tecnología de vanguardia
+                                    y soluciones legadas para la continuidad de tu negocio.
+                                </p>
+                                <div class="d-flex justify-content-center">
+                                    <a class="dimsop-hero-cta" href="/#contacto"
+                                       title="Agendar Consultoría" aria-label="Agendar Consultoría">
+                                        <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- =========================================================
+                             3. CINTILLO DE CALIDAD (ISO 9001)
+                             ========================================================= -->
+                        <section id="iso" class="dimsop-iso py-2 text-center text-white">
+                            En proceso de certificación ISO 9001 | Compromiso con la calidad y la mejora continua
+                        </section>
+
+                        <!-- =========================================================
+                             4. ¿QUIÉNES SOMOS? (MISIÓN, VISIÓN Y VALORES)
+                             ========================================================= -->
+                        <section id="nosotros" class="dimsop-section py-5">
+                            <div class="container">
+                                <!-- 4.1 Visión General -->
+                                <h2 class="dimsop-h2 text-center mb-5">¿Quiénes Somos?</h2>
+                                <p class="dimsop-lead text-center mx-auto mb-5" style="max-width: 900px;">
+                                    En Dimsop impulsamos la rentabilidad y la continuidad operativa de nuestros
+                                    clientes, respaldados por personal altamente calificado e innovadores de la región.
+                                </p>
+
+                                <!-- 4.2 Misión y Visión -->
+                                <div class="row g-4 mb-5">
+                                    <div class="col-lg-6">
+                                        <div class="dimsop-card h-100">
+                                            <h3 class="dimsop-h3">Misión</h3>
+                                            <p>
+                                                Apoyar a nuestros clientes y aliados de negocios en las soluciones de
+                                                innovación tecnológicas legadas y emergentes, para maximizar la
+                                                rentabilidad de sus negocios en una relación de ganancia mutua,
+                                                contando con personal altamente calificado e innovadores de la región.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="dimsop-card h-100">
+                                            <h3 class="dimsop-h3">Visión</h3>
+                                            <p>
+                                                Ser líder en el desarrollo de soluciones TIC´s basadas en las tecnologías
+                                                de innovación emergentes como internet of things (IoT), la visión
+                                                computarizada (digitalización), la realidad virtual, la inteligencia
+                                                artificial y las criptotecnologías, entre otras.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 4.3 Valores Corporativos -->
+                                <h3 class="dimsop-h3 text-center mb-2">Valores Corporativos</h3>
+                                <p class="text-center mb-4">Los principios que guían cada proyecto que entregamos.</p>
+                                <div class="row g-3 justify-content-center">
+                                    <div class="col-6 col-md-4 col-lg">
+                                        <div class="dimsop-value"><i class="fa fa-eye dimsop-value-icon"></i><span>Transparencia</span></div>
+                                    </div>
+                                    <div class="col-6 col-md-4 col-lg">
+                                        <div class="dimsop-value"><i class="fa fa-users dimsop-value-icon"></i><span>Trabajos en equipos virtuales</span></div>
+                                    </div>
+                                    <div class="col-6 col-md-4 col-lg">
+                                        <div class="dimsop-value"><i class="fa fa-rocket dimsop-value-icon"></i><span>Uso de tecnologías disruptivas</span></div>
+                                    </div>
+                                    <div class="col-6 col-md-4 col-lg">
+                                        <div class="dimsop-value"><i class="fa fa-leaf dimsop-value-icon"></i><span>Innovación sostenible (verde)</span></div>
+                                    </div>
+                                    <div class="col-6 col-md-4 col-lg">
+                                        <div class="dimsop-value"><i class="fa fa-line-chart dimsop-value-icon"></i><span>Rentabilidad</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- =========================================================
+                             5. METODOLOGÍA DE TRABAJO
+                             Infografía: static/src/img/methodology/metodologia.png
+                             ========================================================= -->
+                        <section id="metodologia" class="dimsop-section py-5 dimsop-section-dark">
+                            <div class="container">
+                                <h2 class="dimsop-h2 text-center mb-2">Metodología de Trabajo</h2>
+                                <p class="text-center text-white mb-5 mx-auto" style="max-width: 780px;">
+                                    Nuestro proceso garantiza soluciones efectivas, desde la identificación
+                                    de necesidades hasta la entrega de valor tangible para tu negocio.
+                                </p>
+                                <img src="/dimsop_website/static/src/img/methodology/metodologia.png"
+                                     alt="Metodología de trabajo Dimsop" class="img-fluid dimsop-img-methodology mx-auto d-block"/>
+                                <div class="row g-4 mt-2">
+                                    <div class="col-md-6 col-lg">
+                                        <div class="dimsop-step"><span class="dimsop-step-num">1</span>
+                                            <h4>Necesidades del cliente</h4>
+                                            <p>Diagnóstico y levantamiento de requerimientos.</p></div>
+                                    </div>
+                                    <div class="col-md-6 col-lg">
+                                        <div class="dimsop-step"><span class="dimsop-step-num">2</span>
+                                            <h4>Base instalada</h4>
+                                            <p>Evaluación de la infraestructura existente.</p></div>
+                                    </div>
+                                    <div class="col-md-6 col-lg">
+                                        <div class="dimsop-step"><span class="dimsop-step-num">3</span>
+                                            <h4>Diseño de solución</h4>
+                                            <p>Arquitectura a la medida (legadas y emergentes).</p></div>
+                                    </div>
+                                    <div class="col-md-6 col-lg">
+                                        <div class="dimsop-step"><span class="dimsop-step-num">4</span>
+                                            <h4>Propuesta de equipo y servicios</h4>
+                                            <p>Selección de equipamiento y alcance técnico.</p></div>
+                                    </div>
+                                    <div class="col-md-6 col-lg">
+                                        <div class="dimsop-step"><span class="dimsop-step-num">5</span>
+                                            <h4>Propuesta de valor</h4>
+                                            <p>Maximización de rentabilidad y retorno de inversión.</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- =========================================================
+                             6. UNIDADES DE NEGOCIO
+                             ========================================================= -->
+                        <section id="unidades" class="dimsop-section py-5">
+                            <div class="container">
+                                <h2 class="dimsop-h2 text-center mb-5">Unidades de Negocio</h2>
+                                <div class="row g-4">
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="dimsop-card h-100">
+                                            <i class="fa fa-cloud dimsop-card-icon"></i>
+                                            <h3 class="dimsop-h3">Soluciones en la Nube</h3>
+                                            <p>Arquitecturas híbridas, privadas y públicas con máxima escalabilidad.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="dimsop-card h-100">
+                                            <i class="fa fa-sitemap dimsop-card-icon"></i>
+                                            <h3 class="dimsop-h3">Productos y Soluciones de Redes</h3>
+                                            <p>Conectividad de alto rendimiento e infraestructura corporativa.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="dimsop-card h-100">
+                                            <i class="fa fa-shield dimsop-card-icon"></i>
+                                            <h3 class="dimsop-h3">Ciberseguridad Avanzada</h3>
+                                            <p>Protección perimetral, detección de amenazas y blindaje de activos.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="dimsop-card h-100">
+                                            <i class="fa fa-cogs dimsop-card-icon"></i>
+                                            <h3 class="dimsop-h3">Servicios Gestionados</h3>
+                                            <p>Monitoreo 24/7 y gestión integral de la infraestructura de TI.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="dimsop-card h-100">
+                                            <i class="fa fa-exchange dimsop-card-icon"></i>
+                                            <h3 class="dimsop-h3">Soluciones FTTX / ISP</h3>
+                                            <p>Despliegue y equipamiento para redes masivas de fibra óptica.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="dimsop-card h-100">
+                                            <i class="fa fa-phone dimsop-card-icon"></i>
+                                            <h3 class="dimsop-h3">Comunicaciones Unificadas</h3>
+                                            <p>Integración de voz, video y colaboración empresarial.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="dimsop-card h-100">
+                                            <i class="fa fa-microchip dimsop-card-icon"></i>
+                                            <h3 class="dimsop-h3">Unidad de Desarrollo e Inteligencia Artificial</h3>
+                                            <p>Desarrollo de software, automatización y soluciones con IA.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- =========================================================
+                             7. MAPA DE COBERTURA
+                             Módulo interactivo: resaltar países con presencia.
+                             Sustituir por mapa SVG/js personalizado si se desea.
+                             ========================================================= -->
+                        <section id="cobertura" class="dimsop-section py-5 dimsop-section-dark">
+                            <div class="container">
+                                <h2 class="dimsop-h2 text-center mb-2">Mapa de Cobertura</h2>
+                                <p class="text-center text-white mb-5 mx-auto" style="max-width: 780px;">
+                                    Presencia regional con capacidad de despliegue internacional.
+                                    Hemos ejecutado proyectos en múltiples países de Latinoamérica y el Caribe.
+                                </p>
+                                <div id="dimsop-map" class="dimsop-map">
+                                    <img src="/dimsop_website/static/src/img/banners/mapa-cobertura.png"
+                                         alt="Mapa de cobertura global Dimsop" class="img-fluid"/>
+                                </div>
+                                <p class="text-center mt-3 text-white">
+                                    Países y regiones donde Dimsop ha tenido presencia y despliegue de proyectos.
+                                </p>
+                            </div>
+                        </section>
+
+                        <!-- =========================================================
+                             8. ALIADOS TECNOLÓGICOS (MARCAS)
+                             Carrusel/grid con zoom al hover.
+                             Logos: static/src/img/logos/aliados/
+                             ========================================================= -->
+                        <section id="aliados" class="dimsop-section py-5">
+                             <div class="container">
+                                 <h2 class="dimsop-h2 text-center mb-5">Aliados Tecnológicos</h2>
+                             </div>
+                             <!-- Cintillo tipo carrusel: loop infinito (pausa al hover/focus,
+                                  respeta prefers-reduced-motion; ver styles.scss) -->
+                             <div class="dimsop-marquee" role="region" aria-label="Logos de aliados tecnológicos de Dimsop">
+                                 <div class="dimsop-marquee-track">
+                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/4lotrack.png" alt="Aliado 4LOTRACK" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/ahua.png" alt="Aliado AHUA" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/aws.png" alt="Aliado AWS" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/cisco.png" alt="Aliado CISCO" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/datawifi.png" alt="Aliado DATAWIFI" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/fortinet.png" alt="Aliado FORTINET" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/grafana.png" alt="Aliado GRAFANA" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/grandstream.png" alt="Aliado GRANDSTREAM" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/hewlett-packard-enterprise.png" alt="Aliado HEWLETT PACKARD ENTERPRISE" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/hpe-aruba.png" alt="Aliado HPE ARUBA" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/hpe-juniper.png" alt="Aliado HPE JUNIPER" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/hpe-networking.png" alt="Aliado HPE NETWORKING" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/hpe.png" alt="Aliado HPE" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/huawei.png" alt="Aliado HUAWEI" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/microsoft.png" alt="Aliado MICROSOFT" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/poly.png" alt="Aliado POLY" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/qnap.png" alt="Aliado QNAP" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/red-hat.png" alt="Aliado Red Hat" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/rosslare.png" alt="Aliado ROSSLARE" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/ruckus.png" alt="Aliado RUCKUS" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/siemon.png" alt="Aliado SIEMON" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/socialwifi.png" alt="Aliado SOCIALWIFI" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/tibbo.png" alt="Aliado TIBBO" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/tp-link.png" alt="Aliado TP-Link" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/v-count.png" alt="Aliado V COUNT" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/yeastar.png" alt="Aliado YEASTAR" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/zabbix.png" alt="Aliado ZABBIX" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/4lotrack.png" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/ahua.png" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/aws.png" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/cisco.png" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/datawifi.png" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/fortinet.png" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/grafana.png" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/grandstream.png" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/hewlett-packard-enterprise.png" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/hpe-aruba.png" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/hpe-juniper.png" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/hpe-networking.png" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/hpe.png" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/huawei.png" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/microsoft.png" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/poly.png" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/qnap.png" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/red-hat.png" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/rosslare.png" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/ruckus.png" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/siemon.png" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/socialwifi.png" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/tibbo.png" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/tp-link.png" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/v-count.png" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/yeastar.png" loading="lazy"/></div>
+                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/zabbix.png" loading="lazy"/></div>
+                                 </div>
+                             </div>
+                         </section>
+
+                        <!-- =========================================================
+                             9. CONTADORES DE IMPACTO (MÉTRICAS)
+                             Contadores animados al hacer scroll (js/dimsop_theme.js).
+                             Valores configurados aquí (data-target).
+                             ========================================================= -->
+                        <section id="contadores" class="dimsop-section py-5 dimsop-section-dark">
+                            <div class="container">
+                                <h2 class="dimsop-h2 text-center mb-5">Nuestro Impacto</h2>
+                                <div class="row text-center g-4">
+                                    <div class="col-md-4">
+                                        <div class="dimsop-counter">
+                                            <span class="dimsop-counter-num" data-target="150">+0</span>
+                                            <p>Proyectos Implementados</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="dimsop-counter">
+                                            <span class="dimsop-counter-num" data-target="120">+0</span>
+                                            <p>Clientes Satisfechos</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="dimsop-counter">
+                                            <span class="dimsop-counter-num" data-target="9">+0</span>
+                                            <p>Países con Presencia</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- =========================================================
+                             10. PROYECTOS REFERENCIALES
+                             Card/Galería de casos de éxito.
+                             Imágenes: static/src/img/projects/
+                             ========================================================= -->
+                        <section id="proyectos" class="dimsop-section py-5">
+                            <div class="container">
+                                <h2 class="dimsop-h2 text-center mb-5">Proyectos Referenciales</h2>
+                                <div class="row g-4">
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="dimsop-project card h-100">
+                                            <img src="/dimsop_website/static/src/img/projects/ucm-chile.png" class="card-img-top" alt="UCM Chile"/>
+                                            <div class="card-body">
+                                                <p>Servicio de soporte para la plataforma CISCO Contact Center Express - Unidad Coronaria Móvil (UCM) Chile.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="dimsop-project card h-100">
+                                            <img src="/dimsop_website/static/src/img/projects/policlinica-metropolitana.png" class="card-img-top" alt="Policlínica Metropolitana"/>
+                                            <div class="card-body">
+                                                <p>Servicio de soporte para la plataforma CISCO Router &amp; SW de la red de datos. Suministro e instalación de Solución de Seguridad.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="dimsop-project card h-100">
+                                            <img src="/dimsop_website/static/src/img/projects/oleoducto-colombia.png" class="card-img-top" alt="Oleoducto de Colombia"/>
+                                            <div class="card-body">
+                                                <p>Desarrollo, suministro, instalación, administración y soporte de Software de Gestión (MMS), Licencias WEBEX de CISCO Colombia.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="dimsop-project card h-100">
+                                            <img src="/dimsop_website/static/src/img/projects/its-infocom.png" class="card-img-top" alt="ITS InfoCom"/>
+                                            <div class="card-body">
+                                                <p>Suministro, instalación y soporte a redes de datos y transformación de la red de WiFi - Colombia.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="dimsop-project card h-100">
+                                            <img src="/dimsop_website/static/src/img/projects/avianca.png" class="card-img-top" alt="Avianca"/>
+                                            <div class="card-body">
+                                                <p>Servicios profesionales para el suministro, instalación y soporte a redes de datos y la transformación de la red de WiFi en Perú y Chile.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="dimsop-project card h-100">
+                                            <img src="/dimsop_website/static/src/img/projects/mi-tickera.png" class="card-img-top" alt="Mi Tickera"/>
+                                            <div class="card-body">
+                                                <p>Suministro e instalación de infraestructura de la red de datos y telefonía.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="dimsop-project card h-100">
+                                            <img src="/dimsop_website/static/src/img/projects/todo1.png" class="card-img-top" alt="TODO 1"/>
+                                            <div class="card-body">
+                                                <p>Soporte y puesta en servicio para la migración de la telefonía IP CISCO para TODO 1 (filial del Banco Mercantil en Miami).</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="dimsop-project card h-100">
+                                            <img src="/dimsop_website/static/src/img/projects/uniseguros.png" class="card-img-top" alt="Uniseguros"/>
+                                            <div class="card-body">
+                                                <p>Servicio de soporte para la plataforma CISCO Contact Center y desarrollo de Scripts.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- =========================================================
+                             11. SECCIÓN DE BLOG
+                             ========================================================= -->
+                        <section id="blog" class="dimsop-section py-5 dimsop-section-dark">
+                            <div class="container">
+                                <h2 class="dimsop-h2 text-center mb-5">Actualidad y Tendencias Tecnológicas</h2>
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-8">
+                                        <div class="dimsop-blog card mb-4">
+                                            <div class="row g-0">
+                                                <div class="col-md-5">
+                                                    <div class="dimsop-blog-cover" role="img" aria-label="Imagen destacada de la publicación"></div>
+                                                </div>
+                                                <div class="col-md-7">
+                                                    <div class="card-body">
+                                                        <span class="badge dimsop-badge mb-2">Última publicación</span>
+                                                        <h3 class="dimsop-h3">Título del último artículo</h3>
+                                                        <p>Resumen de la última nota publicada por Dimsop...</p>
+                                                        <p class="text-muted small">Fecha de publicación</p>
+                                                        <a class="btn btn-dimsop-primary" href="/blog">Leer más</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            <a class="btn btn-dimsop-secondary" href="/blog">Ver todas las publicaciones →</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- =========================================================
+                             12. FORMULARIO DE CONTACTO
+                             Envía a /dimsop/contacto (controllers/main.py) → crea crm.lead
+                             ========================================================= -->
+                        <section id="contacto" class="dimsop-section py-5">
+                            <div class="container" style="max-width: 720px;">
+                                <h2 class="dimsop-h2 text-center mb-2">Contáctanos</h2>
+                                <p class="text-center mb-5">Déjanos tus datos y un especialista se pondrá en contacto contigo.</p>
+                                <!-- Feedback tras el envío (controllers/main.py redirige con query params) -->
+                                <t t-if="request.params.get('mensaje') == 'enviado'">
+                                    <div class="alert alert-success dimsop-alert" role="alert">
+                                        <i class="fa fa-check-circle me-2" aria-hidden="true"></i>
+                                        ¡Mensaje enviado con éxito! Un especialista se pondrá en contacto contigo pronto.
+                                    </div>
+                                </t>
+                                <t t-if="request.params.get('error') == 'datos_incompletos'">
+                                    <div class="alert alert-danger dimsop-alert" role="alert">
+                                        <i class="fa fa-exclamation-circle me-2" aria-hidden="true"></i>
+                                        Por favor completa los campos obligatorios (Nombre y Correo Electrónico).
+                                    </div>
+                                </t>
+                                <form action="/dimsop/contacto" method="post" class="dimsop-form" novalidate="novalidate">
+                                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="dimsop-f-nombre">Nombre y Apellido *</label>
+                                        <input type="text" class="form-control" id="dimsop-f-nombre" name="nombre" required="required"/>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label class="form-label" for="dimsop-f-correo">Correo Electrónico *</label>
+                                            <input type="email" class="form-control" id="dimsop-f-correo" name="correo" required="required"/>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label class="form-label" for="dimsop-f-telefono">Número de Teléfono</label>
+                                            <input type="tel" class="form-control" id="dimsop-f-telefono" name="telefono"/>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label class="form-label" for="dimsop-f-empresa">Empresa</label>
+                                            <input type="text" class="form-control" id="dimsop-f-empresa" name="empresa"/>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label class="form-label" for="dimsop-f-cargo">Cargo</label>
+                                            <input type="text" class="form-control" id="dimsop-f-cargo" name="cargo"/>
+                                        </div>
+                                    </div>
+                                    <div class="mb-4">
+                                        <label class="form-label" for="dimsop-f-servicio">Servicio de Interés</label>
+                                        <select name="servicio_interes" id="dimsop-f-servicio" class="form-select">
+                                            <option value="cloud">Soluciones en la Nube</option>
+                                            <option value="network">Redes</option>
+                                            <option value="security">Ciberseguridad</option>
+                                            <option value="managed">Servicios Gestionados</option>
+                                            <option value="fttx_isp">FTTX/ISP</option>
+                                            <option value="unified">Comunicaciones Unificadas</option>
+                                            <option value="other">Otro</option>
+                                        </select>
+                                    </div>
+                                    <div class="text-center">
+                                        <button type="submit" class="btn btn-dimsop-primary btn-lg">Enviar Mensaje</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </section>
+
+                    </div>
+                </t>
+            </template>
+
+        <record id="homepage_dimsop" model="website.page">
+            <field name="name">Inicio | Dimsop - Soluciones TIC de Vanguardia</field>
+            <field name="url">/</field>
+            <field name="is_published">True</field>
+            <field name="view_id" ref="dimsop_homepage_view"/>
+            <field name="key">dimsop_website.homepage</field>
+            <field name="website_indexed" eval="True"/>
+            <field name="website_meta_title">Dimsop | Soluciones TIC de Vanguardia para la continuidad de tu negocio</field>
+            <field name="website_meta_description">Soluciones en la Nube, Redes, Ciberseguridad, Servicios Gestionados, FTTX/ISP, Comunicaciones Unificadas e Inteligencia Artificial. Impulsamos la rentabilidad y continuidad operativa de tu negocio con tecnología de vanguardia.</field>
+            <field name="website_meta_keywords">soluciones TIC, nube, redes, ciberseguridad, servicios gestionados, FTTX, comunicaciones unificadas, inteligencia artificial, Dimsop</field>
+        </record>
+    </odoo>

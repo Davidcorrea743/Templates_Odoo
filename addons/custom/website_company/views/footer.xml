@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--
+        PIE DE PÁGINA / FOOTER (Sección 13 del documento)
+          - Dirección física
+          - Enlaces del sitio: Inicio | Nosotros | Unidades de Negocio | Blog | Contacto | Políticas de Privacidad
+          - Redes sociales: LinkedIn e Instagram
+
+        Dirección y redes se configuran en: data/website_data.xml (res.partner / ir.config_parameter)
+    -->
+    <template id="dimsop_footer" inherit_id="website.layout" name="Dimsop Footer">
+        <xpath expr="//footer[1]" position="replace">
+            <footer id="dimsop_footer" class="dimsop-footer text-white">
+                <div class="container py-5">
+                    <div class="row g-4">
+                        <!-- Marca -->
+                        <div class="col-lg-4">
+                            <a class="dimsop-logo d-inline-block mb-3" href="/">
+                                <img src="/dimsop_website/static/src/img/logos/dimsop-logo-white.png"
+                                     alt="Dimsop" class="img-fluid"/>
+                            </a>
+                            <p class="mb-1">
+                                <i class="fa fa-map-marker me-2" aria-hidden="true"></i>
+                                <span t-field="res_company.street"/>
+                            </p>
+                            <p class="mb-1">
+                                <i class="fa fa-phone me-2" aria-hidden="true"></i>
+                                <span t-field="res_company.phone"/>
+                            </p>
+                            <p class="mb-1">
+                                <i class="fa fa-envelope me-2" aria-hidden="true"></i>
+                                <span t-field="res_company.email"/>
+                            </p>
+                        </div>
+
+                        <!-- Enlaces del sitio -->
+                        <div class="col-lg-4">
+                            <h5 class="dimsop-footer-title">Navegación</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="/">Inicio</a></li>
+                                <li><a href="/#nosotros">Nosotros</a></li>
+                                <li><a href="/#unidades">Unidades de Negocio</a></li>
+                                <li><a href="/blog">Blog</a></li>
+                                <li><a href="/#contacto">Contacto</a></li>
+                                <li><a href="/privacy">Políticas de Privacidad</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Redes sociales -->
+                        <div class="col-lg-4">
+                            <h5 class="dimsop-footer-title">Síguenos</h5>
+                            <div class="dimsop-social d-flex gap-2">
+                                <a t-attf-href="{{ request.env['ir.config_parameter'].get_param('dimsop.linkedin_url') }}"
+                                   target="_blank" class="dimsop-social-btn" title="LinkedIn" aria-label="LinkedIn">
+                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                </a>
+                                <a t-attf-href="{{ request.env['ir.config_parameter'].get_param('dimsop.instagram_url') }}"
+                                   target="_blank" class="dimsop-social-btn" title="Instagram" aria-label="Instagram">
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dimsop-footer-bottom text-center py-3">
+                    © <span t-esc="str(datetime.datetime.now().year)"/> Dimsop. Todos los derechos reservados.
+                </div>
+            </footer>
+        </xpath>
+    </template>
+</odoo>

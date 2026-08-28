@@ -1,0 +1,48 @@
+// =====================================================================
+// DIMSOP - DARK MODE
+// Toggle manual (botón luna/sol en el header), persistido en localStorage
+// por static/src/js/darkmode.js mediante el atributo data-theme en <html>.
+// =====================================================================
+
+// Transición suave al alternar el tema
+html, body {
+    transition: background-color .3s ease, color .3s ease;
+}
+
+// Botón del toggle en el header
+#dimsop-dark-toggle {
+    color: var(--dimsop-text);
+    border-color: var(--dimsop-text);
+    transition: color .3s ease, border-color .3s ease;
+}
+
+#dimsop-dark-toggle:hover {
+    color: var(--dimsop-accent);
+    border-color: var(--dimsop-accent);
+}
+
+// Ajustes específicos del dark mode
+[data-theme="dark"] {
+    // Tarjetas y superficies
+    .dimsop-card,
+    .dimsop-project,
+    .dimsop-blog,
+    .dimsop-value,
+    .dimsop-step {
+        background-color: var(--dimsop-surface);
+        border-color: var(--dimsop-surface-border);
+    }
+
+    // Formulario
+    .dimsop-form .form-control,
+    .dimsop-form .form-select {
+        background-color: var(--dimsop-bg-alt);
+        color: var(--dimsop-text);
+        border-color: var(--dimsop-surface-border);
+    }
+
+    // Textos secundarios de Bootstrap
+    .text-muted {
+        color: #9db0c9 !important;
+    }
+}

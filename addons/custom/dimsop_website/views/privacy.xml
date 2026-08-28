@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--
+        PÁGINA DE POLÍTICAS DE PRIVACIDAD (/privacy)
+        Enlace requerido por el footer (Sección 13 del documento).
+        Texto base genérico: revisar/ajustar con el texto legal oficial
+        de Dimsop antes de producción.
+    -->
+    <template id="dimsop_privacy_view" name="Dimsop Privacy">
+        <t t-call="website.layout">
+            <div id="wrap" class="oe_structure oe_empty">
+                <section class="dimsop-section py-5">
+                    <div class="container" style="max-width: 860px;">
+                        <h1 class="dimsop-h2 mb-4">Políticas de Privacidad</h1>
+                        <p class="text-muted">Última actualización: agosto 2026</p>
+
+                        <p>
+                            Dimsop (Soluciones TIC de Vanguardia) respeta tu privacidad y se compromete a
+                            proteger los datos personales que compartes a través de nuestro sitio web.
+                            Esta política describe qué datos recopilamos, cómo los utilizamos y los
+                            derechos que te asisten.
+                        </p>
+
+                        <h2 class="dimsop-h3 mt-4">1. Datos que recopilamos</h2>
+                        <p>
+                            A través del formulario de contacto recopilamos únicamente los datos que
+                            nos proporcionas voluntariamente: nombre y apellido, correo electrónico,
+                            número de teléfono, empresa, cargo y servicio de interés.
+                        </p>
+
+                        <h2 class="dimsop-h3 mt-4">2. Uso de la información</h2>
+                        <p>
+                            Utilizamos tus datos exclusivamente para atender tu solicitud, contactarte
+                            como especialista y gestionar tu consulta dentro de nuestro CRM. No vendemos
+                            ni cedemos tu información personal a terceros con fines comerciales.
+                        </p>
+
+                        <h2 class="dimsop-h3 mt-4">3. Conservación y protección</h2>
+                        <p>
+                            Los datos se almacenan en sistemas protegidos y se conservan solo durante el
+                            tiempo necesario para cumplir las finalidades descritas o las obligaciones
+                            legales aplicables.
+                        </p>
+
+                        <h2 class="dimsop-h3 mt-4">4. Tus derechos</h2>
+                        <p>
+                            Puedes solicitar en cualquier momento el acceso, la rectificación o la
+                            eliminación de tus datos personales escribiendo a nuestro canal de contacto.
+                        </p>
+
+                        <h2 class="dimsop-h3 mt-4">5. Contacto</h2>
+                        <p>
+                            Para cualquier consulta sobre esta política, escríbenos al correo de contacto
+                            publicado en el pie de página de este sitio.
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </t>
+    </template>
+
+    <record id="privacy_page" model="website.page">
+        <field name="name">Políticas de Privacidad | Dimsop</field>
+        <field name="url">/privacy</field>
+        <field name="is_published">True</field>
+        <field name="view_id" ref="dimsop_privacy_view"/>
+        <field name="key">dimsop_website.privacy</field>
+        <field name="website_indexed" eval="True"/>
+        <field name="website_meta_title">Políticas de Privacidad | Dimsop</field>
+        <field name="website_meta_description">Conoce cómo Dimsop recopila, utiliza y protege tus datos personales. Política de privacidad de nuestro sitio web y formulario de contacto.</field>
+    </record>
+</odoo>

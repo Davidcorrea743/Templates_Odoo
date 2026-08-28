@@ -1,0 +1,60 @@
+// =====================================================================
+// DIMSOP - GUÍA DE ESTILO VISUAL E IDENTIDAD DE MARCA (Sección 0)
+// Paleta de colores corporativos y tipografía.
+// =====================================================================
+
+// Tipografía corporativa (Google Fonts)
+// NOTA: Las fuentes se cargan vía <link> en views/layout.xml (no con @import
+// en el CSS, para evitar que Chrome descarte toda la hoja si la red falla).
+
+// Tokens de diseño (variables globales)
+:root {
+    // --- Paleta de colores (Sección 0.1) ---
+    --dimsop-primary:        #003362;  // Color primario (celeste oscuro): header, footer, H1, fondos oscuros
+    --dimsop-primary-dark:   #0a192f;  // Variante muy oscura (cintillo ISO)
+    --dimsop-secondary:      #004587;  // Fondo secundario celeste oscuro: secciones alternas
+    --dimsop-accent:         #4da32f;  // Color de acento (verde): botones CTA, enlaces, iconos, hover
+    --dimsop-text:           #1d2a44;  // Texto principal sobre fondo blanco
+    --dimsop-white:          #ffffff;  // Blanco puro: fondos y texto sobre fondos oscuros
+
+    // --- Tipografía (Sección 0.2) ---
+    --dimsop-font-heading:   'Bebas Neue', 'Anton', sans-serif;  // H1, H2, H3
+    --dimsop-font-body:      'Arimo', sans-serif;                // Body / P
+
+    // --- Medidas base ---
+    --dimsop-font-base:      16px;     // Tamaño base del cuerpo
+    --dimsop-line-height:    1.5;      // Line-height del cuerpo
+
+    // --- Superficies ---
+    --dimsop-bg:             var(--dimsop-white);
+    --dimsop-bg-alt:         #f4f7fb;
+    --dimsop-surface:        var(--dimsop-white);
+    --dimsop-surface-border: #dce3ec;
+}
+
+[data-theme="dark"] {
+    --dimsop-bg:             #0b1626;
+    --dimsop-bg-alt:         #10203a;
+    --dimsop-surface:        #13233f;
+    --dimsop-surface-border: #22354f;
+    --dimsop-text:           #e6edf5;
+    --dimsop-primary:        #0b1626;
+    --dimsop-secondary:      #13233f;
+
+    // Bootstrap body color para que .card herede correctamente
+    --bs-body-color:         #e6edf5;
+    --bs-body-bg:            #0b1626;
+}
+
+// Aplicación de tokens
+html {
+    background-color: var(--dimsop-bg);
+}
+
+body {
+    font-family: var(--dimsop-font-body);
+    font-size: var(--dimsop-font-base);
+    line-height: var(--dimsop-line-height);
+    color: var(--dimsop-text);
+    background-color: var(--dimsop-bg);
+}

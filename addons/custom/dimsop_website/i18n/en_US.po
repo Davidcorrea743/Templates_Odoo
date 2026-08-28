@@ -1,0 +1,33 @@
+# Translation of dimsop_website to English (en)
+# Copyright 2026 Dimsop
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: dimsop_website 18.0.1.0.0\n"
+"Report-Msgid-Bugs-To: support@dimsop.com\n"
+"POT-Creation-Date: 2026-01-01 00:00+0000\n"
+"PO-Revision-Date: 2026-01-01 00:00+0000\n"
+"Last-Translator: Dimsop <contacto@dimsop.com>\n"
+"Language-Team: Dimsop\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: dimsop_website
+#: views/header.xml
+msgid "Buscar..."
+msgstr "Search..."
+
+#: views/header.xml
+msgid "Cambiar modo claro/oscuro"
+msgstr "Switch light/dark mode"
+
+#: views/home.xml
+msgid "Agendar Consultoría"
+msgstr "Book a Consultation"
+
+#: views/home.xml
+msgid "Conocer Soluciones"
+msgstr "Explore Solutions"

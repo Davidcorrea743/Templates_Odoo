@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--
+        Layout base del theme Dimsop.
+        Se hereda website.layout (plantilla estable) para:
+          - Añadir atributo de tema (data-theme) para el dark mode.
+          - Cargar la tipografía corporativa (Bebas Neue / Anton + Arimo).
+    -->
+    <template id="dimsop_layout" inherit_id="website.layout" name="Dimsop Layout">
+        <xpath expr="//html" position="attributes">
+            <attribute name="data-theme">light</attribute>
+        </xpath>
+        <!-- Config runtime para JS: número de WhatsApp desde ir.config_parameter
+             (lo consume static/src/js/whatsapp_float.js) -->
+        <xpath expr="//body" position="inside">
+            <div id="dimsop-config" class="d-none"
+                 t-att-data-whatsapp="request.env['ir.config_parameter'].sudo().get_param('dimsop.whatsapp_number', '123456789')"/>
+        </xpath>
+        <xpath expr="//head/meta[last()]" position="after">
+            <!-- Dark mode: aplicar tema ANTES del primer paint para evitar FOUC -->
+            <script>
+                (function() {
+                    try {
+                        var t = localStorage.getItem('dimsop-theme');
+                        if (t === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+                    } catch(e) {}
+                })();
+            </script>
+            <link rel="preconnect" href="https://fonts.googleapis.com"/>
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+            <link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Bebas+Neue&amp;family=Arimo:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+        </xpath>
+    </template>
+</odoo>
