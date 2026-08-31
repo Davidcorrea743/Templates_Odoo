@@ -40,7 +40,12 @@
                                     Impulsamos la transformación digital con tecnología de vanguardia
                                     y soluciones legadas para la continuidad de tu negocio.
                                 </p>
-
+                                <div class="d-flex justify-content-center">
+                                    <a class="dimsop-hero-cta" href="/#contacto"
+                                       title="Agendar Consultoría" aria-label="Agendar Consultoría">
+                                        <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+                                    </a>
+                                </div>
                             </div>
                         </section>
 
@@ -48,7 +53,7 @@
                              3. CINTILLO DE CALIDAD (ISO 9001)
                              ========================================================= -->
                         <section id="iso" class="dimsop-iso py-2 text-center text-white">
-                            Rumbo a la certificación ISO 9001 | Compromiso con la calidad y la mejora continua
+                            En proceso de certificación ISO 9001 | Compromiso con la calidad y la mejora continua
                         </section>
 
                         <!-- =========================================================

@@ -43,10 +43,10 @@
         <field name="parent_id" ref="website.main_menu"/>
     </record>
 
-    <record id="menu_aliados" model="website.menu">
-        <field name="name">Nuestros Aliados</field>
+    <record id="menu_privacidad" model="website.menu">
+        <field name="name">Políticas de Privacidad</field>
         <field name="website_id">1</field>
-        <field name="url">/#aliados</field>
+        <field name="url">/privacy</field>
         <field name="sequence">16</field>
         <field name="parent_id" ref="website.main_menu"/>
     </record>
@@ -64,18 +64,16 @@
     </record>
 
     <!-- Parámetros configurables del theme -->
-    <data noupdate="1">
-        <record id="dimsop_config" model="ir.config_parameter">
-            <field name="key">dimsop.whatsapp_number</field>
-            <field name="value">123456789</field>
-        </record>
-        <record id="dimsop_config_linkedin" model="ir.config_parameter">
-            <field name="key">dimsop.linkedin_url</field>
-            <field name="value">https://www.linkedin.com/company/dimsop</field>
-        </record>
-        <record id="dimsop_config_instagram" model="ir.config_parameter">
-            <field name="key">dimsop.instagram_url</field>
-            <field name="value">https://www.instagram.com/dimsop</field>
-        </record>
-    </data>
+    <record id="dimsop_config" model="ir.config_parameter">
+        <field name="key">dimsop.whatsapp_number</field>
+        <field name="value">123456789</field>
+    </record>
+    <record id="dimsop_config_linkedin" model="ir.config_parameter">
+        <field name="key">dimsop.linkedin_url</field>
+        <field name="value">https://www.linkedin.com/company/dimsop</field>
+    </record>
+    <record id="dimsop_config_instagram" model="ir.config_parameter">
+        <field name="key">dimsop.instagram_url</field>
+        <field name="value">https://www.instagram.com/dimsop</field>
+    </record>
 </odoo>

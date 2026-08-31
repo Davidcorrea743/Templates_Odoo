@@ -9,6 +9,18 @@ html, body {
     transition: background-color .3s ease, color .3s ease;
 }
 
+// Botón del toggle en el header
+#dimsop-dark-toggle {
+    color: var(--dimsop-white);
+    border-color: rgba(255, 255, 255, .4);
+    transition: color .3s ease, border-color .3s ease;
+}
+
+#dimsop-dark-toggle:hover {
+    color: var(--dimsop-accent);
+    border-color: var(--dimsop-accent);
+}
+
 // En dark mode el botón usa verde para contrastar
 [data-theme="dark"] #dimsop-dark-toggle {
     color: var(--dimsop-accent);
@@ -21,73 +33,6 @@ html, body {
 
 // Ajustes específicos del dark mode
 [data-theme="dark"] {
-    // Header
-    .dimsop-header {
-        background-color: var(--dimsop-bg) !important;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, .3);
-    }
-    .dimsop-header .dimsop-nav .nav-link {
-        color: var(--dimsop-text) !important;
-    }
-    .dimsop-header .dimsop-nav .nav-link:hover {
-        color: var(--dimsop-accent) !important;
-    }
-    .dimsop-search-icon {
-        color: var(--dimsop-text) !important;
-    }
-    .dimsop-search .form-control {
-        background-color: var(--dimsop-bg-alt);
-        border-color: var(--dimsop-surface-border);
-        color: var(--dimsop-text);
-    }
-    .dimsop-search .form-control::placeholder {
-        color: #8a94a6;
-    }
-
-    // Burger menú móvil
-    .dimsop-burger {
-        color: var(--dimsop-text) !important;
-    }
-    .dimsop-burger:hover {
-        color: var(--dimsop-accent) !important;
-    }
-
-    // Panel menú móvil
-    #dimsop-mobile-nav {
-        background-color: var(--dimsop-bg) !important;
-        border-top-color: var(--dimsop-surface-border) !important;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, .4) !important;
-    }
-    #dimsop-mobile-nav .nav-link {
-        color: var(--dimsop-text) !important;
-        border-bottom-color: var(--dimsop-surface-border) !important;
-    }
-
-    // Secciones
-    .dimsop-section {
-        background-color: var(--dimsop-bg);
-        color: var(--dimsop-text);
-    }
-    .dimsop-section-dark {
-        background-color: var(--dimsop-bg-alt);
-        color: var(--dimsop-text);
-    }
-
-    // Headings
-    .dimsop-h1, .dimsop-h2, .dimsop-h3 {
-        color: var(--dimsop-text) !important;
-    }
-
-    // Hero banner overlay
-    .dimsop-banner-overlay {
-        background: rgba(11, 22, 38, .65) !important;
-    }
-
-    // Lead / párrafos
-    .dimsop-lead, p {
-        color: var(--dimsop-text);
-    }
-
     // Tarjetas y superficies
     .dimsop-card,
     .dimsop-blog,
@@ -95,7 +40,6 @@ html, body {
     .dimsop-step {
         background-color: var(--dimsop-surface);
         border-color: var(--dimsop-surface-border);
-        color: var(--dimsop-text);
     }
 
     // Proyectos: sin tono grisáceo, usar fondo del sitio
@@ -113,17 +57,6 @@ html, body {
         color: var(--dimsop-text) !important;
     }
 
-    // Contadores
-    .dimsop-counter p {
-        color: var(--dimsop-text) !important;
-    }
-
-    // ISO cintillo
-    .dimsop-iso {
-        background-color: var(--dimsop-bg-alt) !important;
-        color: var(--dimsop-text) !important;
-    }
-
     // Formulario
     .dimsop-form .form-control,
     .dimsop-form .form-select {
@@ -131,21 +64,10 @@ html, body {
         color: var(--dimsop-text);
         border-color: var(--dimsop-surface-border);
     }
-    .dimsop-form .form-label {
-        color: var(--dimsop-text);
-    }
 
     // Textos secundarios de Bootstrap
     .text-muted {
         color: #9db0c9 !important;
-    }
-
-    // Footer
-    .dimsop-footer {
-        background-color: var(--dimsop-bg-alt) !important;
-    }
-    .dimsop-footer a {
-        color: var(--dimsop-text);
     }
 
     // Marquee de aliados: bordes que funden con el fondo oscuro
@@ -154,28 +76,5 @@ html, body {
     }
     .dimsop-marquee::after {
         background: linear-gradient(to left, var(--dimsop-bg), transparent);
-    }
-
-    // Logo aliados: reiniciar grayscale para que se vean en dark mode
-    .dimsop-logo-item img {
-        filter: grayscale(50%);
-        opacity: .9;
-    }
-
-    // Search bar
-    .dimsop-search-wrap {
-        border-color: var(--dimsop-surface-border);
-    }
-    .dimsop-search-wrap .form-control {
-        background-color: var(--dimsop-bg-alt);
-        color: var(--dimsop-text);
-        border-color: var(--dimsop-surface-border);
-    }
-
-    // Botones
-    .btn-dimsop-primary {
-        background-color: var(--dimsop-accent);
-        border-color: var(--dimsop-accent);
-        color: var(--dimsop-white);
     }
 }

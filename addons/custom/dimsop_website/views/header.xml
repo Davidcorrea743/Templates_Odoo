@@ -39,9 +39,9 @@
 
                     <!-- Herramientas e interacción -->
                     <div class="dimsop-tools d-flex align-items-center">
-                        <!-- Lupa de buscador (expand on hover / click) -->
+                        <!-- Lupa de buscador -->
                         <form class="dimsop-search me-2" action="/website/search" method="get" role="search">
-                            <div class="dimsop-search-wrap" id="dimsop-search-wrap">
+                            <div class="dimsop-search-wrap">
                                 <i class="fa fa-search dimsop-search-icon" aria-hidden="true"></i>
                                 <input type="text" class="form-control" name="search"
                                        placeholder="Buscar..." aria-label="Buscar"/>
@@ -60,7 +60,7 @@
 
                     <!-- Menú móvil -->
                     <button class="dimsop-burger d-lg-none" type="button"
-                            id="dimsop-burger-toggle"
+                            data-bs-toggle="collapse" data-bs-target="#dimsop-mobile-nav"
                             aria-expanded="false" aria-controls="dimsop-mobile-nav"
                             aria-label="Abrir menú de navegación">
                         <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
@@ -68,7 +68,7 @@
                 </div>
 
                 <!-- Navegación móvil -->
-                <div class="d-lg-none" id="dimsop-mobile-nav" style="display: none;">
+                <div class="collapse d-lg-none" id="dimsop-mobile-nav">
                     <ul class="nav flex-column px-3 pb-3">
                         <t t-foreach="website.menu_id.child_id" t-as="menu">
                             <li class="nav-item">
@@ -78,46 +78,6 @@
                     </ul>
                 </div>
             </header>
-            <!-- Touch fallback: toggle búsqueda + burger menú móvil -->
-            <script>
-                (function() {
-                    // Búsqueda expand on click
-                    var wrap = document.getElementById('dimsop-search-wrap');
-                    if (wrap) {
-                        wrap.addEventListener('click', function(e) {
-                            if (e.target.tagName === 'INPUT') return;
-                            wrap.classList.toggle('dimsop-search-open');
-                            var input = wrap.querySelector('input');
-                            if (wrap.classList.contains('dimsop-search-open') &amp;&amp; input) {
-                                input.focus();
-                            }
-                        });
-                        document.addEventListener('click', function(e) {
-                            if (!wrap.contains(e.target)) {
-                                wrap.classList.remove('dimsop-search-open');
-                            }
-                        });
-                    }
-
-                    // Burger menú móvil
-                    var burger = document.getElementById('dimsop-burger-toggle');
-                    var mobileNav = document.getElementById('dimsop-mobile-nav');
-                    if (burger &amp;&amp; mobileNav) {
-                        burger.addEventListener('click', function() {
-                            var isOpen = mobileNav.style.display === 'block';
-                            mobileNav.style.display = isOpen ? 'none' : 'block';
-                            burger.setAttribute('aria-expanded', !isOpen);
-                        });
-                        // Cerrar al hacer click fuera
-                        document.addEventListener('click', function(e) {
-                            if (!burger.contains(e.target) &amp;&amp; !mobileNav.contains(e.target)) {
-                                mobileNav.style.display = 'none';
-                                burger.setAttribute('aria-expanded', 'false');
-                            }
-                        });
-                    }
-                })();
-            </script>
         </xpath>
     </template>
 </odoo>

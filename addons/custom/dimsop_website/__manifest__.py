@@ -39,7 +39,6 @@ Características técnicas:
             'dimsop_website/static/src/js/darkmode.js',
             'dimsop_website/static/src/js/dimsop_theme.js',
             'dimsop_website/static/src/js/whatsapp_float.js',
-            'dimsop_website/static/src/js/scroll_animations.js',
         ],
     },
     'installable': True,
