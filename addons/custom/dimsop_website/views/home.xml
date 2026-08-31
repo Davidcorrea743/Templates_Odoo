@@ -130,7 +130,7 @@
                                 </p>
                                 <img src="/dimsop_website/static/src/img/methodology/metodologia.png"
                                      alt="Metodología de trabajo Dimsop" class="img-fluid dimsop-img-methodology mx-auto d-block"/>
-                                <div class="row g-4 mt-2">
+                                <div class="row row-cols-lg-5 g-4 mt-2">
                                     <div class="col-md-6 col-lg">
                                         <div class="dimsop-step"><span class="dimsop-step-num">1</span>
                                             <h4>Necesidades del cliente</h4>
