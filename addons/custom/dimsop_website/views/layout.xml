@@ -15,15 +15,67 @@
         <xpath expr="//body" position="inside">
             <div id="dimsop-config" class="d-none"
                  t-att-data-whatsapp="request.env['ir.config_parameter'].sudo().get_param('dimsop.whatsapp_number', '123456789')"/>
+            <!-- Botón flotante WhatsApp (renderizado server-side, sin depender de JS lazy) -->
+            <a t-attf-href="https://wa.me/{{ request.env['ir.config_parameter'].sudo().get_param('dimsop.whatsapp_number', '123456789').replace('+', '') }}"
+               target="_blank" rel="noopener noreferrer"
+               id="dimsop-whatsapp-float"
+               title="Atención al cliente por WhatsApp"
+               aria-label="Chatear con Dimsop por WhatsApp">
+                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+            </a>
         </xpath>
         <xpath expr="//head/meta[last()]" position="after">
-            <!-- Dark mode: aplicar tema ANTES del primer paint para evitar FOUC -->
+            <!-- Dark mode: inicializar tema + toggle ANTES del primer paint -->
             <script>
                 (function() {
+                    var STORAGE_KEY = 'dimsop-theme';
+                    function applyTheme(theme) {
+                        document.documentElement.setAttribute('data-theme', theme);
+                        try { localStorage.setItem(STORAGE_KEY, theme); } catch(e) {}
+                        var icon = document.querySelector('#dimsop-dark-toggle i');
+                        if (icon) icon.className = theme === 'dark' ? 'fa fa-sun-o' : 'fa fa-moon-o';
+                    }
                     try {
-                        var t = localStorage.getItem('dimsop-theme');
-                        if (t === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
-                    } catch(e) {}
+                        var t = localStorage.getItem(STORAGE_KEY);
+                        applyTheme(t === 'dark' ? 'dark' : 'light');
+                    } catch(e) { applyTheme('light'); }
+                    document.addEventListener('click', function(e) {
+                        var btn = e.target.closest('#dimsop-dark-toggle');
+                        if (!btn) return;
+                        var current = document.documentElement.getAttribute('data-theme');
+                        applyTheme(current === 'dark' ? 'light' : 'dark');
+                    });
+
+                    // Contadores de impacto: animar al entrar en viewport
+                    function animateCounter(el) {
+                        var target = parseInt(el.getAttribute('data-target'), 10) || 0;
+                        var duration = 1800;
+                        var start = performance.now();
+                        function frame(now) {
+                            var progress = Math.min((now - start) / duration, 1);
+                            var eased = 1 - Math.pow(1 - progress, 3);
+                            el.textContent = '+' + Math.floor(eased * target);
+                            if (progress &lt; 1) { requestAnimationFrame(frame); }
+                            else { el.textContent = '+' + target; }
+                        }
+                        requestAnimationFrame(frame);
+                    }
+                    function initCounters() {
+                        var counters = document.querySelectorAll('.dimsop-counter-num');
+                        if (!counters.length || !('IntersectionObserver' in window)) return;
+                        var observer = new IntersectionObserver(function(entries) {
+                            entries.forEach(function(entry) {
+                                if (entry.isIntersecting) { animateCounter(entry.target); }
+                                else { entry.target.textContent = '+0'; }
+                            });
+                        }, { threshold: 0.3 });
+                        counters.forEach(function(c) { observer.observe(c); });
+                    }
+                    if (document.readyState === 'loading') {
+                        document.addEventListener('DOMContentLoaded', initCounters);
+                    } else {
+                        initCounters();
+                    }
                 })();
             </script>
             <link rel="preconnect" href="https://fonts.googleapis.com"/>
