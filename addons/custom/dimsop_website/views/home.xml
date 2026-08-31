@@ -166,50 +166,50 @@
                         <section id="unidades" class="dimsop-section py-5">
                             <div class="container">
                                 <h2 class="dimsop-h2 text-center mb-5">Unidades de Negocio</h2>
-                                <div class="row g-4">
-                                    <div class="col-md-6 col-lg-4">
+                                <div class="row row-cols-lg-3 g-4">
+                                    <div class="col">
                                         <div class="dimsop-card h-100">
                                             <i class="fa fa-cloud dimsop-card-icon"></i>
                                             <h3 class="dimsop-h3">Soluciones en la Nube</h3>
                                             <p>Arquitecturas híbridas, privadas y públicas con máxima escalabilidad.</p>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 col-lg-4">
+                                    <div class="col">
                                         <div class="dimsop-card h-100">
                                             <i class="fa fa-sitemap dimsop-card-icon"></i>
                                             <h3 class="dimsop-h3">Productos y Soluciones de Redes</h3>
                                             <p>Conectividad de alto rendimiento e infraestructura corporativa.</p>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 col-lg-4">
+                                    <div class="col">
                                         <div class="dimsop-card h-100">
                                             <i class="fa fa-shield dimsop-card-icon"></i>
                                             <h3 class="dimsop-h3">Ciberseguridad Avanzada</h3>
                                             <p>Protección perimetral, detección de amenazas y blindaje de activos.</p>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 col-lg-4">
+                                    <div class="col">
                                         <div class="dimsop-card h-100">
                                             <i class="fa fa-cogs dimsop-card-icon"></i>
                                             <h3 class="dimsop-h3">Servicios Gestionados</h3>
                                             <p>Monitoreo 24/7 y gestión integral de la infraestructura de TI.</p>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 col-lg-4">
+                                    <div class="col">
                                         <div class="dimsop-card h-100">
                                             <i class="fa fa-exchange dimsop-card-icon"></i>
                                             <h3 class="dimsop-h3">Soluciones FTTX / ISP</h3>
                                             <p>Despliegue y equipamiento para redes masivas de fibra óptica.</p>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 col-lg-4">
+                                    <div class="col">
                                         <div class="dimsop-card h-100">
                                             <i class="fa fa-phone dimsop-card-icon"></i>
                                             <h3 class="dimsop-h3">Comunicaciones Unificadas</h3>
                                             <p>Integración de voz, video y colaboración empresarial.</p>
                                         </div>
                                     </div>
-                                    <div class="col-12">
+                                    <div class="col-lg-4">
                                         <div class="dimsop-card h-100">
                                             <i class="fa fa-microchip dimsop-card-icon"></i>
                                             <h3 class="dimsop-h3">Unidad de Desarrollo e Inteligencia Artificial</h3>

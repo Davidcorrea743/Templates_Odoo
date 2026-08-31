@@ -325,12 +325,35 @@ h1, h2, h3, h4, h5, .dimsop-h1, .dimsop-h2, .dimsop-h3 {
     border-top: 4px solid var(--dimsop-accent);
     border-radius: 8px;
     padding: 1.5rem;
-    transition: transform .2s ease, box-shadow .2s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    transform-origin: bottom center;
+    overflow: visible;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .dimsop-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, .1);
+    transform: translateY(-15px) scale(1.08) !important;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.35);
+    z-index: 10;
+}
+
+.dimsop-card p {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    margin-top: 0;
+    transition: max-height 0.4s ease, opacity 0.4s ease, margin 0.4s ease;
+}
+
+.dimsop-card:hover p {
+    max-height: 120px;
+    opacity: 1;
+    margin-top: 0.75rem;
 }
 
 .dimsop-card-icon {
@@ -795,5 +818,10 @@ h1, h2, h3, h4, h5, .dimsop-h1, .dimsop-h2, .dimsop-h3 {
     .dimsop-value:hover,
     #dimsop-whatsapp-float:hover {
         transform: none;
+    }
+
+    .dimsop-card {
+        overflow: hidden;
+        min-height: auto;
     }
 }
