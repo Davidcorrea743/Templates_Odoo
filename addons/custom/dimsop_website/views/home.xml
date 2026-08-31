@@ -33,6 +33,12 @@
                             </video>
                             <div class="dimsop-banner-overlay"/>
                             <div class="container text-center position-relative">
+                                <!-- Boot sequence eyebrow -->
+                                <div class="dimsop-hero-eyebrow">
+                                    <span class="dimsop-hero-eyebrow-line"></span>
+                                    <span class="dimsop-hero-eyebrow-text">INFRASTRUCTURE / SECURITY / AUTOMATION</span>
+                                    <span class="dimsop-hero-eyebrow-line"></span>
+                                </div>
                                 <h1 class="dimsop-h1 mb-4">
                                     Soluciones TIC de Vanguardia para la continuidad de tu negocio.
                                 </h1>
@@ -89,7 +95,7 @@
                                 </div>
 
                                 <!-- 4.3 Valores Corporativos -->
-                                <h3 class="dimsop-h3 text-center mb-2">Valores Corporativos</h3>
+                                <h3 class="dimsop-h3 text-center mb-2">Nuestros Valores</h3>
                                 <p class="text-center mb-4">Los principios que guían cada proyecto que entregamos.</p>
                                 <div class="row g-3 justify-content-center">
                                     <div class="col-6 col-md-4 col-lg">

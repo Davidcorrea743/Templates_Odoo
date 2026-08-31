@@ -241,6 +241,31 @@ h1, h2, h3, h4, h5, .dimsop-h1, .dimsop-h2, .dimsop-h3 {
 
 .dimsop-banner .container { z-index: 2; }
 
+// ----------------------------- Hero boot sequence eyebrow ------------
+.dimsop-hero-eyebrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.dimsop-hero-eyebrow-text {
+    font-family: var(--dimsop-font-heading);
+    font-size: .75rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--dimsop-accent);
+    white-space: nowrap;
+}
+
+.dimsop-hero-eyebrow-line {
+    display: block;
+    width: 40px;
+    height: 1px;
+    background-color: var(--dimsop-accent);
+}
+
 // Texto del hero siempre blanco (está sobre video + overlay oscuro)
 .dimsop-banner .dimsop-lead,
 .dimsop-banner p {
@@ -328,10 +353,42 @@ h1, h2, h3, h4, h5, .dimsop-h1, .dimsop-h2, .dimsop-h3 {
     justify-content: center;
     gap: .5rem;
     font-weight: 600;
-    transition: transform .2s ease;
+    position: relative;
+    overflow: hidden;
+    transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
 }
 
-.dimsop-value:hover { transform: scale(1.05); }
+// Glow sutil en hover
+.dimsop-value::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 8px;
+    background: radial-gradient(circle at 50% 0%, rgba(77, 163, 47, .22) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity .3s ease;
+    pointer-events: none;
+}
+
+.dimsop-value:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 32px rgba(77, 163, 47, .3);
+    border-color: var(--dimsop-accent);
+}
+
+.dimsop-value:hover::before {
+    opacity: 1;
+}
+
+// Icono pulsa sutilmente en hover
+.dimsop-value:hover .dimsop-value-icon {
+    animation: dimsop-icon-pulse .6s ease;
+}
+
+@keyframes dimsop-icon-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
 
 .dimsop-value-icon {
     font-size: 1.6rem;
