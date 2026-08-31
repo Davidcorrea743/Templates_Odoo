@@ -9,18 +9,6 @@ html, body {
     transition: background-color .3s ease, color .3s ease;
 }
 
-// Botón del toggle en el header
-#dimsop-dark-toggle {
-    color: var(--dimsop-white);
-    border-color: rgba(255, 255, 255, .4);
-    transition: color .3s ease, border-color .3s ease;
-}
-
-#dimsop-dark-toggle:hover {
-    color: var(--dimsop-accent);
-    border-color: var(--dimsop-accent);
-}
-
 // En dark mode el botón usa verde para contrastar
 [data-theme="dark"] #dimsop-dark-toggle {
     color: var(--dimsop-accent);
@@ -33,6 +21,48 @@ html, body {
 
 // Ajustes específicos del dark mode
 [data-theme="dark"] {
+    // Header
+    .dimsop-header {
+        background-color: var(--dimsop-bg) !important;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, .3);
+    }
+    .dimsop-header .dimsop-nav .nav-link {
+        color: var(--dimsop-text) !important;
+    }
+    .dimsop-header .dimsop-nav .nav-link:hover {
+        color: var(--dimsop-accent) !important;
+    }
+    .dimsop-search-icon {
+        color: var(--dimsop-text) !important;
+    }
+    .dimsop-search .form-control {
+        background-color: var(--dimsop-bg-alt);
+        border-color: var(--dimsop-surface-border);
+        color: var(--dimsop-text);
+    }
+    .dimsop-search .form-control::placeholder {
+        color: #8a94a6;
+    }
+
+    // Burger menú móvil
+    .dimsop-burger {
+        color: var(--dimsop-text) !important;
+    }
+    .dimsop-burger:hover {
+        color: var(--dimsop-accent) !important;
+    }
+
+    // Panel menú móvil
+    #dimsop-mobile-nav {
+        background-color: var(--dimsop-bg) !important;
+        border-top-color: var(--dimsop-surface-border) !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, .4) !important;
+    }
+    #dimsop-mobile-nav .nav-link {
+        color: var(--dimsop-text) !important;
+        border-bottom-color: var(--dimsop-surface-border) !important;
+    }
+
     // Tarjetas y superficies
     .dimsop-card,
     .dimsop-blog,

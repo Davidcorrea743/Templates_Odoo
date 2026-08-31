@@ -44,9 +44,9 @@
     </record>
 
     <record id="menu_privacidad" model="website.menu">
-        <field name="name">Políticas de Privacidad</field>
+        <field name="name">Nuestros Aliados</field>
         <field name="website_id">1</field>
-        <field name="url">/privacy</field>
+        <field name="url">/#aliados</field>
         <field name="sequence">16</field>
         <field name="parent_id" ref="website.main_menu"/>
     </record>

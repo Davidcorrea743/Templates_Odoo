@@ -16,6 +16,59 @@
             <div id="dimsop-config" class="d-none"
                  t-att-data-whatsapp="request.env['ir.config_parameter'].sudo().get_param('dimsop.whatsapp_number', '123456789')"/>
         </xpath>
+        <!-- WhatsApp float button (server-side, no depende de JS lazy) -->
+        <xpath expr="//body" position="inside">
+            <a id="dimsop-whatsapp-float"
+               t-attf-href="https://wa.me/#{request.env['ir.config_parameter'].sudo().get_param('dimsop.whatsapp_number', '123456789')}"
+               target="_blank" rel="noopener noreferrer"
+               title="Contactanos por WhatsApp" aria-label="WhatsApp">
+                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+            </a>
+        </xpath>
+        <!-- Counter animation script (inline, no depende de JS lazy) -->
+        <xpath expr="//body" position="inside">
+            <script>
+                (function() {
+                    var observed = false;
+                    function animateCounters() {
+                        if (observed) return;
+                        var counters = document.querySelectorAll('.dimsop-counter-num[data-target]');
+                        if (!counters.length) return;
+                        observed = true;
+                        counters.forEach(function(el) {
+                            var target = parseInt(el.getAttribute('data-target'), 10);
+                            var start = 0;
+                            var duration = 1800;
+                            var startTime = null;
+                            var prefix = el.textContent.trim().charAt(0) === '+' ? '+' : '';
+                            function step(ts) {
+                                if (!startTime) startTime = ts;
+                                var progress = Math.min((ts - startTime) / duration, 1);
+                                var eased = 1 - Math.pow(1 - progress, 3);
+                                var current = Math.floor(eased * target);
+                                el.textContent = prefix + current;
+                                if (progress &lt; 1) requestAnimationFrame(step);
+                                else el.textContent = prefix + target;
+                            }
+                            requestAnimationFrame(step);
+                        });
+                    }
+                    var obs = new IntersectionObserver(function(entries) {
+                        entries.forEach(function(entry) {
+                            if (entry.isIntersecting) animateCounters();
+                        });
+                    }, { threshold: 0.3 });
+                    document.addEventListener('DOMContentLoaded', function() {
+                        var section = document.getElementById('contadores');
+                        if (section) obs.observe(section);
+                        else setTimeout(function() {
+                            var s = document.getElementById('contadores');
+                            if (s) obs.observe(s);
+                        }, 500);
+                    });
+                })();
+            </script>
+        </xpath>
         <xpath expr="//head/meta[last()]" position="after">
             <!-- Dark mode: aplicar tema ANTES del primer paint para evitar FOUC -->
             <script>
@@ -25,6 +78,28 @@
                         if (t === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
                     } catch(e) {}
                 })();
+            </script>
+            <!-- Dark mode toggle handler -->
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    var btn = document.getElementById('dimsop-dark-toggle');
+                    if (!btn) return;
+                    btn.addEventListener('click', function() {
+                        var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+                        var next = isDark ? 'light' : 'dark';
+                        document.documentElement.setAttribute('data-theme', next);
+                        try { localStorage.setItem('dimsop-theme', next); } catch(e) {}
+                        var icon = btn.querySelector('i');
+                        if (icon) {
+                            icon.className = next === 'dark' ? 'fa fa-sun-o' : 'fa fa-moon-o';
+                        }
+                    });
+                    // Sync icon on load
+                    var icon = btn.querySelector('i');
+                    if (icon &amp;&amp; document.documentElement.getAttribute('data-theme') === 'dark') {
+                        icon.className = 'fa fa-sun-o';
+                    }
+                });
             </script>
             <link rel="preconnect" href="https://fonts.googleapis.com"/>
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
