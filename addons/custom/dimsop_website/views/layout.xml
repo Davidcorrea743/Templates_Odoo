@@ -164,10 +164,6 @@
                             y: 50, opacity: 0, duration: 0.8, ease: 'power3.out',
                             scrollTrigger: { trigger: '#proyectos', start: 'top 80%', toggleActions: 'play none none reverse' }
                         });
-                        gsap.from('#proyectos .dimsop-project', {
-                            y: 40, opacity: 0, duration: 0.6, stagger: 0.1, ease: 'power3.out',
-                            scrollTrigger: { trigger: '#proyectos .row', start: 'top 85%', toggleActions: 'play none none reverse' }
-                        });
 
                         /* BLOG */
                         gsap.from('#blog .dimsop-h2', {

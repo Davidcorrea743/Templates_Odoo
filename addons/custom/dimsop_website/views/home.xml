@@ -356,76 +356,31 @@
                              Imágenes: static/src/img/projects/
                              ========================================================= -->
                         <section id="proyectos" class="dimsop-section py-5">
-                            <div class="container">
-                                <h2 class="dimsop-h2 text-center mb-5">Proyectos Referenciales</h2>
-                                <div class="row g-4">
-                                    <div class="col-md-6 col-lg-4">
-                                        <div class="dimsop-project card h-100">
-                                            <img src="/dimsop_website/static/src/img/projects/ucm-chile.png" class="card-img-top" alt="UCM Chile"/>
-                                            <div class="card-body">
-                                                <p>Servicio de soporte para la plataforma CISCO Contact Center Express - Unidad Coronaria Móvil (UCM) Chile.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-lg-4">
-                                        <div class="dimsop-project card h-100">
-                                            <img src="/dimsop_website/static/src/img/projects/policlinica-metropolitana.png" class="card-img-top" alt="Policlínica Metropolitana"/>
-                                            <div class="card-body">
-                                                <p>Servicio de soporte para la plataforma CISCO Router &amp; SW de la red de datos. Suministro e instalación de Solución de Seguridad.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-lg-4">
-                                        <div class="dimsop-project card h-100">
-                                            <img src="/dimsop_website/static/src/img/projects/oleoducto-colombia.png" class="card-img-top" alt="Oleoducto de Colombia"/>
-                                            <div class="card-body">
-                                                <p>Desarrollo, suministro, instalación, administración y soporte de Software de Gestión (MMS), Licencias WEBEX de CISCO Colombia.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-lg-4">
-                                        <div class="dimsop-project card h-100">
-                                            <img src="/dimsop_website/static/src/img/projects/its-infocom.png" class="card-img-top" alt="ITS InfoCom"/>
-                                            <div class="card-body">
-                                                <p>Suministro, instalación y soporte a redes de datos y transformación de la red de WiFi - Colombia.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-lg-4">
-                                        <div class="dimsop-project card h-100">
-                                            <img src="/dimsop_website/static/src/img/projects/avianca.png" class="card-img-top" alt="Avianca"/>
-                                            <div class="card-body">
-                                                <p>Servicios profesionales para el suministro, instalación y soporte a redes de datos y la transformación de la red de WiFi en Perú y Chile.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-lg-4">
-                                        <div class="dimsop-project card h-100">
-                                            <img src="/dimsop_website/static/src/img/projects/mi-tickera.png" class="card-img-top" alt="Mi Tickera"/>
-                                            <div class="card-body">
-                                                <p>Suministro e instalación de infraestructura de la red de datos y telefonía.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-lg-4">
-                                        <div class="dimsop-project card h-100">
-                                            <img src="/dimsop_website/static/src/img/projects/todo1.png" class="card-img-top" alt="TODO 1"/>
-                                            <div class="card-body">
-                                                <p>Soporte y puesta en servicio para la migración de la telefonía IP CISCO para TODO 1 (filial del Banco Mercantil en Miami).</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-lg-4">
-                                        <div class="dimsop-project card h-100">
-                                            <img src="/dimsop_website/static/src/img/projects/uniseguros.png" class="card-img-top" alt="Uniseguros"/>
-                                            <div class="card-body">
-                                                <p>Servicio de soporte para la plataforma CISCO Contact Center y desarrollo de Scripts.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
+                             <div class="container">
+                                 <h2 class="dimsop-h2 text-center mb-5">Proyectos Referenciales</h2>
+                             </div>
+                             <div class="dimsop-marquee" role="region" aria-label="Proyectos referenciales de Dimsop">
+                                 <div class="dimsop-marquee-track">
+                                        <div class="dimsop-project-item"><img src="/dimsop_website/static/src/img/projects/ucm-chile.png" alt="UCM Chile" loading="lazy"/><div class="dimsop-project-desc"><p>Implementación y soporte de CISCO Contact Center para la Unidad Coronaria Móvil en Chile.</p></div></div>
+                                        <div class="dimsop-project-item"><img src="/dimsop_website/static/src/img/projects/policlinica-metropolitana.png" alt="Policlínica Metropolitana" loading="lazy"/><div class="dimsop-project-desc"><p>Gestión de red de datos y seguridad CISCO para la Policlínica Metropolitana.</p></div></div>
+                                        <div class="dimsop-project-item"><img src="/dimsop_website/static/src/img/projects/oleoducto-colombia.png" alt="Oleoducto de Colombia" loading="lazy"/><div class="dimsop-project-desc"><p>Despliegue de plataforma MMS y Webex CISCO para Oleoducto de Colombia.</p></div></div>
+                                        <div class="dimsop-project-item"><img src="/dimsop_website/static/src/img/projects/its-infocom.png" alt="ITS InfoCom" loading="lazy"/><div class="dimsop-project-desc"><p>Rediseño de infraestructura de red y WiFi para ITS InfoCom en Colombia.</p></div></div>
+                                        <div class="dimsop-project-item"><img src="/dimsop_website/static/src/img/projects/avianca.png" alt="Avianca" loading="lazy"/><div class="dimsop-project-desc"><p>Modernización de redes de datos y WiFi para Avianca en Perú y Chile.</p></div></div>
+                                        <div class="dimsop-project-item"><img src="/dimsop_website/static/src/img/projects/mi-tickera.png" alt="Mi Tickera" loading="lazy"/><div class="dimsop-project-desc"><p>Despliegue de infraestructura de red de datos y telefonía IP.</p></div></div>
+                                        <div class="dimsop-project-item"><img src="/dimsop_website/static/src/img/projects/todo1.png" alt="TODO 1" loading="lazy"/><div class="dimsop-project-desc"><p>Migración de telefonía IP CISCO para TODO 1, filial del Banco Mercantil.</p></div></div>
+                                        <div class="dimsop-project-item"><img src="/dimsop_website/static/src/img/projects/uniseguros.png" alt="Uniseguros" loading="lazy"/><div class="dimsop-project-desc"><p>Soporte y desarrollo de scripts para CISCO Contact Center.</p></div></div>
+                                        <!-- Duplicados para loop infinito -->
+                                        <div class="dimsop-project-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/projects/ucm-chile.png" loading="lazy"/><div class="dimsop-project-desc"><p>Implementación y soporte de CISCO Contact Center para la Unidad Coronaria Móvil en Chile.</p></div></div>
+                                        <div class="dimsop-project-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/projects/policlinica-metropolitana.png" loading="lazy"/><div class="dimsop-project-desc"><p>Gestión de red de datos y seguridad CISCO para la Policlínica Metropolitana.</p></div></div>
+                                        <div class="dimsop-project-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/projects/oleoducto-colombia.png" loading="lazy"/><div class="dimsop-project-desc"><p>Despliegue de plataforma MMS y Webex CISCO para Oleoducto de Colombia.</p></div></div>
+                                        <div class="dimsop-project-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/projects/its-infocom.png" loading="lazy"/><div class="dimsop-project-desc"><p>Rediseño de infraestructura de red y WiFi para ITS InfoCom en Colombia.</p></div></div>
+                                        <div class="dimsop-project-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/projects/avianca.png" loading="lazy"/><div class="dimsop-project-desc"><p>Modernización de redes de datos y WiFi para Avianca en Perú y Chile.</p></div></div>
+                                        <div class="dimsop-project-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/projects/mi-tickera.png" loading="lazy"/><div class="dimsop-project-desc"><p>Despliegue de infraestructura de red de datos y telefonía IP.</p></div></div>
+                                        <div class="dimsop-project-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/projects/todo1.png" loading="lazy"/><div class="dimsop-project-desc"><p>Migración de telefonía IP CISCO para TODO 1, filial del Banco Mercantil.</p></div></div>
+                                        <div class="dimsop-project-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/projects/uniseguros.png" loading="lazy"/><div class="dimsop-project-desc"><p>Soporte y desarrollo de scripts para CISCO Contact Center.</p></div></div>
+                                 </div>
+                             </div>
+                         </section>
 
                         <!-- =========================================================
                              11. SECCIÓN DE BLOG

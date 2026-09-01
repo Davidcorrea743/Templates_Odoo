@@ -590,6 +590,7 @@ h1, h2, h3, h4, h5, .dimsop-h1, .dimsop-h2, .dimsop-h3 {
     transform-origin: bottom center;
     overflow: visible;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 25px;
 }
 
 .dimsop-logo-item:hover,
@@ -636,21 +637,67 @@ h1, h2, h3, h4, h5, .dimsop-h1, .dimsop-h2, .dimsop-h3 {
     font-size: 1.1rem;
 }
 
-// ----------------------------- Proyectos (Sección 10) ---------------
-.dimsop-project {
-    border: none;
-    border-radius: 10px;
-    overflow: hidden;
+// ----------------------------- Proyectos (Sección 10) Carrusel ----
+.dimsop-project-item {
     background-color: var(--dimsop-surface);
-    transition: transform .2s ease, box-shadow .2s ease;
+    border: 1px solid var(--dimsop-surface-border);
+    border-radius: 10px;
+    padding: 1rem;
+    flex: 0 0 auto;
+    min-width: 280px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform-origin: bottom center;
+    overflow: visible;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 50px;
 }
 
-.dimsop-project:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 24px rgba(0, 0, 0, .15);
+.dimsop-project-item:hover,
+.dimsop-project-item:focus-within {
+    transform: translateY(-15px) scale(1.18) !important;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.35);
+    z-index: 10;
+    animation-play-state: paused;
 }
 
-.dimsop-project img { height: 180px; object-fit: cover; }
+.dimsop-project-item img {
+    max-height: 120px;
+    max-width: 260px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.8;
+    transition: filter .25s ease, opacity .25s ease;
+}
+
+.dimsop-project-item:hover img,
+.dimsop-project-item:focus-within img {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+.dimsop-project-desc {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    text-align: center;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+
+.dimsop-project-item:hover .dimsop-project-desc {
+    max-height: 120px;
+    opacity: 1;
+    margin-top: 0.75rem;
+}
+
+.dimsop-project-desc p {
+    font-size: 0.85rem;
+    color: var(--dimsop-text);
+    line-height: 1.4;
+    margin: 0;
+}
 
 // ----------------------------- Blog (Sección 11) ---------------------
 .dimsop-badge {
@@ -829,8 +876,17 @@ h1, h2, h3, h4, h5, .dimsop-h1, .dimsop-h2, .dimsop-h3 {
     .dimsop-step,
     .dimsop-value { margin-bottom: .75rem; }
 
-    // Proyectos: imagen más baja en móvil
-    .dimsop-project img { height: 150px; }
+    // Proyectos: ajustes móviles
+    .dimsop-project-item {
+        min-width: 220px;
+        padding: 0.75rem;
+    }
+    .dimsop-project-item img {
+        max-height: 100px;
+    }
+    .dimsop-project-desc p {
+        font-size: 0.8rem;
+    }
 
     // Formulario sin columnas
     .dimsop-form .row > [class*="col-"] { width: 100%; }
