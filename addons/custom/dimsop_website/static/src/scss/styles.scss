@@ -580,13 +580,17 @@ h1, h2, h3, h4, h5, .dimsop-h1, .dimsop-h2, .dimsop-h3 {
     align-items: center;
     justify-content: center;
     height: 90px;
-    transition: transform .25s ease, box-shadow .25s ease;
+    transform-origin: bottom center;
+    overflow: visible;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .dimsop-logo-item:hover,
 .dimsop-logo-item:focus-within {
-    transform: scale(1.12);          // Efecto Zoom/Hover
-    box-shadow: 0 8px 20px rgba(0, 0, 0, .15);
+    transform: translateY(-15px) scale(1.18) !important;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.35);
+    z-index: 10;
+    animation-play-state: paused;
 }
 
 .dimsop-logo-item img {
