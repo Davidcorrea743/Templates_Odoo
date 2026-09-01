@@ -155,10 +155,15 @@
                             y: 50, opacity: 0, duration: 0.8, ease: 'power3.out',
                             scrollTrigger: { trigger: '#cobertura', start: 'top 80%', toggleActions: 'play none none reverse' }
                         });
-                        gsap.from('#cobertura .dimsop-map-container', {
-                            scale: 0.92, opacity: 0, duration: 1, ease: 'power2.out',
-                            scrollTrigger: { trigger: '#cobertura .dimsop-map-container', start: 'top 85%', toggleActions: 'play none none reverse' }
-                        });
+                        gsap.fromTo('#cobertura .dimsop-map',
+                            { scale: 0.92, opacity: 0 },
+                            {
+                                scale: 1, opacity: 1, duration: 1, ease: 'power2.out',
+                                scrollTrigger: { trigger: '#cobertura .dimsop-map', start: 'top 85%', toggleActions: 'play none none reverse' },
+                                onComplete: function() { gsap.set(this.targets(), { clearProps: 'transform,opacity' }); },
+                                onReverseComplete: function() { gsap.set(this.targets(), { clearProps: 'transform,opacity' }); }
+                            }
+                        );
 
                         /* ALIADOS */
                         gsap.from('#aliados .dimsop-h2', {

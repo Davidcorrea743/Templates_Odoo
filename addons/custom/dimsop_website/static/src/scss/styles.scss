@@ -362,6 +362,53 @@ h1, h2, h3, h4, h5, .dimsop-h1, .dimsop-h2, .dimsop-h3 {
     margin-bottom: .75rem;
 }
 
+// ----------------------------- Mapa de Cobertura (Sección 7) --------
+.dimsop-map {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: default;
+
+    &::after {
+        content: '';
+        position: absolute;
+        inset: -2px;
+        border-radius: 14px;
+        background: transparent;
+        box-shadow: 0 0 0 0 rgba(77, 163, 47, 0);
+        transition: box-shadow 0.4s ease;
+        pointer-events: none;
+        z-index: 2;
+    }
+
+    &:hover {
+        transform: scale(1.04) !important;
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+
+        &::after {
+            box-shadow: 0 0 20px 4px rgba(77, 163, 47, 0.4);
+        }
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+    }
+}
+
+@keyframes dimsop-map-glow {
+    0%, 100% { box-shadow: 0 0 8px 2px rgba(77, 163, 47, 0.15); }
+    50% { box-shadow: 0 0 20px 6px rgba(77, 163, 47, 0.35); }
+}
+
+.dimsop-map::after {
+    animation: dimsop-map-glow 3s ease-in-out infinite;
+}
+
 // ----------------------------- Valores (Sección 4.3) -----------------
 .dimsop-value {
     background-color: var(--dimsop-surface);
@@ -823,5 +870,9 @@ h1, h2, h3, h4, h5, .dimsop-h1, .dimsop-h2, .dimsop-h3 {
     .dimsop-card {
         overflow: hidden;
         min-height: auto;
+    }
+
+    .dimsop-map::after {
+        animation: none;
     }
 }
