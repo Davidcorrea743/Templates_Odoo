@@ -320,23 +320,29 @@
                              ========================================================= -->
                         <section id="contadores" class="dimsop-section py-5 dimsop-section-dark">
                             <div class="container">
-                                <h2 class="dimsop-h2 text-center mb-5">Nuestro Impacto</h2>
+                                <h2 class="dimsop-h2 text-center mb-5">Ecosistema Dimsop</h2>
                                 <div class="row text-center g-4">
                                     <div class="col-md-4">
                                         <div class="dimsop-counter">
-                                            <span class="dimsop-counter-num" data-target="150">+0</span>
+                                            <div class="dimsop-counter-box">
+                                                <span class="dimsop-counter-num" data-target="150">+0</span>
+                                            </div>
                                             <p>Proyectos Implementados</p>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="dimsop-counter">
-                                            <span class="dimsop-counter-num" data-target="120">+0</span>
+                                            <div class="dimsop-counter-box">
+                                                <span class="dimsop-counter-num" data-target="120">+0</span>
+                                            </div>
                                             <p>Clientes Satisfechos</p>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="dimsop-counter">
-                                            <span class="dimsop-counter-num" data-target="9">+0</span>
+                                            <div class="dimsop-counter-box">
+                                                <span class="dimsop-counter-num" data-target="9">+0</span>
+                                            </div>
                                             <p>Países con Presencia</p>
                                         </div>
                                     </div>

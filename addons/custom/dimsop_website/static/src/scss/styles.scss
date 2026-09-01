@@ -356,6 +356,13 @@ h1, h2, h3, h4, h5, .dimsop-h1, .dimsop-h2, .dimsop-h3 {
     margin-top: 0.75rem;
 }
 
+// Excluir Misión/Visión del Card Lift Effect
+#nosotros .dimsop-card p {
+    max-height: none;
+    opacity: 1;
+    overflow: visible;
+}
+
 .dimsop-card-icon {
     font-size: 2rem;
     color: var(--dimsop-accent);
@@ -611,8 +618,17 @@ h1, h2, h3, h4, h5, .dimsop-h1, .dimsop-h2, .dimsop-h3 {
 // ----------------------------- Contadores (Sección 9) ----------------
 .dimsop-counter-num {
     font-family: var(--dimsop-font-heading);
-    font-size: 3.4rem;
-    color: var(--dimsop-accent);
+    font-size: 4.5rem;
+    color: var(--dimsop-primary);
+}
+
+.dimsop-counter-box {
+    background-color: var(--dimsop-white);
+    border-radius: 12px;
+    padding: 1.5rem 2.5rem;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0.75rem;
 }
 
 .dimsop-counter p {
@@ -769,7 +785,8 @@ h1, h2, h3, h4, h5, .dimsop-h1, .dimsop-h2, .dimsop-h3 {
         padding: 4rem 1rem;
     }
 
-    .dimsop-counter-num { font-size: 2.8rem; }
+    .dimsop-counter-num { font-size: 3.2rem; }
+    .dimsop-counter-box { padding: 1rem 1.5rem; }
 
     // Búsqueda: mantener ícono visible, ocultar en mobile muy pequeño
     .dimsop-search-wrap { width: 36px; height: 36px; }
