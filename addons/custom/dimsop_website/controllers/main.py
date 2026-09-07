@@ -12,6 +12,20 @@ _logger = logging.getLogger(__name__)
 VALID_SERVICES = {'cloud', 'network', 'security', 'managed', 'fttx_isp', 'unified', 'other'}
 
 
+class WebsiteDimsop(http.Controller):
+
+    @http.route('/', type='http', auth='public', website=True)
+    def home(self, **kw):
+        blog_posts = request.env['blog.post'].sudo().search(
+            [('is_published', '=', True)],
+            order='published_date desc',
+            limit=3
+        )
+        return request.render('website.inicio-dimsop-soluciones-tic-de-vanguardia', {
+            'blog_posts': blog_posts,
+        })
+
+
 class WebsiteContact(http.Controller):
 
     @http.route('/dimsop/contacto', type='http', auth='public', website=True, methods=['POST'], csrf=True)

@@ -66,10 +66,15 @@ html, body {
     // Tarjetas y superficies
     .dimsop-card,
     .dimsop-blog,
+    .dimsop-blog-item,
     .dimsop-value,
     .dimsop-step {
         background-color: var(--dimsop-surface);
         border-color: var(--dimsop-surface-border);
+    }
+
+    .dimsop-blog-item-content h3 {
+        color: var(--dimsop-text);
     }
 
     // Proyectos: sin tono grisáceo, usar fondo del sitio

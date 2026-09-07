@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- Blog: Actualidad Tecnológica -->
+        <record id="blog_tech" model="blog.blog">
+            <field name="name">Actualidad Tecnológica</field>
+            <field name="subtitle">Noticias y tendencias en tecnología</field>
+        </record>
+
+        <!-- Etiquetas -->
+        <record id="blog_tag_ciberseguridad" model="blog.tag">
+            <field name="name">Ciberseguridad</field>
+            <field name="color">1</field>
+        </record>
+        <record id="blog_tag_cloud" model="blog.tag">
+            <field name="name">Cloud</field>
+            <field name="color">2</field>
+        </record>
+        <record id="blog_tag_iot" model="blog.tag">
+            <field name="name">IoT</field>
+            <field name="color">3</field>
+        </record>
+
+        <!-- Artículo 1 -->
+        <record id="blog_post_1" model="blog.post">
+            <field name="name">Tendencias en Ciberseguridad 2026</field>
+            <field name="subtitle">Las principales amenazas y cómo proteger tu empresa</field>
+            <field name="blog_id" ref="blog_tech"/>
+            <field name="author_id" ref="base.partner_admin"/>
+            <field name="is_published" eval="True"/>
+            <field name="published_date" eval="(datetime.now()-relativedelta(days=2)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="tag_ids" eval="[(6, 0, [ref('blog_tag_ciberseguridad')])]"/>
+            <field name="content"><![CDATA[
+<p class="lead">El panorama de ciberseguridad evoluciona constantemente. En 2026, las empresas enfrentan nuevas amenazas que requieren soluciones avanzadas.</p>
+<p>Los ataques de ransomware siguen en aumento, pero ahora con inteligencia artificial para evadir detecciones. Las organizaciones deben adoptar una postura de seguridad proactiva.</p>
+<p>Las principales tendencias incluyen: Zero Trust Architecture, SASE (Secure Access Service Edge), y la automatización de respuesta a incidentes con IA.</p>
+]]></field>
+        </record>
+
+        <!-- Artículo 2 -->
+        <record id="blog_post_2" model="blog.post">
+            <field name="name">Migración a la Nube: Guía Práctica</field>
+            <field name="subtitle">Pasos esenciales para una transición exitosa</field>
+            <field name="blog_id" ref="blog_tech"/>
+            <field name="author_id" ref="base.partner_admin"/>
+            <field name="is_published" eval="True"/>
+            <field name="published_date" eval="(datetime.now()-relativedelta(days=5)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="tag_ids" eval="[(6, 0, [ref('blog_tag_cloud')])]"/>
+            <field name="content"><![CDATA[
+<p class="lead">Migrar a la nube no es solo un cambio técnico, sino una transformación estratégica del negocio.</p>
+<p>Antes de iniciar la migración, es fundamental evaluar la infraestructura actual, definir la estrategia de nube (pública, privada o híbrida) y establecer métricas de éxito.</p>
+<p>Los errores más comunes incluyen: subestimar la complejidad de las dependencias, no capacitar al equipo, y olvidar la seguridad desde el inicio.</p>
+]]></field>
+        </record>
+
+        <!-- Artículo 3 -->
+        <record id="blog_post_3" model="blog.post">
+            <field name="name">IoT en la Industria: Casos de Éxito</field>
+            <field name="subtitle">Cómo el Internet de las Things está transformando la manufactura</field>
+            <field name="blog_id" ref="blog_tech"/>
+            <field name="author_id" ref="base.partner_admin"/>
+            <field name="is_published" eval="True"/>
+            <field name="published_date" eval="(datetime.now()-relativedelta(days=8)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="tag_ids" eval="[(6, 0, [ref('blog_tag_iot')])]"/>
+            <field name="content"><![CDATA[
+<p class="lead">El Internet de las Cosas (IoT) está revolucionando la industria manufacturing con datos en tiempo real y automatización inteligente.</p>
+<p>Empresas como Avianca, Oleoducto de Colombia y Policlínica Metropolitana ya implementan soluciones IoT para monitoreo de activos, mantenimiento predictivo y optimización de procesos.</p>
+<p>Los beneficios incluyen: reducción de tiempo de inactividad, mejora en la eficiencia operativa y toma de decisiones basada en datos.</p>
+]]></field>
+        </record>
+    </data>
+</odoo>

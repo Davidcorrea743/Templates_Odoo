@@ -386,33 +386,40 @@
                              11. SECCIÓN DE BLOG
                              ========================================================= -->
                         <section id="blog" class="dimsop-section py-5 dimsop-section-dark">
-                            <div class="container">
-                                <h2 class="dimsop-h2 text-center mb-5">Actualidad y Tendencias Tecnológicas</h2>
-                                <div class="row justify-content-center">
-                                    <div class="col-lg-8">
-                                        <div class="dimsop-blog card mb-4">
-                                            <div class="row g-0">
-                                                <div class="col-md-5">
-                                                    <div class="dimsop-blog-cover" role="img" aria-label="Imagen destacada de la publicación"></div>
-                                                </div>
-                                                <div class="col-md-7">
-                                                    <div class="card-body">
-                                                        <span class="badge dimsop-badge mb-2">Última publicación</span>
-                                                        <h3 class="dimsop-h3">Título del último artículo</h3>
-                                                        <p>Resumen de la última nota publicada por Dimsop...</p>
-                                                        <p class="text-muted small">Fecha de publicación</p>
-                                                        <a class="btn btn-dimsop-primary" href="/blog">Leer más</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="text-center">
-                                            <a class="btn btn-dimsop-secondary" href="/blog">Ver todas las publicaciones →</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
+                             <div class="container">
+                                 <h2 class="dimsop-h2 text-center mb-5">Actualidad y Tendencias Tecnológicas</h2>
+                             </div>
+                             <div class="dimsop-marquee" role="region" aria-label="Últimos artículos del blog">
+                                 <div class="dimsop-marquee-track">
+                                     <t t-foreach="blog_posts" t-as="post">
+                                         <div class="dimsop-blog-item">
+                                             <div class="dimsop-blog-item-cover"></div>
+                                             <div class="dimsop-blog-item-content">
+                                                 <span class="dimsop-blog-date" t-esc="post.published_date.strftime('%d %b %Y') if post.published_date else ''"/>
+                                                 <h3 class="dimsop-h3" t-esc="post.name"/>
+                                                 <p t-esc="post.subtitle or post.teaser or ''"/>
+                                                 <a t-attf-href="#{post.website_url}" class="btn btn-dimsop-primary btn-sm">Leer más</a>
+                                             </div>
+                                         </div>
+                                     </t>
+                                     <!-- Duplicados para loop infinito -->
+                                     <t t-foreach="blog_posts" t-as="post">
+                                         <div class="dimsop-blog-item" aria-hidden="true">
+                                             <div class="dimsop-blog-item-cover"></div>
+                                             <div class="dimsop-blog-item-content">
+                                                 <span class="dimsop-blog-date" t-esc="post.published_date.strftime('%d %b %Y') if post.published_date else ''"/>
+                                                 <h3 class="dimsop-h3" t-esc="post.name"/>
+                                                 <p t-esc="post.subtitle or post.teaser or ''"/>
+                                                 <a t-attf-href="#{post.website_url}" class="btn btn-dimsop-primary btn-sm">Leer más</a>
+                                             </div>
+                                         </div>
+                                     </t>
+                                 </div>
+                             </div>
+                             <div class="text-center mt-4">
+                                 <a class="btn btn-dimsop-secondary" href="/blog">Ver todas las publicaciones →</a>
+                             </div>
+                         </section>
 
                         <!-- =========================================================
                              12. FORMULARIO DE CONTACTO

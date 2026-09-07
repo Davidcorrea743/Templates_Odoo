@@ -714,6 +714,67 @@ h1, h2, h3, h4, h5, .dimsop-h1, .dimsop-h2, .dimsop-h3 {
         linear-gradient(135deg, var(--dimsop-primary) 0%, var(--dimsop-secondary) 60%, var(--dimsop-primary-dark) 100%);
 }
 
+// Blog carousel (Sección 11 - marquee)
+.dimsop-blog-item {
+    min-width: 350px;
+    max-width: 350px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    overflow: hidden;
+    flex-shrink: 0;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    margin-top: 40px;
+}
+
+.dimsop-blog-item:hover {
+    transform: translateY(-12px) scale(1.06);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
+}
+
+.dimsop-blog-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.dimsop-blog-item-cover {
+    width: 100%;
+    height: 180px;
+    background: linear-gradient(135deg, var(--dimsop-primary), var(--dimsop-secondary));
+}
+
+.dimsop-blog-item-content {
+    padding: 1.25rem;
+}
+
+.dimsop-blog-date {
+    font-size: 0.75rem;
+    color: var(--dimsop-accent);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.dimsop-blog-item-content h3 {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+    color: var(--dimsop-white);
+}
+
+.dimsop-blog-item-content p {
+    font-size: 0.88rem;
+    color: var(--dimsop-text-muted);
+    line-height: 1.5;
+}
+
+.dimsop-blog-item .btn-sm {
+    font-size: 0.82rem;
+    padding: 0.35rem 1rem;
+    margin-top: 0.75rem;
+}
+
 // Alertas de feedback del formulario (Sección 12)
 .dimsop-alert {
     max-width: 720px;

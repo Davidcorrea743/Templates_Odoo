@@ -22,6 +22,7 @@ Características técnicas:
         'website',
         'web',
         'website_crm',
+        'website_blog',
     ],
     'data': [
         'views/layout.xml',
@@ -30,6 +31,7 @@ Características técnicas:
         'views/home.xml',
         'views/privacy.xml',
         'data/website_data.xml',
+        'data/blog_data.xml',
     ],
     'assets': {
         'web.assets_frontend': [
