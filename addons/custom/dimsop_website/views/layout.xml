@@ -25,17 +25,169 @@
                 <i class="fa fa-whatsapp" aria-hidden="true"></i>
             </a>
         </xpath>
+        <!-- Header interactivity: scroll hide/show, active underline, burger, smooth scroll (inline, no depende de JS lazy) -->
+        <xpath expr="//body" position="inside">
+            <script>
+                (function() {
+                    var header = document.getElementById('dimsop_header');
+                    var lastScroll = 0;
+                    var scrollThreshold = 80;
+
+                    window.addEventListener('scroll', function() {
+                        var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+                        if (currentScroll > scrollThreshold) {
+                            if (currentScroll > lastScroll) {
+                                header.classList.add('dimsop-header-hidden');
+                                header.classList.remove('dimsop-header-visible');
+                            } else {
+                                header.classList.remove('dimsop-header-hidden');
+                                header.classList.add('dimsop-header-visible');
+                            }
+                        } else {
+                            header.classList.remove('dimsop-header-hidden');
+                            header.classList.remove('dimsop-header-visible');
+                        }
+                        lastScroll = currentScroll;
+                    }, { passive: true });
+
+                    var progressBar = document.getElementById('dimsop-scroll-progress');
+                    if (progressBar) {
+                        window.addEventListener('scroll', function() {
+                            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                            var docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                            var scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+                            progressBar.style.width = scrollPercent + '%';
+                        }, { passive: true });
+                    }
+
+                    function getSections() {
+                        var arr = [];
+                        document.querySelectorAll('section[id]').forEach(function(section) {
+                            arr.push({
+                                id: section.id,
+                                el: section,
+                                offset: section.offsetTop - 120
+                            });
+                        });
+                        return arr;
+                    }
+
+                    function updateActiveLink() {
+                        var navLinks = document.querySelectorAll('.dimsop-nav .nav-link');
+                        var scrollPos = window.pageYOffset || document.documentElement.scrollTop;
+                        var current = '';
+                        var path = window.location.pathname;
+                        var sections = getSections();
+
+                        sections.forEach(function(section) {
+                            if (scrollPos >= section.offset) {
+                                current = section.id;
+                            }
+                        });
+
+                        var firstSectionId = sections.length > 0 ? sections[0].id : '';
+                        var sectionToNav = {
+                            'banner': '/', 'iso': '/', 'nosotros': '/#nosotros',
+                            'metodologia': '/#unidades', 'unidades': '/#unidades',
+                            'cobertura': '/#unidades', 'aliados': '/#aliados',
+                            'contadores': '/#unidades', 'proyectos': '/#unidades',
+                            'blog': '/blog', 'contacto': '/#contacto'
+                        };
+                        var activeHref = sectionToNav[current] || '/';
+
+                        navLinks.forEach(function(link) {
+                            link.classList.remove('dimsop-nav-active');
+                            var href = link.getAttribute('href') || '';
+
+                            if (path === '/blog' &amp;&amp; href === '/blog') {
+                                link.classList.add('dimsop-nav-active');
+                            } else if (path === '/' &amp;&amp; href === activeHref) {
+                                link.classList.add('dimsop-nav-active');
+                            }
+                        });
+                    }
+
+                    window.addEventListener('scroll', updateActiveLink, { passive: true });
+                    updateActiveLink();
+
+                    var wrap = document.getElementById('dimsop-search-wrap');
+                    if (wrap) {
+                        wrap.addEventListener('click', function(e) {
+                            if (e.target.tagName === 'INPUT') return;
+                            wrap.classList.toggle('dimsop-search-open');
+                            var input = wrap.querySelector('input');
+                            if (wrap.classList.contains('dimsop-search-open') &amp;&amp; input) {
+                                input.focus();
+                            }
+                        });
+                        document.addEventListener('click', function(e) {
+                            if (!wrap.contains(e.target)) {
+                                wrap.classList.remove('dimsop-search-open');
+                            }
+                        });
+                    }
+
+                    var burger = document.getElementById('dimsop-burger-toggle');
+                    var mobileNav = document.getElementById('dimsop-mobile-nav');
+                    if (burger &amp;&amp; mobileNav) {
+                        function closeMobileMenu() {
+                            mobileNav.classList.remove('dimsop-mobile-open');
+                            burger.classList.remove('dimsop-burger-active');
+                            burger.setAttribute('aria-expanded', 'false');
+                            mobileNav.setAttribute('aria-hidden', 'true');
+                        }
+
+                        burger.addEventListener('click', function() {
+                            var isOpen = mobileNav.classList.contains('dimsop-mobile-open');
+                            if (isOpen) {
+                                closeMobileMenu();
+                            } else {
+                                mobileNav.classList.add('dimsop-mobile-open');
+                                burger.classList.add('dimsop-burger-active');
+                                burger.setAttribute('aria-expanded', 'true');
+                                mobileNav.setAttribute('aria-hidden', 'false');
+                            }
+                        });
+
+                        mobileNav.querySelectorAll('.nav-link').forEach(function(link) {
+                            link.addEventListener('click', function() {
+                                closeMobileMenu();
+                            });
+                        });
+
+                        document.addEventListener('click', function(e) {
+                            if (!burger.contains(e.target) &amp;&amp; !mobileNav.contains(e.target)) {
+                                closeMobileMenu();
+                            }
+                        });
+                    }
+
+                    document.querySelectorAll('a[href^="/#"]').forEach(function(anchor) {
+                        anchor.addEventListener('click', function(e) {
+                            var hash = this.getAttribute('href');
+                            if (hash) {
+                                var target = document.querySelector(hash);
+                                if (target) {
+                                    e.preventDefault();
+                                    var headerHeight = header.offsetHeight || 70;
+                                    var targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                                    window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+                                }
+                            }
+                        });
+                    });
+                })();
+            </script>
+        </xpath>
         <!-- GSAP ScrollTrigger: CDN + all scroll animations (inline, no depende de JS lazy) -->
         <xpath expr="//body" position="inside">
             <script>
                 (function() {
-                    // Verificar prefers-reduced-motion
                     var prefersReducedMotion = window.matchMedia &amp;&amp;
                         window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
                     if (prefersReducedMotion) return;
 
-                    // Cargar GSAP + ScrollTrigger desde CDN
                     function loadGSAP(callback) {
                         if (window.gsap &amp;&amp; window.ScrollTrigger) { callback(); return; }
                         var gsapScript = document.createElement('script');
@@ -55,7 +207,6 @@
                     function initAnimations() {
                         gsap.config({ nullTargetWarn: false });
 
-                        /* HERO — Boot sequence (sin transformaciones en video) */
                         gsap.from('.dimsop-hero-eyebrow-text', {
                             opacity: 0, letterSpacing: '8px', duration: 0.8, delay: 0.2, ease: 'power2.out'
                         });
@@ -65,7 +216,6 @@
                         gsap.from('#banner h1', { y: 40, opacity: 0, duration: 1, delay: 0.5, ease: 'power3.out' });
                         gsap.from('#banner .dimsop-lead', { y: 30, opacity: 0, duration: 1, delay: 0.7, ease: 'power3.out' });
 
-                        /* ¿QUIÉNES SOMOS? — Timeline escalonada */
                         var nosotrosTl = gsap.timeline({
                             scrollTrigger: { trigger: '#nosotros', start: 'top 75%', toggleActions: 'play none none reverse' }
                         });
@@ -78,13 +228,11 @@
                             .from('#nosotros .text-center.mb-4', { y: 20, opacity: 0, duration: 0.5, ease: 'power3.out' }, '-=0.4')
                             .from('#nosotros .dimsop-value', { scale: 0.85, opacity: 0, duration: 0.5, stagger: 0.08, ease: 'back.out(1.4)' }, '-=0.3');
 
-                        /* CINTILLO ISO */
                         gsap.from('#iso', {
                             x: -60, opacity: 0, duration: 0.7, ease: 'power3.out',
                             scrollTrigger: { trigger: '#iso', start: 'top 90%', toggleActions: 'play none none reverse' }
                         });
 
-                        /* METODOLOGÍA */
                         gsap.from('#metodologia .dimsop-h2', {
                             y: 50, opacity: 0, duration: 0.8, ease: 'power3.out',
                             scrollTrigger: { trigger: '#metodologia', start: 'top 80%', toggleActions: 'play none none reverse' }
@@ -98,7 +246,6 @@
                             scrollTrigger: { trigger: '#metodologia .row', start: 'top 85%', toggleActions: 'play none none reverse' }
                         });
 
-                        /* UNIDADES DE NEGOCIO */
                         gsap.from('#unidades .dimsop-h2', {
                             y: 50, opacity: 0, duration: 0.8, ease: 'power3.out',
                             scrollTrigger: { trigger: '#unidades', start: 'top 80%', toggleActions: 'play none none reverse' }
@@ -108,7 +255,6 @@
                             scrollTrigger: { trigger: '#unidades .row', start: 'top 85%', toggleActions: 'play none none reverse' }
                         });
 
-                        /* MAPA DE COBERTURA */
                         gsap.from('#cobertura .dimsop-h2', {
                             y: 50, opacity: 0, duration: 0.8, ease: 'power3.out',
                             scrollTrigger: { trigger: '#cobertura', start: 'top 80%', toggleActions: 'play none none reverse' }
@@ -123,13 +269,11 @@
                             }
                         );
 
-                        /* ALIADOS */
                         gsap.from('#aliados .dimsop-h2', {
                             y: 50, opacity: 0, duration: 0.8, ease: 'power3.out',
                             scrollTrigger: { trigger: '#aliados', start: 'top 80%', toggleActions: 'play none none reverse' }
                         });
 
-                        /* CONTADORES — GSAP */
                         var contadoresTl = gsap.timeline({
                             scrollTrigger: {
                                 trigger: '#contadores',
@@ -159,13 +303,11 @@
                             }, 0);
                         });
 
-                        /* PROYECTOS */
                         gsap.from('#proyectos .dimsop-h2', {
                             y: 50, opacity: 0, duration: 0.8, ease: 'power3.out',
                             scrollTrigger: { trigger: '#proyectos', start: 'top 80%', toggleActions: 'play none none reverse' }
                         });
 
-                        /* BLOG */
                         gsap.from('#blog .dimsop-h2', {
                             y: 50, opacity: 0, duration: 0.8, ease: 'power3.out',
                             scrollTrigger: { trigger: '#blog', start: 'top 80%', toggleActions: 'play none none reverse' }
@@ -175,7 +317,6 @@
                             scrollTrigger: { trigger: '#blog .row', start: 'top 85%', toggleActions: 'play none none reverse' }
                         });
 
-                        /* FORMULARIO CONTACTO */
                         gsap.from('#contacto .dimsop-h2', {
                             y: 50, opacity: 0, duration: 0.8, ease: 'power3.out',
                             scrollTrigger: { trigger: '#contacto', start: 'top 80%', toggleActions: 'play none none reverse' }
@@ -185,7 +326,6 @@
                             scrollTrigger: { trigger: '#contacto .dimsop-form', start: 'top 85%', toggleActions: 'play none none reverse' }
                         });
 
-                        /* FOOTER */
                         gsap.from('#dimsop_footer .col-lg-4', {
                             y: 30, opacity: 0, duration: 0.6, stagger: 0.12, ease: 'power3.out',
                             scrollTrigger: { trigger: '#dimsop_footer', start: 'top 90%', toggleActions: 'play none none reverse' }
@@ -197,7 +337,6 @@
             </script>
         </xpath>
         <xpath expr="//head/meta[last()]" position="after">
-            <!-- Dark mode: aplicar tema ANTES del primer paint para evitar FOUC -->
             <script>
                 (function() {
                     try {
@@ -206,7 +345,6 @@
                     } catch(e) {}
                 })();
             </script>
-            <!-- Dark mode toggle handler -->
             <script>
                 document.addEventListener('DOMContentLoaded', function() {
                     var btn = document.getElementById('dimsop-dark-toggle');
@@ -221,7 +359,6 @@
                             icon.className = next === 'dark' ? 'fa fa-sun-o' : 'fa fa-moon-o';
                         }
                     });
-                    // Sync icon on load
                     var icon = btn.querySelector('i');
                     if (icon &amp;&amp; document.documentElement.getAttribute('data-theme') === 'dark') {
                         icon.className = 'fa fa-sun-o';

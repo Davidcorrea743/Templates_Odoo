@@ -21,16 +21,23 @@ html, body {
 
 // Ajustes específicos del dark mode
 [data-theme="dark"] {
-    // Header
+    // Header - glassmorphism dark
     .dimsop-header {
-        background-color: var(--dimsop-bg) !important;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, .3);
+        background: rgba(11, 22, 38, 0.88) !important;
+        border-bottom-color: rgba(255, 255, 255, 0.06) !important;
     }
     .dimsop-header .dimsop-nav .nav-link {
         color: var(--dimsop-text) !important;
     }
-    .dimsop-header .dimsop-nav .nav-link:hover {
+    .dimsop-header .dimsop-nav .nav-link:hover,
+    .dimsop-header .dimsop-nav .nav-link.dimsop-nav-active {
         color: var(--dimsop-accent) !important;
+    }
+    .dimsop-scroll-progress {
+        background: linear-gradient(90deg, var(--dimsop-accent), #7dd956);
+    }
+    .dimsop-logo img {
+        filter: brightness(1.2);
     }
     .dimsop-search-icon {
         color: var(--dimsop-text) !important;
@@ -45,22 +52,25 @@ html, body {
     }
 
     // Burger menú móvil
-    .dimsop-burger {
-        color: var(--dimsop-text) !important;
+    .dimsop-burger-line {
+        background: var(--dimsop-text) !important;
     }
-    .dimsop-burger:hover {
-        color: var(--dimsop-accent) !important;
+    .dimsop-burger:hover .dimsop-burger-line {
+        background: var(--dimsop-accent) !important;
     }
 
     // Panel menú móvil
-    #dimsop-mobile-nav {
-        background-color: var(--dimsop-bg) !important;
-        border-top-color: var(--dimsop-surface-border) !important;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, .4) !important;
+    .dimsop-mobile-panel {
+        background-color: rgba(11, 22, 38, 0.95) !important;
+        border-top-color: rgba(255, 255, 255, 0.06) !important;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4) !important;
     }
-    #dimsop-mobile-nav .nav-link {
+    .dimsop-mobile-panel .nav-link {
         color: var(--dimsop-text) !important;
-        border-bottom-color: var(--dimsop-surface-border) !important;
+        border-bottom-color: rgba(255, 255, 255, 0.06) !important;
+    }
+    .dimsop-mobile-panel .nav-link:hover {
+        color: var(--dimsop-accent) !important;
     }
 
     // Tarjetas y superficies

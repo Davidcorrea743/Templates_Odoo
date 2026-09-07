@@ -3,6 +3,9 @@
     <template id="dimsop_header" inherit_id="website.layout" name="Dimsop Header">
         <xpath expr="//header[1]" position="replace">
             <header id="dimsop_header" class="o_header dimsop-header">
+                <!-- Scroll progress bar -->
+                <div class="dimsop-scroll-progress" id="dimsop-scroll-progress"></div>
+
                 <div class="dimsop-header-main container d-flex align-items-center justify-content-between py-2">
                     <!-- Logo -->
                     <a class="dimsop-logo" href="/" title="Dimsop">
@@ -11,13 +14,26 @@
                     </a>
 
                     <!-- Navegacion desktop -->
-                    <nav class="dimsop-nav d-none d-lg-flex">
+                    <nav class="dimsop-nav d-none d-lg-flex" aria-label="Navegacion principal">
                         <ul class="nav">
-                            <t t-foreach="website.menu_id.child_id" t-as="menu">
-                                <li class="nav-item">
-                                    <a class="nav-link" t-att-href="menu.url" t-esc="menu.name"/>
-                                </li>
-                            </t>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/#nosotros">Nosotros</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/#unidades">Unidades de Negocio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/#aliados">Aliados</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/blog">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/#contacto">Contacto</a>
+                            </li>
                         </ul>
                     </nav>
 
@@ -32,9 +48,6 @@
                             </div>
                         </form>
 
-                        <!-- Idioma -->
-                        <t t-call="website.language_selector"/>
-
                         <!-- Dark mode toggle -->
                         <button id="dimsop-dark-toggle" class="btn btn-sm btn-outline-light ms-2"
                                 type="button" title="Cambiar modo claro/oscuro" aria-label="Modo oscuro">
@@ -47,59 +60,38 @@
                             id="dimsop-burger-toggle"
                             aria-expanded="false" aria-controls="dimsop-mobile-nav"
                             aria-label="Abrir menu de navegacion">
-                        <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+                        <span class="dimsop-burger-line"></span>
+                        <span class="dimsop-burger-line"></span>
+                        <span class="dimsop-burger-line"></span>
                     </button>
                 </div>
 
                 <!-- Menu movil -->
-                <div class="d-lg-none" id="dimsop-mobile-nav" style="display: none;">
-                    <ul class="nav flex-column px-3 pb-3">
-                        <t t-foreach="website.menu_id.child_id" t-as="menu">
+                <div class="d-lg-none dimsop-mobile-panel" id="dimsop-mobile-nav" aria-hidden="true">
+                    <nav aria-label="Navegacion movil">
+                        <ul class="nav flex-column">
                             <li class="nav-item">
-                                <a class="nav-link" t-att-href="menu.url" t-esc="menu.name"/>
+                                <a class="nav-link" href="/">Inicio</a>
                             </li>
-                        </t>
-                    </ul>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/#nosotros">Nosotros</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/#unidades">Unidades de Negocio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/#aliados">Aliados</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/blog">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/#contacto">Contacto</a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </header>
-            <script>
-                (function() {
-                    // Busqueda expand on click
-                    var wrap = document.getElementById('dimsop-search-wrap');
-                    if (wrap) {
-                        wrap.addEventListener('click', function(e) {
-                            if (e.target.tagName === 'INPUT') return;
-                            wrap.classList.toggle('dimsop-search-open');
-                            var input = wrap.querySelector('input');
-                            if (wrap.classList.contains('dimsop-search-open') &amp;&amp; input) {
-                                input.focus();
-                            }
-                        });
-                        document.addEventListener('click', function(e) {
-                            if (!wrap.contains(e.target)) {
-                                wrap.classList.remove('dimsop-search-open');
-                            }
-                        });
-                    }
-
-                    // Burger menu movil
-                    var burger = document.getElementById('dimsop-burger-toggle');
-                    var mobileNav = document.getElementById('dimsop-mobile-nav');
-                    if (burger &amp;&amp; mobileNav) {
-                        burger.addEventListener('click', function() {
-                            var isOpen = mobileNav.style.display === 'block';
-                            mobileNav.style.display = isOpen ? 'none' : 'block';
-                            burger.setAttribute('aria-expanded', !isOpen);
-                        });
-                        document.addEventListener('click', function(e) {
-                            if (!burger.contains(e.target) &amp;&amp; !mobileNav.contains(e.target)) {
-                                mobileNav.style.display = 'none';
-                                burger.setAttribute('aria-expanded', 'false');
-                            }
-                        });
-                    }
-                })();
-            </script>
         </xpath>
     </template>
 </odoo>

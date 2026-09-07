@@ -56,11 +56,36 @@ h1, h2, h3, h4, h5, .dimsop-h1, .dimsop-h2, .dimsop-h3 {
 
 // ----------------------------- Header (Sección 1) --------------------
 .dimsop-header {
-    background-color: var(--dimsop-white);
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     position: sticky;
     top: 0;
     z-index: 1030;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
+    border-bottom: 1px solid rgba(0, 51, 98, 0.08);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+                background 0.35s ease,
+                box-shadow 0.35s ease;
+}
+
+.dimsop-header-visible {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.dimsop-header-hidden {
+    transform: translateY(-100%);
+}
+
+// Scroll progress bar
+.dimsop-scroll-progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 0;
+    background: linear-gradient(90deg, var(--dimsop-accent), #7dd956);
+    z-index: 1040;
+    transition: width 0.1s linear;
 }
 
 // Nota: la topbar ISO se eliminó; el cintillo vive como sección #iso en home.
@@ -71,16 +96,47 @@ h1, h2, h3, h4, h5, .dimsop-h1, .dimsop-h2, .dimsop-h3 {
 
 .dimsop-logo img {
     max-height: 46px;
+    transition: transform 0.3s ease;
+}
+
+.dimsop-logo:hover img {
+    transform: scale(1.05);
 }
 
 // Fix: el HTML usa id (#dimsop-mobile-nav), no clase
 .dimsop-nav .nav-link,
-#dimsop-mobile-nav .nav-link {
+.dimsop-mobile-panel .nav-link {
     color: var(--dimsop-primary);
     font-family: var(--dimsop-font-heading);
-    font-size: 1.1rem;
-    letter-spacing: 1px;
-    transition: color .2s ease;
+    font-size: 1.05rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 0.5rem 0.9rem;
+    position: relative;
+    transition: color 0.25s ease;
+}
+
+// Active nav indicator - solo visible cuando hay seccion activa
+.dimsop-nav .nav-link.dimsop-nav-active {
+    color: var(--dimsop-accent);
+}
+
+.dimsop-nav .nav-link.dimsop-nav-active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 2px;
+    background: var(--dimsop-accent);
+    border-radius: 1px;
+    animation: navIndicator 0.3s ease forwards;
+}
+
+@keyframes navIndicator {
+    from { width: 0; opacity: 0; }
+    to { width: 20px; opacity: 1; }
 }
 
 .dimsop-nav .nav-link:hover,
@@ -88,26 +144,87 @@ h1, h2, h3, h4, h5, .dimsop-h1, .dimsop-h2, .dimsop-h3 {
     color: var(--dimsop-accent);
 }
 
-#dimsop-mobile-nav .nav-link:hover,
-#dimsop-mobile-nav .nav-link:focus-visible {
+.dimsop-mobile-panel .nav-link:hover,
+.dimsop-mobile-panel .nav-link:focus-visible {
     color: var(--dimsop-accent);
 }
 
-// Menú móvil: panel desplegable
-#dimsop-mobile-nav {
-    background-color: var(--dimsop-white);
-    border-top: 1px solid var(--dimsop-surface-border);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
-    padding: .5rem 0;
+// Menú móvil: panel desplegable - expande hacia abajo
+.dimsop-mobile-panel {
+    background-color: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(0, 51, 98, 0.08);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    z-index: 1028;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.3s ease;
+    pointer-events: none;
 }
 
-#dimsop-mobile-nav .nav-link {
-    padding: .6rem 0;
-    border-bottom: 1px solid rgba(0, 0, 0, .05);
+.dimsop-mobile-panel.dimsop-mobile-open {
+    max-height: 350px;
+    opacity: 1;
+    pointer-events: auto;
 }
 
-#dimsop-mobile-nav .nav-link:last-child {
+.dimsop-mobile-panel .nav-link {
+    color: var(--dimsop-primary);
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid rgba(0, 51, 98, 0.06);
+    font-size: 1rem;
+}
+
+.dimsop-mobile-panel .nav-link:last-child {
     border-bottom: none;
+}
+
+// Burger animation
+.dimsop-burger {
+    background: transparent;
+    border: none;
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.dimsop-burger-line {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--dimsop-primary);
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease, background 0.3s ease;
+}
+
+.dimsop-burger.dimsop-burger-active .dimsop-burger-line:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.dimsop-burger.dimsop-burger-active .dimsop-burger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.dimsop-burger.dimsop-burger-active .dimsop-burger-line:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+.dimsop-burger:hover .dimsop-burger-line {
+    background: var(--dimsop-accent);
 }
 
 // ----------------------------- Buscador moderno (header) -------------
