@@ -216,14 +216,23 @@
                         gsap.from('#banner h1', { y: 40, opacity: 0, duration: 1, delay: 0.5, ease: 'power3.out' });
                         gsap.from('#banner .dimsop-lead', { y: 30, opacity: 0, duration: 1, delay: 0.7, ease: 'power3.out' });
 
+                        var isMobile = window.innerWidth &lt; 768;
                         var nosotrosTl = gsap.timeline({
                             scrollTrigger: { trigger: '#nosotros', start: 'top 75%', toggleActions: 'play none none reverse' }
                         });
                         nosotrosTl
                             .from('#nosotros .dimsop-h2', { y: 40, opacity: 0, duration: 0.8, ease: 'power3.out' })
-                            .from('#nosotros .dimsop-lead', { y: 25, opacity: 0, duration: 0.7, ease: 'power3.out' }, '-=0.5')
-                            .from('#nosotros .col-lg-6:first-child .dimsop-card', { x: -60, opacity: 0, duration: 0.8, ease: 'power3.out' }, '-=0.3')
-                            .from('#nosotros .col-lg-6:last-child .dimsop-card', { x: 60, opacity: 0, duration: 0.8, ease: 'power3.out' }, '-=0.6')
+                            .from('#nosotros .dimsop-lead', { y: 25, opacity: 0, duration: 0.7, ease: 'power3.out' }, '-=0.5');
+                        if (!isMobile) {
+                            nosotrosTl
+                                .from('#nosotros .col-lg-6:first-child .dimsop-card', { x: -60, opacity: 0, duration: 0.8, ease: 'power3.out' }, '-=0.3')
+                                .from('#nosotros .col-lg-6:last-child .dimsop-card', { x: 60, opacity: 0, duration: 0.8, ease: 'power3.out' }, '-=0.6');
+                        } else {
+                            nosotrosTl
+                                .from('#nosotros .col-lg-6:first-child .dimsop-card', { opacity: 0, duration: 0.6, ease: 'power3.out' }, '-=0.3')
+                                .from('#nosotros .col-lg-6:last-child .dimsop-card', { opacity: 0, duration: 0.6, ease: 'power3.out' }, '-=0.4');
+                        }
+                        nosotrosTl
                             .from('#nosotros .dimsop-h3', { y: 30, opacity: 0, duration: 0.6, ease: 'power3.out' }, '-=0.3')
                             .from('#nosotros .text-center.mb-4', { y: 20, opacity: 0, duration: 0.5, ease: 'power3.out' }, '-=0.4')
                             .from('#nosotros .dimsop-value', { scale: 0.85, opacity: 0, duration: 0.5, stagger: 0.08, ease: 'back.out(1.4)' }, '-=0.3');
@@ -274,33 +283,49 @@
                             scrollTrigger: { trigger: '#aliados', start: 'top 80%', toggleActions: 'play none none reverse' }
                         });
 
-                        var contadoresTl = gsap.timeline({
-                            scrollTrigger: {
-                                trigger: '#contadores',
-                                start: 'top 80%',
-                                toggleActions: 'play none none reverse'
-                            }
-                        });
-                        contadoresTl.from('.dimsop-counter-box', {
-                            scale: 0.85, opacity: 0, duration: 0.6,
-                            stagger: 0.2, ease: 'back.out(1.7)'
-                        });
-                        contadoresTl.from('.dimsop-counter p', {
-                            y: 20, opacity: 0, duration: 0.5,
-                            stagger: 0.2, ease: 'power2.out'
-                        }, '-=0.3');
-                        document.querySelectorAll('.dimsop-counter-num[data-target]').forEach(function(el) {
-                            var target = parseInt(el.getAttribute('data-target'), 10);
-                            var prefix = el.textContent.trim().charAt(0) === '+' ? '+' : '';
-                            var proxy = { val: 0 };
-                            contadoresTl.to(proxy, {
-                                val: target,
-                                duration: 1.8,
-                                ease: 'power2.out',
-                                onUpdate: function() {
-                                    el.textContent = prefix + Math.floor(proxy.val);
-                                }
-                            }, 0);
+                        function resetContadores() {
+                            gsap.set('.dimsop-counter-box', { scale: 0.85, opacity: 0 });
+                            gsap.set('.dimsop-counter p', { y: 20, opacity: 0 });
+                            document.querySelectorAll('.dimsop-counter-num[data-target]').forEach(function(el) {
+                                var prefix = el.textContent.trim().charAt(0) === '+' ? '+' : '';
+                                el.textContent = prefix + '0';
+                            });
+                        }
+
+                        function animarContadores() {
+                            var tl = gsap.timeline();
+                            tl.to('.dimsop-counter-box', {
+                                scale: 1, opacity: 1, duration: 0.6,
+                                stagger: 0.2, ease: 'back.out(1.7)'
+                            });
+                            tl.to('.dimsop-counter p', {
+                                y: 0, opacity: 1, duration: 0.5,
+                                stagger: 0.2, ease: 'power2.out'
+                            }, '-=0.3');
+                            document.querySelectorAll('.dimsop-counter-num[data-target]').forEach(function(el) {
+                                var target = parseInt(el.getAttribute('data-target'), 10);
+                                var prefix = el.textContent.trim().charAt(0) === '+' ? '+' : '';
+                                var proxy = { val: 0 };
+                                tl.to(proxy, {
+                                    val: target,
+                                    duration: 1.8,
+                                    ease: 'power2.out',
+                                    onUpdate: function() {
+                                        el.textContent = prefix + Math.floor(proxy.val);
+                                    }
+                                }, 0);
+                            });
+                        }
+
+                        resetContadores();
+
+                        ScrollTrigger.create({
+                            trigger: '#contadores',
+                            start: 'top 80%',
+                            onEnter: function() { animarContadores(); },
+                            onEnterBack: function() { animarContadores(); },
+                            onLeave: function() {},
+                            onLeaveBack: function() { resetContadores(); }
                         });
 
                         gsap.from('#proyectos .dimsop-h2', {
@@ -321,18 +346,140 @@
                             y: 50, opacity: 0, duration: 0.8, ease: 'power3.out',
                             scrollTrigger: { trigger: '#contacto', start: 'top 80%', toggleActions: 'play none none reverse' }
                         });
-                        gsap.from('#contacto .dimsop-form', {
+                        gsap.from('#contacto .dimsop-form-card', {
                             y: 30, opacity: 0, duration: 0.7, ease: 'power3.out',
-                            scrollTrigger: { trigger: '#contacto .dimsop-form', start: 'top 85%', toggleActions: 'play none none reverse' }
+                            scrollTrigger: { trigger: '#contacto .dimsop-form-card', start: 'top 85%', toggleActions: 'play none none reverse' }
                         });
 
                         gsap.from('#dimsop_footer .col-lg-4', {
                             y: 30, opacity: 0, duration: 0.6, stagger: 0.12, ease: 'power3.out',
                             scrollTrigger: { trigger: '#dimsop_footer', start: 'top 90%', toggleActions: 'play none none reverse' }
                         });
+
+                        setTimeout(function() { ScrollTrigger.refresh(); }, 500);
                     }
 
                     loadGSAP(initAnimations);
+
+                    setTimeout(function() {
+                        if (!window.gsap) {
+                            document.querySelectorAll('.dimsop-counter-num[data-target]').forEach(function(el) {
+                                var target = el.getAttribute('data-target');
+                                var prefix = el.textContent.trim().charAt(0) === '+' ? '+' : '';
+                                el.textContent = prefix + target;
+                            });
+                            document.querySelectorAll('.dimsop-hero-eyebrow-text, .dimsop-hero-eyebrow-line, #banner h1, #banner .dimsop-lead, .dimsop-h2, .dimsop-lead, .dimsop-card, .dimsop-h3, .dimsop-value, .dimsop-step, .dimsop-counter-box, .dimsop-counter p, .dimsop-blog-card, .dimsop-form, #dimsop_footer .col-lg-4').forEach(function(el) {
+                                el.style.opacity = '1';
+                                el.style.transform = 'none';
+                            });
+                        }
+                    }, 3500);
+                })();
+            </script>
+        </xpath>
+        <!-- Formulario: validación inline + loading state -->
+        <xpath expr="//body" position="inside">
+            <script>
+                (function() {
+                    var form = document.querySelector('.dimsop-form');
+                    if (!form) return;
+
+                    var nombre = document.getElementById('dimsop-f-nombre');
+                    var correo = document.getElementById('dimsop-f-correo');
+                    var submitBtn = form.querySelector('.dimsop-btn-submit');
+
+                    function showError(input, errorId, msg) {
+                        var err = document.getElementById(errorId);
+                        input.classList.add('dimsop-is-invalid');
+                        input.classList.remove('dimsop-is-valid');
+                        input.setAttribute('aria-invalid', 'true');
+                        if (err) { err.textContent = msg; err.classList.add('is-visible'); }
+                    }
+
+                    function clearError(input, errorId) {
+                        var err = document.getElementById(errorId);
+                        input.classList.remove('dimsop-is-invalid');
+                        input.removeAttribute('aria-invalid');
+                        if (err) { err.textContent = ''; err.classList.remove('is-visible'); }
+                    }
+
+                    function markValid(input) {
+                        input.classList.remove('dimsop-is-invalid');
+                        input.classList.add('dimsop-is-valid');
+                        input.removeAttribute('aria-invalid');
+                    }
+
+                    function isValidEmail(v) {
+                        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+                    }
+
+                    if (nombre) {
+                        nombre.addEventListener('blur', function() {
+                            var v = this.value.trim();
+                            if (v.length === 0) {
+                                showError(this, 'dimsop-e-nombre', 'El nombre es obligatorio.');
+                            } else if (v.length &lt; 2) {
+                                showError(this, 'dimsop-e-nombre', 'El nombre debe tener al menos 2 caracteres.');
+                            } else {
+                                clearError(this, 'dimsop-e-nombre');
+                                markValid(this);
+                            }
+                        });
+                        nombre.addEventListener('input', function() {
+                            if (this.classList.contains('dimsop-is-invalid')) {
+                                var v = this.value.trim();
+                                if (v.length >= 2) { clearError(this, 'dimsop-e-nombre'); markValid(this); }
+                            }
+                        });
+                    }
+
+                    if (correo) {
+                        correo.addEventListener('blur', function() {
+                            var v = this.value.trim();
+                            if (v.length === 0) {
+                                showError(this, 'dimsop-e-correo', 'El correo electrónico es obligatorio.');
+                            } else if (!isValidEmail(v)) {
+                                showError(this, 'dimsop-e-correo', 'Ingresa un correo electrónico válido.');
+                            } else {
+                                clearError(this, 'dimsop-e-correo');
+                                markValid(this);
+                            }
+                        });
+                        correo.addEventListener('input', function() {
+                            if (this.classList.contains('dimsop-is-invalid')) {
+                                var v = this.value.trim();
+                                if (isValidEmail(v)) { clearError(this, 'dimsop-e-correo'); markValid(this); }
+                            }
+                        });
+                    }
+
+                    form.addEventListener('submit', function(e) {
+                        var valid = true;
+
+                        if (nombre) {
+                            var nv = nombre.value.trim();
+                            if (nv.length === 0) { showError(nombre, 'dimsop-e-nombre', 'El nombre es obligatorio.'); valid = false; }
+                            else if (nv.length &lt; 2) { showError(nombre, 'dimsop-e-nombre', 'El nombre debe tener al menos 2 caracteres.'); valid = false; }
+                            else { clearError(nombre, 'dimsop-e-nombre'); markValid(nombre); }
+                        }
+
+                        if (correo) {
+                            var cv = correo.value.trim();
+                            if (cv.length === 0) { showError(correo, 'dimsop-e-correo', 'El correo electrónico es obligatorio.'); valid = false; }
+                            else if (!isValidEmail(cv)) { showError(correo, 'dimsop-e-correo', 'Ingresa un correo electrónico válido.'); valid = false; }
+                            else { clearError(correo, 'dimsop-e-correo'); markValid(correo); }
+                        }
+
+                        if (!valid) {
+                            e.preventDefault();
+                            var firstInvalid = form.querySelector('.dimsop-is-invalid');
+                            if (firstInvalid) firstInvalid.focus();
+                            return;
+                        }
+
+                        submitBtn.classList.add('dimsop-loading');
+                        submitBtn.disabled = true;
+                    });
                 })();
             </script>
         </xpath>

@@ -21,7 +21,7 @@ class WebsiteDimsop(http.Controller):
             order='published_date desc',
             limit=3
         )
-        return request.render('website.inicio-dimsop-soluciones-tic-de-vanguardia', {
+        return request.render('dimsop_website.dimsop_homepage_view', {
             'blog_posts': blog_posts,
         })
 

@@ -11557,3 +11557,1920 @@ lxml.etree.XMLSyntaxError: StartTag: invalid element name, line 50, column 47
 2026-09-07 21:51:20,640 218 INFO odoo18_lab odoo.service.server: Initiating shutdown 
 2026-09-07 21:51:20,640 218 INFO odoo18_lab odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
 2026-09-07 21:51:20,640 218 INFO odoo18_lab odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 1 connections  
+2026-09-08 13:22:00,911 155 INFO ? odoo: Odoo version 18.0-20260723 
+2026-09-08 13:22:00,911 155 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-09-08 13:22:00,912 155 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/18.0', '/mnt/extra-addons/custom', '/mnt/extra-addons/community'] 
+2026-09-08 13:22:00,912 155 INFO ? odoo: database: odoo@db:5432 
+2026-09-08 13:22:01,511 155 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2026-09-08 13:22:01,588 155 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltoimage binary at /usr/local/bin/wkhtmltoimage 
+2026-09-08 13:22:02,209 155 INFO odoo18_lab odoo.modules.loading: loading 1 modules... 
+2026-09-08 13:22:02,218 155 INFO odoo18_lab odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2026-09-08 13:22:02,245 155 INFO odoo18_lab odoo.modules.loading: updating modules list 
+2026-09-08 13:22:02,248 155 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-09-08 13:22:05,086 155 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.button_upgrade on ['Dimsop Website Theme'] to user __system__ #1 via n/a 
+2026-09-08 13:22:05,087 155 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.update_list on ['Dimsop Website Theme'] to user __system__ #1 via n/a 
+2026-09-08 13:22:06,536 155 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.button_install on [] to user __system__ #1 via n/a 
+2026-09-08 13:22:06,605 155 INFO odoo18_lab odoo.modules.loading: loading 49 modules... 
+2026-09-08 13:22:08,517 155 INFO odoo18_lab odoo.modules.loading: Loading module dimsop_website (49/49) 
+2026-09-08 13:22:08,788 155 INFO odoo18_lab odoo.modules.registry: module dimsop_website: creating or updating database tables 
+2026-09-08 13:22:08,960 155 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/layout.xml 
+2026-09-08 13:22:09,098 155 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/header.xml 
+2026-09-08 13:22:09,131 155 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/footer.xml 
+2026-09-08 13:22:09,167 155 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/home.xml 
+2026-09-08 13:22:09,262 155 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/privacy.xml 
+2026-09-08 13:22:09,305 155 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/data/website_data.xml 
+2026-09-08 13:22:09,410 155 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/data/blog_data.xml 
+2026-09-08 13:22:09,604 155 INFO odoo18_lab odoo.addons.base.models.ir_module: module dimsop_website: loading translation file /mnt/extra-addons/custom/dimsop_website/i18n/en_US.po for language en_US 
+2026-09-08 13:22:09,604 155 INFO odoo18_lab odoo.tools.translate: loading base translation file /mnt/extra-addons/custom/dimsop_website/i18n/en_US.po for language en_US 
+2026-09-08 13:22:09,665 155 INFO odoo18_lab odoo.modules.loading: Module dimsop_website loaded in 1.15s, 285 queries (+285 other) 
+2026-09-08 13:22:09,666 155 INFO odoo18_lab odoo.modules.loading: 49 modules loaded in 3.06s, 285 queries (+285 extra) 
+2026-09-08 13:22:09,899 155 INFO odoo18_lab odoo.modules.loading: Model crm.iap.lead.helpers is declared but cannot be loaded! (Perhaps a module was partially removed or renamed) 
+2026-09-08 13:22:09,899 155 INFO odoo18_lab odoo.modules.loading: Model crm.iap.lead.industry is declared but cannot be loaded! (Perhaps a module was partially removed or renamed) 
+2026-09-08 13:22:09,899 155 INFO odoo18_lab odoo.modules.loading: Model crm.iap.lead.role is declared but cannot be loaded! (Perhaps a module was partially removed or renamed) 
+2026-09-08 13:22:09,900 155 INFO odoo18_lab odoo.modules.loading: Model crm.iap.lead.seniority is declared but cannot be loaded! (Perhaps a module was partially removed or renamed) 
+2026-09-08 13:22:09,902 155 INFO odoo18_lab odoo.modules.loading: Model crm.iap.lead.mining.request is declared but cannot be loaded! (Perhaps a module was partially removed or renamed) 
+2026-09-08 13:22:10,909 155 INFO odoo18_lab odoo.modules.loading: Modules loaded. 
+2026-09-08 13:22:10,919 155 INFO odoo18_lab odoo.modules.registry: Registry changed, signaling through the database 
+2026-09-08 13:22:10,921 155 INFO odoo18_lab odoo.modules.registry: Registry loaded in 8.769s 
+2026-09-08 13:22:10,922 155 INFO odoo18_lab odoo.service.server: Initiating shutdown 
+2026-09-08 13:22:10,922 155 INFO odoo18_lab odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-09-08 13:22:10,922 155 INFO odoo18_lab odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 1 connections  
+2026-09-08 13:33:20,287 207 INFO ? odoo: Odoo version 18.0-20260723 
+2026-09-08 13:33:20,287 207 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-09-08 13:33:20,287 207 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/18.0', '/mnt/extra-addons/custom', '/mnt/extra-addons/community'] 
+2026-09-08 13:33:20,287 207 INFO ? odoo: database: odoo@db:5432 
+2026-09-08 13:33:20,560 207 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2026-09-08 13:33:20,581 207 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltoimage binary at /usr/local/bin/wkhtmltoimage 
+2026-09-08 13:33:20,827 207 INFO odoo18_lab odoo.modules.loading: loading 1 modules... 
+2026-09-08 13:33:20,833 207 INFO odoo18_lab odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2026-09-08 13:33:20,872 207 INFO odoo18_lab odoo.modules.loading: updating modules list 
+2026-09-08 13:33:20,874 207 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-09-08 13:33:22,522 207 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.button_upgrade on ['Dimsop Website Theme'] to user __system__ #1 via n/a 
+2026-09-08 13:33:22,522 207 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.update_list on ['Dimsop Website Theme'] to user __system__ #1 via n/a 
+2026-09-08 13:33:23,836 207 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.button_install on [] to user __system__ #1 via n/a 
+2026-09-08 13:33:23,877 207 INFO odoo18_lab odoo.modules.loading: loading 49 modules... 
+2026-09-08 13:33:24,484 207 INFO odoo18_lab odoo.modules.loading: Loading module dimsop_website (49/49) 
+2026-09-08 13:33:24,636 207 INFO odoo18_lab odoo.modules.registry: module dimsop_website: creating or updating database tables 
+2026-09-08 13:33:24,754 207 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/layout.xml 
+2026-09-08 13:33:24,835 207 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/header.xml 
+2026-09-08 13:33:24,864 207 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/footer.xml 
+2026-09-08 13:33:24,888 207 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/home.xml 
+2026-09-08 13:33:24,938 207 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/privacy.xml 
+2026-09-08 13:33:24,969 207 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/data/website_data.xml 
+2026-09-08 13:33:25,039 207 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/data/blog_data.xml 
+2026-09-08 13:33:25,122 207 INFO odoo18_lab odoo.addons.base.models.ir_module: module dimsop_website: loading translation file /mnt/extra-addons/custom/dimsop_website/i18n/en_US.po for language en_US 
+2026-09-08 13:33:25,122 207 INFO odoo18_lab odoo.tools.translate: loading base translation file /mnt/extra-addons/custom/dimsop_website/i18n/en_US.po for language en_US 
+2026-09-08 13:33:25,147 207 INFO odoo18_lab odoo.modules.loading: Module dimsop_website loaded in 0.66s, 285 queries (+285 other) 
+2026-09-08 13:33:25,148 207 INFO odoo18_lab odoo.modules.loading: 49 modules loaded in 1.27s, 285 queries (+285 extra) 
+2026-09-08 13:33:25,357 207 INFO odoo18_lab odoo.modules.loading: Model crm.iap.lead.helpers is declared but cannot be loaded! (Perhaps a module was partially removed or renamed) 
+2026-09-08 13:33:25,358 207 INFO odoo18_lab odoo.modules.loading: Model crm.iap.lead.industry is declared but cannot be loaded! (Perhaps a module was partially removed or renamed) 
+2026-09-08 13:33:25,358 207 INFO odoo18_lab odoo.modules.loading: Model crm.iap.lead.role is declared but cannot be loaded! (Perhaps a module was partially removed or renamed) 
+2026-09-08 13:33:25,358 207 INFO odoo18_lab odoo.modules.loading: Model crm.iap.lead.seniority is declared but cannot be loaded! (Perhaps a module was partially removed or renamed) 
+2026-09-08 13:33:25,360 207 INFO odoo18_lab odoo.modules.loading: Model crm.iap.lead.mining.request is declared but cannot be loaded! (Perhaps a module was partially removed or renamed) 
+2026-09-08 13:33:26,142 207 INFO odoo18_lab odoo.modules.loading: Modules loaded. 
+2026-09-08 13:33:26,148 207 INFO odoo18_lab odoo.modules.registry: Registry changed, signaling through the database 
+2026-09-08 13:33:26,149 207 INFO odoo18_lab odoo.modules.registry: Registry loaded in 5.360s 
+2026-09-08 13:33:26,149 207 INFO odoo18_lab odoo.service.server: Initiating shutdown 
+2026-09-08 13:33:26,149 207 INFO odoo18_lab odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-09-08 13:33:26,149 207 INFO odoo18_lab odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 1 connections  
+2026-09-08 13:35:58,432 67 INFO ? odoo: Odoo version 18.0-20260723 
+2026-09-08 13:35:58,433 67 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-09-08 13:35:58,433 67 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/18.0', '/mnt/extra-addons/custom', '/mnt/extra-addons/community'] 
+2026-09-08 13:35:58,433 67 INFO ? odoo: database: odoo@db:5432 
+2026-09-08 13:35:58,658 67 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2026-09-08 13:35:58,666 67 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltoimage binary at /usr/local/bin/wkhtmltoimage 
+2026-09-08 13:35:58,910 67 INFO odoo18_lab odoo.modules.loading: loading 1 modules... 
+2026-09-08 13:35:58,922 67 INFO odoo18_lab odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2026-09-08 13:35:58,974 67 INFO odoo18_lab odoo.modules.loading: updating modules list 
+2026-09-08 13:35:58,978 67 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-09-08 13:36:00,784 67 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.button_upgrade on ['Dimsop Website Theme'] to user __system__ #1 via n/a 
+2026-09-08 13:36:00,784 67 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.update_list on ['Dimsop Website Theme'] to user __system__ #1 via n/a 
+2026-09-08 13:36:01,984 67 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.button_install on [] to user __system__ #1 via n/a 
+2026-09-08 13:36:02,023 67 INFO odoo18_lab odoo.modules.loading: loading 49 modules... 
+2026-09-08 13:36:02,768 67 INFO odoo18_lab odoo.modules.loading: Loading module dimsop_website (49/49) 
+2026-09-08 13:36:02,977 67 INFO odoo18_lab odoo.modules.registry: module dimsop_website: creating or updating database tables 
+2026-09-08 13:36:03,090 67 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/layout.xml 
+2026-09-08 13:36:03,153 67 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/header.xml 
+2026-09-08 13:36:03,187 67 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/footer.xml 
+2026-09-08 13:36:03,214 67 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/home.xml 
+2026-09-08 13:36:03,282 67 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/privacy.xml 
+2026-09-08 13:36:03,314 67 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/data/website_data.xml 
+2026-09-08 13:36:03,370 67 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/data/blog_data.xml 
+2026-09-08 13:36:03,467 67 INFO odoo18_lab odoo.addons.base.models.ir_module: module dimsop_website: loading translation file /mnt/extra-addons/custom/dimsop_website/i18n/en_US.po for language en_US 
+2026-09-08 13:36:03,468 67 INFO odoo18_lab odoo.tools.translate: loading base translation file /mnt/extra-addons/custom/dimsop_website/i18n/en_US.po for language en_US 
+2026-09-08 13:36:03,501 67 INFO odoo18_lab odoo.modules.loading: Module dimsop_website loaded in 0.73s, 285 queries (+285 other) 
+2026-09-08 13:36:03,501 67 INFO odoo18_lab odoo.modules.loading: 49 modules loaded in 1.48s, 285 queries (+285 extra) 
+2026-09-08 13:36:03,810 67 INFO odoo18_lab odoo.modules.loading: Model crm.iap.lead.helpers is declared but cannot be loaded! (Perhaps a module was partially removed or renamed) 
+2026-09-08 13:36:03,810 67 INFO odoo18_lab odoo.modules.loading: Model crm.iap.lead.industry is declared but cannot be loaded! (Perhaps a module was partially removed or renamed) 
+2026-09-08 13:36:03,810 67 INFO odoo18_lab odoo.modules.loading: Model crm.iap.lead.role is declared but cannot be loaded! (Perhaps a module was partially removed or renamed) 
+2026-09-08 13:36:03,810 67 INFO odoo18_lab odoo.modules.loading: Model crm.iap.lead.seniority is declared but cannot be loaded! (Perhaps a module was partially removed or renamed) 
+2026-09-08 13:36:03,813 67 INFO odoo18_lab odoo.modules.loading: Model crm.iap.lead.mining.request is declared but cannot be loaded! (Perhaps a module was partially removed or renamed) 
+2026-09-08 13:36:04,675 67 INFO odoo18_lab odoo.modules.loading: Modules loaded. 
+2026-09-08 13:36:04,690 67 INFO odoo18_lab odoo.modules.registry: Registry changed, signaling through the database 
+2026-09-08 13:36:04,693 67 INFO odoo18_lab odoo.modules.registry: Registry loaded in 5.848s 
+2026-09-08 13:36:04,694 67 INFO odoo18_lab odoo.service.server: Initiating shutdown 
+2026-09-08 13:36:04,694 67 INFO odoo18_lab odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-09-08 13:36:04,695 67 INFO odoo18_lab odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 1 connections  
+2026-09-08 14:53:17,744 157 INFO ? odoo: Odoo version 18.0-20260723 
+2026-09-08 14:53:17,746 157 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-09-08 14:53:17,746 157 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/18.0', '/mnt/extra-addons/custom', '/mnt/extra-addons/community'] 
+2026-09-08 14:53:17,747 157 INFO ? odoo: database: odoo@db:5432 
+2026-09-08 14:53:18,204 157 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2026-09-08 14:53:18,275 157 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltoimage binary at /usr/local/bin/wkhtmltoimage 
+2026-09-08 14:53:18,930 157 INFO odoo18_lab odoo.modules.loading: loading 1 modules... 
+2026-09-08 14:53:18,943 157 INFO odoo18_lab odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2026-09-08 14:53:18,980 157 INFO odoo18_lab odoo.modules.loading: updating modules list 
+2026-09-08 14:53:18,982 157 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-09-08 14:53:21,444 157 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.button_upgrade on ['Dimsop Website Theme'] to user __system__ #1 via n/a 
+2026-09-08 14:53:21,444 157 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.update_list on ['Dimsop Website Theme'] to user __system__ #1 via n/a 
+2026-09-08 14:53:22,523 157 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.button_install on [] to user __system__ #1 via n/a 
+2026-09-08 14:53:22,560 157 INFO odoo18_lab odoo.modules.loading: loading 49 modules... 
+2026-09-08 14:53:24,013 157 INFO odoo18_lab odoo.modules.loading: Loading module dimsop_website (49/49) 
+2026-09-08 14:53:24,281 157 INFO odoo18_lab odoo.modules.registry: module dimsop_website: creating or updating database tables 
+2026-09-08 14:53:24,401 157 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/layout.xml 
+2026-09-08 14:53:24,411 157 WARNING odoo18_lab odoo.modules.loading: Transient module states were reset 
+2026-09-08 14:53:24,412 157 ERROR odoo18_lab odoo.modules.registry: Failed to load registry 
+2026-09-08 14:53:24,412 157 CRITICAL odoo18_lab odoo.service.server: Failed to initialize database `odoo18_lab`. 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/service/server.py", line 1414, in preload_registries
+    registry = Registry.new(dbname, update_module=update_module)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/tools/func.py", line 97, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/registry.py", line 115, in new
+    odoo.modules.load_modules(registry, force_demo, status, update_module)
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 485, in load_modules
+    processed_modules += load_marked_modules(env, graph,
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 365, in load_marked_modules
+    loaded, processed = load_module_graph(
+                        ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 228, in load_module_graph
+    load_data(env, idref, mode, kind='data', package=package)
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 72, in load_data
+    tools.convert_file(env, package.name, filename, idref, mode, noupdate, kind)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 662, in convert_file
+    convert_xml_import(env, module, fp, idref, mode, noupdate)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 712, in convert_xml_import
+    doc = etree.parse(xmlfile)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "src/lxml/etree.pyx", line 3570, in lxml.etree.parse
+  File "src/lxml/parser.pxi", line 1973, in lxml.etree._parseDocument
+  File "src/lxml/parser.pxi", line 1993, in lxml.etree._parseFilelikeDocument
+  File "src/lxml/parser.pxi", line 1887, in lxml.etree._parseDocFromFilelike
+  File "src/lxml/parser.pxi", line 1224, in lxml.etree._BaseParser._parseDocFromFilelike
+  File "src/lxml/parser.pxi", line 633, in lxml.etree._ParserContext._handleParseResultDoc
+  File "src/lxml/parser.pxi", line 743, in lxml.etree._handleParseResult
+  File "src/lxml/parser.pxi", line 672, in lxml.etree._raiseParseError
+  File "/mnt/extra-addons/custom/dimsop_website/views/layout.xml", line 412
+lxml.etree.XMLSyntaxError: StartTag: invalid element name, line 412, column 50
+2026-09-08 14:53:24,425 157 INFO odoo18_lab odoo.service.server: Initiating shutdown 
+2026-09-08 14:53:24,426 157 INFO odoo18_lab odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-09-08 14:53:24,426 157 INFO odoo18_lab odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 1 connections  
+2026-09-08 15:02:11,757 62 INFO ? odoo: Odoo version 18.0-20260723 
+2026-09-08 15:02:11,759 62 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-09-08 15:02:11,759 62 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/18.0', '/mnt/extra-addons/custom', '/mnt/extra-addons/community'] 
+2026-09-08 15:02:11,759 62 INFO ? odoo: database: odoo@db:5432 
+2026-09-08 15:02:12,076 62 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2026-09-08 15:02:12,101 62 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltoimage binary at /usr/local/bin/wkhtmltoimage 
+2026-09-08 15:02:12,460 62 INFO odoo18_lab odoo.modules.loading: loading 1 modules... 
+2026-09-08 15:02:12,471 62 INFO odoo18_lab odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2026-09-08 15:02:12,515 62 INFO odoo18_lab odoo.modules.loading: updating modules list 
+2026-09-08 15:02:12,518 62 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-09-08 15:02:13,951 62 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.button_upgrade on ['Dimsop Website Theme'] to user __system__ #1 via n/a 
+2026-09-08 15:02:13,951 62 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.update_list on ['Dimsop Website Theme'] to user __system__ #1 via n/a 
+2026-09-08 15:02:14,795 62 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.button_install on [] to user __system__ #1 via n/a 
+2026-09-08 15:02:14,830 62 INFO odoo18_lab odoo.modules.loading: loading 49 modules... 
+2026-09-08 15:02:15,496 62 INFO odoo18_lab odoo.modules.loading: Loading module dimsop_website (49/49) 
+2026-09-08 15:02:15,661 62 INFO odoo18_lab odoo.modules.registry: module dimsop_website: creating or updating database tables 
+2026-09-08 15:02:15,744 62 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/layout.xml 
+2026-09-08 15:02:15,749 62 WARNING odoo18_lab odoo.modules.loading: Transient module states were reset 
+2026-09-08 15:02:15,750 62 ERROR odoo18_lab odoo.modules.registry: Failed to load registry 
+2026-09-08 15:02:15,750 62 CRITICAL odoo18_lab odoo.service.server: Failed to initialize database `odoo18_lab`. 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/service/server.py", line 1414, in preload_registries
+    registry = Registry.new(dbname, update_module=update_module)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/tools/func.py", line 97, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/registry.py", line 115, in new
+    odoo.modules.load_modules(registry, force_demo, status, update_module)
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 485, in load_modules
+    processed_modules += load_marked_modules(env, graph,
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 365, in load_marked_modules
+    loaded, processed = load_module_graph(
+                        ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 228, in load_module_graph
+    load_data(env, idref, mode, kind='data', package=package)
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 72, in load_data
+    tools.convert_file(env, package.name, filename, idref, mode, noupdate, kind)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 662, in convert_file
+    convert_xml_import(env, module, fp, idref, mode, noupdate)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 712, in convert_xml_import
+    doc = etree.parse(xmlfile)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "src/lxml/etree.pyx", line 3570, in lxml.etree.parse
+  File "src/lxml/parser.pxi", line 1973, in lxml.etree._parseDocument
+  File "src/lxml/parser.pxi", line 1993, in lxml.etree._parseFilelikeDocument
+  File "src/lxml/parser.pxi", line 1887, in lxml.etree._parseDocFromFilelike
+  File "src/lxml/parser.pxi", line 1224, in lxml.etree._BaseParser._parseDocFromFilelike
+  File "src/lxml/parser.pxi", line 633, in lxml.etree._ParserContext._handleParseResultDoc
+  File "src/lxml/parser.pxi", line 743, in lxml.etree._handleParseResult
+  File "src/lxml/parser.pxi", line 672, in lxml.etree._raiseParseError
+  File "/mnt/extra-addons/custom/dimsop_website/views/layout.xml", line 412
+lxml.etree.XMLSyntaxError: StartTag: invalid element name, line 412, column 50
+2026-09-08 15:02:15,754 62 INFO odoo18_lab odoo.service.server: Initiating shutdown 
+2026-09-08 15:02:15,754 62 INFO odoo18_lab odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-09-08 15:02:15,754 62 INFO odoo18_lab odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 1 connections  
+2026-09-08 15:03:10,266 49 INFO ? odoo: Odoo version 18.0-20260723 
+2026-09-08 15:03:10,266 49 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-09-08 15:03:10,266 49 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/18.0', '/mnt/extra-addons/custom', '/mnt/extra-addons/community'] 
+2026-09-08 15:03:10,267 49 INFO ? odoo: database: odoo@db:5432 
+2026-09-08 15:03:10,477 49 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2026-09-08 15:03:10,490 49 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltoimage binary at /usr/local/bin/wkhtmltoimage 
+2026-09-08 15:03:10,762 49 INFO odoo18_lab odoo.modules.loading: loading 1 modules... 
+2026-09-08 15:03:10,768 49 INFO odoo18_lab odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2026-09-08 15:03:10,797 49 INFO odoo18_lab odoo.modules.loading: updating modules list 
+2026-09-08 15:03:10,800 49 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-09-08 15:03:12,459 49 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.button_upgrade on ['Dimsop Website Theme'] to user __system__ #1 via n/a 
+2026-09-08 15:03:12,460 49 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.update_list on ['Dimsop Website Theme'] to user __system__ #1 via n/a 
+2026-09-08 15:03:13,659 49 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.button_install on [] to user __system__ #1 via n/a 
+2026-09-08 15:03:13,688 49 INFO odoo18_lab odoo.modules.loading: loading 49 modules... 
+2026-09-08 15:03:14,149 49 INFO odoo18_lab odoo.modules.loading: Loading module dimsop_website (49/49) 
+2026-09-08 15:03:14,309 49 INFO odoo18_lab odoo.modules.registry: module dimsop_website: creating or updating database tables 
+2026-09-08 15:03:14,379 49 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/layout.xml 
+2026-09-08 15:03:14,383 49 WARNING odoo18_lab odoo.modules.loading: Transient module states were reset 
+2026-09-08 15:03:14,384 49 ERROR odoo18_lab odoo.modules.registry: Failed to load registry 
+2026-09-08 15:03:14,384 49 CRITICAL odoo18_lab odoo.service.server: Failed to initialize database `odoo18_lab`. 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/service/server.py", line 1414, in preload_registries
+    registry = Registry.new(dbname, update_module=update_module)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/tools/func.py", line 97, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/registry.py", line 115, in new
+    odoo.modules.load_modules(registry, force_demo, status, update_module)
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 485, in load_modules
+    processed_modules += load_marked_modules(env, graph,
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 365, in load_marked_modules
+    loaded, processed = load_module_graph(
+                        ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 228, in load_module_graph
+    load_data(env, idref, mode, kind='data', package=package)
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 72, in load_data
+    tools.convert_file(env, package.name, filename, idref, mode, noupdate, kind)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 662, in convert_file
+    convert_xml_import(env, module, fp, idref, mode, noupdate)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 712, in convert_xml_import
+    doc = etree.parse(xmlfile)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "src/lxml/etree.pyx", line 3570, in lxml.etree.parse
+  File "src/lxml/parser.pxi", line 1973, in lxml.etree._parseDocument
+  File "src/lxml/parser.pxi", line 1993, in lxml.etree._parseFilelikeDocument
+  File "src/lxml/parser.pxi", line 1887, in lxml.etree._parseDocFromFilelike
+  File "src/lxml/parser.pxi", line 1224, in lxml.etree._BaseParser._parseDocFromFilelike
+  File "src/lxml/parser.pxi", line 633, in lxml.etree._ParserContext._handleParseResultDoc
+  File "src/lxml/parser.pxi", line 743, in lxml.etree._handleParseResult
+  File "src/lxml/parser.pxi", line 672, in lxml.etree._raiseParseError
+  File "/mnt/extra-addons/custom/dimsop_website/views/layout.xml", line 412
+lxml.etree.XMLSyntaxError: StartTag: invalid element name, line 412, column 50
+2026-09-08 15:03:14,386 49 INFO odoo18_lab odoo.service.server: Initiating shutdown 
+2026-09-08 15:03:14,386 49 INFO odoo18_lab odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-09-08 15:03:14,386 49 INFO odoo18_lab odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 1 connections  
+2026-09-08 15:04:50,835 66 INFO ? odoo: Odoo version 18.0-20260723 
+2026-09-08 15:04:50,835 66 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-09-08 15:04:50,835 66 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/18.0', '/mnt/extra-addons/custom', '/mnt/extra-addons/community'] 
+2026-09-08 15:04:50,835 66 INFO ? odoo: database: odoo@db:5432 
+2026-09-08 15:04:51,165 66 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2026-09-08 15:04:51,176 66 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltoimage binary at /usr/local/bin/wkhtmltoimage 
+2026-09-08 15:04:51,507 66 INFO odoo18_lab odoo.modules.loading: loading 1 modules... 
+2026-09-08 15:04:51,520 66 INFO odoo18_lab odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2026-09-08 15:04:51,556 66 INFO odoo18_lab odoo.modules.loading: updating modules list 
+2026-09-08 15:04:51,559 66 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-09-08 15:04:53,256 66 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.button_upgrade on ['Dimsop Website Theme'] to user __system__ #1 via n/a 
+2026-09-08 15:04:53,257 66 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.update_list on ['Dimsop Website Theme'] to user __system__ #1 via n/a 
+2026-09-08 15:04:54,529 66 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.button_install on [] to user __system__ #1 via n/a 
+2026-09-08 15:04:54,571 66 INFO odoo18_lab odoo.modules.loading: loading 49 modules... 
+2026-09-08 15:04:55,274 66 INFO odoo18_lab odoo.modules.loading: Loading module dimsop_website (49/49) 
+2026-09-08 15:04:55,540 66 INFO odoo18_lab odoo.modules.registry: module dimsop_website: creating or updating database tables 
+2026-09-08 15:04:55,657 66 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/layout.xml 
+2026-09-08 15:04:55,661 66 WARNING odoo18_lab odoo.modules.loading: Transient module states were reset 
+2026-09-08 15:04:55,662 66 ERROR odoo18_lab odoo.modules.registry: Failed to load registry 
+2026-09-08 15:04:55,662 66 CRITICAL odoo18_lab odoo.service.server: Failed to initialize database `odoo18_lab`. 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/service/server.py", line 1414, in preload_registries
+    registry = Registry.new(dbname, update_module=update_module)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/tools/func.py", line 97, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/registry.py", line 115, in new
+    odoo.modules.load_modules(registry, force_demo, status, update_module)
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 485, in load_modules
+    processed_modules += load_marked_modules(env, graph,
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 365, in load_marked_modules
+    loaded, processed = load_module_graph(
+                        ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 228, in load_module_graph
+    load_data(env, idref, mode, kind='data', package=package)
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 72, in load_data
+    tools.convert_file(env, package.name, filename, idref, mode, noupdate, kind)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 662, in convert_file
+    convert_xml_import(env, module, fp, idref, mode, noupdate)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 712, in convert_xml_import
+    doc = etree.parse(xmlfile)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "src/lxml/etree.pyx", line 3570, in lxml.etree.parse
+  File "src/lxml/parser.pxi", line 1973, in lxml.etree._parseDocument
+  File "src/lxml/parser.pxi", line 1993, in lxml.etree._parseFilelikeDocument
+  File "src/lxml/parser.pxi", line 1887, in lxml.etree._parseDocFromFilelike
+  File "src/lxml/parser.pxi", line 1224, in lxml.etree._BaseParser._parseDocFromFilelike
+  File "src/lxml/parser.pxi", line 633, in lxml.etree._ParserContext._handleParseResultDoc
+  File "src/lxml/parser.pxi", line 743, in lxml.etree._handleParseResult
+  File "src/lxml/parser.pxi", line 672, in lxml.etree._raiseParseError
+  File "/mnt/extra-addons/custom/dimsop_website/views/layout.xml", line 412
+lxml.etree.XMLSyntaxError: StartTag: invalid element name, line 412, column 50
+2026-09-08 15:04:55,665 66 INFO odoo18_lab odoo.service.server: Initiating shutdown 
+2026-09-08 15:04:55,665 66 INFO odoo18_lab odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-09-08 15:04:55,666 66 INFO odoo18_lab odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 1 connections  
+2026-09-08 15:06:08,090 40 INFO ? odoo: Odoo version 18.0-20260723 
+2026-09-08 15:06:08,090 40 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-09-08 15:06:08,090 40 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/18.0', '/mnt/extra-addons/custom', '/mnt/extra-addons/community'] 
+2026-09-08 15:06:08,091 40 INFO ? odoo: database: odoo@db:5432 
+2026-09-08 15:06:08,313 40 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2026-09-08 15:06:08,321 40 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltoimage binary at /usr/local/bin/wkhtmltoimage 
+2026-09-08 15:06:08,594 40 INFO odoo18_lab odoo.modules.loading: loading 1 modules... 
+2026-09-08 15:06:08,601 40 INFO odoo18_lab odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2026-09-08 15:06:08,637 40 INFO odoo18_lab odoo.modules.loading: updating modules list 
+2026-09-08 15:06:08,640 40 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-09-08 15:06:10,288 40 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.button_upgrade on ['Dimsop Website Theme'] to user __system__ #1 via n/a 
+2026-09-08 15:06:10,288 40 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.update_list on ['Dimsop Website Theme'] to user __system__ #1 via n/a 
+2026-09-08 15:06:11,677 40 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.button_install on [] to user __system__ #1 via n/a 
+2026-09-08 15:06:11,735 40 INFO odoo18_lab odoo.modules.loading: loading 49 modules... 
+2026-09-08 15:06:12,432 40 INFO odoo18_lab odoo.modules.loading: Loading module dimsop_website (49/49) 
+2026-09-08 15:06:12,692 40 INFO odoo18_lab odoo.modules.registry: module dimsop_website: creating or updating database tables 
+2026-09-08 15:06:12,878 40 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/layout.xml 
+2026-09-08 15:06:12,886 40 WARNING odoo18_lab odoo.modules.loading: Transient module states were reset 
+2026-09-08 15:06:12,887 40 ERROR odoo18_lab odoo.modules.registry: Failed to load registry 
+2026-09-08 15:06:12,887 40 CRITICAL odoo18_lab odoo.service.server: Failed to initialize database `odoo18_lab`. 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/service/server.py", line 1414, in preload_registries
+    registry = Registry.new(dbname, update_module=update_module)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/tools/func.py", line 97, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/registry.py", line 115, in new
+    odoo.modules.load_modules(registry, force_demo, status, update_module)
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 485, in load_modules
+    processed_modules += load_marked_modules(env, graph,
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 365, in load_marked_modules
+    loaded, processed = load_module_graph(
+                        ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 228, in load_module_graph
+    load_data(env, idref, mode, kind='data', package=package)
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 72, in load_data
+    tools.convert_file(env, package.name, filename, idref, mode, noupdate, kind)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 662, in convert_file
+    convert_xml_import(env, module, fp, idref, mode, noupdate)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 712, in convert_xml_import
+    doc = etree.parse(xmlfile)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "src/lxml/etree.pyx", line 3570, in lxml.etree.parse
+  File "src/lxml/parser.pxi", line 1973, in lxml.etree._parseDocument
+  File "src/lxml/parser.pxi", line 1993, in lxml.etree._parseFilelikeDocument
+  File "src/lxml/parser.pxi", line 1887, in lxml.etree._parseDocFromFilelike
+  File "src/lxml/parser.pxi", line 1224, in lxml.etree._BaseParser._parseDocFromFilelike
+  File "src/lxml/parser.pxi", line 633, in lxml.etree._ParserContext._handleParseResultDoc
+  File "src/lxml/parser.pxi", line 743, in lxml.etree._handleParseResult
+  File "src/lxml/parser.pxi", line 672, in lxml.etree._raiseParseError
+  File "/mnt/extra-addons/custom/dimsop_website/views/layout.xml", line 412
+lxml.etree.XMLSyntaxError: StartTag: invalid element name, line 412, column 50
+2026-09-08 15:06:12,893 40 INFO odoo18_lab odoo.service.server: Initiating shutdown 
+2026-09-08 15:06:12,894 40 INFO odoo18_lab odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-09-08 15:06:12,894 40 INFO odoo18_lab odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 1 connections  
+2026-09-08 15:07:21,116 47 INFO ? odoo: Odoo version 18.0-20260723 
+2026-09-08 15:07:21,116 47 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-09-08 15:07:21,116 47 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/18.0', '/mnt/extra-addons/custom', '/mnt/extra-addons/community'] 
+2026-09-08 15:07:21,116 47 INFO ? odoo: database: odoo@db:5432 
+2026-09-08 15:07:21,411 47 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2026-09-08 15:07:21,423 47 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltoimage binary at /usr/local/bin/wkhtmltoimage 
+2026-09-08 15:07:21,721 47 INFO odoo18_lab odoo.modules.loading: loading 1 modules... 
+2026-09-08 15:07:21,728 47 INFO odoo18_lab odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2026-09-08 15:07:21,760 47 INFO odoo18_lab odoo.modules.loading: updating modules list 
+2026-09-08 15:07:21,763 47 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-09-08 15:07:23,713 47 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.button_upgrade on ['Dimsop Website Theme'] to user __system__ #1 via n/a 
+2026-09-08 15:07:23,713 47 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.update_list on ['Dimsop Website Theme'] to user __system__ #1 via n/a 
+2026-09-08 15:07:24,992 47 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.button_install on [] to user __system__ #1 via n/a 
+2026-09-08 15:07:25,042 47 INFO odoo18_lab odoo.modules.loading: loading 49 modules... 
+2026-09-08 15:07:25,843 47 INFO odoo18_lab odoo.modules.loading: Loading module dimsop_website (49/49) 
+2026-09-08 15:07:26,098 47 INFO odoo18_lab odoo.modules.registry: module dimsop_website: creating or updating database tables 
+2026-09-08 15:07:26,219 47 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/layout.xml 
+2026-09-08 15:07:26,225 47 WARNING odoo18_lab odoo.modules.loading: Transient module states were reset 
+2026-09-08 15:07:26,226 47 ERROR odoo18_lab odoo.modules.registry: Failed to load registry 
+2026-09-08 15:07:26,226 47 CRITICAL odoo18_lab odoo.service.server: Failed to initialize database `odoo18_lab`. 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/service/server.py", line 1414, in preload_registries
+    registry = Registry.new(dbname, update_module=update_module)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/tools/func.py", line 97, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/registry.py", line 115, in new
+    odoo.modules.load_modules(registry, force_demo, status, update_module)
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 485, in load_modules
+    processed_modules += load_marked_modules(env, graph,
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 365, in load_marked_modules
+    loaded, processed = load_module_graph(
+                        ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 228, in load_module_graph
+    load_data(env, idref, mode, kind='data', package=package)
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 72, in load_data
+    tools.convert_file(env, package.name, filename, idref, mode, noupdate, kind)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 662, in convert_file
+    convert_xml_import(env, module, fp, idref, mode, noupdate)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 712, in convert_xml_import
+    doc = etree.parse(xmlfile)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "src/lxml/etree.pyx", line 3570, in lxml.etree.parse
+  File "src/lxml/parser.pxi", line 1973, in lxml.etree._parseDocument
+  File "src/lxml/parser.pxi", line 1993, in lxml.etree._parseFilelikeDocument
+  File "src/lxml/parser.pxi", line 1887, in lxml.etree._parseDocFromFilelike
+  File "src/lxml/parser.pxi", line 1224, in lxml.etree._BaseParser._parseDocFromFilelike
+  File "src/lxml/parser.pxi", line 633, in lxml.etree._ParserContext._handleParseResultDoc
+  File "src/lxml/parser.pxi", line 743, in lxml.etree._handleParseResult
+  File "src/lxml/parser.pxi", line 672, in lxml.etree._raiseParseError
+  File "/mnt/extra-addons/custom/dimsop_website/views/layout.xml", line 412
+lxml.etree.XMLSyntaxError: StartTag: invalid element name, line 412, column 50
+2026-09-08 15:07:26,229 47 INFO odoo18_lab odoo.service.server: Initiating shutdown 
+2026-09-08 15:07:26,229 47 INFO odoo18_lab odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-09-08 15:07:26,230 47 INFO odoo18_lab odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 1 connections  
+2026-09-08 15:08:24,945 30 INFO ? odoo: Odoo version 18.0-20260723 
+2026-09-08 15:08:24,954 30 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-09-08 15:08:24,954 30 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/18.0', '/mnt/extra-addons/custom', '/mnt/extra-addons/community'] 
+2026-09-08 15:08:24,954 30 INFO ? odoo: database: odoo@db:5432 
+2026-09-08 15:08:26,030 30 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2026-09-08 15:08:27,753 30 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltoimage binary at /usr/local/bin/wkhtmltoimage 
+2026-09-08 15:08:29,995 30 INFO odoo18_lab odoo.modules.loading: loading 1 modules... 
+2026-09-08 15:08:30,008 30 INFO odoo18_lab odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2026-09-08 15:08:30,088 30 INFO odoo18_lab odoo.modules.loading: updating modules list 
+2026-09-08 15:08:30,109 30 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-09-08 15:08:33,276 30 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.button_upgrade on ['Dimsop Website Theme'] to user __system__ #1 via n/a 
+2026-09-08 15:08:33,276 30 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.update_list on ['Dimsop Website Theme'] to user __system__ #1 via n/a 
+2026-09-08 15:08:34,877 30 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.button_install on [] to user __system__ #1 via n/a 
+2026-09-08 15:08:34,958 30 INFO odoo18_lab odoo.modules.loading: loading 49 modules... 
+2026-09-08 15:08:36,874 30 INFO odoo18_lab odoo.modules.loading: Loading module dimsop_website (49/49) 
+2026-09-08 15:08:37,224 30 INFO odoo18_lab odoo.modules.registry: module dimsop_website: creating or updating database tables 
+2026-09-08 15:08:37,583 30 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/layout.xml 
+2026-09-08 15:08:37,598 30 WARNING odoo18_lab odoo.modules.loading: Transient module states were reset 
+2026-09-08 15:08:37,598 30 ERROR odoo18_lab odoo.modules.registry: Failed to load registry 
+2026-09-08 15:08:37,599 30 CRITICAL odoo18_lab odoo.service.server: Failed to initialize database `odoo18_lab`. 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/service/server.py", line 1414, in preload_registries
+    registry = Registry.new(dbname, update_module=update_module)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/tools/func.py", line 97, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/registry.py", line 115, in new
+    odoo.modules.load_modules(registry, force_demo, status, update_module)
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 485, in load_modules
+    processed_modules += load_marked_modules(env, graph,
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 365, in load_marked_modules
+    loaded, processed = load_module_graph(
+                        ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 228, in load_module_graph
+    load_data(env, idref, mode, kind='data', package=package)
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 72, in load_data
+    tools.convert_file(env, package.name, filename, idref, mode, noupdate, kind)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 662, in convert_file
+    convert_xml_import(env, module, fp, idref, mode, noupdate)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 712, in convert_xml_import
+    doc = etree.parse(xmlfile)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "src/lxml/etree.pyx", line 3570, in lxml.etree.parse
+  File "src/lxml/parser.pxi", line 1973, in lxml.etree._parseDocument
+  File "src/lxml/parser.pxi", line 1993, in lxml.etree._parseFilelikeDocument
+  File "src/lxml/parser.pxi", line 1887, in lxml.etree._parseDocFromFilelike
+  File "src/lxml/parser.pxi", line 1224, in lxml.etree._BaseParser._parseDocFromFilelike
+  File "src/lxml/parser.pxi", line 633, in lxml.etree._ParserContext._handleParseResultDoc
+  File "src/lxml/parser.pxi", line 743, in lxml.etree._handleParseResult
+  File "src/lxml/parser.pxi", line 672, in lxml.etree._raiseParseError
+  File "/mnt/extra-addons/custom/dimsop_website/views/layout.xml", line 412
+lxml.etree.XMLSyntaxError: StartTag: invalid element name, line 412, column 50
+2026-09-08 15:08:37,609 30 INFO odoo18_lab odoo.service.server: Initiating shutdown 
+2026-09-08 15:08:37,609 30 INFO odoo18_lab odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-09-08 15:08:37,609 30 INFO odoo18_lab odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 1 connections  
+2026-09-08 16:42:48,750 66 INFO ? odoo: Odoo version 18.0-20260723 
+2026-09-08 16:42:48,754 66 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-09-08 16:42:48,754 66 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/18.0', '/mnt/extra-addons/custom', '/mnt/extra-addons/community'] 
+2026-09-08 16:42:48,754 66 INFO ? odoo: database: odoo@db:5432 
+2026-09-08 16:42:49,007 66 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2026-09-08 16:42:49,048 66 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltoimage binary at /usr/local/bin/wkhtmltoimage 
+2026-09-08 16:42:49,381 66 INFO odoo18_lab odoo.modules.loading: loading 1 modules... 
+2026-09-08 16:42:49,388 66 INFO odoo18_lab odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2026-09-08 16:42:49,415 66 INFO odoo18_lab odoo.modules.loading: updating modules list 
+2026-09-08 16:42:49,417 66 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-09-08 16:42:51,001 66 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.button_upgrade on ['Dimsop Website Theme'] to user __system__ #1 via n/a 
+2026-09-08 16:42:51,002 66 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.update_list on ['Dimsop Website Theme'] to user __system__ #1 via n/a 
+2026-09-08 16:42:52,125 66 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.button_install on [] to user __system__ #1 via n/a 
+2026-09-08 16:42:52,171 66 INFO odoo18_lab odoo.modules.loading: loading 49 modules... 
+2026-09-08 16:42:52,889 66 INFO odoo18_lab odoo.modules.loading: Loading module dimsop_website (49/49) 
+2026-09-08 16:42:53,097 66 INFO odoo18_lab odoo.modules.registry: module dimsop_website: creating or updating database tables 
+2026-09-08 16:42:53,248 66 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/layout.xml 
+2026-09-08 16:42:53,294 66 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/header.xml 
+2026-09-08 16:42:53,317 66 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/footer.xml 
+2026-09-08 16:42:53,334 66 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/home.xml 
+2026-09-08 16:42:53,384 66 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/privacy.xml 
+2026-09-08 16:42:53,405 66 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/data/website_data.xml 
+2026-09-08 16:42:53,473 66 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/data/blog_data.xml 
+2026-09-08 16:42:53,620 66 INFO odoo18_lab odoo.addons.base.models.ir_module: module dimsop_website: loading translation file /mnt/extra-addons/custom/dimsop_website/i18n/en_US.po for language en_US 
+2026-09-08 16:42:53,620 66 INFO odoo18_lab odoo.tools.translate: loading base translation file /mnt/extra-addons/custom/dimsop_website/i18n/en_US.po for language en_US 
+2026-09-08 16:42:53,662 66 INFO odoo18_lab odoo.modules.loading: Module dimsop_website loaded in 0.77s, 280 queries (+280 other) 
+2026-09-08 16:42:53,663 66 INFO odoo18_lab odoo.modules.loading: 49 modules loaded in 1.49s, 280 queries (+280 extra) 
+2026-09-08 16:42:53,851 66 INFO odoo18_lab odoo.modules.loading: Model crm.iap.lead.helpers is declared but cannot be loaded! (Perhaps a module was partially removed or renamed) 
+2026-09-08 16:42:53,851 66 INFO odoo18_lab odoo.modules.loading: Model crm.iap.lead.industry is declared but cannot be loaded! (Perhaps a module was partially removed or renamed) 
+2026-09-08 16:42:53,851 66 INFO odoo18_lab odoo.modules.loading: Model crm.iap.lead.role is declared but cannot be loaded! (Perhaps a module was partially removed or renamed) 
+2026-09-08 16:42:53,851 66 INFO odoo18_lab odoo.modules.loading: Model crm.iap.lead.seniority is declared but cannot be loaded! (Perhaps a module was partially removed or renamed) 
+2026-09-08 16:42:53,853 66 INFO odoo18_lab odoo.modules.loading: Model crm.iap.lead.mining.request is declared but cannot be loaded! (Perhaps a module was partially removed or renamed) 
+2026-09-08 16:42:54,546 66 INFO odoo18_lab odoo.modules.loading: Modules loaded. 
+2026-09-08 16:42:54,557 66 INFO odoo18_lab odoo.modules.registry: Registry changed, signaling through the database 
+2026-09-08 16:42:54,559 66 INFO odoo18_lab odoo.modules.registry: Registry loaded in 5.221s 
+2026-09-08 16:42:54,559 66 INFO odoo18_lab odoo.service.server: Initiating shutdown 
+2026-09-08 16:42:54,559 66 INFO odoo18_lab odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-09-08 16:42:54,560 66 INFO odoo18_lab odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 1 connections  
+2026-09-08 18:08:00,941 102 INFO ? odoo: Odoo version 18.0-20260723 
+2026-09-08 18:08:00,946 102 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-09-08 18:08:00,947 102 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/18.0', '/mnt/extra-addons/custom', '/mnt/extra-addons/community'] 
+2026-09-08 18:08:00,947 102 INFO ? odoo: database: odoo@db:5432 
+2026-09-08 18:08:02,045 102 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2026-09-08 18:08:02,343 102 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltoimage binary at /usr/local/bin/wkhtmltoimage 
+2026-09-08 18:08:03,591 102 INFO odoo18_lab odoo.modules.loading: loading 1 modules... 
+2026-09-08 18:08:03,621 102 INFO odoo18_lab odoo.modules.loading: 1 modules loaded in 0.03s, 0 queries (+0 extra) 
+2026-09-08 18:08:03,734 102 INFO odoo18_lab odoo.modules.loading: updating modules list 
+2026-09-08 18:08:03,764 102 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-09-08 18:08:07,753 102 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.button_upgrade on ['Dimsop Website Theme'] to user __system__ #1 via n/a 
+2026-09-08 18:08:07,754 102 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.update_list on ['Dimsop Website Theme'] to user __system__ #1 via n/a 
+2026-09-08 18:08:10,342 102 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.button_install on [] to user __system__ #1 via n/a 
+2026-09-08 18:08:10,520 102 INFO odoo18_lab odoo.modules.loading: loading 49 modules... 
+2026-09-08 18:08:13,092 102 INFO odoo18_lab odoo.modules.loading: Loading module dimsop_website (49/49) 
+2026-09-08 18:08:13,820 102 INFO odoo18_lab odoo.modules.registry: module dimsop_website: creating or updating database tables 
+2026-09-08 18:08:14,169 102 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/layout.xml 
+2026-09-08 18:08:14,195 102 WARNING odoo18_lab odoo.modules.loading: Transient module states were reset 
+2026-09-08 18:08:14,196 102 ERROR odoo18_lab odoo.modules.registry: Failed to load registry 
+2026-09-08 18:08:14,197 102 CRITICAL odoo18_lab odoo.service.server: Failed to initialize database `odoo18_lab`. 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/service/server.py", line 1414, in preload_registries
+    registry = Registry.new(dbname, update_module=update_module)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/tools/func.py", line 97, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/registry.py", line 115, in new
+    odoo.modules.load_modules(registry, force_demo, status, update_module)
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 485, in load_modules
+    processed_modules += load_marked_modules(env, graph,
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 365, in load_marked_modules
+    loaded, processed = load_module_graph(
+                        ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 228, in load_module_graph
+    load_data(env, idref, mode, kind='data', package=package)
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 72, in load_data
+    tools.convert_file(env, package.name, filename, idref, mode, noupdate, kind)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 662, in convert_file
+    convert_xml_import(env, module, fp, idref, mode, noupdate)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 712, in convert_xml_import
+    doc = etree.parse(xmlfile)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "src/lxml/etree.pyx", line 3570, in lxml.etree.parse
+  File "src/lxml/parser.pxi", line 1973, in lxml.etree._parseDocument
+  File "src/lxml/parser.pxi", line 1993, in lxml.etree._parseFilelikeDocument
+  File "src/lxml/parser.pxi", line 1887, in lxml.etree._parseDocFromFilelike
+  File "src/lxml/parser.pxi", line 1224, in lxml.etree._BaseParser._parseDocFromFilelike
+  File "src/lxml/parser.pxi", line 633, in lxml.etree._ParserContext._handleParseResultDoc
+  File "src/lxml/parser.pxi", line 743, in lxml.etree._handleParseResult
+  File "src/lxml/parser.pxi", line 672, in lxml.etree._raiseParseError
+  File "/mnt/extra-addons/custom/dimsop_website/views/layout.xml", line 219
+lxml.etree.XMLSyntaxError: StartTag: invalid element name, line 219, column 59
+2026-09-08 18:08:14,216 102 INFO odoo18_lab odoo.service.server: Initiating shutdown 
+2026-09-08 18:08:14,217 102 INFO odoo18_lab odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-09-08 18:08:14,218 102 INFO odoo18_lab odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 1 connections  
+2026-09-08 18:13:13,186 23 INFO ? odoo: Odoo version 18.0-20260723 
+2026-09-08 18:13:13,186 23 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-09-08 18:13:13,187 23 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/18.0', '/mnt/extra-addons/custom', '/mnt/extra-addons/community'] 
+2026-09-08 18:13:13,187 23 INFO ? odoo: database: odoo@db:5432 
+2026-09-08 18:13:13,519 23 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2026-09-08 18:13:13,543 23 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltoimage binary at /usr/local/bin/wkhtmltoimage 
+2026-09-08 18:13:13,873 23 INFO odoo18_lab odoo.modules.loading: loading 1 modules... 
+2026-09-08 18:13:13,892 23 INFO odoo18_lab odoo.modules.loading: 1 modules loaded in 0.02s, 0 queries (+0 extra) 
+2026-09-08 18:13:13,963 23 INFO odoo18_lab odoo.modules.loading: updating modules list 
+2026-09-08 18:13:13,970 23 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-09-08 18:13:16,464 23 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.button_upgrade on ['Dimsop Website Theme'] to user __system__ #1 via n/a 
+2026-09-08 18:13:16,465 23 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.update_list on ['Dimsop Website Theme'] to user __system__ #1 via n/a 
+2026-09-08 18:13:18,404 23 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.button_install on [] to user __system__ #1 via n/a 
+2026-09-08 18:13:18,506 23 INFO odoo18_lab odoo.modules.loading: loading 49 modules... 
+2026-09-08 18:13:19,404 23 INFO odoo18_lab odoo.modules.loading: Loading module dimsop_website (49/49) 
+2026-09-08 18:13:19,746 23 INFO odoo18_lab odoo.modules.registry: module dimsop_website: creating or updating database tables 
+2026-09-08 18:13:19,875 23 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/layout.xml 
+2026-09-08 18:13:19,880 23 WARNING odoo18_lab odoo.modules.loading: Transient module states were reset 
+2026-09-08 18:13:19,880 23 ERROR odoo18_lab odoo.modules.registry: Failed to load registry 
+2026-09-08 18:13:19,880 23 CRITICAL odoo18_lab odoo.service.server: Failed to initialize database `odoo18_lab`. 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/service/server.py", line 1414, in preload_registries
+    registry = Registry.new(dbname, update_module=update_module)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/tools/func.py", line 97, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/registry.py", line 115, in new
+    odoo.modules.load_modules(registry, force_demo, status, update_module)
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 485, in load_modules
+    processed_modules += load_marked_modules(env, graph,
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 365, in load_marked_modules
+    loaded, processed = load_module_graph(
+                        ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 228, in load_module_graph
+    load_data(env, idref, mode, kind='data', package=package)
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 72, in load_data
+    tools.convert_file(env, package.name, filename, idref, mode, noupdate, kind)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 662, in convert_file
+    convert_xml_import(env, module, fp, idref, mode, noupdate)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 712, in convert_xml_import
+    doc = etree.parse(xmlfile)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "src/lxml/etree.pyx", line 3570, in lxml.etree.parse
+  File "src/lxml/parser.pxi", line 1973, in lxml.etree._parseDocument
+  File "src/lxml/parser.pxi", line 1993, in lxml.etree._parseFilelikeDocument
+  File "src/lxml/parser.pxi", line 1887, in lxml.etree._parseDocFromFilelike
+  File "src/lxml/parser.pxi", line 1224, in lxml.etree._BaseParser._parseDocFromFilelike
+  File "src/lxml/parser.pxi", line 633, in lxml.etree._ParserContext._handleParseResultDoc
+  File "src/lxml/parser.pxi", line 743, in lxml.etree._handleParseResult
+  File "src/lxml/parser.pxi", line 672, in lxml.etree._raiseParseError
+  File "/mnt/extra-addons/custom/dimsop_website/views/layout.xml", line 219
+lxml.etree.XMLSyntaxError: StartTag: invalid element name, line 219, column 59
+2026-09-08 18:13:19,884 23 INFO odoo18_lab odoo.service.server: Initiating shutdown 
+2026-09-08 18:13:19,884 23 INFO odoo18_lab odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-09-08 18:13:19,885 23 INFO odoo18_lab odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 1 connections  
+2026-09-08 18:14:17,118 24 INFO ? odoo: Odoo version 18.0-20260723 
+2026-09-08 18:14:17,118 24 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-09-08 18:14:17,118 24 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/18.0', '/mnt/extra-addons/custom', '/mnt/extra-addons/community'] 
+2026-09-08 18:14:17,118 24 INFO ? odoo: database: odoo@db:5432 
+2026-09-08 18:14:17,378 24 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2026-09-08 18:14:17,392 24 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltoimage binary at /usr/local/bin/wkhtmltoimage 
+2026-09-08 18:14:17,790 24 INFO odoo18_lab odoo.modules.loading: loading 1 modules... 
+2026-09-08 18:14:17,811 24 INFO odoo18_lab odoo.modules.loading: 1 modules loaded in 0.02s, 0 queries (+0 extra) 
+2026-09-08 18:14:17,867 24 INFO odoo18_lab odoo.modules.loading: updating modules list 
+2026-09-08 18:14:17,871 24 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-09-08 18:14:20,370 24 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.button_upgrade on ['Dimsop Website Theme'] to user __system__ #1 via n/a 
+2026-09-08 18:14:20,370 24 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.update_list on ['Dimsop Website Theme'] to user __system__ #1 via n/a 
+2026-09-08 18:14:22,186 24 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.button_install on [] to user __system__ #1 via n/a 
+2026-09-08 18:14:22,226 24 INFO odoo18_lab odoo.modules.loading: loading 49 modules... 
+2026-09-08 18:14:23,221 24 INFO odoo18_lab odoo.modules.loading: Loading module dimsop_website (49/49) 
+2026-09-08 18:14:23,483 24 INFO odoo18_lab odoo.modules.registry: module dimsop_website: creating or updating database tables 
+2026-09-08 18:14:23,703 24 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/layout.xml 
+2026-09-08 18:14:23,713 24 WARNING odoo18_lab odoo.modules.loading: Transient module states were reset 
+2026-09-08 18:14:23,715 24 ERROR odoo18_lab odoo.modules.registry: Failed to load registry 
+2026-09-08 18:14:23,715 24 CRITICAL odoo18_lab odoo.service.server: Failed to initialize database `odoo18_lab`. 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/service/server.py", line 1414, in preload_registries
+    registry = Registry.new(dbname, update_module=update_module)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/tools/func.py", line 97, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/registry.py", line 115, in new
+    odoo.modules.load_modules(registry, force_demo, status, update_module)
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 485, in load_modules
+    processed_modules += load_marked_modules(env, graph,
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 365, in load_marked_modules
+    loaded, processed = load_module_graph(
+                        ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 228, in load_module_graph
+    load_data(env, idref, mode, kind='data', package=package)
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 72, in load_data
+    tools.convert_file(env, package.name, filename, idref, mode, noupdate, kind)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 662, in convert_file
+    convert_xml_import(env, module, fp, idref, mode, noupdate)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 712, in convert_xml_import
+    doc = etree.parse(xmlfile)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "src/lxml/etree.pyx", line 3570, in lxml.etree.parse
+  File "src/lxml/parser.pxi", line 1973, in lxml.etree._parseDocument
+  File "src/lxml/parser.pxi", line 1993, in lxml.etree._parseFilelikeDocument
+  File "src/lxml/parser.pxi", line 1887, in lxml.etree._parseDocFromFilelike
+  File "src/lxml/parser.pxi", line 1224, in lxml.etree._BaseParser._parseDocFromFilelike
+  File "src/lxml/parser.pxi", line 633, in lxml.etree._ParserContext._handleParseResultDoc
+  File "src/lxml/parser.pxi", line 743, in lxml.etree._handleParseResult
+  File "src/lxml/parser.pxi", line 672, in lxml.etree._raiseParseError
+  File "/mnt/extra-addons/custom/dimsop_website/views/layout.xml", line 219
+lxml.etree.XMLSyntaxError: StartTag: invalid element name, line 219, column 59
+2026-09-08 18:14:23,721 24 INFO odoo18_lab odoo.service.server: Initiating shutdown 
+2026-09-08 18:14:23,721 24 INFO odoo18_lab odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-09-08 18:14:23,722 24 INFO odoo18_lab odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 1 connections  
+2026-09-08 18:15:02,329 28 INFO ? odoo: Odoo version 18.0-20260723 
+2026-09-08 18:15:02,329 28 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-09-08 18:15:02,329 28 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/18.0', '/mnt/extra-addons/custom', '/mnt/extra-addons/community'] 
+2026-09-08 18:15:02,329 28 INFO ? odoo: database: odoo@db:5432 
+2026-09-08 18:15:02,567 28 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2026-09-08 18:15:02,582 28 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltoimage binary at /usr/local/bin/wkhtmltoimage 
+2026-09-08 18:15:02,982 28 INFO odoo18_lab odoo.modules.loading: loading 1 modules... 
+2026-09-08 18:15:02,992 28 INFO odoo18_lab odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2026-09-08 18:15:03,019 28 INFO odoo18_lab odoo.modules.loading: updating modules list 
+2026-09-08 18:15:03,022 28 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-09-08 18:15:05,449 28 INFO odoo18_lab odoo.modules.loading: loading 49 modules... 
+2026-09-08 18:15:06,395 28 INFO odoo18_lab odoo.modules.loading: Loading module dimsop_website (49/49) 
+2026-09-08 18:15:06,626 28 INFO odoo18_lab odoo.modules.registry: module dimsop_website: creating or updating database tables 
+2026-09-08 18:15:06,720 28 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/layout.xml 
+2026-09-08 18:15:06,738 28 WARNING odoo18_lab odoo.modules.loading: Transient module states were reset 
+2026-09-08 18:15:06,740 28 ERROR odoo18_lab odoo.modules.registry: Failed to load registry 
+2026-09-08 18:15:06,741 28 CRITICAL odoo18_lab odoo.service.server: Failed to initialize database `odoo18_lab`. 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/service/server.py", line 1414, in preload_registries
+    registry = Registry.new(dbname, update_module=update_module)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/tools/func.py", line 97, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/registry.py", line 115, in new
+    odoo.modules.load_modules(registry, force_demo, status, update_module)
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 485, in load_modules
+    processed_modules += load_marked_modules(env, graph,
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 365, in load_marked_modules
+    loaded, processed = load_module_graph(
+                        ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 228, in load_module_graph
+    load_data(env, idref, mode, kind='data', package=package)
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 72, in load_data
+    tools.convert_file(env, package.name, filename, idref, mode, noupdate, kind)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 662, in convert_file
+    convert_xml_import(env, module, fp, idref, mode, noupdate)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 712, in convert_xml_import
+    doc = etree.parse(xmlfile)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "src/lxml/etree.pyx", line 3570, in lxml.etree.parse
+  File "src/lxml/parser.pxi", line 1973, in lxml.etree._parseDocument
+  File "src/lxml/parser.pxi", line 1993, in lxml.etree._parseFilelikeDocument
+  File "src/lxml/parser.pxi", line 1887, in lxml.etree._parseDocFromFilelike
+  File "src/lxml/parser.pxi", line 1224, in lxml.etree._BaseParser._parseDocFromFilelike
+  File "src/lxml/parser.pxi", line 633, in lxml.etree._ParserContext._handleParseResultDoc
+  File "src/lxml/parser.pxi", line 743, in lxml.etree._handleParseResult
+  File "src/lxml/parser.pxi", line 672, in lxml.etree._raiseParseError
+  File "/mnt/extra-addons/custom/dimsop_website/views/layout.xml", line 219
+lxml.etree.XMLSyntaxError: StartTag: invalid element name, line 219, column 59
+2026-09-08 18:15:06,750 28 INFO odoo18_lab odoo.service.server: Initiating shutdown 
+2026-09-08 18:15:06,756 28 INFO odoo18_lab odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-09-08 18:15:06,757 28 INFO odoo18_lab odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 1 connections  
+2026-09-08 18:16:02,933 40 INFO ? odoo: Odoo version 18.0-20260723 
+2026-09-08 18:16:02,934 40 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-09-08 18:16:02,934 40 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/18.0', '/mnt/extra-addons/custom', '/mnt/extra-addons/community'] 
+2026-09-08 18:16:02,934 40 INFO ? odoo: database: odoo@db:5432 
+2026-09-08 18:16:03,248 40 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2026-09-08 18:16:03,264 40 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltoimage binary at /usr/local/bin/wkhtmltoimage 
+2026-09-08 18:16:03,644 40 INFO odoo18_lab odoo.modules.loading: loading 1 modules... 
+2026-09-08 18:16:03,650 40 INFO odoo18_lab odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2026-09-08 18:16:03,686 40 INFO odoo18_lab odoo.modules.loading: updating modules list 
+2026-09-08 18:16:03,689 40 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-09-08 18:16:06,231 40 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.button_upgrade on ['Dimsop Website Theme'] to user __system__ #1 via n/a 
+2026-09-08 18:16:06,231 40 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.update_list on ['Dimsop Website Theme'] to user __system__ #1 via n/a 
+2026-09-08 18:16:08,192 40 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.button_install on [] to user __system__ #1 via n/a 
+2026-09-08 18:16:08,252 40 INFO odoo18_lab odoo.modules.loading: loading 49 modules... 
+2026-09-08 18:16:09,122 40 INFO odoo18_lab odoo.modules.loading: Loading module dimsop_website (49/49) 
+2026-09-08 18:16:09,435 40 INFO odoo18_lab odoo.modules.registry: module dimsop_website: creating or updating database tables 
+2026-09-08 18:16:09,584 40 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/layout.xml 
+2026-09-08 18:16:09,588 40 WARNING odoo18_lab odoo.modules.loading: Transient module states were reset 
+2026-09-08 18:16:09,590 40 ERROR odoo18_lab odoo.modules.registry: Failed to load registry 
+2026-09-08 18:16:09,590 40 CRITICAL odoo18_lab odoo.service.server: Failed to initialize database `odoo18_lab`. 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/service/server.py", line 1414, in preload_registries
+    registry = Registry.new(dbname, update_module=update_module)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/tools/func.py", line 97, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/registry.py", line 115, in new
+    odoo.modules.load_modules(registry, force_demo, status, update_module)
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 485, in load_modules
+    processed_modules += load_marked_modules(env, graph,
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 365, in load_marked_modules
+    loaded, processed = load_module_graph(
+                        ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 228, in load_module_graph
+    load_data(env, idref, mode, kind='data', package=package)
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 72, in load_data
+    tools.convert_file(env, package.name, filename, idref, mode, noupdate, kind)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 662, in convert_file
+    convert_xml_import(env, module, fp, idref, mode, noupdate)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 712, in convert_xml_import
+    doc = etree.parse(xmlfile)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "src/lxml/etree.pyx", line 3570, in lxml.etree.parse
+  File "src/lxml/parser.pxi", line 1973, in lxml.etree._parseDocument
+  File "src/lxml/parser.pxi", line 1993, in lxml.etree._parseFilelikeDocument
+  File "src/lxml/parser.pxi", line 1887, in lxml.etree._parseDocFromFilelike
+  File "src/lxml/parser.pxi", line 1224, in lxml.etree._BaseParser._parseDocFromFilelike
+  File "src/lxml/parser.pxi", line 633, in lxml.etree._ParserContext._handleParseResultDoc
+  File "src/lxml/parser.pxi", line 743, in lxml.etree._handleParseResult
+  File "src/lxml/parser.pxi", line 672, in lxml.etree._raiseParseError
+  File "/mnt/extra-addons/custom/dimsop_website/views/layout.xml", line 219
+lxml.etree.XMLSyntaxError: StartTag: invalid element name, line 219, column 59
+2026-09-08 18:16:09,599 40 INFO odoo18_lab odoo.service.server: Initiating shutdown 
+2026-09-08 18:16:09,600 40 INFO odoo18_lab odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-09-08 18:16:09,600 40 INFO odoo18_lab odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 1 connections  
+2026-09-08 18:16:17,414 55 INFO ? odoo: Odoo version 18.0-20260723 
+2026-09-08 18:16:17,414 55 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-09-08 18:16:17,414 55 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/18.0', '/mnt/extra-addons/custom', '/mnt/extra-addons/community'] 
+2026-09-08 18:16:17,414 55 INFO ? odoo: database: odoo@db:5432 
+2026-09-08 18:16:17,737 55 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2026-09-08 18:16:17,747 55 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltoimage binary at /usr/local/bin/wkhtmltoimage 
+2026-09-08 18:16:18,097 55 INFO odoo18_lab odoo.modules.loading: loading 1 modules... 
+2026-09-08 18:16:18,117 55 INFO odoo18_lab odoo.modules.loading: 1 modules loaded in 0.02s, 0 queries (+0 extra) 
+2026-09-08 18:16:18,179 55 INFO odoo18_lab odoo.modules.loading: updating modules list 
+2026-09-08 18:16:18,184 55 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-09-08 18:16:20,791 55 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.button_upgrade on ['Dimsop Website Theme'] to user __system__ #1 via n/a 
+2026-09-08 18:16:20,791 55 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.update_list on ['Dimsop Website Theme'] to user __system__ #1 via n/a 
+2026-09-08 18:16:22,613 55 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.button_install on [] to user __system__ #1 via n/a 
+2026-09-08 18:16:22,675 55 INFO odoo18_lab odoo.modules.loading: loading 49 modules... 
+2026-09-08 18:16:23,768 55 INFO odoo18_lab odoo.modules.loading: Loading module dimsop_website (49/49) 
+2026-09-08 18:16:24,153 55 INFO odoo18_lab odoo.modules.registry: module dimsop_website: creating or updating database tables 
+2026-09-08 18:16:24,303 55 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/layout.xml 
+2026-09-08 18:16:24,309 55 WARNING odoo18_lab odoo.modules.loading: Transient module states were reset 
+2026-09-08 18:16:24,309 55 ERROR odoo18_lab odoo.modules.registry: Failed to load registry 
+2026-09-08 18:16:24,309 55 CRITICAL odoo18_lab odoo.service.server: Failed to initialize database `odoo18_lab`. 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/service/server.py", line 1414, in preload_registries
+    registry = Registry.new(dbname, update_module=update_module)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/tools/func.py", line 97, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/registry.py", line 115, in new
+    odoo.modules.load_modules(registry, force_demo, status, update_module)
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 485, in load_modules
+    processed_modules += load_marked_modules(env, graph,
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 365, in load_marked_modules
+    loaded, processed = load_module_graph(
+                        ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 228, in load_module_graph
+    load_data(env, idref, mode, kind='data', package=package)
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 72, in load_data
+    tools.convert_file(env, package.name, filename, idref, mode, noupdate, kind)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 662, in convert_file
+    convert_xml_import(env, module, fp, idref, mode, noupdate)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 712, in convert_xml_import
+    doc = etree.parse(xmlfile)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "src/lxml/etree.pyx", line 3570, in lxml.etree.parse
+  File "src/lxml/parser.pxi", line 1973, in lxml.etree._parseDocument
+  File "src/lxml/parser.pxi", line 1993, in lxml.etree._parseFilelikeDocument
+  File "src/lxml/parser.pxi", line 1887, in lxml.etree._parseDocFromFilelike
+  File "src/lxml/parser.pxi", line 1224, in lxml.etree._BaseParser._parseDocFromFilelike
+  File "src/lxml/parser.pxi", line 633, in lxml.etree._ParserContext._handleParseResultDoc
+  File "src/lxml/parser.pxi", line 743, in lxml.etree._handleParseResult
+  File "src/lxml/parser.pxi", line 672, in lxml.etree._raiseParseError
+  File "/mnt/extra-addons/custom/dimsop_website/views/layout.xml", line 219
+lxml.etree.XMLSyntaxError: StartTag: invalid element name, line 219, column 59
+2026-09-08 18:16:24,313 55 INFO odoo18_lab odoo.service.server: Initiating shutdown 
+2026-09-08 18:16:24,313 55 INFO odoo18_lab odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-09-08 18:16:24,313 55 INFO odoo18_lab odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 1 connections  
+2026-09-08 18:17:37,488 63 INFO ? odoo: Odoo version 18.0-20260723 
+2026-09-08 18:17:37,489 63 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-09-08 18:17:37,489 63 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/18.0', '/mnt/extra-addons/custom', '/mnt/extra-addons/community'] 
+2026-09-08 18:17:37,489 63 INFO ? odoo: database: odoo@db:5432 
+2026-09-08 18:17:37,787 63 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2026-09-08 18:17:37,798 63 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltoimage binary at /usr/local/bin/wkhtmltoimage 
+2026-09-08 18:17:38,246 63 INFO odoo18_lab odoo.modules.loading: loading 1 modules... 
+2026-09-08 18:17:38,256 63 INFO odoo18_lab odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2026-09-08 18:17:38,296 63 INFO odoo18_lab odoo.modules.loading: updating modules list 
+2026-09-08 18:17:38,300 63 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-09-08 18:17:40,884 63 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.button_upgrade on ['Dimsop Website Theme'] to user __system__ #1 via n/a 
+2026-09-08 18:17:40,884 63 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.update_list on ['Dimsop Website Theme'] to user __system__ #1 via n/a 
+2026-09-08 18:17:42,641 63 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.button_install on [] to user __system__ #1 via n/a 
+2026-09-08 18:17:42,689 63 INFO odoo18_lab odoo.modules.loading: loading 49 modules... 
+2026-09-08 18:17:43,633 63 INFO odoo18_lab odoo.modules.loading: Loading module dimsop_website (49/49) 
+2026-09-08 18:17:43,915 63 INFO odoo18_lab odoo.modules.registry: module dimsop_website: creating or updating database tables 
+2026-09-08 18:17:44,013 63 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/layout.xml 
+2026-09-08 18:17:44,017 63 WARNING odoo18_lab odoo.modules.loading: Transient module states were reset 
+2026-09-08 18:17:44,018 63 ERROR odoo18_lab odoo.modules.registry: Failed to load registry 
+2026-09-08 18:17:44,018 63 CRITICAL odoo18_lab odoo.service.server: Failed to initialize database `odoo18_lab`. 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/service/server.py", line 1414, in preload_registries
+    registry = Registry.new(dbname, update_module=update_module)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/tools/func.py", line 97, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/registry.py", line 115, in new
+    odoo.modules.load_modules(registry, force_demo, status, update_module)
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 485, in load_modules
+    processed_modules += load_marked_modules(env, graph,
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 365, in load_marked_modules
+    loaded, processed = load_module_graph(
+                        ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 228, in load_module_graph
+    load_data(env, idref, mode, kind='data', package=package)
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 72, in load_data
+    tools.convert_file(env, package.name, filename, idref, mode, noupdate, kind)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 662, in convert_file
+    convert_xml_import(env, module, fp, idref, mode, noupdate)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 712, in convert_xml_import
+    doc = etree.parse(xmlfile)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "src/lxml/etree.pyx", line 3570, in lxml.etree.parse
+  File "src/lxml/parser.pxi", line 1973, in lxml.etree._parseDocument
+  File "src/lxml/parser.pxi", line 1993, in lxml.etree._parseFilelikeDocument
+  File "src/lxml/parser.pxi", line 1887, in lxml.etree._parseDocFromFilelike
+  File "src/lxml/parser.pxi", line 1224, in lxml.etree._BaseParser._parseDocFromFilelike
+  File "src/lxml/parser.pxi", line 633, in lxml.etree._ParserContext._handleParseResultDoc
+  File "src/lxml/parser.pxi", line 743, in lxml.etree._handleParseResult
+  File "src/lxml/parser.pxi", line 672, in lxml.etree._raiseParseError
+  File "/mnt/extra-addons/custom/dimsop_website/views/layout.xml", line 219
+lxml.etree.XMLSyntaxError: StartTag: invalid element name, line 219, column 59
+2026-09-08 18:17:44,020 63 INFO odoo18_lab odoo.service.server: Initiating shutdown 
+2026-09-08 18:17:44,021 63 INFO odoo18_lab odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-09-08 18:17:44,021 63 INFO odoo18_lab odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 1 connections  
+2026-09-08 18:18:19,463 30 INFO ? odoo: Odoo version 18.0-20260723 
+2026-09-08 18:18:19,464 30 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-09-08 18:18:19,464 30 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/18.0', '/mnt/extra-addons/custom', '/mnt/extra-addons/community'] 
+2026-09-08 18:18:19,465 30 INFO ? odoo: database: odoo@db:5432 
+2026-09-08 18:18:19,819 30 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2026-09-08 18:18:19,833 30 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltoimage binary at /usr/local/bin/wkhtmltoimage 
+2026-09-08 18:18:20,184 30 INFO odoo18_lab odoo.modules.loading: loading 1 modules... 
+2026-09-08 18:18:20,194 30 INFO odoo18_lab odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2026-09-08 18:18:20,235 30 INFO odoo18_lab odoo.modules.loading: updating modules list 
+2026-09-08 18:18:20,238 30 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-09-08 18:18:22,241 30 INFO odoo18_lab odoo.modules.loading: loading 48 modules... 
+2026-09-08 18:18:23,012 30 INFO odoo18_lab odoo.modules.loading: 48 modules loaded in 0.77s, 0 queries (+0 extra) 
+2026-09-08 18:18:23,014 30 INFO odoo18_lab odoo.modules.loading: loading 49 modules... 
+2026-09-08 18:18:23,015 30 INFO odoo18_lab odoo.modules.loading: Loading module dimsop_website (49/49) 
+2026-09-08 18:18:23,115 30 INFO odoo18_lab odoo.modules.registry: module dimsop_website: creating or updating database tables 
+2026-09-08 18:18:23,187 30 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/layout.xml 
+2026-09-08 18:18:23,192 30 WARNING odoo18_lab odoo.modules.loading: Transient module states were reset 
+2026-09-08 18:18:23,194 30 ERROR odoo18_lab odoo.modules.registry: Failed to load registry 
+2026-09-08 18:18:23,194 30 CRITICAL odoo18_lab odoo.service.server: Failed to initialize database `odoo18_lab`. 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/service/server.py", line 1414, in preload_registries
+    registry = Registry.new(dbname, update_module=update_module)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/tools/func.py", line 97, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/registry.py", line 115, in new
+    odoo.modules.load_modules(registry, force_demo, status, update_module)
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 489, in load_modules
+    processed_modules += load_marked_modules(env, graph,
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 365, in load_marked_modules
+    loaded, processed = load_module_graph(
+                        ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 228, in load_module_graph
+    load_data(env, idref, mode, kind='data', package=package)
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 72, in load_data
+    tools.convert_file(env, package.name, filename, idref, mode, noupdate, kind)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 662, in convert_file
+    convert_xml_import(env, module, fp, idref, mode, noupdate)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 712, in convert_xml_import
+    doc = etree.parse(xmlfile)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "src/lxml/etree.pyx", line 3570, in lxml.etree.parse
+  File "src/lxml/parser.pxi", line 1973, in lxml.etree._parseDocument
+  File "src/lxml/parser.pxi", line 1993, in lxml.etree._parseFilelikeDocument
+  File "src/lxml/parser.pxi", line 1887, in lxml.etree._parseDocFromFilelike
+  File "src/lxml/parser.pxi", line 1224, in lxml.etree._BaseParser._parseDocFromFilelike
+  File "src/lxml/parser.pxi", line 633, in lxml.etree._ParserContext._handleParseResultDoc
+  File "src/lxml/parser.pxi", line 743, in lxml.etree._handleParseResult
+  File "src/lxml/parser.pxi", line 672, in lxml.etree._raiseParseError
+  File "/mnt/extra-addons/custom/dimsop_website/views/layout.xml", line 219
+lxml.etree.XMLSyntaxError: StartTag: invalid element name, line 219, column 59
+2026-09-08 18:18:23,196 30 INFO odoo18_lab odoo.service.server: Initiating shutdown 
+2026-09-08 18:18:23,196 30 INFO odoo18_lab odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-09-08 18:18:23,197 30 INFO odoo18_lab odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 1 connections  
+2026-09-08 18:19:01,069 30 INFO ? odoo: Odoo version 18.0-20260723 
+2026-09-08 18:19:01,070 30 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-09-08 18:19:01,070 30 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/18.0', '/mnt/extra-addons/custom', '/mnt/extra-addons/community'] 
+2026-09-08 18:19:01,070 30 INFO ? odoo: database: odoo@db:5432 
+2026-09-08 18:19:01,440 30 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2026-09-08 18:19:01,459 30 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltoimage binary at /usr/local/bin/wkhtmltoimage 
+2026-09-08 18:19:02,112 30 INFO odoo18_lab odoo.modules.loading: loading 1 modules... 
+2026-09-08 18:19:02,136 30 INFO odoo18_lab odoo.modules.loading: 1 modules loaded in 0.02s, 0 queries (+0 extra) 
+2026-09-08 18:19:02,216 30 INFO odoo18_lab odoo.modules.loading: updating modules list 
+2026-09-08 18:19:02,221 30 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-09-08 18:19:07,558 30 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.button_install on ['Dimsop Website Theme'] to user __system__ #1 via n/a 
+2026-09-08 18:19:07,861 30 INFO odoo18_lab odoo.modules.loading: loading 48 modules... 
+2026-09-08 18:19:09,943 30 INFO odoo18_lab odoo.modules.loading: 48 modules loaded in 2.08s, 0 queries (+0 extra) 
+2026-09-08 18:19:09,949 30 INFO odoo18_lab odoo.modules.loading: loading 49 modules... 
+2026-09-08 18:19:09,950 30 INFO odoo18_lab odoo.modules.loading: Loading module dimsop_website (49/49) 
+2026-09-08 18:19:10,334 30 INFO odoo18_lab odoo.modules.registry: module dimsop_website: creating or updating database tables 
+2026-09-08 18:19:10,542 30 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/layout.xml 
+2026-09-08 18:19:10,553 30 WARNING odoo18_lab odoo.modules.loading: Transient module states were reset 
+2026-09-08 18:19:10,555 30 ERROR odoo18_lab odoo.modules.registry: Failed to load registry 
+2026-09-08 18:19:10,555 30 CRITICAL odoo18_lab odoo.service.server: Failed to initialize database `odoo18_lab`. 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/service/server.py", line 1414, in preload_registries
+    registry = Registry.new(dbname, update_module=update_module)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/tools/func.py", line 97, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/registry.py", line 115, in new
+    odoo.modules.load_modules(registry, force_demo, status, update_module)
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 489, in load_modules
+    processed_modules += load_marked_modules(env, graph,
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 365, in load_marked_modules
+    loaded, processed = load_module_graph(
+                        ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 228, in load_module_graph
+    load_data(env, idref, mode, kind='data', package=package)
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 72, in load_data
+    tools.convert_file(env, package.name, filename, idref, mode, noupdate, kind)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 662, in convert_file
+    convert_xml_import(env, module, fp, idref, mode, noupdate)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 712, in convert_xml_import
+    doc = etree.parse(xmlfile)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "src/lxml/etree.pyx", line 3570, in lxml.etree.parse
+  File "src/lxml/parser.pxi", line 1973, in lxml.etree._parseDocument
+  File "src/lxml/parser.pxi", line 1993, in lxml.etree._parseFilelikeDocument
+  File "src/lxml/parser.pxi", line 1887, in lxml.etree._parseDocFromFilelike
+  File "src/lxml/parser.pxi", line 1224, in lxml.etree._BaseParser._parseDocFromFilelike
+  File "src/lxml/parser.pxi", line 633, in lxml.etree._ParserContext._handleParseResultDoc
+  File "src/lxml/parser.pxi", line 743, in lxml.etree._handleParseResult
+  File "src/lxml/parser.pxi", line 672, in lxml.etree._raiseParseError
+  File "/mnt/extra-addons/custom/dimsop_website/views/layout.xml", line 219
+lxml.etree.XMLSyntaxError: StartTag: invalid element name, line 219, column 59
+2026-09-08 18:19:10,566 30 INFO odoo18_lab odoo.service.server: Initiating shutdown 
+2026-09-08 18:19:10,566 30 INFO odoo18_lab odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-09-08 18:19:10,567 30 INFO odoo18_lab odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 1 connections  
+2026-09-08 18:19:43,390 28 INFO ? odoo: Odoo version 18.0-20260723 
+2026-09-08 18:19:43,391 28 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-09-08 18:19:43,391 28 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/18.0', '/mnt/extra-addons/custom', '/mnt/extra-addons/community'] 
+2026-09-08 18:19:43,392 28 INFO ? odoo: database: odoo@db:5432 
+2026-09-08 18:19:43,727 28 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2026-09-08 18:19:43,739 28 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltoimage binary at /usr/local/bin/wkhtmltoimage 
+2026-09-08 18:19:44,138 28 INFO odoo18_lab odoo.modules.loading: loading 1 modules... 
+2026-09-08 18:19:44,148 28 INFO odoo18_lab odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2026-09-08 18:19:44,204 28 INFO odoo18_lab odoo.modules.loading: updating modules list 
+2026-09-08 18:19:44,208 28 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-09-08 18:19:47,307 28 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.button_install on ['Dimsop Website Theme'] to user __system__ #1 via n/a 
+2026-09-08 18:19:47,419 28 INFO odoo18_lab odoo.modules.loading: loading 48 modules... 
+2026-09-08 18:19:48,339 28 INFO odoo18_lab odoo.modules.loading: 48 modules loaded in 0.92s, 0 queries (+0 extra) 
+2026-09-08 18:19:48,342 28 INFO odoo18_lab odoo.modules.loading: loading 49 modules... 
+2026-09-08 18:19:48,343 28 INFO odoo18_lab odoo.modules.loading: Loading module dimsop_website (49/49) 
+2026-09-08 18:19:48,515 28 INFO odoo18_lab odoo.modules.registry: module dimsop_website: creating or updating database tables 
+2026-09-08 18:19:48,677 28 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/layout.xml 
+2026-09-08 18:19:48,684 28 WARNING odoo18_lab odoo.modules.loading: Transient module states were reset 
+2026-09-08 18:19:48,685 28 ERROR odoo18_lab odoo.modules.registry: Failed to load registry 
+2026-09-08 18:19:48,686 28 CRITICAL odoo18_lab odoo.service.server: Failed to initialize database `odoo18_lab`. 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/service/server.py", line 1414, in preload_registries
+    registry = Registry.new(dbname, update_module=update_module)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/tools/func.py", line 97, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/registry.py", line 115, in new
+    odoo.modules.load_modules(registry, force_demo, status, update_module)
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 489, in load_modules
+    processed_modules += load_marked_modules(env, graph,
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 365, in load_marked_modules
+    loaded, processed = load_module_graph(
+                        ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 228, in load_module_graph
+    load_data(env, idref, mode, kind='data', package=package)
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 72, in load_data
+    tools.convert_file(env, package.name, filename, idref, mode, noupdate, kind)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 662, in convert_file
+    convert_xml_import(env, module, fp, idref, mode, noupdate)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 712, in convert_xml_import
+    doc = etree.parse(xmlfile)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "src/lxml/etree.pyx", line 3570, in lxml.etree.parse
+  File "src/lxml/parser.pxi", line 1973, in lxml.etree._parseDocument
+  File "src/lxml/parser.pxi", line 1993, in lxml.etree._parseFilelikeDocument
+  File "src/lxml/parser.pxi", line 1887, in lxml.etree._parseDocFromFilelike
+  File "src/lxml/parser.pxi", line 1224, in lxml.etree._BaseParser._parseDocFromFilelike
+  File "src/lxml/parser.pxi", line 633, in lxml.etree._ParserContext._handleParseResultDoc
+  File "src/lxml/parser.pxi", line 743, in lxml.etree._handleParseResult
+  File "src/lxml/parser.pxi", line 672, in lxml.etree._raiseParseError
+  File "/mnt/extra-addons/custom/dimsop_website/views/layout.xml", line 219
+lxml.etree.XMLSyntaxError: StartTag: invalid element name, line 219, column 59
+2026-09-08 18:19:48,693 28 INFO odoo18_lab odoo.service.server: Initiating shutdown 
+2026-09-08 18:19:48,693 28 INFO odoo18_lab odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-09-08 18:19:48,694 28 INFO odoo18_lab odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 1 connections  
+2026-09-08 18:19:56,302 44 INFO ? odoo: Odoo version 18.0-20260723 
+2026-09-08 18:19:56,302 44 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-09-08 18:19:56,303 44 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/18.0', '/mnt/extra-addons/custom', '/mnt/extra-addons/community'] 
+2026-09-08 18:19:56,303 44 INFO ? odoo: database: odoo@db:5432 
+2026-09-08 18:19:56,523 44 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2026-09-08 18:19:56,530 44 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltoimage binary at /usr/local/bin/wkhtmltoimage 
+2026-09-08 18:19:56,879 44 INFO odoo18_lab odoo.modules.loading: loading 1 modules... 
+2026-09-08 18:19:56,886 44 INFO odoo18_lab odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2026-09-08 18:19:56,915 44 INFO odoo18_lab odoo.modules.loading: updating modules list 
+2026-09-08 18:19:56,916 44 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-09-08 18:19:58,848 44 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.button_install on ['Dimsop Website Theme'] to user __system__ #1 via n/a 
+2026-09-08 18:19:58,935 44 INFO odoo18_lab odoo.modules.loading: loading 48 modules... 
+2026-09-08 18:19:59,636 44 INFO odoo18_lab odoo.modules.loading: 48 modules loaded in 0.70s, 0 queries (+0 extra) 
+2026-09-08 18:19:59,640 44 INFO odoo18_lab odoo.modules.loading: loading 49 modules... 
+2026-09-08 18:19:59,640 44 INFO odoo18_lab odoo.modules.loading: Loading module dimsop_website (49/49) 
+2026-09-08 18:19:59,757 44 INFO odoo18_lab odoo.modules.registry: module dimsop_website: creating or updating database tables 
+2026-09-08 18:19:59,825 44 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/layout.xml 
+2026-09-08 18:19:59,828 44 WARNING odoo18_lab odoo.modules.loading: Transient module states were reset 
+2026-09-08 18:19:59,828 44 ERROR odoo18_lab odoo.modules.registry: Failed to load registry 
+2026-09-08 18:19:59,828 44 CRITICAL odoo18_lab odoo.service.server: Failed to initialize database `odoo18_lab`. 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/service/server.py", line 1414, in preload_registries
+    registry = Registry.new(dbname, update_module=update_module)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/tools/func.py", line 97, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/registry.py", line 115, in new
+    odoo.modules.load_modules(registry, force_demo, status, update_module)
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 489, in load_modules
+    processed_modules += load_marked_modules(env, graph,
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 365, in load_marked_modules
+    loaded, processed = load_module_graph(
+                        ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 228, in load_module_graph
+    load_data(env, idref, mode, kind='data', package=package)
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 72, in load_data
+    tools.convert_file(env, package.name, filename, idref, mode, noupdate, kind)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 662, in convert_file
+    convert_xml_import(env, module, fp, idref, mode, noupdate)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 712, in convert_xml_import
+    doc = etree.parse(xmlfile)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "src/lxml/etree.pyx", line 3570, in lxml.etree.parse
+  File "src/lxml/parser.pxi", line 1973, in lxml.etree._parseDocument
+  File "src/lxml/parser.pxi", line 1993, in lxml.etree._parseFilelikeDocument
+  File "src/lxml/parser.pxi", line 1887, in lxml.etree._parseDocFromFilelike
+  File "src/lxml/parser.pxi", line 1224, in lxml.etree._BaseParser._parseDocFromFilelike
+  File "src/lxml/parser.pxi", line 633, in lxml.etree._ParserContext._handleParseResultDoc
+  File "src/lxml/parser.pxi", line 743, in lxml.etree._handleParseResult
+  File "src/lxml/parser.pxi", line 672, in lxml.etree._raiseParseError
+  File "/mnt/extra-addons/custom/dimsop_website/views/layout.xml", line 219
+lxml.etree.XMLSyntaxError: StartTag: invalid element name, line 219, column 59
+2026-09-08 18:19:59,830 44 INFO odoo18_lab odoo.service.server: Initiating shutdown 
+2026-09-08 18:19:59,830 44 INFO odoo18_lab odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-09-08 18:19:59,830 44 INFO odoo18_lab odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 1 connections  
+2026-09-08 18:21:05,540 72 DEBUG ? odoo.netsvc: logger level set: "odoo.http.rpc.request:INFO" 
+2026-09-08 18:21:05,540 72 DEBUG ? odoo.netsvc: logger level set: "odoo.http.rpc.response:INFO" 
+2026-09-08 18:21:05,540 72 DEBUG ? odoo.netsvc: logger level set: ":INFO" 
+2026-09-08 18:21:05,541 72 DEBUG ? odoo.netsvc: logger level set: "odoo:DEBUG" 
+2026-09-08 18:21:05,541 72 DEBUG ? odoo.netsvc: logger level set: "odoo.sql_db:INFO" 
+2026-09-08 18:21:05,541 72 DEBUG ? odoo.netsvc: logger level set: ":INFO" 
+2026-09-08 18:21:05,541 72 INFO ? odoo: Odoo version 18.0-20260723 
+2026-09-08 18:21:05,541 72 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-09-08 18:21:05,541 72 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/18.0', '/mnt/extra-addons/custom', '/mnt/extra-addons/community'] 
+2026-09-08 18:21:05,542 72 INFO ? odoo: database: odoo@db:5432 
+2026-09-08 18:21:05,825 72 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2026-09-08 18:21:05,834 72 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltoimage binary at /usr/local/bin/wkhtmltoimage 
+2026-09-08 18:21:06,213 72 DEBUG ? odoo.service.server: Setting signal handlers 
+2026-09-08 18:21:06,235 72 DEBUG odoo18_lab odoo.modules.registry: Multiprocess load registry signaling: [Registry: 98] [Cache default: 2] [Cache assets: 1] [Cache templates: 4] [Cache routing: 1] [Cache groups: 1] 
+2026-09-08 18:21:06,249 72 INFO odoo18_lab odoo.modules.loading: loading 1 modules... 
+2026-09-08 18:21:06,249 72 DEBUG odoo18_lab odoo.modules.loading: Loading module base (1/1) 
+2026-09-08 18:21:06,258 72 DEBUG odoo18_lab odoo.modules.loading: Module base loaded in 0.01s, 0 queries 
+2026-09-08 18:21:06,258 72 INFO odoo18_lab odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2026-09-08 18:21:06,293 72 INFO odoo18_lab odoo.modules.loading: updating modules list 
+2026-09-08 18:21:06,296 72 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-09-08 18:21:08,292 72 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.button_install on ['Dimsop Website Theme'] to user __system__ #1 via n/a 
+2026-09-08 18:21:08,381 72 DEBUG odoo18_lab odoo.modules.loading: Updating graph with 47 more modules 
+2026-09-08 18:21:08,382 72 INFO odoo18_lab odoo.modules.loading: loading 48 modules... 
+2026-09-08 18:21:08,382 72 DEBUG odoo18_lab odoo.modules.loading: Loading module social_media (2/48) 
+2026-09-08 18:21:08,383 72 DEBUG odoo18_lab odoo.modules.loading: Module social_media loaded in 0.00s, 0 queries 
+2026-09-08 18:21:08,383 72 DEBUG odoo18_lab odoo.modules.loading: Loading module web (3/48) 
+2026-09-08 18:21:08,385 72 DEBUG odoo18_lab odoo.modules.loading: Module web loaded in 0.00s, 0 queries 
+2026-09-08 18:21:08,385 72 DEBUG odoo18_lab odoo.modules.loading: Loading module auth_totp (4/48) 
+2026-09-08 18:21:08,409 72 DEBUG odoo18_lab odoo.modules.loading: Module auth_totp loaded in 0.02s, 0 queries 
+2026-09-08 18:21:08,409 72 DEBUG odoo18_lab odoo.modules.loading: Loading module base_import (5/48) 
+2026-09-08 18:21:08,571 72 DEBUG odoo18_lab odoo.modules.loading: Module base_import loaded in 0.16s, 0 queries 
+2026-09-08 18:21:08,571 72 DEBUG odoo18_lab odoo.modules.loading: Loading module base_import_module (6/48) 
+2026-09-08 18:21:08,577 72 DEBUG odoo18_lab odoo.modules.loading: Module base_import_module loaded in 0.01s, 0 queries 
+2026-09-08 18:21:08,577 72 DEBUG odoo18_lab odoo.modules.loading: Loading module base_setup (7/48) 
+2026-09-08 18:21:08,579 72 DEBUG odoo18_lab odoo.modules.loading: Module base_setup loaded in 0.00s, 0 queries 
+2026-09-08 18:21:08,579 72 DEBUG odoo18_lab odoo.modules.loading: Loading module bus (8/48) 
+2026-09-08 18:21:08,589 72 DEBUG odoo18_lab odoo.modules.loading: Module bus loaded in 0.01s, 0 queries 
+2026-09-08 18:21:08,589 72 DEBUG odoo18_lab odoo.modules.loading: Loading module http_routing (9/48) 
+2026-09-08 18:21:08,592 72 DEBUG odoo18_lab odoo.modules.loading: Module http_routing loaded in 0.00s, 0 queries 
+2026-09-08 18:21:08,592 72 DEBUG odoo18_lab odoo.modules.loading: Loading module resource (10/48) 
+2026-09-08 18:21:08,600 72 DEBUG odoo18_lab odoo.modules.loading: Module resource loaded in 0.01s, 0 queries 
+2026-09-08 18:21:08,600 72 DEBUG odoo18_lab odoo.modules.loading: Loading module utm (11/48) 
+2026-09-08 18:21:08,607 72 DEBUG odoo18_lab odoo.modules.loading: Module utm loaded in 0.01s, 0 queries 
+2026-09-08 18:21:08,608 72 DEBUG odoo18_lab odoo.modules.loading: Loading module web_tour (12/48) 
+2026-09-08 18:21:08,611 72 DEBUG odoo18_lab odoo.modules.loading: Module web_tour loaded in 0.00s, 0 queries 
+2026-09-08 18:21:08,611 72 DEBUG odoo18_lab odoo.modules.loading: Loading module google_recaptcha (13/48) 
+2026-09-08 18:21:08,612 72 DEBUG odoo18_lab odoo.modules.loading: Module google_recaptcha loaded in 0.00s, 0 queries 
+2026-09-08 18:21:08,613 72 DEBUG odoo18_lab odoo.modules.loading: Loading module html_editor (14/48) 
+2026-09-08 18:21:08,701 72 DEBUG odoo18_lab odoo.modules.loading: Module html_editor loaded in 0.09s, 0 queries 
+2026-09-08 18:21:08,701 72 DEBUG odoo18_lab odoo.modules.loading: Loading module iap (15/48) 
+2026-09-08 18:21:08,702 72 DEBUG odoo18_lab odoo.modules.loading: Module iap loaded in 0.00s, 0 queries 
+2026-09-08 18:21:08,702 72 DEBUG odoo18_lab odoo.modules.loading: Loading module mail (16/48) 
+2026-09-08 18:21:08,707 72 DEBUG odoo18_lab odoo.modules.loading: Module mail loaded in 0.01s, 0 queries 
+2026-09-08 18:21:08,708 72 DEBUG odoo18_lab odoo.modules.loading: Loading module web_editor (17/48) 
+2026-09-08 18:21:08,727 72 DEBUG odoo18_lab odoo.modules.loading: Module web_editor loaded in 0.02s, 0 queries 
+2026-09-08 18:21:08,727 72 DEBUG odoo18_lab odoo.modules.loading: Loading module auth_signup (18/48) 
+2026-09-08 18:21:08,736 72 DEBUG odoo18_lab odoo.modules.loading: Module auth_signup loaded in 0.01s, 0 queries 
+2026-09-08 18:21:08,736 72 DEBUG odoo18_lab odoo.modules.loading: Loading module auth_totp_mail (19/48) 
+2026-09-08 18:21:08,739 72 DEBUG odoo18_lab odoo.modules.loading: Module auth_totp_mail loaded in 0.00s, 0 queries 
+2026-09-08 18:21:08,739 72 DEBUG odoo18_lab odoo.modules.loading: Loading module base_install_request (20/48) 
+2026-09-08 18:21:08,744 72 DEBUG odoo18_lab odoo.modules.loading: Module base_install_request loaded in 0.00s, 0 queries 
+2026-09-08 18:21:08,744 72 DEBUG odoo18_lab odoo.modules.loading: Loading module calendar (21/48) 
+2026-09-08 18:21:08,756 72 DEBUG odoo18_lab odoo.modules.loading: Module calendar loaded in 0.01s, 0 queries 
+2026-09-08 18:21:08,756 72 DEBUG odoo18_lab odoo.modules.loading: Loading module contacts (22/48) 
+2026-09-08 18:21:08,758 72 DEBUG odoo18_lab odoo.modules.loading: Module contacts loaded in 0.00s, 0 queries 
+2026-09-08 18:21:08,758 72 DEBUG odoo18_lab odoo.modules.loading: Loading module google_gmail (23/48) 
+2026-09-08 18:21:08,761 72 DEBUG odoo18_lab odoo.modules.loading: Module google_gmail loaded in 0.00s, 0 queries 
+2026-09-08 18:21:08,761 72 DEBUG odoo18_lab odoo.modules.loading: Loading module iap_mail (24/48) 
+2026-09-08 18:21:08,763 72 DEBUG odoo18_lab odoo.modules.loading: Module iap_mail loaded in 0.00s, 0 queries 
+2026-09-08 18:21:08,763 72 DEBUG odoo18_lab odoo.modules.loading: Loading module mail_bot (25/48) 
+2026-09-08 18:21:08,766 72 DEBUG odoo18_lab odoo.modules.loading: Module mail_bot loaded in 0.00s, 0 queries 
+2026-09-08 18:21:08,767 72 DEBUG odoo18_lab odoo.modules.loading: Loading module phone_validation (26/48) 
+2026-09-08 18:21:08,951 72 DEBUG odoo18_lab odoo.modules.loading: Module phone_validation loaded in 0.18s, 0 queries 
+2026-09-08 18:21:08,952 72 DEBUG odoo18_lab odoo.modules.loading: Loading module privacy_lookup (27/48) 
+2026-09-08 18:21:08,962 72 DEBUG odoo18_lab odoo.modules.loading: Module privacy_lookup loaded in 0.01s, 0 queries 
+2026-09-08 18:21:08,962 72 DEBUG odoo18_lab odoo.modules.loading: Loading module resource_mail (28/48) 
+2026-09-08 18:21:08,964 72 DEBUG odoo18_lab odoo.modules.loading: Module resource_mail loaded in 0.00s, 0 queries 
+2026-09-08 18:21:08,964 72 DEBUG odoo18_lab odoo.modules.loading: Loading module sales_team (29/48) 
+2026-09-08 18:21:08,972 72 DEBUG odoo18_lab odoo.modules.loading: Module sales_team loaded in 0.01s, 0 queries 
+2026-09-08 18:21:08,972 72 DEBUG odoo18_lab odoo.modules.loading: Loading module web_unsplash (30/48) 
+2026-09-08 18:21:08,975 72 DEBUG odoo18_lab odoo.modules.loading: Module web_unsplash loaded in 0.00s, 0 queries 
+2026-09-08 18:21:08,975 72 DEBUG odoo18_lab odoo.modules.loading: Loading module partner_autocomplete (31/48) 
+2026-09-08 18:21:08,980 72 DEBUG odoo18_lab odoo.modules.loading: Module partner_autocomplete loaded in 0.01s, 0 queries 
+2026-09-08 18:21:08,981 72 DEBUG odoo18_lab odoo.modules.loading: Loading module portal (32/48) 
+2026-09-08 18:21:08,989 72 DEBUG odoo18_lab odoo.modules.loading: Module portal loaded in 0.01s, 0 queries 
+2026-09-08 18:21:08,989 72 DEBUG odoo18_lab odoo.modules.loading: Loading module sms (33/48) 
+2026-09-08 18:21:09,009 72 DEBUG odoo18_lab odoo.modules.loading: Module sms loaded in 0.02s, 0 queries 
+2026-09-08 18:21:09,009 72 DEBUG odoo18_lab odoo.modules.loading: Loading module snailmail (34/48) 
+2026-09-08 18:21:09,021 72 DEBUG odoo18_lab odoo.modules.loading: Module snailmail loaded in 0.01s, 0 queries 
+2026-09-08 18:21:09,021 72 DEBUG odoo18_lab odoo.modules.loading: Loading module auth_totp_portal (35/48) 
+2026-09-08 18:21:09,024 72 DEBUG odoo18_lab odoo.modules.loading: Module auth_totp_portal loaded in 0.00s, 0 queries 
+2026-09-08 18:21:09,025 72 DEBUG odoo18_lab odoo.modules.loading: Loading module calendar_sms (36/48) 
+2026-09-08 18:21:09,031 72 DEBUG odoo18_lab odoo.modules.loading: Module calendar_sms loaded in 0.01s, 0 queries 
+2026-09-08 18:21:09,031 72 DEBUG odoo18_lab odoo.modules.loading: Loading module digest (37/48) 
+2026-09-08 18:21:09,042 72 DEBUG odoo18_lab odoo.modules.loading: Module digest loaded in 0.01s, 0 queries 
+2026-09-08 18:21:09,043 72 DEBUG odoo18_lab odoo.modules.loading: Loading module crm (38/48) 
+2026-09-08 18:21:09,074 72 DEBUG odoo18_lab odoo.modules.loading: Module crm loaded in 0.03s, 0 queries 
+2026-09-08 18:21:09,074 72 DEBUG odoo18_lab odoo.modules.loading: Loading module website (39/48) 
+2026-09-08 18:21:09,171 72 DEBUG odoo18_lab odoo.modules.loading: Module website loaded in 0.10s, 0 queries 
+2026-09-08 18:21:09,172 72 DEBUG odoo18_lab odoo.modules.loading: Loading module crm_sms (40/48) 
+2026-09-08 18:21:09,172 72 DEBUG odoo18_lab odoo.modules.loading: Module crm_sms loaded in 0.00s, 0 queries 
+2026-09-08 18:21:09,173 72 DEBUG odoo18_lab odoo.modules.loading: Loading module iap_crm (41/48) 
+2026-09-08 18:21:09,175 72 DEBUG odoo18_lab odoo.modules.loading: Module iap_crm loaded in 0.00s, 0 queries 
+2026-09-08 18:21:09,175 72 DEBUG odoo18_lab odoo.modules.loading: Loading module website_company (42/48) 
+2026-09-08 18:21:09,176 72 DEBUG odoo18_lab odoo.modules.loading: Module website_company loaded in 0.00s, 0 queries 
+2026-09-08 18:21:09,176 72 DEBUG odoo18_lab odoo.modules.loading: Loading module website_crm (43/48) 
+2026-09-08 18:21:09,179 72 DEBUG odoo18_lab odoo.modules.loading: Module website_crm loaded in 0.00s, 0 queries 
+2026-09-08 18:21:09,180 72 DEBUG odoo18_lab odoo.modules.loading: Loading module website_mail (44/48) 
+2026-09-08 18:21:09,181 72 DEBUG odoo18_lab odoo.modules.loading: Module website_mail loaded in 0.00s, 0 queries 
+2026-09-08 18:21:09,181 72 DEBUG odoo18_lab odoo.modules.loading: Loading module website_partner (45/48) 
+2026-09-08 18:21:09,183 72 DEBUG odoo18_lab odoo.modules.loading: Module website_partner loaded in 0.00s, 0 queries 
+2026-09-08 18:21:09,183 72 DEBUG odoo18_lab odoo.modules.loading: Loading module website_sms (46/48) 
+2026-09-08 18:21:09,185 72 DEBUG odoo18_lab odoo.modules.loading: Module website_sms loaded in 0.00s, 0 queries 
+2026-09-08 18:21:09,185 72 DEBUG odoo18_lab odoo.modules.loading: Loading module crm_iap_enrich (47/48) 
+2026-09-08 18:21:09,188 72 DEBUG odoo18_lab odoo.modules.loading: Module crm_iap_enrich loaded in 0.00s, 0 queries 
+2026-09-08 18:21:09,188 72 DEBUG odoo18_lab odoo.modules.loading: Loading module website_blog (48/48) 
+2026-09-08 18:21:09,194 72 DEBUG odoo18_lab odoo.modules.loading: Module website_blog loaded in 0.01s, 0 queries 
+2026-09-08 18:21:09,194 72 INFO odoo18_lab odoo.modules.loading: 48 modules loaded in 0.81s, 0 queries (+0 extra) 
+2026-09-08 18:21:09,196 72 DEBUG odoo18_lab odoo.modules.loading: Updating graph with 1 more modules 
+2026-09-08 18:21:09,196 72 INFO odoo18_lab odoo.modules.loading: loading 49 modules... 
+2026-09-08 18:21:09,197 72 INFO odoo18_lab odoo.modules.loading: Loading module dimsop_website (49/49) 
+2026-09-08 18:21:09,264 72 DEBUG odoo18_lab odoo.models: Patching res.config.settings.report_footer with translate=True 
+2026-09-08 18:21:09,270 72 DEBUG odoo18_lab odoo.models: Patching base.document.layout.report_header with translate=True 
+2026-09-08 18:21:09,270 72 DEBUG odoo18_lab odoo.models: Patching base.document.layout.report_footer with translate=True 
+2026-09-08 18:21:09,271 72 DEBUG odoo18_lab odoo.models: Patching base.document.layout.company_details with translate=True 
+2026-09-08 18:21:09,273 72 DEBUG odoo18_lab odoo.models: Patching iap.account.description with translate=True 
+2026-09-08 18:21:09,280 72 DEBUG odoo18_lab odoo.models: Patching calendar.event.res_model_name with translate=True 
+2026-09-08 18:21:09,285 72 DEBUG odoo18_lab odoo.models: Patching crm.lead.scoring.frequency.field.name with translate=True 
+2026-09-08 18:21:09,343 72 INFO odoo18_lab odoo.modules.registry: module dimsop_website: creating or updating database tables 
+2026-09-08 18:21:09,417 72 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/layout.xml 
+2026-09-08 18:21:09,423 72 WARNING odoo18_lab odoo.modules.loading: Transient module states were reset 
+2026-09-08 18:21:09,424 72 ERROR odoo18_lab odoo.modules.registry: Failed to load registry 
+2026-09-08 18:21:09,424 72 CRITICAL odoo18_lab odoo.service.server: Failed to initialize database `odoo18_lab`. 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/service/server.py", line 1414, in preload_registries
+    registry = Registry.new(dbname, update_module=update_module)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/tools/func.py", line 97, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/registry.py", line 115, in new
+    odoo.modules.load_modules(registry, force_demo, status, update_module)
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 489, in load_modules
+    processed_modules += load_marked_modules(env, graph,
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 365, in load_marked_modules
+    loaded, processed = load_module_graph(
+                        ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 228, in load_module_graph
+    load_data(env, idref, mode, kind='data', package=package)
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 72, in load_data
+    tools.convert_file(env, package.name, filename, idref, mode, noupdate, kind)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 662, in convert_file
+    convert_xml_import(env, module, fp, idref, mode, noupdate)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 712, in convert_xml_import
+    doc = etree.parse(xmlfile)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "src/lxml/etree.pyx", line 3570, in lxml.etree.parse
+  File "src/lxml/parser.pxi", line 1973, in lxml.etree._parseDocument
+  File "src/lxml/parser.pxi", line 1993, in lxml.etree._parseFilelikeDocument
+  File "src/lxml/parser.pxi", line 1887, in lxml.etree._parseDocFromFilelike
+  File "src/lxml/parser.pxi", line 1224, in lxml.etree._BaseParser._parseDocFromFilelike
+  File "src/lxml/parser.pxi", line 633, in lxml.etree._ParserContext._handleParseResultDoc
+  File "src/lxml/parser.pxi", line 743, in lxml.etree._handleParseResult
+  File "src/lxml/parser.pxi", line 672, in lxml.etree._raiseParseError
+  File "/mnt/extra-addons/custom/dimsop_website/views/layout.xml", line 219
+lxml.etree.XMLSyntaxError: StartTag: invalid element name, line 219, column 59
+2026-09-08 18:21:09,427 72 INFO odoo18_lab odoo.service.server: Initiating shutdown 
+2026-09-08 18:21:09,427 72 INFO odoo18_lab odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-09-08 18:21:09,427 72 DEBUG odoo18_lab odoo.service.server: on_close call <bound method Event.set of <threading.Event at 0x7d0ed1746870: unset>> 
+2026-09-08 18:21:09,427 72 DEBUG odoo18_lab odoo.service.server: on_close call <function _kick_all at 0x7d0ed158e520> 
+2026-09-08 18:21:09,427 72 DEBUG odoo18_lab odoo.service.server: current thread: <_MainThread(MainThread, started 137502753841280)> 
+2026-09-08 18:21:09,428 72 DEBUG odoo18_lab odoo.service.server: process <_MainThread(MainThread, started 137502753841280)> (False) 
+2026-09-08 18:21:09,428 72 INFO odoo18_lab odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 1 connections  
+2026-09-08 18:21:09,429 72 DEBUG odoo18_lab odoo.service.server: -- 
+2026-09-08 18:21:15,998 86 DEBUG ? odoo.netsvc: logger level set: "odoo.http.rpc.request:INFO" 
+2026-09-08 18:21:15,999 86 DEBUG ? odoo.netsvc: logger level set: "odoo.http.rpc.response:INFO" 
+2026-09-08 18:21:15,999 86 DEBUG ? odoo.netsvc: logger level set: ":INFO" 
+2026-09-08 18:21:15,999 86 DEBUG ? odoo.netsvc: logger level set: "odoo:DEBUG" 
+2026-09-08 18:21:15,999 86 DEBUG ? odoo.netsvc: logger level set: "odoo.sql_db:INFO" 
+2026-09-08 18:21:15,999 86 DEBUG ? odoo.netsvc: logger level set: ":INFO" 
+2026-09-08 18:21:15,999 86 INFO ? odoo: Odoo version 18.0-20260723 
+2026-09-08 18:21:15,999 86 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-09-08 18:21:15,999 86 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/18.0', '/mnt/extra-addons/custom', '/mnt/extra-addons/community'] 
+2026-09-08 18:21:16,000 86 INFO ? odoo: database: odoo@db:5432 
+2026-09-08 18:21:16,342 86 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2026-09-08 18:21:16,353 86 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltoimage binary at /usr/local/bin/wkhtmltoimage 
+2026-09-08 18:21:16,652 86 DEBUG ? odoo.service.server: Setting signal handlers 
+2026-09-08 18:21:16,676 86 DEBUG odoo18_lab odoo.modules.registry: Multiprocess load registry signaling: [Registry: 98] [Cache default: 2] [Cache assets: 1] [Cache templates: 4] [Cache routing: 1] [Cache groups: 1] 
+2026-09-08 18:21:16,679 86 INFO odoo18_lab odoo.modules.loading: loading 1 modules... 
+2026-09-08 18:21:16,680 86 DEBUG odoo18_lab odoo.modules.loading: Loading module base (1/1) 
+2026-09-08 18:21:16,691 86 DEBUG odoo18_lab odoo.modules.loading: Module base loaded in 0.01s, 0 queries 
+2026-09-08 18:21:16,691 86 INFO odoo18_lab odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2026-09-08 18:21:16,718 86 DEBUG odoo18_lab odoo.modules.loading: Updating graph with 47 more modules 
+2026-09-08 18:21:16,719 86 INFO odoo18_lab odoo.modules.loading: loading 48 modules... 
+2026-09-08 18:21:16,719 86 DEBUG odoo18_lab odoo.modules.loading: Loading module social_media (2/48) 
+2026-09-08 18:21:16,721 86 DEBUG odoo18_lab odoo.modules.loading: Module social_media loaded in 0.00s, 0 queries 
+2026-09-08 18:21:16,721 86 DEBUG odoo18_lab odoo.modules.loading: Loading module web (3/48) 
+2026-09-08 18:21:16,722 86 DEBUG odoo18_lab odoo.modules.loading: Module web loaded in 0.00s, 0 queries 
+2026-09-08 18:21:16,722 86 DEBUG odoo18_lab odoo.modules.loading: Loading module auth_totp (4/48) 
+2026-09-08 18:21:16,737 86 DEBUG odoo18_lab odoo.modules.loading: Module auth_totp loaded in 0.01s, 0 queries 
+2026-09-08 18:21:16,737 86 DEBUG odoo18_lab odoo.modules.loading: Loading module base_import (5/48) 
+2026-09-08 18:21:16,882 86 DEBUG odoo18_lab odoo.modules.loading: Module base_import loaded in 0.14s, 0 queries 
+2026-09-08 18:21:16,882 86 DEBUG odoo18_lab odoo.modules.loading: Loading module base_import_module (6/48) 
+2026-09-08 18:21:16,885 86 DEBUG odoo18_lab odoo.modules.loading: Module base_import_module loaded in 0.00s, 0 queries 
+2026-09-08 18:21:16,885 86 DEBUG odoo18_lab odoo.modules.loading: Loading module base_setup (7/48) 
+2026-09-08 18:21:16,888 86 DEBUG odoo18_lab odoo.modules.loading: Module base_setup loaded in 0.00s, 0 queries 
+2026-09-08 18:21:16,888 86 DEBUG odoo18_lab odoo.modules.loading: Loading module bus (8/48) 
+2026-09-08 18:21:16,898 86 DEBUG odoo18_lab odoo.modules.loading: Module bus loaded in 0.01s, 0 queries 
+2026-09-08 18:21:16,898 86 DEBUG odoo18_lab odoo.modules.loading: Loading module http_routing (9/48) 
+2026-09-08 18:21:16,901 86 DEBUG odoo18_lab odoo.modules.loading: Module http_routing loaded in 0.00s, 0 queries 
+2026-09-08 18:21:16,901 86 DEBUG odoo18_lab odoo.modules.loading: Loading module resource (10/48) 
+2026-09-08 18:21:16,911 86 DEBUG odoo18_lab odoo.modules.loading: Module resource loaded in 0.01s, 0 queries 
+2026-09-08 18:21:16,911 86 DEBUG odoo18_lab odoo.modules.loading: Loading module utm (11/48) 
+2026-09-08 18:21:16,916 86 DEBUG odoo18_lab odoo.modules.loading: Module utm loaded in 0.00s, 0 queries 
+2026-09-08 18:21:16,916 86 DEBUG odoo18_lab odoo.modules.loading: Loading module web_tour (12/48) 
+2026-09-08 18:21:16,918 86 DEBUG odoo18_lab odoo.modules.loading: Module web_tour loaded in 0.00s, 0 queries 
+2026-09-08 18:21:16,918 86 DEBUG odoo18_lab odoo.modules.loading: Loading module google_recaptcha (13/48) 
+2026-09-08 18:21:16,923 86 DEBUG odoo18_lab odoo.modules.loading: Module google_recaptcha loaded in 0.01s, 0 queries 
+2026-09-08 18:21:16,924 86 DEBUG odoo18_lab odoo.modules.loading: Loading module html_editor (14/48) 
+2026-09-08 18:21:17,049 86 DEBUG odoo18_lab odoo.modules.loading: Module html_editor loaded in 0.13s, 0 queries 
+2026-09-08 18:21:17,050 86 DEBUG odoo18_lab odoo.modules.loading: Loading module iap (15/48) 
+2026-09-08 18:21:17,050 86 DEBUG odoo18_lab odoo.modules.loading: Module iap loaded in 0.00s, 0 queries 
+2026-09-08 18:21:17,051 86 DEBUG odoo18_lab odoo.modules.loading: Loading module mail (16/48) 
+2026-09-08 18:21:17,064 86 DEBUG odoo18_lab odoo.modules.loading: Module mail loaded in 0.01s, 0 queries 
+2026-09-08 18:21:17,064 86 DEBUG odoo18_lab odoo.modules.loading: Loading module web_editor (17/48) 
+2026-09-08 18:21:17,089 86 DEBUG odoo18_lab odoo.modules.loading: Module web_editor loaded in 0.02s, 0 queries 
+2026-09-08 18:21:17,090 86 DEBUG odoo18_lab odoo.modules.loading: Loading module auth_signup (18/48) 
+2026-09-08 18:21:17,096 86 DEBUG odoo18_lab odoo.modules.loading: Module auth_signup loaded in 0.01s, 0 queries 
+2026-09-08 18:21:17,096 86 DEBUG odoo18_lab odoo.modules.loading: Loading module auth_totp_mail (19/48) 
+2026-09-08 18:21:17,098 86 DEBUG odoo18_lab odoo.modules.loading: Module auth_totp_mail loaded in 0.00s, 0 queries 
+2026-09-08 18:21:17,098 86 DEBUG odoo18_lab odoo.modules.loading: Loading module base_install_request (20/48) 
+2026-09-08 18:21:17,101 86 DEBUG odoo18_lab odoo.modules.loading: Module base_install_request loaded in 0.00s, 0 queries 
+2026-09-08 18:21:17,101 86 DEBUG odoo18_lab odoo.modules.loading: Loading module calendar (21/48) 
+2026-09-08 18:21:17,117 86 DEBUG odoo18_lab odoo.modules.loading: Module calendar loaded in 0.02s, 0 queries 
+2026-09-08 18:21:17,117 86 DEBUG odoo18_lab odoo.modules.loading: Loading module contacts (22/48) 
+2026-09-08 18:21:17,119 86 DEBUG odoo18_lab odoo.modules.loading: Module contacts loaded in 0.00s, 0 queries 
+2026-09-08 18:21:17,120 86 DEBUG odoo18_lab odoo.modules.loading: Loading module google_gmail (23/48) 
+2026-09-08 18:21:17,125 86 DEBUG odoo18_lab odoo.modules.loading: Module google_gmail loaded in 0.01s, 0 queries 
+2026-09-08 18:21:17,125 86 DEBUG odoo18_lab odoo.modules.loading: Loading module iap_mail (24/48) 
+2026-09-08 18:21:17,128 86 DEBUG odoo18_lab odoo.modules.loading: Module iap_mail loaded in 0.00s, 0 queries 
+2026-09-08 18:21:17,128 86 DEBUG odoo18_lab odoo.modules.loading: Loading module mail_bot (25/48) 
+2026-09-08 18:21:17,132 86 DEBUG odoo18_lab odoo.modules.loading: Module mail_bot loaded in 0.00s, 0 queries 
+2026-09-08 18:21:17,132 86 DEBUG odoo18_lab odoo.modules.loading: Loading module phone_validation (26/48) 
+2026-09-08 18:21:17,176 86 DEBUG odoo18_lab odoo.modules.loading: Module phone_validation loaded in 0.04s, 0 queries 
+2026-09-08 18:21:17,176 86 DEBUG odoo18_lab odoo.modules.loading: Loading module privacy_lookup (27/48) 
+2026-09-08 18:21:17,181 86 DEBUG odoo18_lab odoo.modules.loading: Module privacy_lookup loaded in 0.01s, 0 queries 
+2026-09-08 18:21:17,181 86 DEBUG odoo18_lab odoo.modules.loading: Loading module resource_mail (28/48) 
+2026-09-08 18:21:17,183 86 DEBUG odoo18_lab odoo.modules.loading: Module resource_mail loaded in 0.00s, 0 queries 
+2026-09-08 18:21:17,183 86 DEBUG odoo18_lab odoo.modules.loading: Loading module sales_team (29/48) 
+2026-09-08 18:21:17,190 86 DEBUG odoo18_lab odoo.modules.loading: Module sales_team loaded in 0.01s, 0 queries 
+2026-09-08 18:21:17,191 86 DEBUG odoo18_lab odoo.modules.loading: Loading module web_unsplash (30/48) 
+2026-09-08 18:21:17,194 86 DEBUG odoo18_lab odoo.modules.loading: Module web_unsplash loaded in 0.00s, 0 queries 
+2026-09-08 18:21:17,194 86 DEBUG odoo18_lab odoo.modules.loading: Loading module partner_autocomplete (31/48) 
+2026-09-08 18:21:17,203 86 DEBUG odoo18_lab odoo.modules.loading: Module partner_autocomplete loaded in 0.01s, 0 queries 
+2026-09-08 18:21:17,203 86 DEBUG odoo18_lab odoo.modules.loading: Loading module portal (32/48) 
+2026-09-08 18:21:17,217 86 DEBUG odoo18_lab odoo.modules.loading: Module portal loaded in 0.01s, 0 queries 
+2026-09-08 18:21:17,217 86 DEBUG odoo18_lab odoo.modules.loading: Loading module sms (33/48) 
+2026-09-08 18:21:17,252 86 DEBUG odoo18_lab odoo.modules.loading: Module sms loaded in 0.03s, 0 queries 
+2026-09-08 18:21:17,252 86 DEBUG odoo18_lab odoo.modules.loading: Loading module snailmail (34/48) 
+2026-09-08 18:21:17,263 86 DEBUG odoo18_lab odoo.modules.loading: Module snailmail loaded in 0.01s, 0 queries 
+2026-09-08 18:21:17,263 86 DEBUG odoo18_lab odoo.modules.loading: Loading module auth_totp_portal (35/48) 
+2026-09-08 18:21:17,265 86 DEBUG odoo18_lab odoo.modules.loading: Module auth_totp_portal loaded in 0.00s, 0 queries 
+2026-09-08 18:21:17,265 86 DEBUG odoo18_lab odoo.modules.loading: Loading module calendar_sms (36/48) 
+2026-09-08 18:21:17,267 86 DEBUG odoo18_lab odoo.modules.loading: Module calendar_sms loaded in 0.00s, 0 queries 
+2026-09-08 18:21:17,267 86 DEBUG odoo18_lab odoo.modules.loading: Loading module digest (37/48) 
+2026-09-08 18:21:17,271 86 DEBUG odoo18_lab odoo.modules.loading: Module digest loaded in 0.00s, 0 queries 
+2026-09-08 18:21:17,271 86 DEBUG odoo18_lab odoo.modules.loading: Loading module crm (38/48) 
+2026-09-08 18:21:17,288 86 DEBUG odoo18_lab odoo.modules.loading: Module crm loaded in 0.02s, 0 queries 
+2026-09-08 18:21:17,288 86 DEBUG odoo18_lab odoo.modules.loading: Loading module website (39/48) 
+2026-09-08 18:21:17,350 86 DEBUG odoo18_lab odoo.modules.loading: Module website loaded in 0.06s, 0 queries 
+2026-09-08 18:21:17,350 86 DEBUG odoo18_lab odoo.modules.loading: Loading module crm_sms (40/48) 
+2026-09-08 18:21:17,351 86 DEBUG odoo18_lab odoo.modules.loading: Module crm_sms loaded in 0.00s, 0 queries 
+2026-09-08 18:21:17,351 86 DEBUG odoo18_lab odoo.modules.loading: Loading module iap_crm (41/48) 
+2026-09-08 18:21:17,353 86 DEBUG odoo18_lab odoo.modules.loading: Module iap_crm loaded in 0.00s, 0 queries 
+2026-09-08 18:21:17,353 86 DEBUG odoo18_lab odoo.modules.loading: Loading module website_company (42/48) 
+2026-09-08 18:21:17,354 86 DEBUG odoo18_lab odoo.modules.loading: Module website_company loaded in 0.00s, 0 queries 
+2026-09-08 18:21:17,354 86 DEBUG odoo18_lab odoo.modules.loading: Loading module website_crm (43/48) 
+2026-09-08 18:21:17,357 86 DEBUG odoo18_lab odoo.modules.loading: Module website_crm loaded in 0.00s, 0 queries 
+2026-09-08 18:21:17,357 86 DEBUG odoo18_lab odoo.modules.loading: Loading module website_mail (44/48) 
+2026-09-08 18:21:17,359 86 DEBUG odoo18_lab odoo.modules.loading: Module website_mail loaded in 0.00s, 0 queries 
+2026-09-08 18:21:17,359 86 DEBUG odoo18_lab odoo.modules.loading: Loading module website_partner (45/48) 
+2026-09-08 18:21:17,360 86 DEBUG odoo18_lab odoo.modules.loading: Module website_partner loaded in 0.00s, 0 queries 
+2026-09-08 18:21:17,360 86 DEBUG odoo18_lab odoo.modules.loading: Loading module website_sms (46/48) 
+2026-09-08 18:21:17,361 86 DEBUG odoo18_lab odoo.modules.loading: Module website_sms loaded in 0.00s, 0 queries 
+2026-09-08 18:21:17,361 86 DEBUG odoo18_lab odoo.modules.loading: Loading module crm_iap_enrich (47/48) 
+2026-09-08 18:21:17,363 86 DEBUG odoo18_lab odoo.modules.loading: Module crm_iap_enrich loaded in 0.00s, 0 queries 
+2026-09-08 18:21:17,363 86 DEBUG odoo18_lab odoo.modules.loading: Loading module website_blog (48/48) 
+2026-09-08 18:21:17,367 86 DEBUG odoo18_lab odoo.modules.loading: Module website_blog loaded in 0.00s, 0 queries 
+2026-09-08 18:21:17,368 86 INFO odoo18_lab odoo.modules.loading: 48 modules loaded in 0.65s, 0 queries (+0 extra) 
+2026-09-08 18:21:17,580 86 INFO odoo18_lab odoo.modules.loading: Modules loaded. 
+2026-09-08 18:21:17,588 86 INFO odoo18_lab odoo.modules.registry: Registry loaded in 0.935s 
+2026-09-08 18:21:17,589 86 INFO odoo18_lab odoo.service.server: Initiating shutdown 
+2026-09-08 18:21:17,589 86 INFO odoo18_lab odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-09-08 18:21:17,589 86 DEBUG odoo18_lab odoo.service.server: on_close call <bound method Event.set of <threading.Event at 0x77593080e6c0: unset>> 
+2026-09-08 18:21:17,590 86 DEBUG odoo18_lab odoo.service.server: on_close call <function _kick_all at 0x775930849ee0> 
+2026-09-08 18:21:17,590 86 DEBUG odoo18_lab odoo.service.server: current thread: <_MainThread(MainThread, started 131225103773824)> 
+2026-09-08 18:21:17,591 86 DEBUG odoo18_lab odoo.service.server: process <_MainThread(MainThread, started 131225103773824)> (False) 
+2026-09-08 18:21:17,592 86 INFO odoo18_lab odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 1 connections  
+2026-09-08 18:21:17,593 86 DEBUG odoo18_lab odoo.service.server: -- 
+2026-09-08 18:21:24,469 100 INFO ? odoo: Odoo version 18.0-20260723 
+2026-09-08 18:21:24,469 100 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-09-08 18:21:24,469 100 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/18.0', '/mnt/extra-addons/custom', '/mnt/extra-addons/community'] 
+2026-09-08 18:21:24,470 100 INFO ? odoo: database: odoo@db:5432 
+2026-09-08 18:21:24,759 100 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2026-09-08 18:21:24,767 100 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltoimage binary at /usr/local/bin/wkhtmltoimage 
+2026-09-08 18:21:24,990 100 INFO ? odoo.service.server: Initiating shutdown 
+2026-09-08 18:21:24,991 100 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-09-08 18:22:22,814 160 INFO ? odoo: Odoo version 18.0-20260723 
+2026-09-08 18:22:22,814 160 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-09-08 18:22:22,814 160 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/18.0', '/mnt/extra-addons/custom', '/mnt/extra-addons/community'] 
+2026-09-08 18:22:22,814 160 INFO ? odoo: database: odoo@db:5432 
+2026-09-08 18:22:23,147 160 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2026-09-08 18:22:23,161 160 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltoimage binary at /usr/local/bin/wkhtmltoimage 
+2026-09-08 18:22:23,448 160 INFO odoo18_lab odoo.modules.loading: loading 1 modules... 
+2026-09-08 18:22:23,458 160 INFO odoo18_lab odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2026-09-08 18:22:23,494 160 INFO odoo18_lab odoo.modules.loading: updating modules list 
+2026-09-08 18:22:23,497 160 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-09-08 18:22:25,489 160 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.button_install on ['Dimsop Website Theme'] to user __system__ #1 via n/a 
+2026-09-08 18:22:25,553 160 INFO odoo18_lab odoo.modules.loading: loading 48 modules... 
+2026-09-08 18:22:26,496 160 INFO odoo18_lab odoo.modules.loading: 48 modules loaded in 0.94s, 0 queries (+0 extra) 
+2026-09-08 18:22:26,499 160 INFO odoo18_lab odoo.modules.loading: loading 49 modules... 
+2026-09-08 18:22:26,499 160 INFO odoo18_lab odoo.modules.loading: Loading module dimsop_website (49/49) 
+2026-09-08 18:22:26,661 160 INFO odoo18_lab odoo.modules.registry: module dimsop_website: creating or updating database tables 
+2026-09-08 18:22:26,747 160 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/layout.xml 
+2026-09-08 18:22:26,751 160 WARNING odoo18_lab odoo.modules.loading: Transient module states were reset 
+2026-09-08 18:22:26,751 160 ERROR odoo18_lab odoo.modules.registry: Failed to load registry 
+2026-09-08 18:22:26,751 160 CRITICAL odoo18_lab odoo.service.server: Failed to initialize database `odoo18_lab`. 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/service/server.py", line 1414, in preload_registries
+    registry = Registry.new(dbname, update_module=update_module)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/tools/func.py", line 97, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/registry.py", line 115, in new
+    odoo.modules.load_modules(registry, force_demo, status, update_module)
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 489, in load_modules
+    processed_modules += load_marked_modules(env, graph,
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 365, in load_marked_modules
+    loaded, processed = load_module_graph(
+                        ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 228, in load_module_graph
+    load_data(env, idref, mode, kind='data', package=package)
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 72, in load_data
+    tools.convert_file(env, package.name, filename, idref, mode, noupdate, kind)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 662, in convert_file
+    convert_xml_import(env, module, fp, idref, mode, noupdate)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 712, in convert_xml_import
+    doc = etree.parse(xmlfile)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "src/lxml/etree.pyx", line 3570, in lxml.etree.parse
+  File "src/lxml/parser.pxi", line 1973, in lxml.etree._parseDocument
+  File "src/lxml/parser.pxi", line 1993, in lxml.etree._parseFilelikeDocument
+  File "src/lxml/parser.pxi", line 1887, in lxml.etree._parseDocFromFilelike
+  File "src/lxml/parser.pxi", line 1224, in lxml.etree._BaseParser._parseDocFromFilelike
+  File "src/lxml/parser.pxi", line 633, in lxml.etree._ParserContext._handleParseResultDoc
+  File "src/lxml/parser.pxi", line 743, in lxml.etree._handleParseResult
+  File "src/lxml/parser.pxi", line 672, in lxml.etree._raiseParseError
+  File "/mnt/extra-addons/custom/dimsop_website/views/layout.xml", line 219
+lxml.etree.XMLSyntaxError: StartTag: invalid element name, line 219, column 59
+2026-09-08 18:22:26,753 160 INFO odoo18_lab odoo.service.server: Initiating shutdown 
+2026-09-08 18:22:26,753 160 INFO odoo18_lab odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-09-08 18:22:26,753 160 INFO odoo18_lab odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 1 connections  
+2026-09-08 18:23:25,059 213 INFO ? odoo: Odoo version 18.0-20260723 
+2026-09-08 18:23:25,059 213 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-09-08 18:23:25,059 213 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/18.0', '/mnt/extra-addons/custom', '/mnt/extra-addons/community'] 
+2026-09-08 18:23:25,060 213 INFO ? odoo: database: odoo@db:5432 
+2026-09-08 18:23:25,335 213 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2026-09-08 18:23:25,350 213 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltoimage binary at /usr/local/bin/wkhtmltoimage 
+2026-09-08 18:23:25,771 213 INFO odoo18_lab odoo.modules.loading: loading 1 modules... 
+2026-09-08 18:23:25,783 213 INFO odoo18_lab odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2026-09-08 18:23:25,832 213 INFO odoo18_lab odoo.modules.loading: updating modules list 
+2026-09-08 18:23:25,836 213 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-09-08 18:23:28,306 213 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.button_install on ['Dimsop Website Theme'] to user __system__ #1 via n/a 
+2026-09-08 18:23:28,400 213 INFO odoo18_lab odoo.modules.loading: loading 48 modules... 
+2026-09-08 18:23:29,237 213 INFO odoo18_lab odoo.modules.loading: 48 modules loaded in 0.84s, 0 queries (+0 extra) 
+2026-09-08 18:23:29,239 213 INFO odoo18_lab odoo.modules.loading: loading 49 modules... 
+2026-09-08 18:23:29,240 213 INFO odoo18_lab odoo.modules.loading: Loading module dimsop_website (49/49) 
+2026-09-08 18:23:29,496 213 INFO odoo18_lab odoo.modules.registry: module dimsop_website: creating or updating database tables 
+2026-09-08 18:23:29,648 213 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/layout.xml 
+2026-09-08 18:23:29,655 213 WARNING odoo18_lab odoo.modules.loading: Transient module states were reset 
+2026-09-08 18:23:29,656 213 ERROR odoo18_lab odoo.modules.registry: Failed to load registry 
+2026-09-08 18:23:29,657 213 CRITICAL odoo18_lab odoo.service.server: Failed to initialize database `odoo18_lab`. 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/service/server.py", line 1414, in preload_registries
+    registry = Registry.new(dbname, update_module=update_module)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/tools/func.py", line 97, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/registry.py", line 115, in new
+    odoo.modules.load_modules(registry, force_demo, status, update_module)
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 489, in load_modules
+    processed_modules += load_marked_modules(env, graph,
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 365, in load_marked_modules
+    loaded, processed = load_module_graph(
+                        ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 228, in load_module_graph
+    load_data(env, idref, mode, kind='data', package=package)
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 72, in load_data
+    tools.convert_file(env, package.name, filename, idref, mode, noupdate, kind)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 662, in convert_file
+    convert_xml_import(env, module, fp, idref, mode, noupdate)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 712, in convert_xml_import
+    doc = etree.parse(xmlfile)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "src/lxml/etree.pyx", line 3570, in lxml.etree.parse
+  File "src/lxml/parser.pxi", line 1973, in lxml.etree._parseDocument
+  File "src/lxml/parser.pxi", line 1993, in lxml.etree._parseFilelikeDocument
+  File "src/lxml/parser.pxi", line 1887, in lxml.etree._parseDocFromFilelike
+  File "src/lxml/parser.pxi", line 1224, in lxml.etree._BaseParser._parseDocFromFilelike
+  File "src/lxml/parser.pxi", line 633, in lxml.etree._ParserContext._handleParseResultDoc
+  File "src/lxml/parser.pxi", line 743, in lxml.etree._handleParseResult
+  File "src/lxml/parser.pxi", line 672, in lxml.etree._raiseParseError
+  File "/mnt/extra-addons/custom/dimsop_website/views/layout.xml", line 219
+lxml.etree.XMLSyntaxError: StartTag: invalid element name, line 219, column 59
+2026-09-08 18:23:29,662 213 INFO odoo18_lab odoo.service.server: Initiating shutdown 
+2026-09-08 18:23:29,662 213 INFO odoo18_lab odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-09-08 18:23:29,663 213 INFO odoo18_lab odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 1 connections  
+2026-09-08 18:23:56,918 30 INFO ? odoo: Odoo version 18.0-20260723 
+2026-09-08 18:23:56,919 30 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-09-08 18:23:56,919 30 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/18.0', '/mnt/extra-addons/custom', '/mnt/extra-addons/community'] 
+2026-09-08 18:23:56,919 30 INFO ? odoo: database: odoo@db:5432 
+2026-09-08 18:23:57,517 30 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2026-09-08 18:23:57,546 30 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltoimage binary at /usr/local/bin/wkhtmltoimage 
+2026-09-08 18:23:58,042 30 INFO odoo18_lab odoo.modules.loading: loading 1 modules... 
+2026-09-08 18:23:58,057 30 INFO odoo18_lab odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2026-09-08 18:23:58,115 30 INFO odoo18_lab odoo.modules.loading: updating modules list 
+2026-09-08 18:23:58,121 30 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-09-08 18:24:00,890 30 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.button_install on ['Dimsop Website Theme'] to user __system__ #1 via n/a 
+2026-09-08 18:24:01,000 30 INFO odoo18_lab odoo.modules.loading: loading 48 modules... 
+2026-09-08 18:24:02,011 30 INFO odoo18_lab odoo.modules.loading: 48 modules loaded in 1.01s, 0 queries (+0 extra) 
+2026-09-08 18:24:02,014 30 INFO odoo18_lab odoo.modules.loading: loading 49 modules... 
+2026-09-08 18:24:02,015 30 INFO odoo18_lab odoo.modules.loading: Loading module dimsop_website (49/49) 
+2026-09-08 18:24:02,221 30 INFO odoo18_lab odoo.modules.registry: module dimsop_website: creating or updating database tables 
+2026-09-08 18:24:02,355 30 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/layout.xml 
+2026-09-08 18:24:02,362 30 WARNING odoo18_lab odoo.modules.loading: Transient module states were reset 
+2026-09-08 18:24:02,362 30 ERROR odoo18_lab odoo.modules.registry: Failed to load registry 
+2026-09-08 18:24:02,362 30 CRITICAL odoo18_lab odoo.service.server: Failed to initialize database `odoo18_lab`. 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/service/server.py", line 1414, in preload_registries
+    registry = Registry.new(dbname, update_module=update_module)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/tools/func.py", line 97, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/registry.py", line 115, in new
+    odoo.modules.load_modules(registry, force_demo, status, update_module)
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 489, in load_modules
+    processed_modules += load_marked_modules(env, graph,
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 365, in load_marked_modules
+    loaded, processed = load_module_graph(
+                        ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 228, in load_module_graph
+    load_data(env, idref, mode, kind='data', package=package)
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 72, in load_data
+    tools.convert_file(env, package.name, filename, idref, mode, noupdate, kind)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 662, in convert_file
+    convert_xml_import(env, module, fp, idref, mode, noupdate)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 712, in convert_xml_import
+    doc = etree.parse(xmlfile)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "src/lxml/etree.pyx", line 3570, in lxml.etree.parse
+  File "src/lxml/parser.pxi", line 1973, in lxml.etree._parseDocument
+  File "src/lxml/parser.pxi", line 1993, in lxml.etree._parseFilelikeDocument
+  File "src/lxml/parser.pxi", line 1887, in lxml.etree._parseDocFromFilelike
+  File "src/lxml/parser.pxi", line 1224, in lxml.etree._BaseParser._parseDocFromFilelike
+  File "src/lxml/parser.pxi", line 633, in lxml.etree._ParserContext._handleParseResultDoc
+  File "src/lxml/parser.pxi", line 743, in lxml.etree._handleParseResult
+  File "src/lxml/parser.pxi", line 672, in lxml.etree._raiseParseError
+  File "/mnt/extra-addons/custom/dimsop_website/views/layout.xml", line 219
+lxml.etree.XMLSyntaxError: StartTag: invalid element name, line 219, column 59
+2026-09-08 18:24:02,369 30 INFO odoo18_lab odoo.service.server: Initiating shutdown 
+2026-09-08 18:24:02,369 30 INFO odoo18_lab odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-09-08 18:24:02,370 30 INFO odoo18_lab odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 1 connections  
+2026-09-08 18:24:10,162 46 INFO ? odoo: Odoo version 18.0-20260723 
+2026-09-08 18:24:10,163 46 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-09-08 18:24:10,163 46 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/18.0', '/mnt/extra-addons/custom', '/mnt/extra-addons/community'] 
+2026-09-08 18:24:10,163 46 INFO ? odoo: database: odoo@db:5432 
+2026-09-08 18:24:11,002 46 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2026-09-08 18:24:11,033 46 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltoimage binary at /usr/local/bin/wkhtmltoimage 
+2026-09-08 18:24:11,633 46 INFO odoo18_lab odoo.modules.loading: loading 1 modules... 
+2026-09-08 18:24:11,641 46 INFO odoo18_lab odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2026-09-08 18:24:11,723 46 INFO odoo18_lab odoo.modules.loading: updating modules list 
+2026-09-08 18:24:11,728 46 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-09-08 18:24:15,942 46 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.button_install on ['Dimsop Website Theme'] to user __system__ #1 via n/a 
+2026-09-08 18:24:16,111 46 INFO odoo18_lab odoo.modules.loading: loading 48 modules... 
+2026-09-08 18:24:17,470 46 INFO odoo18_lab odoo.modules.loading: 48 modules loaded in 1.36s, 0 queries (+0 extra) 
+2026-09-08 18:24:17,475 46 INFO odoo18_lab odoo.modules.loading: loading 49 modules... 
+2026-09-08 18:24:17,476 46 INFO odoo18_lab odoo.modules.loading: Loading module dimsop_website (49/49) 
+2026-09-08 18:24:17,753 46 INFO odoo18_lab odoo.modules.registry: module dimsop_website: creating or updating database tables 
+2026-09-08 18:24:17,924 46 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/layout.xml 
+2026-09-08 18:24:17,933 46 WARNING odoo18_lab odoo.modules.loading: Transient module states were reset 
+2026-09-08 18:24:17,934 46 ERROR odoo18_lab odoo.modules.registry: Failed to load registry 
+2026-09-08 18:24:17,935 46 CRITICAL odoo18_lab odoo.service.server: Failed to initialize database `odoo18_lab`. 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/service/server.py", line 1414, in preload_registries
+    registry = Registry.new(dbname, update_module=update_module)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/tools/func.py", line 97, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/registry.py", line 115, in new
+    odoo.modules.load_modules(registry, force_demo, status, update_module)
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 489, in load_modules
+    processed_modules += load_marked_modules(env, graph,
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 365, in load_marked_modules
+    loaded, processed = load_module_graph(
+                        ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 228, in load_module_graph
+    load_data(env, idref, mode, kind='data', package=package)
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 72, in load_data
+    tools.convert_file(env, package.name, filename, idref, mode, noupdate, kind)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 662, in convert_file
+    convert_xml_import(env, module, fp, idref, mode, noupdate)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 712, in convert_xml_import
+    doc = etree.parse(xmlfile)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "src/lxml/etree.pyx", line 3570, in lxml.etree.parse
+  File "src/lxml/parser.pxi", line 1973, in lxml.etree._parseDocument
+  File "src/lxml/parser.pxi", line 1993, in lxml.etree._parseFilelikeDocument
+  File "src/lxml/parser.pxi", line 1887, in lxml.etree._parseDocFromFilelike
+  File "src/lxml/parser.pxi", line 1224, in lxml.etree._BaseParser._parseDocFromFilelike
+  File "src/lxml/parser.pxi", line 633, in lxml.etree._ParserContext._handleParseResultDoc
+  File "src/lxml/parser.pxi", line 743, in lxml.etree._handleParseResult
+  File "src/lxml/parser.pxi", line 672, in lxml.etree._raiseParseError
+  File "/mnt/extra-addons/custom/dimsop_website/views/layout.xml", line 219
+lxml.etree.XMLSyntaxError: StartTag: invalid element name, line 219, column 59
+2026-09-08 18:24:17,939 46 INFO odoo18_lab odoo.service.server: Initiating shutdown 
+2026-09-08 18:24:17,940 46 INFO odoo18_lab odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-09-08 18:24:17,940 46 INFO odoo18_lab odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 1 connections  
+2026-09-08 18:24:37,082 61 INFO ? odoo: Odoo version 18.0-20260723 
+2026-09-08 18:24:37,083 61 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-09-08 18:24:37,083 61 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/18.0', '/mnt/extra-addons/custom', '/mnt/extra-addons/community'] 
+2026-09-08 18:24:37,083 61 INFO ? odoo: database: odoo@db:5432 
+2026-09-08 18:24:37,528 61 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2026-09-08 18:24:37,544 61 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltoimage binary at /usr/local/bin/wkhtmltoimage 
+2026-09-08 18:24:37,961 61 INFO odoo18_lab odoo.modules.loading: loading 1 modules... 
+2026-09-08 18:24:37,972 61 INFO odoo18_lab odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2026-09-08 18:24:38,017 61 INFO odoo18_lab odoo.modules.loading: updating modules list 
+2026-09-08 18:24:38,020 61 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-09-08 18:24:40,442 61 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.button_upgrade on ['Dimsop Website Theme'] to user __system__ #1 via n/a 
+2026-09-08 18:24:40,443 61 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.update_list on ['Dimsop Website Theme'] to user __system__ #1 via n/a 
+2026-09-08 18:24:41,882 61 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.button_install on [] to user __system__ #1 via n/a 
+2026-09-08 18:24:41,937 61 INFO odoo18_lab odoo.modules.loading: loading 49 modules... 
+2026-09-08 18:24:42,669 61 INFO odoo18_lab odoo.modules.loading: Loading module dimsop_website (49/49) 
+2026-09-08 18:24:42,869 61 INFO odoo18_lab odoo.modules.registry: module dimsop_website: creating or updating database tables 
+2026-09-08 18:24:42,964 61 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/layout.xml 
+2026-09-08 18:24:42,967 61 WARNING odoo18_lab odoo.modules.loading: Transient module states were reset 
+2026-09-08 18:24:42,968 61 ERROR odoo18_lab odoo.modules.registry: Failed to load registry 
+2026-09-08 18:24:42,968 61 CRITICAL odoo18_lab odoo.service.server: Failed to initialize database `odoo18_lab`. 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/service/server.py", line 1414, in preload_registries
+    registry = Registry.new(dbname, update_module=update_module)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/tools/func.py", line 97, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/registry.py", line 115, in new
+    odoo.modules.load_modules(registry, force_demo, status, update_module)
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 485, in load_modules
+    processed_modules += load_marked_modules(env, graph,
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 365, in load_marked_modules
+    loaded, processed = load_module_graph(
+                        ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 228, in load_module_graph
+    load_data(env, idref, mode, kind='data', package=package)
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 72, in load_data
+    tools.convert_file(env, package.name, filename, idref, mode, noupdate, kind)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 662, in convert_file
+    convert_xml_import(env, module, fp, idref, mode, noupdate)
+  File "/usr/lib/python3/dist-packages/odoo/tools/convert.py", line 712, in convert_xml_import
+    doc = etree.parse(xmlfile)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "src/lxml/etree.pyx", line 3570, in lxml.etree.parse
+  File "src/lxml/parser.pxi", line 1973, in lxml.etree._parseDocument
+  File "src/lxml/parser.pxi", line 1993, in lxml.etree._parseFilelikeDocument
+  File "src/lxml/parser.pxi", line 1887, in lxml.etree._parseDocFromFilelike
+  File "src/lxml/parser.pxi", line 1224, in lxml.etree._BaseParser._parseDocFromFilelike
+  File "src/lxml/parser.pxi", line 633, in lxml.etree._ParserContext._handleParseResultDoc
+  File "src/lxml/parser.pxi", line 743, in lxml.etree._handleParseResult
+  File "src/lxml/parser.pxi", line 672, in lxml.etree._raiseParseError
+  File "/mnt/extra-addons/custom/dimsop_website/views/layout.xml", line 219
+lxml.etree.XMLSyntaxError: StartTag: invalid element name, line 219, column 59
+2026-09-08 18:24:42,971 61 INFO odoo18_lab odoo.service.server: Initiating shutdown 
+2026-09-08 18:24:42,971 61 INFO odoo18_lab odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-09-08 18:24:42,971 61 INFO odoo18_lab odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 1 connections  
+2026-09-08 18:26:53,500 57 INFO ? odoo: Odoo version 18.0-20260723 
+2026-09-08 18:26:53,500 57 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-09-08 18:26:53,500 57 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/18.0', '/mnt/extra-addons/custom', '/mnt/extra-addons/community'] 
+2026-09-08 18:26:53,501 57 INFO ? odoo: database: odoo@db:5432 
+2026-09-08 18:26:53,767 57 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2026-09-08 18:26:53,779 57 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltoimage binary at /usr/local/bin/wkhtmltoimage 
+2026-09-08 18:26:54,148 57 INFO odoo18_lab odoo.modules.loading: loading 1 modules... 
+2026-09-08 18:26:54,155 57 INFO odoo18_lab odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2026-09-08 18:26:54,209 57 INFO odoo18_lab odoo.modules.loading: updating modules list 
+2026-09-08 18:26:54,214 57 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-09-08 18:26:56,466 57 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.button_upgrade on ['Dimsop Website Theme'] to user __system__ #1 via n/a 
+2026-09-08 18:26:56,466 57 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.update_list on ['Dimsop Website Theme'] to user __system__ #1 via n/a 
+2026-09-08 18:26:58,245 57 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.button_install on [] to user __system__ #1 via n/a 
+2026-09-08 18:26:58,285 57 INFO odoo18_lab odoo.modules.loading: loading 49 modules... 
+2026-09-08 18:26:59,053 57 INFO odoo18_lab odoo.modules.loading: Loading module dimsop_website (49/49) 
+2026-09-08 18:26:59,300 57 INFO odoo18_lab odoo.modules.registry: module dimsop_website: creating or updating database tables 
+2026-09-08 18:26:59,438 57 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/layout.xml 
+2026-09-08 18:26:59,538 57 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/header.xml 
+2026-09-08 18:26:59,579 57 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/footer.xml 
+2026-09-08 18:26:59,613 57 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/home.xml 
+2026-09-08 18:26:59,664 57 INFO odoo18_lab odoo.models.unlink: User #1 deleted ir.model.data records with IDs: [36519] 
+2026-09-08 18:26:59,695 57 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/privacy.xml 
+2026-09-08 18:26:59,722 57 INFO odoo18_lab odoo.models.unlink: User #1 deleted ir.model.data records with IDs: [32039] 
+2026-09-08 18:26:59,736 57 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/data/website_data.xml 
+2026-09-08 18:26:59,848 57 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/data/blog_data.xml 
+2026-09-08 18:27:00,006 57 INFO odoo18_lab odoo.addons.base.models.ir_module: module dimsop_website: loading translation file /mnt/extra-addons/custom/dimsop_website/i18n/en_US.po for language en_US 
+2026-09-08 18:27:00,006 57 INFO odoo18_lab odoo.tools.translate: loading base translation file /mnt/extra-addons/custom/dimsop_website/i18n/en_US.po for language en_US 
+2026-09-08 18:27:00,055 57 INFO odoo18_lab odoo.modules.loading: Module dimsop_website loaded in 1.00s, 264 queries (+264 other) 
+2026-09-08 18:27:00,055 57 INFO odoo18_lab odoo.modules.loading: 49 modules loaded in 1.77s, 264 queries (+264 extra) 
+2026-09-08 18:27:00,360 57 INFO odoo18_lab odoo.modules.loading: Model crm.iap.lead.helpers is declared but cannot be loaded! (Perhaps a module was partially removed or renamed) 
+2026-09-08 18:27:00,361 57 INFO odoo18_lab odoo.modules.loading: Model crm.iap.lead.industry is declared but cannot be loaded! (Perhaps a module was partially removed or renamed) 
+2026-09-08 18:27:00,361 57 INFO odoo18_lab odoo.modules.loading: Model crm.iap.lead.role is declared but cannot be loaded! (Perhaps a module was partially removed or renamed) 
+2026-09-08 18:27:00,361 57 INFO odoo18_lab odoo.modules.loading: Model crm.iap.lead.seniority is declared but cannot be loaded! (Perhaps a module was partially removed or renamed) 
+2026-09-08 18:27:00,365 57 INFO odoo18_lab odoo.modules.loading: Model crm.iap.lead.mining.request is declared but cannot be loaded! (Perhaps a module was partially removed or renamed) 
+2026-09-08 18:27:01,339 57 INFO odoo18_lab odoo.modules.loading: Modules loaded. 
+2026-09-08 18:27:01,347 57 INFO odoo18_lab odoo.modules.registry: Registry changed, signaling through the database 
+2026-09-08 18:27:01,349 57 INFO odoo18_lab odoo.modules.registry: Registry loaded in 7.263s 
+2026-09-08 18:27:01,350 57 INFO odoo18_lab odoo.service.server: Initiating shutdown 
+2026-09-08 18:27:01,350 57 INFO odoo18_lab odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-09-08 18:27:01,350 57 INFO odoo18_lab odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 1 connections  
+2026-09-08 18:35:07,354 126 INFO ? odoo: Odoo version 18.0-20260723 
+2026-09-08 18:35:07,355 126 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-09-08 18:35:07,355 126 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/18.0', '/mnt/extra-addons/custom', '/mnt/extra-addons/community'] 
+2026-09-08 18:35:07,355 126 INFO ? odoo: database: odoo@db:5432 
+2026-09-08 18:35:07,938 126 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2026-09-08 18:35:07,971 126 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltoimage binary at /usr/local/bin/wkhtmltoimage 
+2026-09-08 18:35:08,636 126 INFO odoo18_lab odoo.modules.loading: loading 1 modules... 
+2026-09-08 18:35:08,655 126 INFO odoo18_lab odoo.modules.loading: 1 modules loaded in 0.02s, 0 queries (+0 extra) 
+2026-09-08 18:35:08,740 126 INFO odoo18_lab odoo.modules.loading: updating modules list 
+2026-09-08 18:35:08,745 126 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-09-08 18:35:11,955 126 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.button_upgrade on ['Dimsop Website Theme'] to user __system__ #1 via n/a 
+2026-09-08 18:35:11,956 126 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.update_list on ['Dimsop Website Theme'] to user __system__ #1 via n/a 
+2026-09-08 18:35:14,298 126 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.button_install on [] to user __system__ #1 via n/a 
+2026-09-08 18:35:14,372 126 INFO odoo18_lab odoo.modules.loading: loading 49 modules... 
+2026-09-08 18:35:15,569 126 INFO odoo18_lab odoo.modules.loading: Loading module dimsop_website (49/49) 
+2026-09-08 18:35:16,004 126 INFO odoo18_lab odoo.modules.registry: module dimsop_website: creating or updating database tables 
+2026-09-08 18:35:16,196 126 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/layout.xml 
+2026-09-08 18:35:16,284 126 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/header.xml 
+2026-09-08 18:35:16,329 126 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/footer.xml 
+2026-09-08 18:35:16,374 126 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/home.xml 
+2026-09-08 18:35:16,495 126 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/privacy.xml 
+2026-09-08 18:35:16,558 126 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/data/website_data.xml 
+2026-09-08 18:35:16,741 126 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/data/blog_data.xml 
+2026-09-08 18:35:16,958 126 INFO odoo18_lab odoo.addons.base.models.ir_module: module dimsop_website: loading translation file /mnt/extra-addons/custom/dimsop_website/i18n/en_US.po for language en_US 
+2026-09-08 18:35:16,959 126 INFO odoo18_lab odoo.tools.translate: loading base translation file /mnt/extra-addons/custom/dimsop_website/i18n/en_US.po for language en_US 
+2026-09-08 18:35:17,020 126 INFO odoo18_lab odoo.modules.loading: Module dimsop_website loaded in 1.45s, 282 queries (+282 other) 
+2026-09-08 18:35:17,020 126 INFO odoo18_lab odoo.modules.loading: 49 modules loaded in 2.65s, 282 queries (+282 extra) 
+2026-09-08 18:35:17,430 126 INFO odoo18_lab odoo.modules.loading: Model crm.iap.lead.helpers is declared but cannot be loaded! (Perhaps a module was partially removed or renamed) 
+2026-09-08 18:35:17,431 126 INFO odoo18_lab odoo.modules.loading: Model crm.iap.lead.industry is declared but cannot be loaded! (Perhaps a module was partially removed or renamed) 
+2026-09-08 18:35:17,431 126 INFO odoo18_lab odoo.modules.loading: Model crm.iap.lead.role is declared but cannot be loaded! (Perhaps a module was partially removed or renamed) 
+2026-09-08 18:35:17,431 126 INFO odoo18_lab odoo.modules.loading: Model crm.iap.lead.seniority is declared but cannot be loaded! (Perhaps a module was partially removed or renamed) 
+2026-09-08 18:35:17,436 126 INFO odoo18_lab odoo.modules.loading: Model crm.iap.lead.mining.request is declared but cannot be loaded! (Perhaps a module was partially removed or renamed) 
+2026-09-08 18:35:18,793 126 INFO odoo18_lab odoo.modules.loading: Modules loaded. 
+2026-09-08 18:35:18,803 126 INFO odoo18_lab odoo.modules.registry: Registry changed, signaling through the database 
+2026-09-08 18:35:18,805 126 INFO odoo18_lab odoo.modules.registry: Registry loaded in 10.252s 
+2026-09-08 18:35:18,805 126 INFO odoo18_lab odoo.service.server: Initiating shutdown 
+2026-09-08 18:35:18,805 126 INFO odoo18_lab odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-09-08 18:35:18,806 126 INFO odoo18_lab odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 1 connections  

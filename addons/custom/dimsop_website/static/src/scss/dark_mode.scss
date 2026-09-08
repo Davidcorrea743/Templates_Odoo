@@ -102,12 +102,36 @@ html, body {
         color: var(--dimsop-text) !important;
     }
 
-    // Formulario
+    // Formulario - card glassmorphic dark
+    .dimsop-form-card {
+        background: rgba(15, 30, 52, 0.75);
+        border-color: rgba(255, 255, 255, 0.08);
+        box-shadow:
+            0 4px 24px rgba(0, 0, 0, 0.2),
+            0 1px 3px rgba(0, 0, 0, 0.15);
+    }
+    .dimsop-form-card:hover {
+        box-shadow:
+            0 8px 32px rgba(0, 0, 0, 0.28),
+            0 2px 6px rgba(0, 0, 0, 0.18);
+    }
     .dimsop-form .form-control,
     .dimsop-form .form-select {
         background-color: var(--dimsop-bg-alt);
         color: var(--dimsop-text);
         border-color: var(--dimsop-surface-border);
+    }
+    .dimsop-form .form-control:hover,
+    .dimsop-form .form-select:hover {
+        border-color: #5a6a80;
+    }
+    .dimsop-form .form-control:focus,
+    .dimsop-form .form-select:focus {
+        border-color: var(--dimsop-accent);
+        box-shadow: 0 0 0 3px rgba(77, 163, 47, 0.2);
+    }
+    .dimsop-form .form-label {
+        color: var(--dimsop-text);
     }
 
     // Textos secundarios de Bootstrap
