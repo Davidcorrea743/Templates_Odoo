@@ -737,15 +737,15 @@ h1, h2, h3, h4, h5, .dimsop-h1, .dimsop-h2, .dimsop-h3 {
 .dimsop-counter-num {
     font-family: var(--dimsop-font-heading);
     font-size: 4.5rem;
-    color: var(--dimsop-primary);
+    color: var(--dimsop-accent);
 }
 
 .dimsop-counter-box {
-    background-color: var(--dimsop-white);
+    background-color: transparent;
     border-radius: 12px;
-    padding: 1.5rem 2.5rem;
+    padding: 1rem 0;
     display: inline-block;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: none;
     margin-bottom: 0.75rem;
 }
 
@@ -1011,7 +1011,7 @@ h1, h2, h3, h4, h5, .dimsop-h1, .dimsop-h2, .dimsop-h3 {
     }
 
     .dimsop-counter-num { font-size: 3.2rem; }
-    .dimsop-counter-box { padding: 1rem 1.5rem; }
+    .dimsop-counter-box { padding: 0.5rem 0; }
 
     // Búsqueda: mantener ícono visible, ocultar en mobile muy pequeño
     .dimsop-search-wrap { width: 36px; height: 36px; }
