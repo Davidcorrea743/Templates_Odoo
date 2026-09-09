@@ -21,7 +21,7 @@ class WebsiteDimsop(http.Controller):
             order='published_date desc',
             limit=3
         )
-        return request.render('dimsop_website.dimsop_homepage_view', {
+        return request.render('website.inicio-dimsop-soluciones-tic-de-vanguardia', {
             'blog_posts': blog_posts,
         })
 
@@ -66,3 +66,46 @@ class WebsiteContact(http.Controller):
             return request.redirect('/?error=datos_incompletos#contacto')
 
         return request.redirect('/?mensaje=enviado#contacto')
+
+
+class WebsiteCarreras(http.Controller):
+
+    @http.route('/dimsop/postularme', type='http', auth='public', website=True, methods=['POST'], csrf=True)
+    def dimsop_postularme(self, **kw):
+        """Crea una postulación (dimsop.job.application) desde el modal 'Forma parte de nuestro equipo'.
+
+        Requeridos: nombre y correo.
+        Acepta archivo CV via multipart/form-data.
+        Redirige a la home con query string #footer para mostrar mensaje de éxito.
+        """
+        name = (kw.get('name') or '').strip()
+        email = (kw.get('email') or '').strip()
+        phone = (kw.get('phone') or '').strip()
+        profession = (kw.get('profession') or '').strip()
+        city = (kw.get('city') or '').strip()
+
+        if not name or not email or '@' not in email:
+            return request.redirect('/?error=postulacion_incompleta#footer')
+
+        cv_file = False
+        cv_filename = False
+        cv_upload = request.httprequest.files.get('cv')
+        if cv_upload and cv_upload.filename:
+            cv_file = cv_upload.read()
+            cv_filename = cv_upload.filename
+
+        try:
+            request.env['dimsop.job.application'].sudo().create({
+                'name': name,
+                'email': email,
+                'phone': phone or False,
+                'profession': profession or False,
+                'city': city or False,
+                'cv_file': cv_file or False,
+                'cv_filename': cv_filename or False,
+            })
+        except Exception:
+            _logger.exception("Dimsop: no se pudo crear la postulación")
+            return request.redirect('/?error=postulacion_incompleta#footer')
+
+        return request.redirect('/?postulacion=enviada#footer')

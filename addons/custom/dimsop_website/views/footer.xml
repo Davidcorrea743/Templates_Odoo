@@ -43,6 +43,7 @@
                                 <li><a href="/blog">Blog</a></li>
                                 <li><a href="/#contacto">Contacto</a></li>
                                 <li><a href="/privacy">Políticas de Privacidad</a></li>
+                                <li><a href="#" data-bs-toggle="modal" data-bs-target="#dimsop-carreras-modal">Forma parte de nuestro equipo</a></li>
                             </ul>
                         </div>
 

@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_dimsop_job_application_user,dimsop.job.application.user,model_dimsop_job_application,base.group_user,1,0,0,0
+access_dimsop_job_application_public,dimsop.job.application.public,model_dimsop_job_application,,1,0,1,0

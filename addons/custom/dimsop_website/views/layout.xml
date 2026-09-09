@@ -483,6 +483,159 @@
                 })();
             </script>
         </xpath>
+        <!-- Modal Carreras: validación inline + file label + loading state -->
+        <xpath expr="//body" position="inside">
+            <script>
+                (function() {
+                    var form = document.getElementById('dimsop-carreras-form');
+                    if (!form) return;
+
+                    var nombre = document.getElementById('carreras-nombre');
+                    var correo = document.getElementById('carreras-email');
+                    var cvInput = document.getElementById('carreras-cv');
+                    var cvLabel = document.getElementById('carreras-cv-label');
+                    var submitBtn = form.querySelector('.dimsop-btn-submit');
+
+                    function showError(input, msg) {
+                        input.classList.add('dimsop-is-invalid');
+                        input.classList.remove('dimsop-is-valid');
+                        input.setAttribute('aria-invalid', 'true');
+                        var err = input.parentNode.querySelector('.dimsop-field-error');
+                        if (err) { err.textContent = msg; err.classList.add('is-visible'); }
+                    }
+
+                    function clearError(input) {
+                        input.classList.remove('dimsop-is-invalid');
+                        input.removeAttribute('aria-invalid');
+                        var err = input.parentNode.querySelector('.dimsop-field-error');
+                        if (err) { err.textContent = ''; err.classList.remove('is-visible'); }
+                    }
+
+                    function markValid(input) {
+                        input.classList.remove('dimsop-is-invalid');
+                        input.classList.add('dimsop-is-valid');
+                        input.removeAttribute('aria-invalid');
+                    }
+
+                    function isValidEmail(v) {
+                        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+                    }
+
+                    if (nombre) {
+                        nombre.addEventListener('blur', function() {
+                            var v = this.value.trim();
+                            if (v.length === 0) { showError(this, 'El nombre es obligatorio.'); }
+                            else if (v.length &lt; 2) { showError(this, 'El nombre debe tener al menos 2 caracteres.'); }
+                            else { clearError(this); markValid(this); }
+                        });
+                        nombre.addEventListener('input', function() {
+                            if (this.classList.contains('dimsop-is-invalid') &amp;&amp; this.value.trim().length >= 2) { clearError(this); markValid(this); }
+                        });
+                    }
+
+                    if (correo) {
+                        correo.addEventListener('blur', function() {
+                            var v = this.value.trim();
+                            if (v.length === 0) { showError(this, 'El correo electrónico es obligatorio.'); }
+                            else if (!isValidEmail(v)) { showError(this, 'Ingresa un correo electrónico válido.'); }
+                            else { clearError(this); markValid(this); }
+                        });
+                        correo.addEventListener('input', function() {
+                            if (this.classList.contains('dimsop-is-invalid') &amp;&amp; isValidEmail(this.value.trim())) { clearError(this); markValid(this); }
+                        });
+                    }
+
+                    if (cvInput &amp;&amp; cvLabel) {
+                        cvInput.addEventListener('change', function() {
+                            var span = cvLabel.querySelector('span');
+                            if (this.files &amp;&amp; this.files.length > 0) {
+                                if (span) span.textContent = this.files[0].name;
+                                cvLabel.classList.add('dimsop-file-selected');
+                            } else {
+                                if (span) span.textContent = 'Seleccionar archivo';
+                                cvLabel.classList.remove('dimsop-file-selected');
+                            }
+                        });
+                    }
+
+                    form.addEventListener('submit', function(e) {
+                        var valid = true;
+
+                        if (nombre) {
+                            var nv = nombre.value.trim();
+                            if (nv.length === 0) { showError(nombre, 'El nombre es obligatorio.'); valid = false; }
+                            else if (nv.length &lt; 2) { showError(nombre, 'El nombre debe tener al menos 2 caracteres.'); valid = false; }
+                            else { clearError(nombre); markValid(nombre); }
+                        }
+
+                        if (correo) {
+                            var cv2 = correo.value.trim();
+                            if (cv2.length === 0) { showError(correo, 'El correo electrónico es obligatorio.'); valid = false; }
+                            else if (!isValidEmail(cv2)) { showError(correo, 'Ingresa un correo electrónico válido.'); valid = false; }
+                            else { clearError(correo); markValid(correo); }
+                        }
+
+                        if (!valid) {
+                            e.preventDefault();
+                            var firstInvalid = form.querySelector('.dimsop-is-invalid');
+                            if (firstInvalid) firstInvalid.focus();
+                            return;
+                        }
+
+                        submitBtn.classList.add('dimsop-loading');
+                        submitBtn.disabled = true;
+                    });
+                })();
+            </script>
+        </xpath>
+        <!-- Modal Carreras: vanilla JS open/close (Odoo lazy-loads Bootstrap, no global bootstrap.Modal) -->
+        <xpath expr="//body" position="inside">
+            <script>
+                (function() {
+                    function initCarrerasModal() {
+                        var trigger = document.querySelector('[data-bs-target="#dimsop-carreras-modal"]');
+                        var modalEl = document.getElementById('dimsop-carreras-modal');
+                        if (!trigger || !modalEl) return;
+                        var backdrop = null;
+
+                        function openModal() {
+                            modalEl.classList.add('show');
+                            modalEl.style.display = 'block';
+                            document.body.classList.add('modal-open');
+                            backdrop = document.createElement('div');
+                            backdrop.className = 'modal-backdrop fade show';
+                            document.body.appendChild(backdrop);
+                            backdrop.addEventListener('click', closeModal);
+                        }
+
+                        function closeModal() {
+                            modalEl.classList.remove('show');
+                            modalEl.style.display = 'none';
+                            document.body.classList.remove('modal-open');
+                            if (backdrop) { backdrop.remove(); backdrop = null; }
+                        }
+
+                        trigger.addEventListener('click', function(e) {
+                            e.preventDefault();
+                            openModal();
+                        });
+
+                        var closeBtn = modalEl.querySelector('.btn-close');
+                        if (closeBtn) closeBtn.addEventListener('click', closeModal);
+
+                        modalEl.addEventListener('click', function(e) {
+                            if (e.target === modalEl) closeModal();
+                        });
+                    }
+
+                    if (document.readyState === 'loading') {
+                        document.addEventListener('DOMContentLoaded', initCarrerasModal);
+                    } else {
+                        initCarrerasModal();
+                    }
+                })();
+            </script>
+        </xpath>
         <xpath expr="//head/meta[last()]" position="after">
             <script>
                 (function() {

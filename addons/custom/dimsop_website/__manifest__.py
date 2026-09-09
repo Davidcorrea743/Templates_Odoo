@@ -32,6 +32,7 @@ Características técnicas:
         'views/privacy.xml',
         'data/website_data.xml',
         'data/blog_data.xml',
+        'security/ir.model.access.csv',
     ],
     'assets': {
         'web.assets_frontend': [
