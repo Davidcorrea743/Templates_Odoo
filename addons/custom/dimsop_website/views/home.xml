@@ -525,7 +525,7 @@
                              Se abre desde el enlace en el footer.
                              ========================================================= -->
                         <div class="modal fade" id="dimsop-carreras-modal" tabindex="-1" aria-labelledby="dimsop-carreras-modal-label" aria-hidden="true">
-                            <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-dialog modal-dialog-centered dimsop-carreras-dialog">
                                 <div class="modal-content dimsop-modal-content">
                                     <div class="modal-header dimsop-modal-header">
                                         <h5 class="modal-title dimsop-h3" id="dimsop-carreras-modal-label">Forma parte de nuestro equipo</h5>
@@ -534,46 +534,46 @@
                                     <div class="modal-body p-0">
                                         <div class="row g-0">
                                             <!-- Formulario -->
-                                            <div class="col-md-7 dimsop-modal-form-side">
+                                            <div class="col-md-6 dimsop-modal-form-side">
                                                 <t t-if="request.params.get('postulacion') == 'enviado'">
-                                                    <div class="alert alert-success dimsop-alert mx-4 mt-4" role="alert">
+                                                    <div class="alert alert-success dimsop-alert mx-3 mt-3" role="alert">
                                                         <i class="fa fa-check-circle me-2" aria-hidden="true"></i>
-                                                        <strong>¡Postulación enviada con éxito!</strong> Hemos recibido tu CV y datos. Nuestro equipo de RRHH los revisará pronto.
+                                                        <strong>¡Postulación enviada!</strong> Nuestro equipo de RRHH revisará tu CV pronto.
                                                     </div>
                                                 </t>
                                                 <t t-if="request.params.get('error') == 'postulacion_incompleta'">
-                                                    <div class="alert alert-danger dimsop-alert mx-4 mt-4" role="alert">
+                                                    <div class="alert alert-danger dimsop-alert mx-3 mt-3" role="alert">
                                                         <i class="fa fa-exclamation-circle me-2" aria-hidden="true"></i>
-                                                        Por favor completa los campos obligatorios (Nombre y Correo Electrónico).
+                                                        Por favor completa los campos obligatorios.
                                                     </div>
                                                 </t>
                                                 <form action="/dimsop/postularme" method="post" enctype="multipart/form-data" class="dimsop-form dimsop-modal-form" novalidate="novalidate" id="dimsop-carreras-form">
                                                     <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
-                                                    <div class="mb-3">
+                                                    <div class="mb-2">
                                                         <label class="form-label" for="carreras-nombre">Nombre y Apellido *</label>
                                                         <input type="text" class="form-control" id="carreras-nombre" name="name" required="required" autocomplete="name"/>
                                                         <span class="dimsop-field-error" role="alert"></span>
                                                     </div>
-                                                    <div class="mb-3">
+                                                    <div class="mb-2">
                                                         <label class="form-label" for="carreras-email">Correo Electrónico *</label>
                                                         <input type="email" class="form-control" id="carreras-email" name="email" required="required" autocomplete="email"/>
                                                         <span class="dimsop-field-error" role="alert"></span>
                                                     </div>
                                                     <div class="row">
-                                                        <div class="col-md-6 mb-3">
+                                                        <div class="col-6 mb-2">
                                                             <label class="form-label" for="carreras-telefono">Teléfono</label>
                                                             <input type="tel" class="form-control" id="carreras-telefono" name="phone" autocomplete="tel"/>
                                                         </div>
-                                                        <div class="col-md-6 mb-3">
+                                                        <div class="col-6 mb-2">
                                                             <label class="form-label" for="carreras-profesion">Profesión</label>
                                                             <input type="text" class="form-control" id="carreras-profesion" name="profession"/>
                                                         </div>
                                                     </div>
-                                                    <div class="mb-3">
+                                                    <div class="mb-2">
                                                         <label class="form-label" for="carreras-ciudad">Ciudad de Residencia</label>
                                                         <input type="text" class="form-control" id="carreras-ciudad" name="city"/>
                                                     </div>
-                                                    <div class="mb-4">
+                                                    <div class="mb-3">
                                                         <label class="form-label" for="carreras-cv">Adjunta tu CV</label>
                                                         <div class="dimsop-file-upload">
                                                             <input type="file" class="form-control" id="carreras-cv" name="cv" accept=".pdf,.doc,.docx"/>
@@ -581,10 +581,10 @@
                                                                 <i class="fa fa-cloud-upload me-2" aria-hidden="true"></i><span>Seleccionar archivo</span>
                                                             </span>
                                                         </div>
-                                                        <small class="text-muted">Formatos aceptados: PDF, DOC, DOCX (máx. 5MB)</small>
+                                                        <small class="text-muted">PDF, DOC, DOCX (máx. 5MB)</small>
                                                     </div>
                                                     <div class="text-center">
-                                                        <button type="submit" class="btn dimsop-btn-submit btn-lg">
+                                                        <button type="submit" class="btn dimsop-btn-submit">
                                                             <span class="dimsop-btn-text">Enviar Postulación</span>
                                                             <span class="dimsop-btn-spinner" aria-hidden="true">
                                                                 <i class="fa fa-circle-o-notch fa-spin"></i>
@@ -594,8 +594,8 @@
                                                 </form>
                                             </div>
                                             <!-- Imagen -->
-                                            <div class="col-md-5 dimsop-modal-img-side d-none d-md-block">
-                                                <img src="/dimsop_website/static/src/img/carreras-modal.webp" alt="Forma parte de nuestro equipo" class="img-fluid"/>
+                                            <div class="col-md-6 dimsop-modal-img-side d-none d-md-block">
+                                                <img src="/dimsop_website/static/src/img/carreras-modal.webp" alt="Forma parte de nuestro equipo"/>
                                             </div>
                                         </div>
                                     </div>
