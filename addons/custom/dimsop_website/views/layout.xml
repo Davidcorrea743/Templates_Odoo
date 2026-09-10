@@ -207,12 +207,6 @@
                     function initAnimations() {
                         gsap.config({ nullTargetWarn: false });
 
-                        gsap.from('.dimsop-hero-eyebrow-text', {
-                            opacity: 0, letterSpacing: '8px', duration: 0.8, delay: 0.2, ease: 'power2.out'
-                        });
-                        gsap.from('.dimsop-hero-eyebrow-line', {
-                            scaleX: 0, opacity: 0, duration: 0.6, delay: 0.3, stagger: 0.1, ease: 'power2.out'
-                        });
                         gsap.from('#banner h1', { y: 40, opacity: 0, duration: 1, delay: 0.5, ease: 'power3.out' });
                         gsap.from('#banner .dimsop-lead', { y: 30, opacity: 0, duration: 1, delay: 0.7, ease: 'power3.out' });
 
@@ -368,7 +362,7 @@
                                 var prefix = el.textContent.trim().charAt(0) === '+' ? '+' : '';
                                 el.textContent = prefix + target;
                             });
-                            document.querySelectorAll('.dimsop-hero-eyebrow-text, .dimsop-hero-eyebrow-line, #banner h1, #banner .dimsop-lead, .dimsop-h2, .dimsop-lead, .dimsop-card, .dimsop-h3, .dimsop-value, .dimsop-step, .dimsop-counter-box, .dimsop-counter p, .dimsop-blog-card, .dimsop-form, #dimsop_footer .col-lg-4').forEach(function(el) {
+                            document.querySelectorAll('#banner h1, #banner .dimsop-lead, .dimsop-h2, .dimsop-lead, .dimsop-card, .dimsop-h3, .dimsop-value, .dimsop-step, .dimsop-counter-box, .dimsop-counter p, .dimsop-blog-card, .dimsop-form, #dimsop_footer .col-lg-4').forEach(function(el) {
                                 el.style.opacity = '1';
                                 el.style.transform = 'none';
                             });
