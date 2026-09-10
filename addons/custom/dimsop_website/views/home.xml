@@ -215,24 +215,28 @@
                         </section>
 
                         <!-- =========================================================
-                             7. MAPA DE COBERTURA
-                             Módulo interactivo: resaltar países con presencia.
-                             Sustituir por mapa SVG/js personalizado si se desea.
+                             7. MAPA DE COBERTURA / SEDES
                              ========================================================= -->
                         <section id="cobertura" class="dimsop-section py-5 dimsop-section-dark">
                             <div class="container">
-                                <h2 class="dimsop-h2 text-center mb-2">Mapa de Cobertura</h2>
-                                <p class="text-center text-white mb-5 mx-auto" style="max-width: 780px;">
-                                    Presencia regional con capacidad de despliegue internacional.
-                                    Hemos ejecutado proyectos en múltiples países de Latinoamérica y el Caribe.
-                                </p>
-                                <div id="dimsop-map" class="dimsop-map">
-                                    <img src="/dimsop_website/static/src/img/banners/mapa-cobertura.png"
-                                         alt="Mapa de cobertura global Dimsop" class="img-fluid"/>
+                                <h2 class="dimsop-h2 text-center mb-4">Nuestras Sedes</h2>
+                                <div class="row align-items-center">
+                                    <div class="col-lg-5 dimsop-cobertura-text mb-4 mb-lg-0">
+                                        <p class="text-white-50 mb-3" style="font-size: 1rem; line-height: 1.7;">
+                                            Nuestra sede principal está en la Ciudad de <strong class="text-white">Caracas-Venezuela</strong>,
+                                            junto a operaciones en la ciudad de <strong class="text-white">Miami-Estados Unidos</strong>.
+                                        </p>
+                                        <p class="text-white-50" style="font-size: .9rem;">
+                                            Con proyectos en <strong class="text-white">Latinoamérica y España</strong>
+                                        </p>
+                                    </div>
+                                    <div class="col-lg-7">
+                                        <div id="dimsop-map" class="dimsop-map">
+                                            <img src="/dimsop_website/static/src/img/banners/IMAGEN_MAPA_COBERTURA_clean.png"
+                                                 alt="Mapa de cobertura Dimsop" class="img-fluid"/>
+                                        </div>
+                                    </div>
                                 </div>
-                                <p class="text-center mt-3 text-white">
-                                    Países y regiones donde Dimsop ha tenido presencia y despliegue de proyectos.
-                                </p>
                             </div>
                         </section>
 

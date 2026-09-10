@@ -262,15 +262,28 @@
                             y: 50, opacity: 0, duration: 0.8, ease: 'power3.out',
                             scrollTrigger: { trigger: '#cobertura', start: 'top 80%', toggleActions: 'play none none reverse' }
                         });
-                        gsap.fromTo('#cobertura .dimsop-map',
-                            { scale: 0.92, opacity: 0 },
-                            {
-                                scale: 1, opacity: 1, duration: 1, ease: 'power2.out',
-                                scrollTrigger: { trigger: '#cobertura .dimsop-map', start: 'top 85%', toggleActions: 'play none none reverse' },
-                                onComplete: function() { gsap.set(this.targets(), { clearProps: 'transform,opacity' }); },
-                                onReverseComplete: function() { gsap.set(this.targets(), { clearProps: 'transform,opacity' }); }
-                            }
-                        );
+
+                        // Texto de sedes
+                        gsap.from('#cobertura .dimsop-cobertura-text > *', {
+                            opacity: 0, y: 20, duration: 0.5, stagger: 0.1, ease: 'power2.out',
+                            scrollTrigger: { trigger: '#cobertura .dimsop-cobertura-text', start: 'top 85%', toggleActions: 'play none none reverse' }
+                        });
+
+                        // Mapa: clip-path reveal + parallax
+                        var coberturaMap = document.querySelector('#cobertura .dimsop-map');
+                        if (coberturaMap) {
+                            gsap.fromTo(coberturaMap,
+                                { clipPath: 'inset(10% 20% 10% 20%)', opacity: 0 },
+                                {
+                                    clipPath: 'inset(0% 0% 0% 0%)', opacity: 1, duration: 1.2, ease: 'power3.out',
+                                    scrollTrigger: { trigger: coberturaMap, start: 'top 80%', toggleActions: 'play none none reverse' }
+                                }
+                            );
+                            gsap.to('#cobertura .dimsop-map img', {
+                                yPercent: -8, ease: 'none',
+                                scrollTrigger: { trigger: '#cobertura', start: 'top bottom', end: 'bottom top', scrub: 0.5 }
+                            });
+                        }
 
                         gsap.from('#aliados .dimsop-h2', {
                             y: 50, opacity: 0, duration: 0.8, ease: 'power3.out',

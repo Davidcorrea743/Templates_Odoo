@@ -461,7 +461,11 @@ h1, h2, h3, h4, h5, .dimsop-h1, .dimsop-h2, .dimsop-h3 {
     margin-bottom: .75rem;
 }
 
-// ----------------------------- Mapa de Cobertura (Sección 7) --------
+// ----------------------------- Mapa de Cobertura / Sedes (Sección 7) --------
+.dimsop-cobertura-text {
+    strong { font-weight: 600; }
+}
+
 .dimsop-map {
     position: relative;
     border-radius: 12px;
@@ -469,6 +473,7 @@ h1, h2, h3, h4, h5, .dimsop-h1, .dimsop-h2, .dimsop-h3 {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
     cursor: default;
+    will-change: transform;
 
     &::after {
         content: '';
@@ -483,7 +488,7 @@ h1, h2, h3, h4, h5, .dimsop-h1, .dimsop-h2, .dimsop-h3 {
     }
 
     &:hover {
-        transform: scale(1.04) !important;
+        transform: scale(1.03) !important;
         box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
 
         &::after {
@@ -497,15 +502,6 @@ h1, h2, h3, h4, h5, .dimsop-h1, .dimsop-h2, .dimsop-h3 {
         height: auto;
         border-radius: 12px;
     }
-}
-
-@keyframes dimsop-map-glow {
-    0%, 100% { box-shadow: 0 0 8px 2px rgba(77, 163, 47, 0.15); }
-    50% { box-shadow: 0 0 20px 6px rgba(77, 163, 47, 0.35); }
-}
-
-.dimsop-map::after {
-    animation: dimsop-map-glow 3s ease-in-out infinite;
 }
 
 // ----------------------------- Valores (Sección 4.3) -----------------
@@ -1270,9 +1266,6 @@ h1, h2, h3, h4, h5, .dimsop-h1, .dimsop-h2, .dimsop-h3 {
         min-height: auto;
     }
 
-    .dimsop-map::after {
-        animation: none;
-    }
 }
 
 /* =========================================================
