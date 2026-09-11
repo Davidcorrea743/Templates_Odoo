@@ -328,21 +328,23 @@ h1, h2, h3, h4, h5, .dimsop-h1, .dimsop-h2, .dimsop-h3 {
     border-color: var(--dimsop-accent);
 }
 
-// CTA Button: Únete a nuestro equipo
+// CTA Button: Únete (degradado azul-verde)
 .dimsop-btn-cta {
-    background: var(--dimsop-accent);
+    background: linear-gradient(135deg, #4da32f 0%, #003362 100%);
+    background-size: 200% 200%;
+    background-position: 0% 50%;
     color: var(--dimsop-white) !important;
     padding: 0.45rem 1rem;
     border-radius: 6px;
     font-size: 0.82rem;
     font-weight: 600;
     text-decoration: none;
-    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    transition: transform 0.2s, box-shadow 0.3s, background-position 0.3s;
     white-space: nowrap;
     letter-spacing: 0.3px;
 
     &:hover {
-        background: darken(#4da32f, 8%);
+        background-position: 100% 50%;
         color: var(--dimsop-white) !important;
         transform: translateY(-1px);
         box-shadow: 0 4px 12px rgba(77, 163, 47, 0.3);
@@ -350,15 +352,18 @@ h1, h2, h3, h4, h5, .dimsop-h1, .dimsop-h2, .dimsop-h3 {
 }
 
 .dimsop-btn-cta-mobile {
-    background: var(--dimsop-accent);
+    background: linear-gradient(135deg, #4da32f 0%, #003362 100%);
+    background-size: 200% 200%;
     color: var(--dimsop-white) !important;
     border-radius: 6px;
     font-weight: 600;
+    font-size: 0.85rem;
     text-align: center;
+    padding: 0.5rem 0.75rem;
     margin-top: 0.5rem;
 
     &:hover {
-        background: darken(#4da32f, 8%);
+        background-position: 100% 50%;
         color: var(--dimsop-white) !important;
     }
 }
