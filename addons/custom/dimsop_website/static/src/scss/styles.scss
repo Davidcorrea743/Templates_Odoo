@@ -657,15 +657,16 @@ h1, h2, h3, h4, h5, .dimsop-h1, .dimsop-h2, .dimsop-h3 {
     border-radius: 10px;
     padding: 1rem;
     flex: 0 0 auto;
-    min-width: 170px;
+    min-width: 280px;
+    max-width: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 90px;
+    height: 140px;
     transform-origin: bottom center;
     overflow: visible;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-top: 25px;
+    margin-top: 40px;
 }
 
 .dimsop-logo-item:hover,
@@ -677,8 +678,8 @@ h1, h2, h3, h4, h5, .dimsop-h1, .dimsop-h2, .dimsop-h3 {
 }
 
 .dimsop-logo-item img {
-    max-height: 60px;
-    max-width: 140px;
+    max-height: 120px;
+    max-width: 280px;
     object-fit: contain;
     filter: grayscale(100%);
     opacity: .8;
