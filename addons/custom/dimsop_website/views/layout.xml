@@ -600,12 +600,20 @@
             <script>
                 (function() {
                     function initCarrerasModal() {
-                        var trigger = document.querySelector('[data-bs-target="#dimsop-carreras-modal"]');
+                        var triggers = document.querySelectorAll('[data-bs-target="#dimsop-carreras-modal"]');
                         var modalEl = document.getElementById('dimsop-carreras-modal');
-                        if (!trigger || !modalEl) return;
+                        if (!triggers.length || !modalEl) return;
                         var backdrop = null;
 
                         function openModal() {
+                            // Cerrar menú móvil si está abierto
+                            var mobileNav = document.getElementById('dimsop-mobile-nav');
+                            var burger = document.getElementById('dimsop-burger-toggle');
+                            if (mobileNav) mobileNav.classList.remove('dimsop-mobile-open');
+                            if (burger) {
+                                burger.classList.remove('dimsop-burger-active');
+                                burger.setAttribute('aria-expanded', 'false');
+                            }
                             modalEl.classList.add('show');
                             modalEl.style.display = 'block';
                             document.body.classList.add('modal-open');
@@ -622,9 +630,11 @@
                             if (backdrop) { backdrop.remove(); backdrop = null; }
                         }
 
-                        trigger.addEventListener('click', function(e) {
-                            e.preventDefault();
-                            openModal();
+                        triggers.forEach(function(trigger) {
+                            trigger.addEventListener('click', function(e) {
+                                e.preventDefault();
+                                openModal();
+                            });
                         });
 
                         var closeBtn = modalEl.querySelector('.btn-close');

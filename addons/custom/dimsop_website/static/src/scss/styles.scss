@@ -328,6 +328,41 @@ h1, h2, h3, h4, h5, .dimsop-h1, .dimsop-h2, .dimsop-h3 {
     border-color: var(--dimsop-accent);
 }
 
+// CTA Button: Únete a nuestro equipo
+.dimsop-btn-cta {
+    background: var(--dimsop-accent);
+    color: var(--dimsop-white) !important;
+    padding: 0.45rem 1rem;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    white-space: nowrap;
+    letter-spacing: 0.3px;
+
+    &:hover {
+        background: darken(#4da32f, 8%);
+        color: var(--dimsop-white) !important;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(77, 163, 47, 0.3);
+    }
+}
+
+.dimsop-btn-cta-mobile {
+    background: var(--dimsop-accent);
+    color: var(--dimsop-white) !important;
+    border-radius: 6px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 0.5rem;
+
+    &:hover {
+        background: darken(#4da32f, 8%);
+        color: var(--dimsop-white) !important;
+    }
+}
+
 // ----------------------------- Banner (Sección 2) --------------------
 .dimsop-banner {
     position: relative;
