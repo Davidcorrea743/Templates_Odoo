@@ -124,33 +124,6 @@
                                 </p>
                                 <img src="/dimsop_website/static/src/img/methodology/metodologia.png"
                                      alt="Metodología de trabajo Dimsop" class="img-fluid dimsop-img-methodology mx-auto d-block"/>
-                                <div class="row row-cols-lg-5 g-4 mt-2">
-                                    <div class="col-md-6 col-lg">
-                                        <div class="dimsop-step"><span class="dimsop-step-num">1</span>
-                                            <h4>Necesidades del cliente</h4>
-                                            <p>Diagnóstico y levantamiento de requerimientos.</p></div>
-                                    </div>
-                                    <div class="col-md-6 col-lg">
-                                        <div class="dimsop-step"><span class="dimsop-step-num">2</span>
-                                            <h4>Base instalada</h4>
-                                            <p>Evaluación de la infraestructura existente.</p></div>
-                                    </div>
-                                    <div class="col-md-6 col-lg">
-                                        <div class="dimsop-step"><span class="dimsop-step-num">3</span>
-                                            <h4>Diseño de solución</h4>
-                                            <p>Arquitectura a la medida (legadas y emergentes).</p></div>
-                                    </div>
-                                    <div class="col-md-6 col-lg">
-                                        <div class="dimsop-step"><span class="dimsop-step-num">4</span>
-                                            <h4>Propuesta de equipo y servicios</h4>
-                                            <p>Selección de equipamiento y alcance técnico.</p></div>
-                                    </div>
-                                    <div class="col-md-6 col-lg">
-                                        <div class="dimsop-step"><span class="dimsop-step-num">5</span>
-                                            <h4>Propuesta de valor</h4>
-                                            <p>Maximización de rentabilidad y retorno de inversión.</p></div>
-                                    </div>
-                                </div>
                             </div>
                         </section>
 

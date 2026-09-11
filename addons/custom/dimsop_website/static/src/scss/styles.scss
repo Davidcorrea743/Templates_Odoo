@@ -610,61 +610,6 @@ h1, h2, h3, h4, h5, .dimsop-h1, .dimsop-h2, .dimsop-h3 {
     border-radius: 10px;
 }
 
-.dimsop-step {
-    background-color: var(--dimsop-surface);
-    border-radius: 10px;
-    padding: 1.25rem;
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    height: 100%;
-    min-height: 154px;
-    transform-origin: bottom center;
-    overflow: visible;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-// Descripción: oculta por defecto, no ocupa espacio
-.dimsop-step p {
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease, opacity 0.3s ease;
-    margin: 0;
-    font-size: .8rem;
-    color: var(--dimsop-text-muted);
-}
-
-// Hover: crece hacia ARRIBA como pop-out + muestra descripción
-.dimsop-step:hover {
-    z-index: 10;
-    transform: translateY(-15px) scale(1.08);
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.35);
-    border-color: var(--dimsop-accent);
-}
-
-.dimsop-step:hover p {
-    max-height: 80px;
-    opacity: 1;
-}
-
-.dimsop-step-num {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background-color: var(--dimsop-accent);
-    color: var(--dimsop-white);
-    font-weight: 700;
-    margin-bottom: .75rem;
-}
-
 // ----------------------------- Logos aliados (Sección 8) -------------
 // Cintillo tipo carrusel con loop infinito (marquee CSS).
 // El track contiene 2 sets idénticos de logos; al desplazarse -50%
@@ -1231,7 +1176,6 @@ h1, h2, h3, h4, h5, .dimsop-h1, .dimsop-h2, .dimsop-h3 {
 
     // Cards a ancho completo con respiración vertical
     .dimsop-card,
-    .dimsop-step,
     .dimsop-value { margin-bottom: .75rem; }
 
     // Proyectos: ajustes móviles
