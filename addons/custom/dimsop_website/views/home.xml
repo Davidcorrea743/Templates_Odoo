@@ -176,7 +176,9 @@
                                             <p>Integración de voz, video y colaboración empresarial.</p>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4">
+                                </div>
+                                <div class="row mt-4">
+                                    <div class="col-lg-4 offset-lg-4">
                                         <div class="dimsop-card h-100">
                                             <i class="fa fa-microchip dimsop-card-icon"></i>
                                             <h3 class="dimsop-h3">Unidad de Desarrollo e Inteligencia Artificial</h3>
