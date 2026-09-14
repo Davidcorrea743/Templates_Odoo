@@ -145,4 +145,23 @@ html, body {
     .dimsop-marquee::after {
         background: linear-gradient(to left, var(--dimsop-bg), transparent);
     }
+
+    // Metodología - dark mode
+    #metodologia {
+        background-color: var(--dimsop-bg) !important;
+    }
+    .dimsop-metodologia-text {
+        color: var(--dimsop-text) !important;
+    }
+    .dimsop-metodologia-icon-circle {
+        background: rgba(15, 30, 52, 0.95) !important;
+        border-color: var(--dimsop-accent) !important;
+    }
+    .dimsop-metodologia-icon-label {
+        background: rgba(15, 30, 52, 0.95) !important;
+        color: var(--dimsop-text) !important;
+    }
+    .dimsop-section-divider {
+        background: linear-gradient(90deg, var(--dimsop-accent), var(--dimsop-primary));
+    }
 }

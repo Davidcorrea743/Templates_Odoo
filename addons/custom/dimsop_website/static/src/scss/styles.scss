@@ -602,12 +602,146 @@ h1, h2, h3, h4, h5, .dimsop-h1, .dimsop-h2, .dimsop-h3 {
     color: var(--dimsop-accent);
 }
 
+// ----------------------------- Section Divider ---------------
+.dimsop-section-divider {
+    width: 90%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--dimsop-primary), var(--dimsop-accent));
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
 // ----------------------------- Metodología (Sección 5) ---------------
-.dimsop-img-methodology {
-    max-width: 820px;
+#metodologia {
+    background-color: var(--dimsop-white);
+}
+
+.dimsop-metodologia-text {
+    color: var(--dimsop-text);
+}
+
+.dimsop-metodologia-container {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.dimsop-metodologia-base {
     width: 100%;
     height: auto;
-    border-radius: 10px;
+    display: block;
+}
+
+.dimsop-metodologia-icon {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    z-index: 10;
+    text-align: center;
+    opacity: 0.15;
+    transition: opacity 0.4s ease, transform 0.3s ease;
+}
+
+// Per-icon positions
+#metod-icon-cliente { top: 22%; left: 50%; }
+#metod-icon-base    { top: 33%; left: 63%; }
+#metod-icon-valor   { top: 33%; left: 37%; }
+#metod-icon-equipos { top: 80%; left: 37%; }
+#metod-icon-diseno  { top: 80%; left: 63%; }
+
+// Labels above for base and valor (and cliente already has it)
+#metod-icon-cliente .dimsop-metodologia-icon-label,
+#metod-icon-base .dimsop-metodologia-icon-label,
+#metod-icon-valor .dimsop-metodologia-icon-label {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 8px;
+    margin-top: 0;
+}
+
+.dimsop-metodologia-container:hover .dimsop-metodologia-icon {
+    opacity: 1 !important;
+}
+
+.dimsop-metodologia-icon:hover {
+    opacity: 1 !important;
+    z-index: 20;
+}
+
+.dimsop-metodologia-icon-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.98);
+    border: 3px solid var(--dimsop-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+
+    img {
+        width: 42px;
+        height: 42px;
+        object-fit: contain;
+        transition: filter 0.3s ease;
+    }
+}
+
+.dimsop-metodologia-icon-label {
+    display: block;
+    margin-top: 6px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--dimsop-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.dimsop-metodologia-icon:hover {
+    .dimsop-metodologia-icon-circle {
+        transform: scale(1.2);
+        box-shadow: 0 8px 25px rgba(77, 163, 47, 0.4);
+    }
+
+    .dimsop-metodologia-icon-label {
+        background: var(--dimsop-accent);
+        color: var(--dimsop-white);
+    }
+}
+
+@media (max-width: 767.98px) {
+    .dimsop-metodologia-container {
+        max-width: 100%;
+    }
+
+    .dimsop-metodologia-icon-circle {
+        width: 48px;
+        height: 48px;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .dimsop-metodologia-icon-label {
+        font-size: 0.6rem;
+    }
+
+    // Hide desktop interactive icons on mobile (static image shown instead)
+    .dimsop-metodologia-icon {
+        display: none !important;
+    }
 }
 
 // ----------------------------- Logos aliados (Sección 8) -------------
@@ -1205,12 +1339,6 @@ h1, h2, h3, h4, h5, .dimsop-h1, .dimsop-h2, .dimsop-h3 {
         bottom: 70px;
         right: 16px;
         z-index: 1030;
-    }
-
-    // Metodología: imagen sin desbordamiento
-    .dimsop-img-methodology {
-        max-width: 100%;
-        height: auto;
     }
 }
 

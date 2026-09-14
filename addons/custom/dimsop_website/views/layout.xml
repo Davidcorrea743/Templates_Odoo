@@ -236,14 +236,37 @@
                             scrollTrigger: { trigger: '#iso', start: 'top 90%', toggleActions: 'play none none reverse' }
                         });
 
+                        // Metodología: título + texto
                         gsap.from('#metodologia .dimsop-h2', {
                             y: 50, opacity: 0, duration: 0.8, ease: 'power3.out',
                             scrollTrigger: { trigger: '#metodologia', start: 'top 80%', toggleActions: 'play none none reverse' }
                         });
-                        gsap.from('#metodologia .dimsop-img-methodology', {
-                            scale: 0.95, opacity: 0, duration: 1, ease: 'power2.out',
-                            scrollTrigger: { trigger: '#metodologia .dimsop-img-methodology', start: 'top 85%', toggleActions: 'play none none reverse' }
+                        gsap.from('#metodologia .dimsop-metodologia-text', {
+                            y: 30, opacity: 0, duration: 0.6, ease: 'power2.out',
+                            scrollTrigger: { trigger: '#metodologia', start: 'top 75%', toggleActions: 'play none none reverse' }
                         });
+
+                        // Metodología: imagen base
+                        var metBase = document.querySelector('#metodologia .dimsop-metodologia-base');
+                        if (metBase) {
+                            gsap.fromTo(metBase,
+                                { scale: 0.9, opacity: 0 },
+                                { scale: 1, opacity: 1, duration: 1, ease: 'power2.out', clearProps: 'all',
+                                  scrollTrigger: { trigger: '#metodologia .dimsop-metodologia-container', start: 'top 80%', toggleActions: 'play none none reverse' }
+                                }
+                            );
+                        }
+
+                        // Metodología: iconos con stagger (scale only, opacity controlled by CSS)
+                        var metIcons = document.querySelectorAll('#metodologia .dimsop-metodologia-icon');
+                        if (metIcons.length) {
+                            gsap.fromTo(metIcons,
+                                { scale: 0 },
+                                { scale: 1, duration: 0.5, stagger: 0.15, ease: 'back.out(1.7)', clearProps: 'transform',
+                                  scrollTrigger: { trigger: '#metodologia .dimsop-metodologia-container', start: 'top 70%', toggleActions: 'play none none reverse' }
+                                }
+                            );
+                        }
 
                         gsap.from('#unidades .dimsop-h2', {
                             y: 50, opacity: 0, duration: 0.8, ease: 'power3.out',

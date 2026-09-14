@@ -111,19 +111,70 @@
                             </div>
                         </section>
 
+                        <!-- Divider -->
+                        <div class="dimsop-section-divider my-4"></div>
+
                         <!-- =========================================================
                              5. METODOLOGÍA DE TRABAJO
-                             Infografía: static/src/img/methodology/metodologia.png
                              ========================================================= -->
-                        <section id="metodologia" class="dimsop-section py-5 dimsop-section-dark">
+                        <section id="metodologia" class="dimsop-section py-5">
                             <div class="container">
                                 <h2 class="dimsop-h2 text-center mb-2">Metodología de Trabajo</h2>
-                                <p class="text-center text-white mb-5 mx-auto" style="max-width: 780px;">
+                                <p class="text-center mb-5 mx-auto dimsop-metodologia-text" style="max-width: 780px;">
                                     Nuestro proceso garantiza soluciones efectivas, desde la identificación
                                     de necesidades hasta la entrega de valor tangible para tu negocio.
                                 </p>
-                                <img src="/dimsop_website/static/src/img/methodology/metodologia.png"
-                                     alt="Metodología de trabajo Dimsop" class="img-fluid dimsop-img-methodology mx-auto d-block"/>
+                                <!-- Desktop: base image + interactive icon overlays -->
+                                <div class="dimsop-metodologia-container d-none d-md-block">
+                                    <img src="/dimsop_website/static/src/img/methodology/metdologia_nueva.png"
+                                         alt="Metodología de trabajo Dimsop" class="dimsop-metodologia-base"/>
+
+                                    <!-- Necesidades del Cliente - Top centro -->
+                                    <div id="metod-icon-cliente" class="dimsop-metodologia-icon" data-area="cliente">
+                                        <div class="dimsop-metodologia-icon-circle">
+                                            <img src="/dimsop_website/static/src/img/methodology/Icono_Necesidades_del_Cliente.png" alt="Necesidades del Cliente"/>
+                                        </div>
+                                        <span class="dimsop-metodologia-icon-label">Necesidades del Cliente</span>
+                                    </div>
+
+                                    <!-- Base Instalada - Top derecha -->
+                                    <div id="metod-icon-base" class="dimsop-metodologia-icon" data-area="base">
+                                        <div class="dimsop-metodologia-icon-circle">
+                                            <img src="/dimsop_website/static/src/img/methodology/Icono_Base_Instalada.png" alt="Base Instalada"/>
+                                        </div>
+                                        <span class="dimsop-metodologia-icon-label">Base Instalada</span>
+                                    </div>
+
+                                    <!-- Propuesta de Valor - Top izquierda -->
+                                    <div id="metod-icon-valor" class="dimsop-metodologia-icon" data-area="valor">
+                                        <div class="dimsop-metodologia-icon-circle">
+                                            <img src="/dimsop_website/static/src/img/methodology/Icono_Propuesta_de_Valor.png" alt="Propuesta de Valor"/>
+                                        </div>
+                                        <span class="dimsop-metodologia-icon-label">Propuesta de Valor</span>
+                                    </div>
+
+                                    <!-- Propuesta de Equipos y Servicios - Bottom izquierda -->
+                                    <div id="metod-icon-equipos" class="dimsop-metodologia-icon" data-area="equipos">
+                                        <div class="dimsop-metodologia-icon-circle">
+                                            <img src="/dimsop_website/static/src/img/methodology/Icono_Propuesta_Equipos.png" alt="Propuesta de Equipos y Servicios"/>
+                                        </div>
+                                        <span class="dimsop-metodologia-icon-label">Propuesta de Equipos y Servicios</span>
+                                    </div>
+
+                                    <!-- Diseño de Solución - Bottom derecha -->
+                                    <div id="metod-icon-diseno" class="dimsop-metodologia-icon" data-area="diseno">
+                                        <div class="dimsop-metodologia-icon-circle">
+                                            <img src="/dimsop_website/static/src/img/methodology/Icono_Disenio_de_Solucion.png" alt="Diseño de Solución"/>
+                                        </div>
+                                        <span class="dimsop-metodologia-icon-label">Diseño de Solución</span>
+                                    </div>
+                                </div>
+
+                                <!-- Mobile: static pre-made image with all icons -->
+                                <div class="d-md-none">
+                                    <img src="/dimsop_website/static/src/img/methodology/metodologia_crop.png"
+                                         alt="Metodología de trabajo Dimsop" class="img-fluid"/>
+                                </div>
                             </div>
                         </section>
 
