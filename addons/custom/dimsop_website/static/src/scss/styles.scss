@@ -538,11 +538,49 @@ h1, h2, h3, h4, h5, .dimsop-h1, .dimsop-h2, .dimsop-h3 {
         }
     }
 
-    img {
+    .dimsop-mapa-base {
         display: block;
         width: 100%;
         height: auto;
         border-radius: 12px;
+    }
+}
+
+// Map pins
+.dimsop-map-pin {
+    position: absolute;
+    transform: translate(-50%, -100%);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    white-space: nowrap;
+    z-index: 3;
+    pointer-events: none;
+
+    i {
+        font-size: 1.4rem;
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+    }
+
+    span {
+        text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+        letter-spacing: 0.02em;
+    }
+
+    &.pin-office i {
+        color: var(--dimsop-accent);
+    }
+    &.pin-office span {
+        color: var(--dimsop-accent);
+    }
+
+    &.pin-project i {
+        color: #e74c3c;
+    }
+    &.pin-project span {
+        color: #e74c3c;
     }
 }
 

@@ -252,17 +252,50 @@
                                 <div class="row align-items-center">
                                     <div class="col-lg-5 dimsop-cobertura-text mb-4 mb-lg-0">
                                         <p class="mb-3" style="font-size: 1rem; line-height: 1.7; color: var(--dimsop-text);">
+                                            <i class="fa fa-map-marker" style="color: var(--dimsop-accent); font-size: 1.1rem;"></i>
                                             Nuestra sede principal está en la Ciudad de <strong style="color: var(--dimsop-primary);">Caracas-Venezuela</strong>,
                                             junto a operaciones en la ciudad de <strong style="color: var(--dimsop-primary);">Miami-Estados Unidos</strong>.
                                         </p>
                                         <p style="font-size: .9rem; color: var(--dimsop-text-muted);">
+                                            <i class="fa fa-map-marker" style="color: #e74c3c; font-size: 1rem;"></i>
                                             Con proyectos en <strong style="color: var(--dimsop-primary);">Latinoamérica y España</strong>
                                         </p>
                                     </div>
                                     <div class="col-lg-7">
                                         <div id="dimsop-map" class="dimsop-map">
-                                            <img src="/dimsop_website/static/src/img/banners/IMAGEN_MAPA_COBERTURA_clean.png"
-                                                 alt="Mapa de cobertura Dimsop" class="img-fluid"/>
+                                            <img src="/dimsop_website/static/src/img/banners/MAPA_clean.png"
+                                                 alt="Mapa de cobertura Dimsop" class="dimsop-mapa-base"/>
+
+                                            <!-- Office pins (green) -->
+                                            <div class="dimsop-map-pin pin-office" data-pin="miami" style="top: 30%; left: 19%;">
+                                                <i class="fa fa-map-marker"></i><span>Miami</span>
+                                            </div>
+                                            <div class="dimsop-map-pin pin-office" data-pin="caracas" style="top: 46%; left: 30%;">
+                                                <i class="fa fa-map-marker"></i><span>Caracas</span>
+                                            </div>
+
+                                            <!-- Project pins (red) -->
+                                            <div class="dimsop-map-pin pin-project" data-pin="mexico" style="top: 36%; left: 13%;">
+                                                <i class="fa fa-map-marker"></i><span>México</span>
+                                            </div>
+                                            <div class="dimsop-map-pin pin-project" data-pin="costarica" style="top: 42%; left: 18%;">
+                                                <i class="fa fa-map-marker"></i><span>Costa Rica</span>
+                                            </div>
+                                            <div class="dimsop-map-pin pin-project" data-pin="colombia" style="top: 50%; left: 26%;">
+                                                <i class="fa fa-map-marker"></i><span>Colombia</span>
+                                            </div>
+                                            <div class="dimsop-map-pin pin-project" data-pin="peru" style="top: 58%; left: 22%;">
+                                                <i class="fa fa-map-marker"></i><span>Perú</span>
+                                            </div>
+                                            <div class="dimsop-map-pin pin-project" data-pin="chile" style="top: 70%; left: 26%;">
+                                                <i class="fa fa-map-marker"></i><span>Chile</span>
+                                            </div>
+                                            <div class="dimsop-map-pin pin-project" data-pin="argentina" style="top: 78%; left: 29%;">
+                                                <i class="fa fa-map-marker"></i><span>Argentina</span>
+                                            </div>
+                                            <div class="dimsop-map-pin pin-project" data-pin="espana" style="top: 18%; left: 50%;">
+                                                <i class="fa fa-map-marker"></i><span>España</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

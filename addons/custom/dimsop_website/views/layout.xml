@@ -288,7 +288,7 @@
                             scrollTrigger: { trigger: '#cobertura .dimsop-cobertura-text', start: 'top 85%', toggleActions: 'play none none reverse' }
                         });
 
-                        // Mapa: clip-path reveal + parallax
+                        // Mapa: clip-path reveal + parallax + pins
                         var coberturaMap = document.querySelector('#cobertura .dimsop-map');
                         if (coberturaMap) {
                             gsap.fromTo(coberturaMap,
@@ -298,10 +298,34 @@
                                     scrollTrigger: { trigger: coberturaMap, start: 'top 80%', toggleActions: 'play none none reverse' }
                                 }
                             );
-                            gsap.to('#cobertura .dimsop-map img', {
+                            gsap.to('#cobertura .dimsop-map .dimsop-mapa-base', {
                                 yPercent: -8, ease: 'none',
                                 scrollTrigger: { trigger: '#cobertura', start: 'top bottom', end: 'bottom top', scrub: 0.5 }
                             });
+
+                            // Pins: offices first, then projects
+                            var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                            if (!prefersReduced) {
+                                gsap.set('.dimsop-map-pin', { opacity: 0, scale: 0 });
+                                gsap.fromTo('.pin-office',
+                                    { opacity: 0, scale: 0 },
+                                    {
+                                        opacity: 1, scale: 1, duration: 0.5,
+                                        stagger: 0.3, ease: 'back.out(1.7)',
+                                        scrollTrigger: { trigger: coberturaMap, start: 'top 80%', toggleActions: 'play none none none' }
+                                    }
+                                );
+                                gsap.fromTo('.pin-project',
+                                    { opacity: 0, scale: 0 },
+                                    {
+                                        opacity: 1, scale: 1, duration: 0.4,
+                                        stagger: 0.15, ease: 'back.out(1.7)', delay: 0.8,
+                                        scrollTrigger: { trigger: coberturaMap, start: 'top 80%', toggleActions: 'play none none none' }
+                                    }
+                                );
+                            } else {
+                                gsap.set('.dimsop-map-pin', { opacity: 1, scale: 1 });
+                            }
                         }
 
                         gsap.from('#aliados .dimsop-h2', {
