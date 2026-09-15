@@ -43,15 +43,15 @@ h1, h2, h3, h4, h5, .dimsop-h1, .dimsop-h2, .dimsop-h3 {
 .btn-dimsop-secondary {
     background-color: transparent;
     border: 2px solid var(--dimsop-accent);
-    color: var(--dimsop-white);
+    color: var(--dimsop-primary);
     font-family: var(--dimsop-font-heading);
     letter-spacing: 1px;
     transition: background-color .2s ease, color .2s ease;
-}
 
-.btn-dimsop-secondary:hover {
-    background-color: var(--dimsop-accent);
-    color: var(--dimsop-white);
+    &:hover {
+        background-color: var(--dimsop-accent);
+        color: var(--dimsop-white);
+    }
 }
 
 // ----------------------------- Header (Sección 1) --------------------
