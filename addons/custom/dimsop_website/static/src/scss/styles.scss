@@ -584,6 +584,17 @@ h1, h2, h3, h4, h5, .dimsop-h1, .dimsop-h2, .dimsop-h3 {
     }
 }
 
+// Map pin positions
+[data-pin="miami"]    { top: 14%; left: 26%; }
+[data-pin="caracas"]  { top: 35%; left: 33%; }
+[data-pin="mexico"]   { top: 22%; left: 17%; }
+[data-pin="costarica"]{ top: 31%; left: 27%; }
+[data-pin="colombia"] { top: 40%; left: 31%; }
+[data-pin="peru"]     { top: 49%; left: 29%; }
+[data-pin="chile"]    { top: 66%; left: 31%; }
+[data-pin="argentina"]{ top: 77%; left: 34%; }
+[data-pin="espana"]   { top: 7%;  left: 60%; }
+
 // ----------------------------- Valores (Sección 4.3) -----------------
 .dimsop-value {
     background-color: var(--dimsop-surface);

@@ -267,33 +267,33 @@
                                                  alt="Mapa de cobertura Dimsop" class="dimsop-mapa-base"/>
 
                                             <!-- Office pins (green) -->
-                                            <div class="dimsop-map-pin pin-office" data-pin="miami" style="top: 30%; left: 19%;">
+                                            <div class="dimsop-map-pin pin-office" data-pin="miami">
                                                 <i class="fa fa-map-marker"></i><span>Miami</span>
                                             </div>
-                                            <div class="dimsop-map-pin pin-office" data-pin="caracas" style="top: 46%; left: 30%;">
+                                            <div class="dimsop-map-pin pin-office" data-pin="caracas">
                                                 <i class="fa fa-map-marker"></i><span>Caracas</span>
                                             </div>
 
                                             <!-- Project pins (red) -->
-                                            <div class="dimsop-map-pin pin-project" data-pin="mexico" style="top: 36%; left: 13%;">
+                                            <div class="dimsop-map-pin pin-project" data-pin="mexico">
                                                 <i class="fa fa-map-marker"></i><span>México</span>
                                             </div>
-                                            <div class="dimsop-map-pin pin-project" data-pin="costarica" style="top: 42%; left: 18%;">
+                                            <div class="dimsop-map-pin pin-project" data-pin="costarica">
                                                 <i class="fa fa-map-marker"></i><span>Costa Rica</span>
                                             </div>
-                                            <div class="dimsop-map-pin pin-project" data-pin="colombia" style="top: 50%; left: 26%;">
+                                            <div class="dimsop-map-pin pin-project" data-pin="colombia">
                                                 <i class="fa fa-map-marker"></i><span>Colombia</span>
                                             </div>
-                                            <div class="dimsop-map-pin pin-project" data-pin="peru" style="top: 58%; left: 22%;">
+                                            <div class="dimsop-map-pin pin-project" data-pin="peru">
                                                 <i class="fa fa-map-marker"></i><span>Perú</span>
                                             </div>
-                                            <div class="dimsop-map-pin pin-project" data-pin="chile" style="top: 70%; left: 26%;">
+                                            <div class="dimsop-map-pin pin-project" data-pin="chile">
                                                 <i class="fa fa-map-marker"></i><span>Chile</span>
                                             </div>
-                                            <div class="dimsop-map-pin pin-project" data-pin="argentina" style="top: 78%; left: 29%;">
+                                            <div class="dimsop-map-pin pin-project" data-pin="argentina">
                                                 <i class="fa fa-map-marker"></i><span>Argentina</span>
                                             </div>
-                                            <div class="dimsop-map-pin pin-project" data-pin="espana" style="top: 18%; left: 50%;">
+                                            <div class="dimsop-map-pin pin-project" data-pin="espana">
                                                 <i class="fa fa-map-marker"></i><span>España</span>
                                             </div>
                                         </div>
