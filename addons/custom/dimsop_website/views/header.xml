@@ -57,7 +57,7 @@
                         <!-- CTA: Únete -->
                         <a href="#" class="dimsop-btn-cta ms-2 d-none d-lg-inline-flex align-items-center"
                            data-bs-toggle="modal" data-bs-target="#dimsop-carreras-modal">
-                            <i class="fa fa-users me-1" aria-hidden="true"></i> Únete
+                            <i class="fa fa-users me-1" aria-hidden="true"></i> Trabaja con nosotros
                         </a>
                     </div>
 
@@ -97,7 +97,7 @@
                             <li class="nav-item mt-2">
                                 <a class="nav-link dimsop-btn-cta-mobile" href="#"
                                    data-bs-toggle="modal" data-bs-target="#dimsop-carreras-modal">
-                                    <i class="fa fa-users me-1" aria-hidden="true"></i> Únete
+                                    <i class="fa fa-users me-1" aria-hidden="true"></i> Trabaja con nosotros
                                 </a>
                             </li>
                         </ul>

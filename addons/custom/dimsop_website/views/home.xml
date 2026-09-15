@@ -111,9 +111,6 @@
                             </div>
                         </section>
 
-                        <!-- Divider -->
-                        <div class="dimsop-section-divider my-4"></div>
-
                         <!-- =========================================================
                              5. METODOLOGÍA DE TRABAJO
                              ========================================================= -->
@@ -178,6 +175,9 @@
                             </div>
                         </section>
 
+                        <!-- Divider -->
+                        <div class="dimsop-section-divider my-4"></div>
+
                         <!-- =========================================================
                              6. UNIDADES DE NEGOCIO
                              ========================================================= -->
@@ -240,20 +240,23 @@
                             </div>
                         </section>
 
+                        <!-- Divider -->
+                        <div class="dimsop-section-divider my-4"></div>
+
                         <!-- =========================================================
                              7. MAPA DE COBERTURA / SEDES
                              ========================================================= -->
-                        <section id="cobertura" class="dimsop-section py-5 dimsop-section-dark">
+                        <section id="cobertura" class="dimsop-section py-5">
                             <div class="container">
                                 <h2 class="dimsop-h2 text-center mb-4">Nuestras Sedes</h2>
                                 <div class="row align-items-center">
                                     <div class="col-lg-5 dimsop-cobertura-text mb-4 mb-lg-0">
-                                        <p class="text-white-50 mb-3" style="font-size: 1rem; line-height: 1.7;">
-                                            Nuestra sede principal está en la Ciudad de <strong class="text-white">Caracas-Venezuela</strong>,
-                                            junto a operaciones en la ciudad de <strong class="text-white">Miami-Estados Unidos</strong>.
+                                        <p class="mb-3" style="font-size: 1rem; line-height: 1.7; color: var(--dimsop-text);">
+                                            Nuestra sede principal está en la Ciudad de <strong style="color: var(--dimsop-primary);">Caracas-Venezuela</strong>,
+                                            junto a operaciones en la ciudad de <strong style="color: var(--dimsop-primary);">Miami-Estados Unidos</strong>.
                                         </p>
-                                        <p class="text-white-50" style="font-size: .9rem;">
-                                            Con proyectos en <strong class="text-white">Latinoamérica y España</strong>
+                                        <p style="font-size: .9rem; color: var(--dimsop-text-muted);">
+                                            Con proyectos en <strong style="color: var(--dimsop-primary);">Latinoamérica y España</strong>
                                         </p>
                                     </div>
                                     <div class="col-lg-7">
@@ -265,6 +268,9 @@
                                 </div>
                             </div>
                         </section>
+
+                        <!-- Divider -->
+                        <div class="dimsop-section-divider my-4"></div>
 
                         <!-- =========================================================
                              8. ALIADOS TECNOLÓGICOS (MARCAS)
@@ -431,7 +437,7 @@
                         <!-- =========================================================
                              11. SECCIÓN DE BLOG
                              ========================================================= -->
-                        <section id="blog" class="dimsop-section py-5 dimsop-section-dark">
+                        <section id="blog" class="dimsop-section py-5">
                              <div class="container">
                                  <h2 class="dimsop-h2 text-center mb-5">Actualidad y Tendencias Tecnológicas</h2>
                              </div>

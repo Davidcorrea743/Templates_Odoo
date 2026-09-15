@@ -622,7 +622,7 @@ h1, h2, h3, h4, h5, .dimsop-h1, .dimsop-h2, .dimsop-h3 {
 
 .dimsop-metodologia-container {
     position: relative;
-    max-width: 700px;
+    max-width: 1050px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -640,15 +640,15 @@ h1, h2, h3, h4, h5, .dimsop-h1, .dimsop-h2, .dimsop-h3 {
     z-index: 10;
     text-align: center;
     opacity: 0.15;
-    transition: opacity 0.4s ease, transform 0.3s ease;
+    transition: opacity 0.9s ease, transform 0.3s ease;
 }
 
 // Per-icon positions
-#metod-icon-cliente { top: 22%; left: 50%; }
-#metod-icon-base    { top: 33%; left: 63%; }
-#metod-icon-valor   { top: 33%; left: 37%; }
-#metod-icon-equipos { top: 80%; left: 37%; }
-#metod-icon-diseno  { top: 80%; left: 63%; }
+#metod-icon-cliente { top: 21%; left: calc(38% + 126px); }
+#metod-icon-base    { top: calc(31% + 11px); left: calc(52% + 121px); }
+#metod-icon-valor   { top: calc(11% + 132px); left: calc(24% + 132px); }
+#metod-icon-equipos { top: calc(59% + 131px); left: calc(24% + 133px); }
+#metod-icon-diseno  { top: calc(60% + 125px); left: calc(52% + 121px); }
 
 // Labels above for base and valor (and cliente already has it)
 #metod-icon-cliente .dimsop-metodologia-icon-label,
@@ -928,8 +928,8 @@ h1, h2, h3, h4, h5, .dimsop-h1, .dimsop-h2, .dimsop-h3 {
 .dimsop-blog-item {
     min-width: 350px;
     max-width: 350px;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: var(--dimsop-white, #fff);
+    border: 1px solid var(--dimsop-surface-border);
     border-radius: 8px;
     overflow: hidden;
     flex-shrink: 0;
@@ -939,7 +939,7 @@ h1, h2, h3, h4, h5, .dimsop-h1, .dimsop-h2, .dimsop-h3 {
 
 .dimsop-blog-item:hover {
     transform: translateY(-12px) scale(1.06);
-    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
 }
 
 .dimsop-blog-item img {
@@ -970,7 +970,7 @@ h1, h2, h3, h4, h5, .dimsop-h1, .dimsop-h2, .dimsop-h3 {
 .dimsop-blog-item-content h3 {
     font-size: 1.1rem;
     margin: 0.5rem 0;
-    color: var(--dimsop-white);
+    color: var(--dimsop-text);
 }
 
 .dimsop-blog-item-content p {
