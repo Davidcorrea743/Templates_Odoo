@@ -164,4 +164,18 @@ html, body {
     .dimsop-section-divider {
         background: linear-gradient(90deg, var(--dimsop-accent), var(--dimsop-primary));
     }
+
+    // Sedes - texto bold visible en dark
+    #cobertura .dimsop-cobertura-text strong {
+        color: var(--dimsop-accent) !important;
+    }
+
+    // Botón secundario - dark mode
+    .btn-dimsop-secondary {
+        color: var(--dimsop-accent) !important;
+        border-color: var(--dimsop-accent) !important;
+        &:hover {
+            color: var(--dimsop-white) !important;
+        }
+    }
 }
