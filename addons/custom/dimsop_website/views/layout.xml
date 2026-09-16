@@ -527,6 +527,15 @@
                         });
                     }
 
+                    // Campo "Otro": show/hide segun seleccion
+                    var servicioSelect = document.getElementById('dimsop-f-servicio');
+                    var otroWrapper = document.getElementById('dimsop-otro-wrapper');
+                    if (servicioSelect &amp;&amp; otroWrapper) {
+                        servicioSelect.addEventListener('change', function() {
+                            otroWrapper.style.display = this.value === 'other' ? 'block' : 'none';
+                        });
+                    }
+
                     form.addEventListener('submit', function(e) {
                         var valid = true;
 

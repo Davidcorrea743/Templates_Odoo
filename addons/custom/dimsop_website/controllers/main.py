@@ -42,6 +42,7 @@ class WebsiteContact(http.Controller):
         company = (kw.get('empresa') or '').strip()
         position = (kw.get('cargo') or '').strip()
         service = kw.get('servicio_interes')
+        otro_motivo = (kw.get('otro_motivo') or '').strip()
 
         if not partner_name or not email or '@' not in email:
             return request.redirect('/?error=datos_incompletos#contacto')
@@ -50,6 +51,10 @@ class WebsiteContact(http.Controller):
             service = False
 
         try:
+            description = False
+            if otro_motivo:
+                description = f'Motivo de contacto (Otro): {otro_motivo}'
+
             request.env['crm.lead'].sudo().create({
                 'name': f'{partner_name} - {company}' if company else partner_name,
                 'partner_name': partner_name,
@@ -59,6 +64,7 @@ class WebsiteContact(http.Controller):
                 'company_contact': company or False,
                 'job_position': position or False,
                 'service_of_interest': service,
+                'description': description,
                 'type': 'lead',
             })
         except Exception:
