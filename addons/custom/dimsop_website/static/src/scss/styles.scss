@@ -361,8 +361,8 @@ h1, h2, h3, h4, h5, .dimsop-h1, .dimsop-h2, .dimsop-h3 {
     text-align: center;
     padding: 0.35rem 0.6rem;
     margin-top: 0.4rem;
-    display: inline-block;
-    width: auto;
+    display: block;
+    width: 100%;
 
     &:hover {
         background-position: 100% 50%;

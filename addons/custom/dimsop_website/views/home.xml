@@ -262,40 +262,49 @@
                                         </p>
                                     </div>
                                     <div class="col-lg-7">
-                                        <div id="dimsop-map" class="dimsop-map">
-                                            <img src="/dimsop_website/static/src/img/banners/MAPA_clean.png"
-                                                 alt="Mapa de cobertura Dimsop" class="dimsop-mapa-base"/>
+                                        <!-- Desktop: mapa limpio + pins HTML animados -->
+                                        <div class="d-none d-md-block">
+                                            <div id="dimsop-map" class="dimsop-map">
+                                                <img src="/dimsop_website/static/src/img/banners/MAPA_clean.png"
+                                                     alt="Mapa de cobertura Dimsop" class="dimsop-mapa-base"/>
 
-                                            <!-- Office pins (green) -->
-                                            <div class="dimsop-map-pin pin-office" data-pin="miami">
-                                                <i class="fa fa-map-marker"></i><span>Miami</span>
-                                            </div>
-                                            <div class="dimsop-map-pin pin-office" data-pin="caracas">
-                                                <i class="fa fa-map-marker"></i><span>Caracas</span>
-                                            </div>
+                                                <!-- Office pins (green) -->
+                                                <div class="dimsop-map-pin pin-office" data-pin="miami">
+                                                    <i class="fa fa-map-marker"></i><span>Miami</span>
+                                                </div>
+                                                <div class="dimsop-map-pin pin-office" data-pin="caracas">
+                                                    <i class="fa fa-map-marker"></i><span>Caracas</span>
+                                                </div>
 
-                                            <!-- Project pins (red) -->
-                                            <div class="dimsop-map-pin pin-project" data-pin="mexico">
-                                                <i class="fa fa-map-marker"></i><span>México</span>
+                                                <!-- Project pins (red) -->
+                                                <div class="dimsop-map-pin pin-project" data-pin="mexico">
+                                                    <i class="fa fa-map-marker"></i><span>México</span>
+                                                </div>
+                                                <div class="dimsop-map-pin pin-project" data-pin="costarica">
+                                                    <i class="fa fa-map-marker"></i><span>Costa Rica</span>
+                                                </div>
+                                                <div class="dimsop-map-pin pin-project" data-pin="colombia">
+                                                    <i class="fa fa-map-marker"></i><span>Colombia</span>
+                                                </div>
+                                                <div class="dimsop-map-pin pin-project" data-pin="peru">
+                                                    <i class="fa fa-map-marker"></i><span>Perú</span>
+                                                </div>
+                                                <div class="dimsop-map-pin pin-project" data-pin="chile">
+                                                    <i class="fa fa-map-marker"></i><span>Chile</span>
+                                                </div>
+                                                <div class="dimsop-map-pin pin-project" data-pin="argentina">
+                                                    <i class="fa fa-map-marker"></i><span>Argentina</span>
+                                                </div>
+                                                <div class="dimsop-map-pin pin-project" data-pin="espana">
+                                                    <i class="fa fa-map-marker"></i><span>España</span>
+                                                </div>
                                             </div>
-                                            <div class="dimsop-map-pin pin-project" data-pin="costarica">
-                                                <i class="fa fa-map-marker"></i><span>Costa Rica</span>
-                                            </div>
-                                            <div class="dimsop-map-pin pin-project" data-pin="colombia">
-                                                <i class="fa fa-map-marker"></i><span>Colombia</span>
-                                            </div>
-                                            <div class="dimsop-map-pin pin-project" data-pin="peru">
-                                                <i class="fa fa-map-marker"></i><span>Perú</span>
-                                            </div>
-                                            <div class="dimsop-map-pin pin-project" data-pin="chile">
-                                                <i class="fa fa-map-marker"></i><span>Chile</span>
-                                            </div>
-                                            <div class="dimsop-map-pin pin-project" data-pin="argentina">
-                                                <i class="fa fa-map-marker"></i><span>Argentina</span>
-                                            </div>
-                                            <div class="dimsop-map-pin pin-project" data-pin="espana">
-                                                <i class="fa fa-map-marker"></i><span>España</span>
-                                            </div>
+                                        </div>
+
+                                        <!-- Mobile: imagen estatica con pins precargados -->
+                                        <div class="d-md-none">
+                                            <img src="/dimsop_website/static/src/img/banners/IMAGEN_MAPA_COBERTURA_clean.png"
+                                                 alt="Mapa de cobertura Dimsop" class="img-fluid"/>
                                         </div>
                                     </div>
                                 </div>
