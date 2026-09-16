@@ -523,19 +523,15 @@
                             <div class="container" style="max-width: 780px;">
                                 <h2 class="dimsop-h2 text-center mb-2">Contáctanos</h2>
                                 <p class="text-center mb-5">Déjanos tus datos y nos pondremos en contacto contigo a la brevedad.</p>
-                                <!-- Feedback tras el envío (controllers/main.py redirige con query params) -->
-                                <t t-if="request.params.get('mensaje') == 'enviado'">
-                                    <div class="alert alert-success dimsop-alert" role="alert">
-                                        <i class="fa fa-check-circle me-2" aria-hidden="true"></i>
-                                        ¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.
-                                    </div>
-                                </t>
-                                <t t-if="request.params.get('error') == 'datos_incompletos'">
-                                    <div class="alert alert-danger dimsop-alert" role="alert">
-                                        <i class="fa fa-exclamation-circle me-2" aria-hidden="true"></i>
-                                        Por favor completa los campos obligatorios (Nombre y Correo Electrónico).
-                                    </div>
-                                </t>
+                                <!-- Feedback tras el envío -->
+                                <div id="dimsop-alert-success" class="alert alert-success dimsop-alert" role="alert" style="display: none;">
+                                    <i class="fa fa-check-circle me-2" aria-hidden="true"></i>
+                                    ¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.
+                                </div>
+                                <div id="dimsop-alert-error" class="alert alert-danger dimsop-alert" role="alert" style="display: none;">
+                                    <i class="fa fa-exclamation-circle me-2" aria-hidden="true"></i>
+                                    Por favor completa los campos obligatorios (Nombre y Correo Electrónico).
+                                </div>
                                 <div class="dimsop-form-card">
                                     <form action="/dimsop/contacto" method="post" class="dimsop-form" novalidate="novalidate">
                                         <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>

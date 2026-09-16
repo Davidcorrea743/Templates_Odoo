@@ -566,6 +566,31 @@
                 })();
             </script>
         </xpath>
+        <!-- Alert auto-hide: success/error after form submission -->
+        <xpath expr="//body" position="inside">
+            <script>
+                (function() {
+                    var urlParams = new URLSearchParams(window.location.search);
+                    var alertEl = null;
+                    if (urlParams.get('mensaje') === 'enviado') {
+                        alertEl = document.getElementById('dimsop-alert-success');
+                    } else if (urlParams.get('error') === 'datos_incompletos') {
+                        alertEl = document.getElementById('dimsop-alert-error');
+                    }
+                    if (alertEl) {
+                        alertEl.style.display = 'block';
+                        if (window.history &amp;&amp; window.history.replaceState) {
+                            window.history.replaceState({}, '', window.location.pathname + '#contacto');
+                        }
+                        setTimeout(function() {
+                            alertEl.style.transition = 'opacity 0.4s ease';
+                            alertEl.style.opacity = '0';
+                            setTimeout(function() { alertEl.style.display = 'none'; }, 400);
+                        }, 5000);
+                    }
+                })();
+            </script>
+        </xpath>
         <!-- Modal Carreras: validación inline + file label + loading state -->
         <xpath expr="//body" position="inside">
             <script>
