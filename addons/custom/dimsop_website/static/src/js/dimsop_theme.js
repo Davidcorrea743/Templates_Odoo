@@ -115,6 +115,7 @@
     function init() {
         initCounters();
         initBannerVideo();
+        initDarkMode();
     }
 
     // Ejecutar inmediatamente si el DOM ya está listo, o esperar
@@ -122,5 +123,38 @@
         document.addEventListener('DOMContentLoaded', init);
     } else {
         init();
+    }
+
+    /* Dark mode: toggle handler via event delegation (reliable even if
+     * Odoo replaces DOM elements after script execution). */
+    function initDarkMode() {
+        document.addEventListener('click', function (e) {
+            var btn = e.target.closest('#dimsop-dark-toggle');
+            if (!btn) return;
+            e.preventDefault();
+            var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            var next = isDark ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', next);
+            try { localStorage.setItem('dimsop-theme', next); } catch (err) {}
+            var icon = btn.querySelector('i');
+            if (icon) {
+                icon.className = next === 'dark' ? 'fa fa-sun-o' : 'fa fa-moon-o';
+            }
+        });
+        /* Restore saved theme immediately */
+        try {
+            var saved = localStorage.getItem('dimsop-theme');
+            if (saved === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        } catch (err) {}
+        /* Sync icon if dark */
+        var btn = document.getElementById('dimsop-dark-toggle');
+        if (btn) {
+            var icon = btn.querySelector('i');
+            if (icon && document.documentElement.getAttribute('data-theme') === 'dark') {
+                icon.className = 'fa fa-sun-o';
+            }
+        }
     }
 })();
