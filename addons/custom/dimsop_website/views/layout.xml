@@ -8,7 +8,7 @@
     -->
     <template id="dimsop_layout" inherit_id="website.layout" name="Dimsop Layout">
         <xpath expr="//html" position="attributes">
-            <attribute name="data-theme">light</attribute>
+            <attribute name="data-theme">dark</attribute>
         </xpath>
         <!-- Config runtime para JS: número de WhatsApp desde ir.config_parameter
              (lo consume static/src/js/whatsapp_float.js) -->
@@ -760,7 +760,7 @@
                 (function() {
                     try {
                         var t = localStorage.getItem('dimsop-theme');
-                        if (t === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+                        document.documentElement.setAttribute('data-theme', t === 'light' ? 'light' : 'dark');
                     } catch(e) {}
                 })();
             </script>

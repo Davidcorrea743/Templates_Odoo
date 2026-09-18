@@ -34,8 +34,8 @@
         } catch (e) {
             theme = null;
         }
-        // Valor por defecto: claro
-        applyTheme(theme === 'dark' ? 'dark' : 'light');
+        // Valor por defecto: oscuro
+        applyTheme(theme === 'light' ? 'light' : 'dark');
 
         var toggle = document.getElementById('dimsop-dark-toggle');
         if (toggle) {
