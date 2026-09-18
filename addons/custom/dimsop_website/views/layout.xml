@@ -300,54 +300,14 @@
                             scrollTrigger: { trigger: '#cobertura .dimsop-cobertura-text', start: 'top 85%', toggleActions: 'play none none reverse' }
                         });
 
-                        // Mapa: clip-path reveal + parallax + pins
-                        var coberturaMap = document.querySelector('#cobertura .dimsop-map');
-                        if (coberturaMap) {
-                            gsap.fromTo(coberturaMap,
+                        // Globe: clip-path reveal
+                        var coberturaGlobe = document.querySelector('#dimsop-globe-wrap');
+                        if (coberturaGlobe) {
+                            gsap.fromTo(coberturaGlobe,
                                 { clipPath: 'inset(10% 20% 10% 20%)', opacity: 0 },
                                 {
                                     clipPath: 'inset(0% 0% 0% 0%)', opacity: 1, duration: 1.2, ease: 'power3.out',
-                                    scrollTrigger: { trigger: coberturaMap, start: 'top 80%', toggleActions: 'play none none reverse' }
-                                }
-                            );
-                            gsap.to('#cobertura .dimsop-map .dimsop-mapa-base', {
-                                yPercent: -8, ease: 'none',
-                                scrollTrigger: { trigger: '#cobertura', start: 'top bottom', end: 'bottom top', scrub: 0.5 }
-                            });
-
-                            // Pins: offices first, then projects
-                            var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-                            if (!prefersReduced) {
-                                gsap.set('.dimsop-map-pin', { opacity: 0, scale: 0 });
-                                gsap.fromTo('.pin-office',
-                                    { opacity: 0, scale: 0 },
-                                    {
-                                        opacity: 1, scale: 1, duration: 0.5,
-                                        stagger: 0.3, ease: 'back.out(1.7)',
-                                        scrollTrigger: { trigger: coberturaMap, start: 'top 80%', toggleActions: 'play none none none' }
-                                    }
-                                );
-                                gsap.fromTo('.pin-project',
-                                    { opacity: 0, scale: 0 },
-                                    {
-                                        opacity: 1, scale: 1, duration: 0.4,
-                                        stagger: 0.15, ease: 'back.out(1.7)', delay: 0.8,
-                                        scrollTrigger: { trigger: coberturaMap, start: 'top 80%', toggleActions: 'play none none none' }
-                                    }
-                                );
-                            } else {
-                                gsap.set('.dimsop-map-pin', { opacity: 1, scale: 1 });
-                            }
-                        }
-
-                        // Mapa mobile: clip-path reveal
-                        var coberturaMapMobile = document.querySelector('#cobertura .d-md-none img');
-                        if (coberturaMapMobile) {
-                            gsap.fromTo(coberturaMapMobile,
-                                { clipPath: 'inset(50% 50% 50% 50%)' },
-                                {
-                                    clipPath: 'inset(0% 0% 0% 0%)', duration: 1, ease: 'power3.out',
-                                    scrollTrigger: { trigger: '#cobertura', start: 'top 75%', toggleActions: 'play none none reverse' }
+                                    scrollTrigger: { trigger: coberturaGlobe, start: 'top 80%', toggleActions: 'play none none reverse' }
                                 }
                             );
                         }
@@ -765,7 +725,105 @@
                 })();
             </script>
         </xpath>
-        <!-- Dark mode toggle handler is now in dimsop_theme.js (reliable execution) -->
+        <!-- Globe.gl lazy loading -->
+        <xpath expr="//body" position="inside">
+            <script>
+                (function() {
+                    var globeLoaded = false;
+                    var section = document.getElementById('cobertura');
+                    if (!section) return;
+
+                    var observer = new IntersectionObserver(function(entries) {
+                        if (entries[0].isIntersecting &amp;&amp; !globeLoaded) {
+                            globeLoaded = true;
+                            observer.disconnect();
+                            window.process = window.process || { env: { NODE_ENV: 'production' } };
+                            var script = document.createElement('script');
+                            script.src = '//cdn.jsdelivr.net/npm/globe.gl';
+                            script.onload = function() {
+                                var fallback = document.getElementById('dimsop-globe-fallback');
+                                var container = document.getElementById('dimsop-globe');
+                                if (fallback) fallback.style.display = 'none';
+                                if (container) initGlobe(container);
+                            };
+                            document.head.appendChild(script);
+                        }
+                    }, { threshold: 0.15 });
+                    observer.observe(section);
+
+                    function initGlobe(container) {
+                        var redCountries = [
+                            { name: '\u00d3xico', code: 'Mexico' },
+                            { name: 'Costa Rica', code: 'Costa Rica' },
+                            { name: 'Colombia', code: 'Colombia' },
+                            { name: 'Per\u00fa', code: 'Peru' },
+                            { name: 'Chile', code: 'Chile' },
+                            { name: 'Argentina', code: 'Argentina' },
+                            { name: 'Espa\u00f1a', code: 'Spain' }
+                        ];
+                        var redCodes = redCountries.map(function(c) { return c.code; });
+                        var hqs = [
+                            { name: 'Miami', lat: 25.7617, lng: -80.1918 },
+                            { name: 'Caracas', lat: 10.4806, lng: -66.9036 }
+                        ];
+                        var markerSvg = '&lt;svg viewBox="-4 0 36 36" width="16" height="16"&gt;'
+                            + '&lt;path fill="#2ecc71" d="M14,0 C21.732,0 28,5.641 28,12.6 C28,23.963 14,36 14,36 C14,36 0,24.064 0,12.6 C0,5.641 6.268,0 14,0 Z"&gt;&lt;/path&gt;'
+                            + '&lt;circle fill="white" cx="14" cy="14" r="6"&gt;&lt;/circle&gt;&lt;/svg&gt;';
+
+                        var world = new Globe(container)
+                            .globeImageUrl('//cdn.jsdelivr.net/npm/three-globe/example/img/earth-dark.jpg')
+                            .polygonSideColor(function() { return 'rgba(0,0,0,0.5)'; })
+                            .polygonStrokeColor(function() { return '#222'; })
+                            .polygonCapColor(function(d) {
+                                return redCodes.indexOf(d.properties.ADMIN) !== -1
+                                    ? 'rgba(231,76,60,0.75)' : 'rgba(0,0,0,0)';
+                            })
+                            .polygonAltitude(function(d) {
+                                return redCodes.indexOf(d.properties.ADMIN) !== -1 ? 0.015 : 0;
+                            })
+                            .htmlElementsData([])
+                            .htmlElement(function(d) {
+                                var el = document.createElement('div');
+                                if (d.type === 'hq') {
+                                    el.className = 'headquarter-marker';
+                                    el.innerHTML = markerSvg + '&lt;span class="headquarter-label"&gt;' + d.name + '&lt;/span&gt;';
+                                } else {
+                                    el.className = 'country-label';
+                                    el.innerText = d.name;
+                                }
+                                return el;
+                            });
+
+                        fetch('https://raw.githubusercontent.com/vasturiano/globe.gl/master/example/datasets/ne_110m_admin_0_countries.geojson')
+                            .then(function(res) { return res.json(); })
+                            .then(function(countries) {
+                                world.polygonsData(countries.features);
+                                var labels = countries.features
+                                    .filter(function(f) { return redCodes.indexOf(f.properties.ADMIN) !== -1; })
+                                    .map(function(f) {
+                                        var matched = redCountries.find(function(c) { return c.code === f.properties.ADMIN; });
+                                        var bbox = f.bbox;
+                                        return {
+                                            type: 'country',
+                                            name: matched ? matched.name : f.properties.ADMIN,
+                                            lat: bbox ? (bbox[1] + bbox[3]) / 2 : 0,
+                                            lng: bbox ? (bbox[0] + bbox[2]) / 2 : 0
+                                        };
+                                    });
+                                var allElements = hqs.map(function(hq) { return Object.assign({}, hq, { type: 'hq' }); }).concat(labels);
+                                world.htmlElementsData(allElements);
+                            });
+
+                        var ctrls = world.controls();
+                        ctrls.autoRotate = true;
+                        var rotSpeed = 1.5;
+                        ctrls.autoRotateSpeed = rotSpeed;
+                        world.width(container.clientWidth);
+                        world.height(container.clientHeight);
+                    }
+                })();
+            </script>
+        </xpath>
         <!-- Google Fonts via JS (Odoo 18 strips link tags from xpaths) -->
         <xpath expr="//body" position="inside">
             <script>
