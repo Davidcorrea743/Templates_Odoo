@@ -753,7 +753,7 @@
 
                     function initGlobe(container) {
                         var redCountries = [
-                            { name: '\u00d3xico', code: 'Mexico' },
+                            { name: 'M\u00e9xico', code: 'Mexico' },
                             { name: 'Costa Rica', code: 'Costa Rica' },
                             { name: 'Colombia', code: 'Colombia' },
                             { name: 'Per\u00fa', code: 'Peru' },
