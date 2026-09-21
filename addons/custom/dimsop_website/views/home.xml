@@ -252,13 +252,13 @@
                                 <div class="row align-items-center">
                                     <div class="col-lg-5 dimsop-cobertura-text mb-4 mb-lg-0">
                                         <p class="mb-3" style="font-size: 1rem; line-height: 1.7; color: var(--dimsop-text);">
-                                            <i class="fa fa-map-marker" style="color: var(--dimsop-accent); font-size: 1.1rem;"></i>
-                                            Nuestra sede principal está en la Ciudad de <strong style="color: var(--dimsop-primary);">Caracas-Venezuela</strong>,
-                                            junto a operaciones en la ciudad de <strong style="color: var(--dimsop-primary);">Miami-Estados Unidos</strong>.
+                                            <i class="fa fa-map-marker" style="color: #003362; font-size: 1.1rem;"></i>
+                                            Nuestra sede principal est&#225; en la Ciudad de <strong style="color: #003362;">Caracas-Venezuela</strong>,
+                                            junto a operaciones en la ciudad de <strong style="color: #003362;">Miami-Estados Unidos</strong>.
                                         </p>
                                         <p style="font-size: .9rem; color: var(--dimsop-text-muted);">
-                                            <i class="fa fa-map-marker" style="color: #e74c3c; font-size: 1rem;"></i>
-                                            Con proyectos en <strong style="color: var(--dimsop-primary);">Latinoamérica y España</strong>
+                                            <i class="fa fa-map-marker" style="color: #4da32f; font-size: 1rem;"></i>
+                                            Con proyectos en <strong style="color: #4da32f;">Latinoam&#233;rica y Espa&#241;a</strong>
                                         </p>
                                     </div>
                                     <div class="col-lg-7">
