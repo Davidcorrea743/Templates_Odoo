@@ -64,6 +64,7 @@
     top: 0;
     z-index: 1030;
     border-bottom: 1px solid rgba(0, 51, 98, 0.08);
+    overflow: visible;
     transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
                 background 0.35s ease,
                 box-shadow 0.35s ease;
@@ -96,7 +97,9 @@
 }
 
 .dimsop-logo img {
-    max-height: 46px;
+    max-height: 120px;
+    margin-top: -55px;
+    margin-bottom: -43px;
     transition: transform 0.3s ease;
 }
 
