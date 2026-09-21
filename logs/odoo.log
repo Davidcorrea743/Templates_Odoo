@@ -16759,3 +16759,78 @@ lxml.etree.XMLSyntaxError: StartTag: invalid element name, line 219, column 59
 2026-09-21 17:09:26,689 82 INFO odoo18_lab odoo.service.server: Initiating shutdown 
 2026-09-21 17:09:26,690 82 INFO odoo18_lab odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
 2026-09-21 17:09:26,690 82 INFO odoo18_lab odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 1 connections  
+2026-09-21 17:54:50,557 171 INFO ? odoo: Odoo version 18.0-20260723 
+2026-09-21 17:54:50,557 171 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-09-21 17:54:50,558 171 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/18.0', '/mnt/extra-addons/custom', '/mnt/extra-addons/community'] 
+2026-09-21 17:54:50,558 171 INFO ? odoo: database: odoo@db:5432 
+2026-09-21 17:54:51,379 171 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2026-09-21 17:54:51,520 171 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltoimage binary at /usr/local/bin/wkhtmltoimage 
+2026-09-21 17:54:52,390 171 INFO odoo18_lab odoo.modules.loading: loading 1 modules... 
+2026-09-21 17:54:52,409 171 INFO odoo18_lab odoo.modules.loading: 1 modules loaded in 0.02s, 0 queries (+0 extra) 
+2026-09-21 17:54:52,486 171 INFO odoo18_lab odoo.modules.loading: updating modules list 
+2026-09-21 17:54:52,493 171 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-09-21 17:54:56,476 171 INFO odoo18_lab odoo.modules.loading: loading 49 modules... 
+2026-09-21 17:54:58,461 171 INFO odoo18_lab odoo.modules.loading: Loading module dimsop_website (49/49) 
+2026-09-21 17:54:59,147 171 INFO odoo18_lab odoo.modules.registry: module dimsop_website: creating or updating database tables 
+2026-09-21 17:54:59,470 171 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/layout.xml 
+2026-09-21 17:54:59,545 171 INFO odoo18_lab odoo.models.unlink: User #1 deleted ir.model.data records with IDs: [44420] 
+2026-09-21 17:54:59,642 171 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/header.xml 
+2026-09-21 17:54:59,660 171 INFO odoo18_lab odoo.models.unlink: User #1 deleted ir.model.data records with IDs: [37305] 
+2026-09-21 17:54:59,721 171 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/footer.xml 
+2026-09-21 17:54:59,773 171 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/home.xml 
+2026-09-21 17:54:59,903 171 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/privacy.xml 
+2026-09-21 17:54:59,972 171 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/data/website_data.xml 
+2026-09-21 17:55:00,162 171 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/data/blog_data.xml 
+2026-09-21 17:55:00,380 171 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/security/ir.model.access.csv 
+2026-09-21 17:55:00,455 171 INFO odoo18_lab odoo.addons.base.models.ir_module: module dimsop_website: loading translation file /mnt/extra-addons/custom/dimsop_website/i18n/en_US.po for language en_US 
+2026-09-21 17:55:00,455 171 INFO odoo18_lab odoo.tools.translate: loading base translation file /mnt/extra-addons/custom/dimsop_website/i18n/en_US.po for language en_US 
+2026-09-21 17:55:00,484 171 INFO odoo18_lab odoo.modules.loading: Module dimsop_website loaded in 2.02s, 316 queries (+316 other) 
+2026-09-21 17:55:00,484 171 INFO odoo18_lab odoo.modules.loading: 49 modules loaded in 4.01s, 316 queries (+316 extra) 
+2026-09-21 17:55:00,890 171 INFO odoo18_lab odoo.modules.loading: Model crm.iap.lead.helpers is declared but cannot be loaded! (Perhaps a module was partially removed or renamed) 
+2026-09-21 17:55:00,891 171 INFO odoo18_lab odoo.modules.loading: Model crm.iap.lead.industry is declared but cannot be loaded! (Perhaps a module was partially removed or renamed) 
+2026-09-21 17:55:00,891 171 INFO odoo18_lab odoo.modules.loading: Model crm.iap.lead.role is declared but cannot be loaded! (Perhaps a module was partially removed or renamed) 
+2026-09-21 17:55:00,891 171 INFO odoo18_lab odoo.modules.loading: Model crm.iap.lead.seniority is declared but cannot be loaded! (Perhaps a module was partially removed or renamed) 
+2026-09-21 17:55:00,899 171 INFO odoo18_lab odoo.modules.loading: Model crm.iap.lead.mining.request is declared but cannot be loaded! (Perhaps a module was partially removed or renamed) 
+2026-09-21 17:55:02,473 171 INFO odoo18_lab odoo.modules.loading: Modules loaded. 
+2026-09-21 17:55:02,486 171 INFO odoo18_lab odoo.modules.registry: Registry changed, signaling through the database 
+2026-09-21 17:55:02,488 171 INFO odoo18_lab odoo.modules.registry: Registry loaded in 10.224s 
+2026-09-21 17:55:02,489 171 INFO odoo18_lab odoo.service.server: Initiating shutdown 
+2026-09-21 17:55:02,489 171 INFO odoo18_lab odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-09-21 17:55:02,489 171 INFO odoo18_lab odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 1 connections  
+2026-09-21 18:13:39,475 114 INFO ? odoo: Odoo version 18.0-20260723 
+2026-09-21 18:13:39,480 114 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-09-21 18:13:39,481 114 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/18.0', '/mnt/extra-addons/custom', '/mnt/extra-addons/community'] 
+2026-09-21 18:13:39,481 114 INFO ? odoo: database: odoo@db:5432 
+2026-09-21 18:13:39,757 114 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2026-09-21 18:13:39,796 114 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltoimage binary at /usr/local/bin/wkhtmltoimage 
+2026-09-21 18:13:40,246 114 INFO odoo18_lab odoo.modules.loading: loading 1 modules... 
+2026-09-21 18:13:40,256 114 INFO odoo18_lab odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2026-09-21 18:13:40,300 114 INFO odoo18_lab odoo.modules.loading: updating modules list 
+2026-09-21 18:13:40,305 114 INFO odoo18_lab odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-09-21 18:13:42,113 114 INFO odoo18_lab odoo.modules.loading: loading 49 modules... 
+2026-09-21 18:13:42,921 114 INFO odoo18_lab odoo.modules.loading: Loading module dimsop_website (49/49) 
+2026-09-21 18:13:43,123 114 INFO odoo18_lab odoo.modules.registry: module dimsop_website: creating or updating database tables 
+2026-09-21 18:13:43,251 114 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/layout.xml 
+2026-09-21 18:13:43,286 114 INFO odoo18_lab odoo.models.unlink: User #1 deleted ir.model.data records with IDs: [44503] 
+2026-09-21 18:13:43,339 114 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/header.xml 
+2026-09-21 18:13:43,370 114 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/footer.xml 
+2026-09-21 18:13:43,397 114 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/home.xml 
+2026-09-21 18:13:43,470 114 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/views/privacy.xml 
+2026-09-21 18:13:43,503 114 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/data/website_data.xml 
+2026-09-21 18:13:43,600 114 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/data/blog_data.xml 
+2026-09-21 18:13:43,769 114 INFO odoo18_lab odoo.modules.loading: loading dimsop_website/security/ir.model.access.csv 
+2026-09-21 18:13:43,821 114 INFO odoo18_lab odoo.addons.base.models.ir_module: module dimsop_website: loading translation file /mnt/extra-addons/custom/dimsop_website/i18n/en_US.po for language en_US 
+2026-09-21 18:13:43,821 114 INFO odoo18_lab odoo.tools.translate: loading base translation file /mnt/extra-addons/custom/dimsop_website/i18n/en_US.po for language en_US 
+2026-09-21 18:13:43,845 114 INFO odoo18_lab odoo.modules.loading: Module dimsop_website loaded in 0.92s, 307 queries (+307 other) 
+2026-09-21 18:13:43,845 114 INFO odoo18_lab odoo.modules.loading: 49 modules loaded in 1.73s, 307 queries (+307 extra) 
+2026-09-21 18:13:44,093 114 INFO odoo18_lab odoo.modules.loading: Model crm.iap.lead.helpers is declared but cannot be loaded! (Perhaps a module was partially removed or renamed) 
+2026-09-21 18:13:44,093 114 INFO odoo18_lab odoo.modules.loading: Model crm.iap.lead.industry is declared but cannot be loaded! (Perhaps a module was partially removed or renamed) 
+2026-09-21 18:13:44,093 114 INFO odoo18_lab odoo.modules.loading: Model crm.iap.lead.role is declared but cannot be loaded! (Perhaps a module was partially removed or renamed) 
+2026-09-21 18:13:44,094 114 INFO odoo18_lab odoo.modules.loading: Model crm.iap.lead.seniority is declared but cannot be loaded! (Perhaps a module was partially removed or renamed) 
+2026-09-21 18:13:44,097 114 INFO odoo18_lab odoo.modules.loading: Model crm.iap.lead.mining.request is declared but cannot be loaded! (Perhaps a module was partially removed or renamed) 
+2026-09-21 18:13:45,372 114 INFO odoo18_lab odoo.modules.loading: Modules loaded. 
+2026-09-21 18:13:45,388 114 INFO odoo18_lab odoo.modules.registry: Registry changed, signaling through the database 
+2026-09-21 18:13:45,391 114 INFO odoo18_lab odoo.modules.registry: Registry loaded in 5.233s 
+2026-09-21 18:13:45,392 114 INFO odoo18_lab odoo.service.server: Initiating shutdown 
+2026-09-21 18:13:45,392 114 INFO odoo18_lab odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-09-21 18:13:45,392 114 INFO odoo18_lab odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 1 connections  

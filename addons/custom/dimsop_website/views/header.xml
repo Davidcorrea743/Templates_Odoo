@@ -32,6 +32,9 @@
                                 <a class="nav-link" href="/blog">Blog</a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link" href="/catalogo">Cat&#225;logo</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="/#contacto">Contacto</a>
                             </li>
                         </ul>
@@ -39,14 +42,11 @@
 
                     <!-- Herramientas -->
                     <div class="dimsop-tools d-flex align-items-center">
-                        <!-- Buscador expand-on-hover -->
-                        <form class="dimsop-search me-2" action="/website/search" method="get" role="search">
-                            <div class="dimsop-search-wrap" id="dimsop-search-wrap">
-                                <i class="fa fa-search dimsop-search-icon" aria-hidden="true"></i>
-                                <input type="text" class="form-control" name="search"
-                                       placeholder="Buscar..." aria-label="Buscar"/>
-                            </div>
-                        </form>
+                        <!-- Buscador overlay trigger -->
+                        <button class="dimsop-search-trigger me-2" type="button"
+                                id="dimsop-search-open" aria-label="Buscar">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </button>
 
                         <!-- Dark mode toggle (onclick — always works, no script dependency) -->
                         <button id="dimsop-dark-toggle" class="btn btn-sm btn-outline-light ms-2"
@@ -93,6 +93,9 @@
                                 <a class="nav-link" href="/blog">Blog</a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link" href="/catalogo">Cat&#225;logo</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="/#contacto">Contacto</a>
                             </li>
                             <li class="nav-item mt-2">
@@ -103,6 +106,21 @@
                             </li>
                         </ul>
                     </nav>
+                </div>
+
+                <!-- Search overlay -->
+                <div class="dimsop-search-overlay" id="dimsop-search-overlay" role="dialog" aria-label="Buscar" aria-hidden="true">
+                    <div class="dimsop-search-overlay-backdrop" id="dimsop-search-close"></div>
+                    <div class="dimsop-search-overlay-content">
+                        <form action="/website/search" method="get" role="search" class="dimsop-search-overlay-form">
+                            <i class="fa fa-search dimsop-search-overlay-icon" aria-hidden="true"></i>
+                            <input type="text" class="dimsop-search-overlay-input" name="search"
+                                   placeholder="Buscar en Dimsop..." aria-label="Buscar" id="dimsop-search-input"/>
+                            <button type="button" class="dimsop-search-overlay-close" id="dimsop-search-close-btn" aria-label="Cerrar">
+                                <i class="fa fa-times" aria-hidden="true"></i>
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </header>
         </xpath>

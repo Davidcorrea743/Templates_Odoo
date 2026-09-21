@@ -752,7 +752,7 @@
                     observer.observe(section);
 
                     function initGlobe(container) {
-                        var redCountries = [
+                        var projectCountries = [
                             { name: 'M\u00e9xico', code: 'Mexico' },
                             { name: 'Costa Rica', code: 'Costa Rica' },
                             { name: 'Colombia', code: 'Colombia' },
@@ -761,13 +761,13 @@
                             { name: 'Argentina', code: 'Argentina' },
                             { name: 'Espa\u00f1a', code: 'Spain' }
                         ];
-                        var redCodes = redCountries.map(function(c) { return c.code; });
+                        var projectCodes = projectCountries.map(function(c) { return c.code; });
                         var hqs = [
                             { name: 'Miami', lat: 25.7617, lng: -80.1918 },
                             { name: 'Caracas', lat: 10.4806, lng: -66.9036 }
                         ];
                         var markerSvg = '&lt;svg viewBox="-4 0 36 36" width="16" height="16"&gt;'
-                            + '&lt;path fill="#2ecc71" d="M14,0 C21.732,0 28,5.641 28,12.6 C28,23.963 14,36 14,36 C14,36 0,24.064 0,12.6 C0,5.641 6.268,0 14,0 Z"&gt;&lt;/path&gt;'
+                            + '&lt;path fill="#003362" d="M14,0 C21.732,0 28,5.641 28,12.6 C28,23.963 14,36 14,36 C14,36 0,24.064 0,12.6 C0,5.641 6.268,0 14,0 Z"&gt;&lt;/path&gt;'
                             + '&lt;circle fill="white" cx="14" cy="14" r="6"&gt;&lt;/circle&gt;&lt;/svg&gt;';
 
                         var world = new Globe(container)
@@ -776,11 +776,11 @@
                             .polygonSideColor(function() { return 'rgba(0,0,0,0.5)'; })
                             .polygonStrokeColor(function() { return '#222'; })
                             .polygonCapColor(function(d) {
-                                return redCodes.indexOf(d.properties.ADMIN) !== -1
-                                    ? 'rgba(231,76,60,0.75)' : 'rgba(0,0,0,0)';
+                                return projectCodes.indexOf(d.properties.ADMIN) !== -1
+                                    ? 'rgba(77,163,47,0.75)' : 'rgba(0,0,0,0)';
                             })
                             .polygonAltitude(function(d) {
-                                return redCodes.indexOf(d.properties.ADMIN) !== -1 ? 0.015 : 0;
+                                return projectCodes.indexOf(d.properties.ADMIN) !== -1 ? 0.015 : 0;
                             })
                             .htmlElementsData([])
                             .htmlElement(function(d) {
@@ -803,9 +803,9 @@
                             .then(function(countries) {
                                 world.polygonsData(countries.features);
                                 var labels = countries.features
-                                    .filter(function(f) { return redCodes.indexOf(f.properties.ADMIN) !== -1; })
+                                    .filter(function(f) { return projectCodes.indexOf(f.properties.ADMIN) !== -1; })
                                     .map(function(f) {
-                                        var matched = redCountries.find(function(c) { return c.code === f.properties.ADMIN; });
+                                        var matched = projectCountries.find(function(c) { return c.code === f.properties.ADMIN; });
                                         var bbox = f.bbox;
                                         return {
                                             type: 'country',
@@ -825,6 +825,42 @@
                         world.width(container.clientWidth);
                         world.height(container.clientHeight);
                     }
+                })();
+            </script>
+        </xpath>
+        <!-- Search overlay toggle -->
+        <xpath expr="//body" position="inside">
+            <script>
+                (function() {
+                    var openBtn = document.getElementById('dimsop-search-open');
+                    var overlay = document.getElementById('dimsop-search-overlay');
+                    var closeBtn = document.getElementById('dimsop-search-close-btn');
+                    var backdrop = document.getElementById('dimsop-search-close');
+                    var input = document.getElementById('dimsop-search-input');
+                    if (!openBtn || !overlay) return;
+
+                    function showOverlay() {
+                        overlay.classList.add('dimsop-search-active');
+                        overlay.setAttribute('aria-hidden', 'false');
+                        if (input) setTimeout(function() { input.focus(); }, 100);
+                        document.body.style.overflow = 'hidden';
+                    }
+
+                    function hideOverlay() {
+                        overlay.classList.remove('dimsop-search-active');
+                        overlay.setAttribute('aria-hidden', 'true');
+                        if (input) input.value = '';
+                        document.body.style.overflow = '';
+                    }
+
+                    openBtn.addEventListener('click', showOverlay);
+                    if (closeBtn) closeBtn.addEventListener('click', hideOverlay);
+                    if (backdrop) backdrop.addEventListener('click', hideOverlay);
+                    document.addEventListener('keydown', function(e) {
+                        if (e.key === 'Escape' &amp;&amp; overlay.classList.contains('dimsop-search-active')) {
+                            hideOverlay();
+                        }
+                    });
                 })();
             </script>
         </xpath>

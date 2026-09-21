@@ -39,16 +39,30 @@ html, body {
     .dimsop-logo img {
         filter: brightness(1.2);
     }
-    .dimsop-search-icon {
+    .dimsop-search-trigger {
         color: var(--dimsop-text) !important;
+
+        &:hover {
+            background: rgba(255, 255, 255, .08);
+        }
     }
-    .dimsop-search .form-control {
-        background-color: var(--dimsop-bg-alt);
-        border-color: var(--dimsop-surface-border);
-        color: var(--dimsop-text);
+    .dimsop-search-overlay-form {
+        background: #0f1e34;
     }
-    .dimsop-search .form-control::placeholder {
-        color: #8a94a6;
+    .dimsop-search-overlay-input {
+        color: #e0e7ef;
+
+        &::placeholder {
+            color: #6b7a8d;
+        }
+    }
+    .dimsop-search-overlay-close {
+        color: #6b7a8d;
+
+        &:hover {
+            background: rgba(255, 255, 255, .06);
+            color: #e0e7ef;
+        }
     }
 
     // Burger menú móvil
