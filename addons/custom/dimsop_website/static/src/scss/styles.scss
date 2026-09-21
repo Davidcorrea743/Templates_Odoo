@@ -995,17 +995,7 @@
 }
 
 .dimsop-project-desc {
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    text-align: center;
-    transition: max-height 0.4s ease, opacity 0.4s ease;
-}
-
-.dimsop-project-item:hover .dimsop-project-desc {
-    max-height: 120px;
-    opacity: 1;
-    margin-top: 0.75rem;
+    display: none;
 }
 
 .dimsop-project-desc p {
