@@ -1521,7 +1521,11 @@
 
     // Footer centrado
     .dimsop-footer { text-align: center; }
-    .dimsop-footer .d-flex { justify-content: center; }
+    .dimsop-footer-bottom .container {
+        flex-direction: column-reverse;
+        gap: 12px;
+    }
+    .dimsop-footer-bottom .dimsop-social { justify-content: center; }
 
     #dimsop-whatsapp-float {
         width: 52px;
