@@ -42,7 +42,7 @@
 
                         <!-- Columna 3: Venezuela -->
                         <div class="col-lg-3 col-md-6 dimsop-footer-map-col">
-                            <h5 class="dimsop-footer-title">Venezuela &#127479;&#127482;</h5>
+                            <h5 class="dimsop-footer-title">Venezuela</h5>
                             <p style="font-size: .85rem; line-height: 1.5;">
                                 Calle Sanatorio del Avila, Centro Empresarial Ciudad Center, Torre C, Piso 4, Ofic. 41-C, Municipio Sucre &#8211; Estado Miranda
                             </p>
@@ -68,7 +68,7 @@
 
                         <!-- Columna 4: Estados Unidos -->
                         <div class="col-lg-3 col-md-6 dimsop-footer-map-col">
-                            <h5 class="dimsop-footer-title">Estados Unidos &#127482;&#127480;</h5>
+                            <h5 class="dimsop-footer-title">Estados Unidos</h5>
                             <p style="font-size: .85rem; line-height: 1.5;">
                                 4995 NW 72 Nd AVE STE 205, Miami, Florida
                             </p>
