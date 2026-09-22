@@ -157,4 +157,22 @@
             }
         }
     }
+
+    /* Language switcher demo — updates button visual only */
+    var langOptions = document.querySelectorAll('.dimsop-lang-option');
+    if (langOptions.length) {
+        langOptions.forEach(function(opt) {
+            opt.addEventListener('click', function(e) {
+                e.preventDefault();
+                var lang = this.getAttribute('data-lang');
+                var btn = document.getElementById('dimsop-lang-toggle');
+                if (btn) {
+                    var code = btn.querySelector('.dimsop-lang-code');
+                    if (code) code.textContent = lang.toUpperCase();
+                }
+                langOptions.forEach(function(o) { o.classList.remove('active'); });
+                this.classList.add('active');
+            });
+        });
+    }
 })();

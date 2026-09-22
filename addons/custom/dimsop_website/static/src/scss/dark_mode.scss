@@ -46,6 +46,31 @@ html, body {
             background: rgba(255, 255, 255, .08);
         }
     }
+    .dimsop-lang-btn {
+        color: var(--dimsop-text) !important;
+        border-color: rgba(255, 255, 255, .15);
+
+        &:hover {
+            background: rgba(255, 255, 255, .06);
+            border-color: rgba(255, 255, 255, .25);
+        }
+    }
+    .dimsop-lang-dropdown .dropdown-menu {
+        background: rgba(15, 30, 52, 0.95);
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+    .dimsop-lang-dropdown .dropdown-item {
+        color: #e0e7ef;
+    }
+    .dimsop-lang-dropdown .dropdown-item:hover,
+    .dimsop-lang-dropdown .dropdown-item:focus {
+        background: rgba(255, 255, 255, 0.06);
+        color: var(--dimsop-accent);
+    }
+    .dimsop-lang-dropdown .dropdown-item.active {
+        background: var(--dimsop-accent);
+        color: var(--dimsop-white);
+    }
     .dimsop-search-overlay-form {
         background: #0f1e34;
     }

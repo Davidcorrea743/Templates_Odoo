@@ -43,20 +43,41 @@
                     <!-- Herramientas -->
                     <div class="dimsop-tools d-flex align-items-center">
                         <!-- Buscador overlay trigger -->
-                        <button class="dimsop-search-trigger me-2" type="button"
+                        <button class="dimsop-search-trigger me-1" type="button"
                                 id="dimsop-search-open" aria-label="Buscar">
                             <i class="fa fa-search" aria-hidden="true"></i>
                         </button>
 
+                        <!-- Language switcher (demo) -->
+                        <div class="dropdown dimsop-lang-dropdown me-1">
+                            <button class="dimsop-lang-btn" type="button" id="dimsop-lang-toggle"
+                                    data-bs-toggle="dropdown" aria-expanded="false" aria-label="Idioma">
+                                <span class="dimsop-lang-code">ES</span>
+                                <i class="fa fa-caret-down" aria-hidden="true"></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dimsop-lang-toggle">
+                                <li>
+                                    <a class="dropdown-item dimsop-lang-option active" href="#" data-lang="es">
+                                        ES
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item dimsop-lang-option" href="#" data-lang="en">
+                                        EN
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
                         <!-- Dark mode toggle (onclick — always works, no script dependency) -->
-                        <button id="dimsop-dark-toggle" class="btn btn-sm btn-outline-light ms-2"
+                        <button id="dimsop-dark-toggle" class="btn btn-sm btn-outline-light ms-1"
                                 type="button" title="Cambiar modo claro/oscuro" aria-label="Modo oscuro"
                                 onclick="var d=document.documentElement;var n=d.getAttribute('data-theme')==='dark'?'light':'dark';d.setAttribute('data-theme',n);try{localStorage.setItem('dimsop-theme',n)}catch(e){}var i=this.querySelector('i');if(i)i.className=n==='dark'?'fa fa-sun-o':'fa fa-moon-o'">
                             <i class="fa fa-sun-o" aria-hidden="true"></i>
                         </button>
 
                         <!-- CTA: Únete -->
-                        <a href="#" class="dimsop-btn-cta ms-2 d-none d-lg-inline-flex align-items-center"
+                        <a href="#" class="dimsop-btn-cta ms-1 d-none d-lg-inline-flex align-items-center"
                            data-bs-toggle="modal" data-bs-target="#dimsop-carreras-modal">
                             <i class="fa fa-users me-1" aria-hidden="true"></i> Trabaja con nosotros
                         </a>
