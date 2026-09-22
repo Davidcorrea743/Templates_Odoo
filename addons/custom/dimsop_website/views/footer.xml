@@ -48,11 +48,11 @@
                             </p>
                             <div class="dimsop-footer-map-wrap">
                                 <iframe class="dimsop-footer-map"
-                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3922.7!2d-66.858!3d10.491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2ae40f9e1e6a5d%3A0x1234567890abcdef!2sCentro+Empresarial+Ciudad+Center+Torre+C!5e0!3m2!1ses!2sve!4v1700000000000"
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3922.7!2d-66.8227312!3d10.4967188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2a57469c306ea3%3A0xe03812c021d2fc41!2sDIMSOP%20TECHNOLOGY%20VE!5e0!3m2!1ses!2sve!4v1700000000000"
                                         allowfullscreen="" loading="lazy"
                                         title="Ubicacion Venezuela"></iframe>
                             </div>
-                            <a href="https://www.google.com/maps/search/Centro+Empresarial+Ciudad+Center+Torre+C+Caracas+Venezuela"
+                            <a href="https://www.google.com/maps/place/DIMSOP+TECHNOLOGY+VE/@10.4967188,-66.8227312,17z"
                                target="_blank" class="dimsop-footer-map-link">
                                 Abrir en Google Maps &#8594;
                             </a>
@@ -74,11 +74,11 @@
                             </p>
                             <div class="dimsop-footer-map-wrap">
                                 <iframe class="dimsop-footer-map"
-                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3585.5!2d-80.324!3d25.814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9bba03c1e6e3f%3A0x1234567890abcdef!2s4995+NW+72nd+Ave+STE+205+Miami+FL!5e0!3m2!1ses!2sus!4v1700000000000"
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3585.5!2d-80.31312!3d25.8184393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9ba2ed7a89c0f%3A0x19d982c9a758f0ce!2s4995%20NW%2072nd%20Ave%20%23205%2C%20Miami%2C%20FL%2033166!5e0!3m2!1ses!2sus!4v1700000000000"
                                         allowfullscreen="" loading="lazy"
                                         title="Ubicacion Estados Unidos"></iframe>
                             </div>
-                            <a href="https://www.google.com/maps/search/4995+NW+72+N+Ave+STE+205+Miami+Florida"
+                            <a href="https://www.google.com/maps/place/4995+NW+72nd+Ave+%23205,+Miami,+FL+33166/@25.8184393,-80.31312,17z"
                                target="_blank" class="dimsop-footer-map-link">
                                 Abrir en Google Maps &#8594;
                             </a>
