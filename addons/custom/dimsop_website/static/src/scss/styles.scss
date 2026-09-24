@@ -1052,6 +1052,17 @@
     overflow: visible;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin-top: 40px;
+    position: relative;
+}
+
+.dimsop-logo-item::before {
+    content: '';
+    position: absolute;
+    inset: 8px;
+    background: #ffffff;
+    border-radius: 6px;
+    z-index: 0;
+    pointer-events: none;
 }
 
 .dimsop-logo-item:hover,
@@ -1063,17 +1074,16 @@
 }
 
 .dimsop-logo-item img {
+    position: relative;
+    z-index: 1;
     max-height: 120px;
     max-width: 280px;
     object-fit: contain;
-    filter: grayscale(100%);
-    opacity: .8;
-    transition: filter .25s ease, opacity .25s ease;
+    transition: opacity .25s ease;
 }
 
 .dimsop-logo-item:hover img,
 .dimsop-logo-item:focus-within img {
-    filter: grayscale(0%);
     opacity: 1;
 }
 
