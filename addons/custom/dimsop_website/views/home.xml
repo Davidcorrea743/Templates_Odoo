@@ -667,7 +667,7 @@
             <field name="view_id" ref="dimsop_homepage_view"/>
             <field name="key">dimsop_website.homepage</field>
             <field name="website_indexed" eval="True"/>
-            <field name="website_meta_title">Dimsop | Soluciones TIC de Vanguardia para la continuidad de tu negocio</field>
+            <field name="website_meta_title">Dimsop</field>
             <field name="website_meta_description">Soluciones en la Nube, Redes, Ciberseguridad, Servicios Gestionados, FTTX/ISP, Comunicaciones Unificadas e Inteligencia Artificial. Impulsamos la rentabilidad y continuidad operativa de tu negocio con tecnología de vanguardia.</field>
             <field name="website_meta_keywords">soluciones TIC, nube, redes, ciberseguridad, servicios gestionados, FTTX, comunicaciones unificadas, inteligencia artificial, Dimsop</field>
         </record>
