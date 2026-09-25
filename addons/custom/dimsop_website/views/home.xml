@@ -249,17 +249,30 @@
                         <section id="cobertura" class="dimsop-section py-5">
                             <div class="container">
                                 <h2 class="dimsop-h2 text-center mb-4">Nuestras Sedes</h2>
+
+                                <p class="dimsop-cobertura-intro text-center mb-4" style="max-width: 900px; margin-left: auto; margin-right: auto;">
+                                    En Dimsop Technology, expandimos constantemente nuestra presencia para conectar a los negocios con soluciones TIC de vanguardia, garantizando continuidad operativa y rentabilidad donde sea que se encuentren.
+                                </p>
+
                                 <div class="row align-items-center">
-                                    <div class="col-lg-5 dimsop-cobertura-text mb-4 mb-lg-0">
+                                    <div class="col-lg-5 dimsop-cobertura-legend mb-4 mb-lg-0">
                                         <p class="mb-3" style="font-size: 1rem; line-height: 1.7; color: var(--dimsop-text);">
-                                            <i class="fa fa-map-marker" style="color: #003362; font-size: 1.1rem;"></i>
-                                            Nuestra sede principal est&#225; en la Ciudad de <strong style="color: #003362;">Caracas-Venezuela</strong>,
-                                            junto a operaciones en la ciudad de <strong style="color: #003362;">Miami-Estados Unidos</strong>.
+                                            A trav&#233;s del mapa interactivo de nuestras sedes podr&#225;s visualizar nuestro alcance:
                                         </p>
-                                        <p style="font-size: .9rem; color: var(--dimsop-text-muted);">
-                                            <i class="fa fa-map-marker" style="color: #4da32f; font-size: 1rem;"></i>
-                                            Con proyectos en <strong style="color: #4da32f;">Latinoam&#233;rica y Espa&#241;a</strong>
-                                        </p>
+                                        <div class="dimsop-cobertura-item mb-3">
+                                            <span class="dimsop-cobertura-pin dimsop-cobertura-pin-blue">&#128309;</span>
+                                            <div>
+                                                <strong class="dimsop-cobertura-strong-blue">Puntos Azules (Sedes F&#237;sicas):</strong>
+                                                <span style="color: var(--dimsop-text);"> Representan nuestros centros estrat&#233;gicos de operaci&#243;n. Nuestra sede principal se ubica en la ciudad de <strong class="dimsop-cobertura-strong-blue">Caracas, Venezuela</strong>, trabajando en constante sinergia con nuestra sede de operaciones en la ciudad de <strong class="dimsop-cobertura-strong-blue">Miami, Estados Unidos</strong>.</span>
+                                            </div>
+                                        </div>
+                                        <div class="dimsop-cobertura-item">
+                                            <span class="dimsop-cobertura-pin dimsop-cobertura-pin-green">&#128994;</span>
+                                            <div>
+                                                <strong class="dimsop-cobertura-strong-green">&#193;reas Verdes (Cobertura Global):</strong>
+                                                <span style="color: var(--dimsop-text);"> Muestran el alcance internacional de nuestros servicios y despliegues, respaldados por la capacidad t&#233;cnica para ejecutar proyectos integrales a lo largo de <strong class="dimsop-cobertura-strong-green">Latinoam&#233;rica y Espa&#241;a</strong>.</span>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="col-lg-7">
                                         <div id="dimsop-globe-wrap" class="dimsop-globe-wrap">
@@ -270,6 +283,10 @@
                                         </div>
                                     </div>
                                 </div>
+
+                                <p class="dimsop-cobertura-outro text-center mt-4" style="max-width: 900px; margin-left: auto; margin-right: auto;">
+                                    Gracias a nuestro ecosistema global de aliados y a un equipo altamente calificado, llevamos innovaci&#243;n en nube, ciberseguridad, inteligencia artificial y redes directamente al coraz&#243;n de las empresas, sin importar sus fronteras geogr&#225;ficas.
+                                </p>
                             </div>
                         </section>
 

@@ -205,7 +205,10 @@ html, body {
     }
 
     // Sedes - texto bold visible en dark
-    #cobertura .dimsop-cobertura-text strong {
+    #cobertura .dimsop-cobertura-strong-blue {
+        color: #6da8e8 !important;
+    }
+    #cobertura .dimsop-cobertura-strong-green {
         color: var(--dimsop-accent) !important;
     }
 

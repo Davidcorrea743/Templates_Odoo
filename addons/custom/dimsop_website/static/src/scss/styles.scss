@@ -652,8 +652,39 @@
 }
 
 // ----------------------------- Mapa de Cobertura / Sedes (Sección 7) --------
-.dimsop-cobertura-text {
+.dimsop-cobertura-intro,
+.dimsop-cobertura-outro {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--dimsop-text);
+}
+
+.dimsop-cobertura-legend {
     strong { font-weight: 600; }
+}
+
+.dimsop-cobertura-item {
+    display: flex;
+    align-items: flex-start;
+    gap: .6rem;
+    line-height: 1.7;
+}
+
+.dimsop-cobertura-pin {
+    flex: 0 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-top: .1rem;
+}
+
+.dimsop-cobertura-strong-blue {
+    color: #003362;
+    font-weight: 600;
+}
+
+.dimsop-cobertura-strong-green {
+    color: #4da32f;
+    font-weight: 600;
 }
 
 .dimsop-map {
