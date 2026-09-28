@@ -511,25 +511,26 @@
                                 </div>
                                 <div id="dimsop-alert-error" class="alert alert-danger dimsop-alert" role="alert" style="display: none;">
                                     <i class="fa fa-exclamation-circle me-2" aria-hidden="true"></i>
-                                    Por favor completa los campos obligatorios (Nombre y Correo Electrónico).
+                                    <span id="dimsop-alert-error-text">Por favor completa los campos obligatorios (Nombre y Correo Electrónico).</span>
                                 </div>
                                 <div class="dimsop-form-card">
                                     <form action="/dimsop/contacto" method="post" class="dimsop-form" novalidate="novalidate">
                                         <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                        <input type="text" name="homepage" value="" tabindex="-1" autocomplete="off" aria-hidden="true" class="dimsop-hp-field"/>
                                         <div class="mb-3">
                                             <label class="form-label" for="dimsop-f-nombre">Nombre y Apellido *</label>
-                                            <input type="text" class="form-control" id="dimsop-f-nombre" name="nombre" required="required" aria-describedby="dimsop-e-nombre" autocomplete="name"/>
+                                            <input type="text" class="form-control" id="dimsop-f-nombre" name="nombre" required="required" maxlength="200" aria-describedby="dimsop-e-nombre" autocomplete="name"/>
                                             <span class="dimsop-field-error" id="dimsop-e-nombre" role="alert"></span>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6 mb-3">
                                                 <label class="form-label" for="dimsop-f-correo">Correo Electrónico *</label>
-                                                <input type="email" class="form-control" id="dimsop-f-correo" name="correo" required="required" aria-describedby="dimsop-e-correo" autocomplete="email"/>
+                                                <input type="email" class="form-control" id="dimsop-f-correo" name="correo" required="required" maxlength="254" aria-describedby="dimsop-e-correo" autocomplete="email"/>
                                                 <span class="dimsop-field-error" id="dimsop-e-correo" role="alert"></span>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <label class="form-label" for="dimsop-f-telefono">Número de Teléfono</label>
-                                                <input type="tel" class="form-control" id="dimsop-f-telefono" name="telefono" autocomplete="tel"/>
+                                                <input type="tel" class="form-control" id="dimsop-f-telefono" name="telefono" maxlength="40" autocomplete="tel"/>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -600,22 +601,35 @@
                                                         Por favor completa los campos obligatorios.
                                                     </div>
                                                 </t>
+                                                <t t-if="request.params.get('error') == 'cv_invalido'">
+                                                    <div class="alert alert-danger dimsop-alert mx-3 mt-3" role="alert">
+                                                        <i class="fa fa-exclamation-circle me-2" aria-hidden="true"></i>
+                                                        El CV no es válido. Adjunta un archivo PDF, DOC o DOCX de máximo 5MB.
+                                                    </div>
+                                                </t>
+                                                <t t-if="request.params.get('error') == 'limite'">
+                                                    <div class="alert alert-danger dimsop-alert mx-3 mt-3" role="alert">
+                                                        <i class="fa fa-exclamation-circle me-2" aria-hidden="true"></i>
+                                                        Demasiados envíos. Intenta de nuevo en unos minutos.
+                                                    </div>
+                                                </t>
                                                 <form action="/dimsop/postularme" method="post" enctype="multipart/form-data" class="dimsop-form dimsop-modal-form" novalidate="novalidate" id="dimsop-carreras-form">
                                                     <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                                    <input type="text" name="homepage" value="" tabindex="-1" autocomplete="off" aria-hidden="true" class="dimsop-hp-field"/>
                                                     <div class="mb-2">
                                                         <label class="form-label" for="carreras-nombre">Nombre y Apellido *</label>
-                                                        <input type="text" class="form-control" id="carreras-nombre" name="name" required="required" autocomplete="name"/>
+                                                        <input type="text" class="form-control" id="carreras-nombre" name="name" required="required" maxlength="200" autocomplete="name"/>
                                                         <span class="dimsop-field-error" role="alert"></span>
                                                     </div>
                                                     <div class="mb-2">
                                                         <label class="form-label" for="carreras-email">Correo Electrónico *</label>
-                                                        <input type="email" class="form-control" id="carreras-email" name="email" required="required" autocomplete="email"/>
+                                                        <input type="email" class="form-control" id="carreras-email" name="email" required="required" maxlength="254" autocomplete="email"/>
                                                         <span class="dimsop-field-error" role="alert"></span>
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-6 mb-2">
                                                             <label class="form-label" for="carreras-telefono">Teléfono</label>
-                                                            <input type="tel" class="form-control" id="carreras-telefono" name="phone" autocomplete="tel"/>
+                                                            <input type="tel" class="form-control" id="carreras-telefono" name="phone" maxlength="40" autocomplete="tel"/>
                                                         </div>
                                                         <div class="col-6 mb-2">
                                                             <label class="form-label" for="carreras-profesion">Profesión</label>

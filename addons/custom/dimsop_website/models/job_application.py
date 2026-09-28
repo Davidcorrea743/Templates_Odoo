@@ -9,13 +9,13 @@ class JobApplication(models.Model):
     _description = 'Postulación - Forma parte de nuestro equipo'
     _order = 'create_date desc'
 
-    name = fields.Char(string='Nombre y Apellido', required=True)
-    phone = fields.Char(string='Teléfono')
-    email = fields.Char(string='Correo Electrónico', required=True)
-    profession = fields.Char(string='Profesión')
-    city = fields.Char(string='Ciudad de Residencia')
+    name = fields.Char(string='Nombre y Apellido', required=True, size=200)
+    phone = fields.Char(string='Teléfono', size=40)
+    email = fields.Char(string='Correo Electrónico', required=True, size=254)
+    profession = fields.Char(string='Profesión', size=200)
+    city = fields.Char(string='Ciudad de Residencia', size=200)
     cv_file = fields.Binary(string='Archivo CV', attachment=True)
-    cv_filename = fields.Char(string='Nombre del Archivo')
+    cv_filename = fields.Char(string='Nombre del Archivo', size=255)
     state = fields.Selection(
         selection=[
             ('draft', 'Recibida'),

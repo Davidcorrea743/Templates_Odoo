@@ -1399,6 +1399,16 @@
     box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.15);
 }
 
+// Honeypot anti-bots: presente en el DOM pero invisible e inaccesible
+.dimsop-hp-field {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
 // Error messages
 .dimsop-field-error {
     display: block;

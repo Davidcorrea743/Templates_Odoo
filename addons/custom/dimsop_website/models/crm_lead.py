@@ -18,6 +18,7 @@ class CrmLead(models.Model):
             ('managed', 'Servicios Gestionados'),
             ('fttx_isp', 'FTTX/ISP'),
             ('unified', 'Comunicaciones Unificadas'),
+            ('ia', 'Inteligencia Artificial'),
             ('other', 'Otro'),
         ],
         string='Servicio de Interés',

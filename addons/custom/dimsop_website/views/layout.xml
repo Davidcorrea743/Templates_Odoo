@@ -542,8 +542,13 @@
                     var alertEl = null;
                     if (urlParams.get('mensaje') === 'enviado') {
                         alertEl = document.getElementById('dimsop-alert-success');
-                    } else if (urlParams.get('error') === 'datos_incompletos') {
+                    } else if (urlParams.get('error') === 'datos_incompletos' || urlParams.get('error') === 'limite') {
                         alertEl = document.getElementById('dimsop-alert-error');
+                        var errKey = urlParams.get('error');
+                        var errText = document.getElementById('dimsop-alert-error-text');
+                        if (errText &amp;&amp; errKey === 'limite') {
+                            errText.textContent = 'Demasiados envíos desde tu conexión. Intenta de nuevo en unos minutos.';
+                        }
                     }
                     if (alertEl) {
                         alertEl.style.display = 'block';
