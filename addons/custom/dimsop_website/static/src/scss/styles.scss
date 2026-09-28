@@ -1081,7 +1081,7 @@
     height: 140px;
     transform-origin: bottom center;
     overflow: visible;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
     margin-top: 40px;
     position: relative;
 }
@@ -1096,12 +1096,43 @@
     pointer-events: none;
 }
 
+// Light sweep: destello sutil que cruza el chip periódicamente.
+// Barra diagonal (110deg) animada vía background-position; solo
+// transform/opacity-composited => GPU. Fases desfasadas por nth-child.
+.dimsop-logo-item::after {
+    content: '';
+    position: absolute;
+    inset: 8px;
+    border-radius: 6px;
+    z-index: 2;
+    pointer-events: none;
+    background: linear-gradient(110deg,
+                transparent 44%,
+                rgba(0, 51, 98, 0.10) 50%,
+                transparent 56%);
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+    background-position: 150% 0;
+    animation: dimsop-chip-sweep 6s ease-in-out infinite;
+}
+
+@keyframes dimsop-chip-sweep {
+    0%, 55%  { background-position: 150% 0; }
+    100%     { background-position: -50% 0; }
+}
+
+@for $i from 1 through 4 {
+    .dimsop-logo-item:nth-child(4n + #{$i})::after {
+        animation-delay: #{($i - 1) * -1.5}s;
+    }
+}
+
+// Hover: elevación y escala contenidas (200ms), sin exagerar.
 .dimsop-logo-item:hover,
 .dimsop-logo-item:focus-within {
-    transform: translateY(-15px) scale(1.18) !important;
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.35);
+    transform: translateY(-6px) scale(1.04);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
     z-index: 10;
-    animation-play-state: paused;
 }
 
 .dimsop-logo-item img {
@@ -1692,6 +1723,11 @@
     .dimsop-marquee-track {
         animation: none;
         overflow-x: auto;
+    }
+
+    // Destello del chip desactivado; el marquee ya se detiene arriba
+    .dimsop-logo-item::after {
+        animation: none;
     }
 
     .dimsop-logo-item:hover,
