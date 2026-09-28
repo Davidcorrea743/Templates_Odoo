@@ -1170,47 +1170,9 @@
     font-size: 1.1rem;
 }
 
-// ----------------------------- Proyectos (Sección 10) Carrusel ----
-.dimsop-project-item {
-    background-color: var(--dimsop-surface);
-    border: 1px solid var(--dimsop-surface-border);
-    border-radius: 10px;
-    padding: 1rem;
-    flex: 0 0 auto;
-    min-width: 280px;
-    max-width: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transform-origin: bottom center;
-    overflow: visible;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-top: 50px;
-}
-
-.dimsop-project-item:hover,
-.dimsop-project-item:focus-within {
-    transform: translateY(-15px) scale(1.18) !important;
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.35);
-    z-index: 10;
-    animation-play-state: paused;
-}
-
-.dimsop-project-item img {
-    max-height: 120px;
-    max-width: 260px;
-    object-fit: contain;
-    filter: grayscale(100%);
-    opacity: 0.8;
-    transition: filter .25s ease, opacity .25s ease;
-}
-
-.dimsop-project-item:hover img,
-.dimsop-project-item:focus-within img {
-    filter: grayscale(0%);
-    opacity: 1;
-}
-
+// ----------------------------- Proyectos (Sección 10) ----------------
+// Reutiliza .dimsop-logo-item (chip blanco, light sweep y hover)
+// para mantener la misma estructura/estilos que Aliados Tecnológicos.
 .dimsop-project-desc {
     display: none;
 }
@@ -1678,13 +1640,10 @@
     .dimsop-card,
     .dimsop-value { margin-bottom: .75rem; }
 
-    // Proyectos: ajustes móviles
-    .dimsop-project-item {
+    // Proyectos: ajustes móviles (hereda chips de logo-item)
+    .dimsop-logo-item {
         min-width: 220px;
         padding: 0.75rem;
-    }
-    .dimsop-project-item img {
-        max-height: 100px;
     }
     .dimsop-project-desc p {
         font-size: 0.8rem;
