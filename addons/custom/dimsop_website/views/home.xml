@@ -24,12 +24,12 @@
 
                         <!-- =========================================================
                              2. BANNER PRINCIPAL
-                             Fondo de video: static/src/video/banner_principal.mp4
+                             Fondo de video: static/src/video/video BANNER dimsop inicio actualizado.mp4
                              ========================================================= -->
                         <section id="banner" class="dimsop-banner d-flex align-items-center text-white">
                             <video class="dimsop-banner-video" autoplay="true" muted="true" loop="true" playsinline="true"
                                    preload="metadata">
-                                <source src="/dimsop_website/static/src/video/banner_principal_2.mp4" type="video/mp4"/>
+                                <source src="/dimsop_website/static/src/video/video%20BANNER%20dimsop%20inicio%20actualizado.mp4" type="video/mp4"/>
                             </video>
                             <div class="dimsop-banner-overlay"/>
                             <div class="container text-center position-relative">
