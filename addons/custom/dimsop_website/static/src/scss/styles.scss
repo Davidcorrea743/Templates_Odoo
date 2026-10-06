@@ -1068,6 +1068,79 @@
     to   { transform: translateX(-50%); }
 }
 
+// --------------------- Controles manuales del marquee -----------------
+// Se activan solo si marquee_controls.js toma el control
+// (.dimsop-marquee--ready): los botones dejan de estar [hidden] y el
+// track pasa a moverse con transform por JS.
+.dimsop-marquee {
+    &.dimsop-marquee--ready {
+        cursor: grab;
+        touch-action: pan-y; // el arrastre captura X; el scroll vertical pasa
+
+        img {
+            -webkit-user-drag: none; // evita el fantasma de arrastre nativo
+            user-select: none;
+        }
+    }
+
+    &.is-dragging {
+        cursor: grabbing;
+        user-select: none;
+    }
+}
+
+.dimsop-marquee-btn {
+    position: absolute;
+    top: 50%;
+    z-index: 3; // por encima de los degradados laterales (z-index: 2)
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, .25);
+    border-radius: 50%;
+    background-color: #003362; // brand navy
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .35);
+    transform: translateY(-50%);
+    transition: transform .2s ease, background-color .2s ease,
+                border-color .2s ease;
+    cursor: pointer;
+
+    &.dimsop-marquee-btn--prev { left: 12px; }
+    &.dimsop-marquee-btn--next { right: 12px; }
+
+    &[hidden] { display: none; }
+
+    &:hover {
+        background-color: #4da32f; // brand green
+        border-color: #4da32f;
+        transform: translateY(-50%) scale(1.06);
+    }
+
+    &:active {
+        transform: translateY(-50%) scale(.96);
+    }
+
+    &:focus-visible {
+        outline: 2px solid #4da32f;
+        outline-offset: 2px;
+    }
+
+    @media (max-width: 767.98px) {
+        width: 38px;
+        height: 38px;
+        font-size: .875rem;
+
+        &.dimsop-marquee-btn--prev { left: 8px; }
+        &.dimsop-marquee-btn--next { right: 8px; }
+    }
+}
+
 .dimsop-logo-item {
     background-color: var(--dimsop-surface);
     border: 1px solid var(--dimsop-surface-border);
