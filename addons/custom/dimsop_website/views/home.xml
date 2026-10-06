@@ -24,12 +24,12 @@
 
                         <!-- =========================================================
                              2. BANNER PRINCIPAL
-                             Fondo de video: static/src/video/video BANNER dimsop inicio actualizado.mp4
+                             Fondo de video: static/src/video/Video Banner Dimsop Inicio Actualizado(1).mp4
                              ========================================================= -->
                         <section id="banner" class="dimsop-banner d-flex align-items-center text-white">
                             <video class="dimsop-banner-video" autoplay="true" muted="true" loop="true" playsinline="true"
                                    preload="metadata">
-                                <source src="/dimsop_website/static/src/video/video%20BANNER%20dimsop%20inicio%20actualizado.mp4" type="video/mp4"/>
+                                <source src="/dimsop_website/static/src/video/Video%20Banner%20Dimsop%20Inicio%20Actualizado%281%29.mp4" type="video/mp4"/>
                             </video>
                             <div class="dimsop-banner-overlay"/>
                             <div class="container text-center position-relative">
@@ -306,62 +306,56 @@
                                   respeta prefers-reduced-motion; ver styles.scss) -->
                              <div class="dimsop-marquee" role="region" aria-label="Logos de aliados tecnológicos de Dimsop">
                                  <div class="dimsop-marquee-track">
-                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/4lotrack.png" alt="Aliado 4LOTRACK" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/ahua.png" alt="Aliado AHUA" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/aws.png" alt="Aliado AWS" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/cisco.png" alt="Aliado CISCO" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/datawifi.png" alt="Aliado DATAWIFI" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/fortinet.png" alt="Aliado FORTINET" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/grafana.png" alt="Aliado GRAFANA" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/grandstream.png" alt="Aliado GRANDSTREAM" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/hewlett-packard-enterprise.png" alt="Aliado HEWLETT PACKARD ENTERPRISE" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/hpe-aruba.png" alt="Aliado HPE ARUBA" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/hpe-juniper.png" alt="Aliado HPE JUNIPER" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/hpe-networking.png" alt="Aliado HPE NETWORKING" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/hpe.png" alt="Aliado HPE" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/huawei.png" alt="Aliado HUAWEI" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/microsoft.png" alt="Aliado MICROSOFT" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/poly.png" alt="Aliado POLY" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/qnap.png" alt="Aliado QNAP" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/red-hat.png" alt="Aliado Red Hat" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/rosslare.png" alt="Aliado ROSSLARE" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/ruckus.png" alt="Aliado RUCKUS" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/siemon.png" alt="Aliado SIEMON" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/socialwifi.png" alt="Aliado SOCIALWIFI" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/tibbo.png" alt="Aliado TIBBO" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/tp-link.png" alt="Aliado TP-Link" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/v-count.png" alt="Aliado V COUNT" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/yeastar.png" alt="Aliado YEASTAR" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/zabbix.png" alt="Aliado ZABBIX" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/panduit.png" alt="Aliado PANDUIT" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/4lotrack.png" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/ahua.png" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/aws.png" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/cisco.png" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/datawifi.png" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/fortinet.png" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/grafana.png" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/grandstream.png" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/hewlett-packard-enterprise.png" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/hpe-aruba.png" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/hpe-juniper.png" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/hpe-networking.png" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/hpe.png" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/huawei.png" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/microsoft.png" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/poly.png" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/qnap.png" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/red-hat.png" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/rosslare.png" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/ruckus.png" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/siemon.png" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/socialwifi.png" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/tibbo.png" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/tp-link.png" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/v-count.png" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/yeastar.png" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/zabbix.png" loading="lazy"/></div>
-                                        <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/panduit.png" loading="lazy"/></div>
+                                         <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/hewlett-packard.png" alt="Aliado HEWLETT PACKARD" loading="lazy"/></div>
+                                         <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/hpe-aruba.png" alt="Aliado HPE ARUBA" loading="lazy"/></div>
+                                         <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/hpe-juniper.png" alt="Aliado HPE JUNIPER" loading="lazy"/></div>
+                                         <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/hp.png" alt="Aliado HP" loading="lazy"/></div>
+                                         <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/qnap.png" alt="Aliado QNAP" loading="lazy"/></div>
+                                         <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/ruckus.png" alt="Aliado RUCKUS" loading="lazy"/></div>
+                                         <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/cisco.png" alt="Aliado CISCO" loading="lazy"/></div>
+                                         <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/fortinet.png" alt="Aliado FORTINET" loading="lazy"/></div>
+                                         <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/tp-link.png" alt="Aliado TP-Link" loading="lazy"/></div>
+                                         <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/huawei.png" alt="Aliado HUAWEI" loading="lazy"/></div>
+                                         <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/zabbix.png" alt="Aliado ZABBIX" loading="lazy"/></div>
+                                         <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/grafana.png" alt="Aliado GRAFANA" loading="lazy"/></div>
+                                         <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/grandstream.png" alt="Aliado GRANDSTREAM" loading="lazy"/></div>
+                                         <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/yeastar.png" alt="Aliado YEASTAR" loading="lazy"/></div>
+                                         <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/microsoft.png" alt="Aliado MICROSOFT" loading="lazy"/></div>
+                                         <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/aws.png" alt="Aliado AWS" loading="lazy"/></div>
+                                         <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/red-hat.png" alt="Aliado Red Hat" loading="lazy"/></div>
+                                         <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/panduit.png" alt="Aliado PANDUIT" loading="lazy"/></div>
+                                         <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/siemon.png" alt="Aliado SIEMON" loading="lazy"/></div>
+                                         <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/datawifi.png" alt="Aliado DATA WIFI" loading="lazy"/></div>
+                                         <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/socialwifi.png" alt="Aliado SOCIALWIFI" loading="lazy"/></div>
+                                         <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/v-count.png" alt="Aliado V COUNT" loading="lazy"/></div>
+                                         <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/ahua.png" alt="Aliado AHUA" loading="lazy"/></div>
+                                         <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/rosslare.png" alt="Aliado ROSSLARE" loading="lazy"/></div>
+                                         <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/logos/aliados/4lotrack.png" alt="Aliado 4LOTRACK" loading="lazy"/></div>
+                                         <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/hewlett-packard.png" loading="lazy"/></div>
+                                         <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/hpe-aruba.png" loading="lazy"/></div>
+                                         <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/hpe-juniper.png" loading="lazy"/></div>
+                                         <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/hp.png" loading="lazy"/></div>
+                                         <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/qnap.png" loading="lazy"/></div>
+                                         <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/ruckus.png" loading="lazy"/></div>
+                                         <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/cisco.png" loading="lazy"/></div>
+                                         <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/fortinet.png" loading="lazy"/></div>
+                                         <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/tp-link.png" loading="lazy"/></div>
+                                         <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/huawei.png" loading="lazy"/></div>
+                                         <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/zabbix.png" loading="lazy"/></div>
+                                         <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/grafana.png" loading="lazy"/></div>
+                                         <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/grandstream.png" loading="lazy"/></div>
+                                         <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/yeastar.png" loading="lazy"/></div>
+                                         <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/microsoft.png" loading="lazy"/></div>
+                                         <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/aws.png" loading="lazy"/></div>
+                                         <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/red-hat.png" loading="lazy"/></div>
+                                         <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/panduit.png" loading="lazy"/></div>
+                                         <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/siemon.png" loading="lazy"/></div>
+                                         <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/datawifi.png" loading="lazy"/></div>
+                                         <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/socialwifi.png" loading="lazy"/></div>
+                                         <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/v-count.png" loading="lazy"/></div>
+                                         <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/ahua.png" loading="lazy"/></div>
+                                         <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/rosslare.png" loading="lazy"/></div>
+                                         <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/logos/aliados/4lotrack.png" loading="lazy"/></div>
                                  </div>
                              </div>
                          </section>
