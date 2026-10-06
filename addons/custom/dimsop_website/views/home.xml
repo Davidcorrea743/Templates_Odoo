@@ -411,6 +411,7 @@
                                  <h2 class="dimsop-h2 text-center mb-5">Proyectos Referenciales</h2>
                              </div>
                              <div class="dimsop-marquee" role="region" aria-label="Proyectos referenciales de Dimsop">
+                                 <button class="dimsop-marquee-btn dimsop-marquee-btn--prev" type="button" aria-label="Mover el carrusel hacia atrás" hidden="hidden"><i class="fa fa-chevron-left" aria-hidden="true"/></button>
                                  <div class="dimsop-marquee-track">
                                         <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/projects/ucm-chile.png" alt="UCM Chile" loading="lazy"/><div class="dimsop-project-desc"><p>Implementación y soporte de CISCO Contact Center para la Unidad Coronaria Móvil en Chile.</p></div></div>
                                         <div class="dimsop-logo-item"><img src="/dimsop_website/static/src/img/projects/policlinica-metropolitana.png" alt="Policlínica Metropolitana" loading="lazy"/><div class="dimsop-project-desc"><p>Gestión de red de datos y seguridad CISCO para la Policlínica Metropolitana.</p></div></div>
@@ -452,6 +453,7 @@
                                         <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/projects/TELEFONICA.png" loading="lazy"/><div class="dimsop-project-desc"><p>TELEFONICA</p></div></div>
                                         <div class="dimsop-logo-item" aria-hidden="true"><img src="/dimsop_website/static/src/img/projects/VNET.png" loading="lazy"/><div class="dimsop-project-desc"><p>VNET</p></div></div>
                                  </div>
+                                 <button class="dimsop-marquee-btn dimsop-marquee-btn--next" type="button" aria-label="Mover el carrusel hacia adelante" hidden="hidden"><i class="fa fa-chevron-right" aria-hidden="true"/></button>
                              </div>
                          </section>
 
